@@ -40,9 +40,9 @@ public class SysAutIdentiInterceptor implements HandlerInterceptor {
 
         HttpSession session = request.getSession();
         SysUserVO user = (SysUserVO) session.getAttribute("sysUserVO");
-        System.out.println(request.getRequestURI()+"------"+user.getOpenid());
+        System.out.println(request.getRequestURI()+"------");
         if (user != null) {
-            request.setAttribute("userOpenid",user.getOpenid());
+            session.setAttribute("userOpenid",user.getOpenid());
             return true;
         } else {
             String code = request.getParameter("code");
@@ -57,12 +57,12 @@ public class SysAutIdentiInterceptor implements HandlerInterceptor {
                 if (sys != null && sys.size() > 0) {
                     SysUserVO sysUserVO = sysUserService.view(sys.get(0).getId());
                     session.setAttribute("sysUserVO", sysUserVO);
-
+                    session.setAttribute("userOpenid",openid);
                     return true;
                 } else {
                     System.out.println("去注册");
                     if (request.getRequestURL().indexOf("/phone/sys/basicinfo/sysuser/tocreate.action") >= 0) {
-                        request.setAttribute("userOpenid", openid);
+                        session.setAttribute("userOpenid",openid);
                         return true;
                     }
 

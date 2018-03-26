@@ -6,6 +6,7 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -52,8 +53,9 @@ public class PhoneSysUserController extends BaseController {
     // 转向注册页面
     @RequestMapping("/phone/sys/basicinfo/sysuser/tocreate.action")
     public String tocreate(Model model, HttpServletRequest request) {
-        String userOpenid = request.getAttribute("userOpenid").toString();
-
+//        String userOpenid = request.getAttribute("userOpenid").toString();
+        HttpSession session = request.getSession();
+        String userOpenid = (String) session.getAttribute("userOpenid");
         model.addAttribute("userOpenid", userOpenid);
         HashMap<String, Integer> firstAreaList = new HashMap<String, Integer>();
         firstAreaList.put("level", 1);

@@ -103,15 +103,15 @@
     <update id="update" parameterType="cn.itcast.jk.domain.SysUser">
         update suser
         <set>
-            <if test="name != null">NAME=#{name}</if>
-            <if test="openid != null">OPENID=#{openid}</if>
-            <if test="weixin != null">WEIXIN=#{weixin}</if>
-            <if test="phonenumber != null">PHONENUMBER=#{phonenumber}</if>
-            <if test="email != null">EMAIL=#{email}</if>
-            <if test="sex != null">SEX=#{sex}</if>
-            <if test="areaId != null">AREA_ID=#{areaId}</if>
-            <if test="areaName != null">AREA_NAME=#{areaName}</if>
-            <if test="password != null">PASSWORD=#{password}</if>
+            <if test="name != null">NAME=#{name},</if>
+            <if test="openid != null">OPENID=#{openid},</if>
+            <if test="weixin != null">WEIXIN=#{weixin},</if>
+            <if test="phonenumber != null">PHONENUMBER=#{phonenumber},</if>
+            <if test="email != null">EMAIL=#{email},</if>
+            <if test="sex != null">SEX=#{sex},</if>
+            <if test="areaId != null">AREA_ID=#{areaId},</if>
+            <if test="areaName != null">AREA_NAME=#{areaName},</if>
+            <if test="password != null">PASSWORD=#{password},</if>
             <if test="state != null">STATE=#{state}</if>
         </set>
         where SYSTEM_USER_ID=#{id}
