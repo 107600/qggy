@@ -40,10 +40,11 @@ public class SysAutIdentiInterceptor implements HandlerInterceptor {
 
         HttpSession session = request.getSession();
         SysUserVO user = (SysUserVO) session.getAttribute("sysUserVO");
-        System.out.println(request.getRequestURI());
-        if (user != null)
+        System.out.println(request.getRequestURI()+"------"+user.getOpenid());
+        if (user != null) {
+            request.setAttribute("userOpenid",user.getOpenid());
             return true;
-        else {
+        } else {
             String code = request.getParameter("code");
             System.out.println("code=" + code);
             if (code != null && code.length() > 0) {
