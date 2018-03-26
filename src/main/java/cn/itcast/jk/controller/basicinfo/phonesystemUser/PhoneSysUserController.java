@@ -85,7 +85,7 @@ public class PhoneSysUserController extends BaseController {
         if (sysyUser.getName() != null && !sysyUser.getName().equals("")) {
             sysUserService.insert(sysyUser);
         }
-        return "redirect:/basicinfo/sysuser/list.action"; // 转向列表的action
+        return "/basicinfo/sysuser/applySuccess.jsp";
     }
 
     // 新增连接保存
