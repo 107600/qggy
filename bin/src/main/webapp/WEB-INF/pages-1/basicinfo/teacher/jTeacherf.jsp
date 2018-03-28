@@ -95,7 +95,7 @@
                             </c:if>
 
                                 <c:if test="${o.state==2}">通过
-                                    <a href="toaddCourse.action?id=${o.id}"><font
+                                    <a href="toaddCourse.action?teacherId=${o.id}"><font
                                             color="green">[添加课程]</font></a>
                                 </c:if></td>
 
