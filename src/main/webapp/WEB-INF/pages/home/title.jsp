@@ -242,13 +242,13 @@
                 <div id="mask">
                     <div id="menuContent"><span id="topmenu"
                                                 onclick="top.location.href='fmain.action';linkHighlightMenu(this);">系统首页</span><span
-                            id="tm_separator"></span><span id="topmenu"
+                            id="tm_separator1"></span><span id="topmenu1"
                                                            onclick="top.leftFrame.location.href='cargoLeft.action';top.main.location.href='cargoMain.action';linkHighlightMenu(this);">财务管理</span><span
-                            id="tm_separator"></span><span id="topmenu"
+                            id="tm_separator2"></span><span id="topmenu2"
                                                            onclick="top.leftFrame.location.href='statLeft.action';top.main.location.href='statMain.action';linkHighlightMenu(this);">统计分析</span><span
-                            id="tm_separator"></span><span id="topmenu"
+                            id="tm_separator3"></span><span id="topmenu3"
                                                            onclick="top.leftFrame.location.href='baseinfoLeft.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">课程管理</span><span
-                            id="tm_separator"></span><span id="topmenu"
+                            id="tm_separator4"></span><span id="topmenu4"
                                                            onclick="top.leftFrame.location.href='sysadminLeft.action';top.main.location.href='sysadminMain.action';linkHighlightMenu(this);">系统管理</span>
                     </div>
                 </div>

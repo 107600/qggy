@@ -23,7 +23,6 @@
                 <div class="zc">
                     <div class="zc_line">手机号：
                         <input type="text" value="" name="name" id="name"
-                               onkeyup="showGs(event)"
                                onFocus="this.select();"
                                autocomplete="off" title="请您输入用户名"/>
                         <div id="ts" style="z-index:1;"></div>
@@ -68,7 +67,7 @@
     </div>
 </form>
 <script type="text/JavaScript">
-    document.getElementById('name').name.focus();
+//    document.getElementById('name').name.focus();
 </script>
 
 </body>

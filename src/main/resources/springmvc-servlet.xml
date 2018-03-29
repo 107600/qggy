@@ -38,10 +38,10 @@
             <mvc:mapping path="/phone/user/**"/>
             <bean class="cn.itcast.jk.interceptor.UserAutIdentiInterceptortest"></bean>
         </mvc:interceptor>
-        <!-- <mvc:interceptor>
-            <mvc:mapping path="/phone/sys/**" />
+        <mvc:interceptor>
+            <mvc:mapping path="/phone/sys/**"/>
             <bean class="cn.itcast.jk.interceptor.SysAutIdentiInterceptor"></bean>
-        </mvc:interceptor> -->
+        </mvc:interceptor>
     </mvc:interceptors>
 
 
