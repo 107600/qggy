@@ -45,6 +45,7 @@ public class PhoneTransferController extends BaseController {
         Student student = (Student) session.getAttribute("user");
         Map<String, String> map = new HashMap<>();
         map.put("transferUserid", student.getId());
+        map.put("areaId",student.getAreaId());
         List<Transfer> dataList = transferService.find(map);
         JsonConfig config = new JsonConfig();
         config.setIgnoreDefaultExcludes(false);
