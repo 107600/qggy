@@ -83,7 +83,7 @@
                 </table>
                 <p>
                     <label for="">选择性别</label> <br/> <input type="radio" name="sex"
-                                                            id="" value="0"
+                                                            id="sex" value="0"
                                                             <c:if test="${obj.sex==0}">checked</c:if> />男 <input
                         type="radio" name="sex" id="" value="1"
                         <c:if test="${obj.sex==1}">checked</c:if> />女 <label for="">区域</label>

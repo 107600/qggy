@@ -216,8 +216,8 @@
 <div class="PositionFrame_black" id="PositionFrame"></div>
 <div id="userInfo" style="z-index:999;" onclick="HideLoginDiv()" title="点击关闭">
     <img src="${ctx}/skin/default/images/title/avataronline.gif" border="0" style="margin-top:-1px;"/>
-    您好：<strong>${_CURRENT_USER.realName}</strong>&nbsp;&nbsp;|
-    您所属单位：<strong title="${_CURRENT_USER.dept.deptNameFull}">${_CURRENT_USER.dept.deptName}</strong>&nbsp;&nbsp;
+    您好：<strong>${sessionScope.sysUserVO.name}</strong>&nbsp;&nbsp;|
+    您所属单位：<strong>${sessionScope.sysUserVO.areaName}</strong>&nbsp;&nbsp;
     <img src="${ctx}/skin/default/images/title/close.gif" border="0"/>
 </div>
 

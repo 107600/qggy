@@ -3,11 +3,13 @@ package cn.itcast.jk.controller.basicinfo.systemUser;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -148,6 +150,15 @@ public class SysUserController extends BaseController {
     @RequestMapping("/basicinfo/sysuser/update.action")
     public String update(SysUser sysyUser) {
         if (sysyUser.getPassword() != null && !sysyUser.getPassword().equals("")) {
+            //如果区域名为空，查询一次带上区域名
+            if (StringUtils.isBlank(sysyUser.getAreaName())) {
+                HashMap map = new HashMap();
+                map.put("areaId", sysyUser.getAreaId());
+                List<Area> areas = areaService.find(map);
+                if (areas.size() > 0) {
+                    sysyUser.setAreaName(areas.get(0).getAreaName());
+                }
+            }
             sysUserService.update(sysyUser);
         }
         return "redirect:/basicinfo/sysuser/toview.action?id=" + sysyUser.getId();
