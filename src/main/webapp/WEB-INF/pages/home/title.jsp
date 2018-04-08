@@ -11,8 +11,6 @@
     <link rel="stylesheet" rev="stylesheet" type="text/css" href="${ctx}/skin/default/css/title.css" media="all"/>
 
     <script type="text/javascript" src="${ctx}/components/jquery-ui/jquery-1.2.6.js"></script>
-    <script language="javascript" src="${ctx}/js/pngfix_map.js"></script>
-    <script language="javascript" src="${ctx}/js/common.js"></script>
     <!-- 调用外部 JavaScript 脚本语言 -->
 
     <script language="javascript">
@@ -242,13 +240,13 @@
                 <div id="mask">
                     <div id="menuContent"><span id="topmenu"
                                                 onclick="top.location.href='fmain.action';linkHighlightMenu(this);">系统首页</span><span
-                            id="tm_separator1"></span><span id="topmenu1"
+                            id="tm_separator1"></span><span id="topmenu"
                                                            onclick="top.leftFrame.location.href='cargoLeft.action';top.main.location.href='cargoMain.action';linkHighlightMenu(this);">财务管理</span><span
-                            id="tm_separator2"></span><span id="topmenu2"
+                            id="tm_separator2"></span><span id="topmenu"
                                                            onclick="top.leftFrame.location.href='statLeft.action';top.main.location.href='statMain.action';linkHighlightMenu(this);">统计分析</span><span
-                            id="tm_separator3"></span><span id="topmenu3"
+                            id="tm_separator3"></span><span id="topmenu"
                                                            onclick="top.leftFrame.location.href='baseinfoLeft.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">课程管理</span><span
-                            id="tm_separator4"></span><span id="topmenu4"
+                            id="tm_separator4"></span><span id="topmenu"
                                                            onclick="top.leftFrame.location.href='sysadminLeft.action';top.main.location.href='sysadminMain.action';linkHighlightMenu(this);">系统管理</span>
                     </div>
                 </div>
