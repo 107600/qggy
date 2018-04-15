@@ -152,7 +152,7 @@
     </insert>
     <select id="find" parameterType="map" resultMap="advRM">
         select * from advertise
-        where 1=1
+        where 1=1 and ADSTATE = 3
         <if test="isMain!=null">and ISMAIN=#{isMain}</if>
         <if test="adstate!=null">and ADSTATE=#{state}</if>
         <if test="releaseUserId!=null">and RELEASEUSERID=#{releaseUserId}</if>
