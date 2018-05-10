@@ -2,6 +2,8 @@ package cn.itcast.jk.controller;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.http.HttpRequest;
+import org.apache.http.HttpResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -160,6 +162,12 @@ public class PhoneUserHomeController {
     @RequestMapping("/phone/user/suretiqutoxianjin.action")
     public String myTransfer(double money) {
         return "/basicinfo/phoneuser/suretiqutoxianjin.html?money=" + money;
+    }
+
+    //app接口
+    @RequestMapping("/app/user/user.action")
+    public String myTransfer(HttpRequest request, HttpResponse response) {
+       return "/basicinfo/phoneuser/Main.jsp";
     }
 
 }
