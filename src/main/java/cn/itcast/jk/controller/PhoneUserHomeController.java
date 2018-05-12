@@ -164,15 +164,9 @@ public class PhoneUserHomeController {
         return "/basicinfo/phoneuser/suretiqutoxianjin.html?money=" + money;
     }
 
-    //app接口转向课程列表
-    @RequestMapping("/app/user/user.action")
-    public String appToCourseList(HttpRequest request, HttpResponse response) {
-       return "/public/phone/basicinfo/course/view.action";
-    }
-
     //app接口转向个人中心
     @RequestMapping("/app/user/user.action")
-    public String appToUserCenter(HttpRequest request, HttpResponse response) {
+    public String appToUserCenter() {
        return "/basicinfo/phoneuser/Main.jsp";
     }
 
