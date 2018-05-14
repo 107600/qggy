@@ -166,10 +166,12 @@
     </update>
 
     <!-- 删除一条 -->
-    <delete id="deleteById" parameterType="string">DELETE FROM AREA
-        WHERE
-        AREA_ID=#{cid}
-    </delete>
+    <delete id="deleteById" parameterType="string">
+			DELETE
+			FROM
+			trade_detail
+			WHERE DETAIL_ID=#{cid}
+		</delete>
 
     <!-- 删除多条（一维字符串数组） -->
     <delete id="delete" parameterType="string">
