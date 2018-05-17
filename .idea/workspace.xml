@@ -1,29 +1,244 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e72fd958-2a28-49c1-98f4-f2126c8f7079" name="Default" comment="根据uid获取用户">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/PhoneUserHomeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/PhoneUserHomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/PhoneUserHomeController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/PhoneUserHomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/StudentMapper.xml" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/StudentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/target/classes/springmvc-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/StudentMapper.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/StudentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/springmvc-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/phoneuser/Main.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/phoneuser/Main.jsp" />
-    </list>
-    <list id="951e4b92-82ea-43dd-aaca-848c20e2ed30" name="Failed commit: Default" comment="同上" />
     <list id="f4213a49-df61-431c-90da-7a1c309f3c4a" name="Failed commit: Default (2)" comment="根据uid获取用户" />
+    <list id="951e4b92-82ea-43dd-aaca-848c20e2ed30" name="Failed commit: Default" comment="同上" />
     <list id="da868344-6d64-465b-a6f2-e6ad0bfa5111" name="Failed commit: Default (3)" comment="根据uid获取用户" />
-    <list id="78662e8c-9b3e-46b1-804a-82d403c421de" name="Failed commit: Default (4)" comment="根据uid获取用户">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/cn/itcast/jk/mapper/StudentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/cn/itcast/jk/mapper/StudentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/src/main/resources/springmvc-servlet.xml" />
+    <list default="true" id="e72fd958-2a28-49c1-98f4-f2126c8f7079" name="Default" comment="根据uid获取用户">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Score/scoreLeft.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/activity/activityLeft.jsp" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/qggy_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/qggy_war_exploded.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_wxpay_wxpay_sdk_0_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_wxpay_wxpay_sdk_0_0_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_pre8.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_7.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_2_16.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_2_16.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_2_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_2_7.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_7.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_12.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jstl_jstl_api_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jstl_jstl_api_1_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jexcelapi_jxl_2_4_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jexcelapi_jxl_2_4_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jfree_jcommon_1_0_16.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jfree_jcommon_1_0_16.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jfree_jfreechart_1_0_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jfree_jfreechart_1_0_13.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_9.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_13.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_10.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_core_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_core_3_0_0_milestone2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_soap_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_soap_3_0_0_milestone2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_xml_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_xml_3_0_0_milestone2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_databinding_jaxb_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_databinding_jaxb_3_0_0_milestone2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_jaxws_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_jaxws_3_0_0_milestone2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_simple_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_simple_3_0_0_milestone2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_transports_http_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_transports_http_3_0_0_milestone2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_transports_http_jetty_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_transports_http_jetty_3_0_0_milestone2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_addr_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_addr_3_0_0_milestone2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_policy_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_policy_3_0_0_milestone2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_wsdl_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_wsdl_3_0_0_milestone2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_servlet_3_0_spec_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_servlet_3_0_spec_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_neethi_neethi_3_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_neethi_neethi_3_0_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_9.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_9.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_9.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_servlet_api_6_0_33.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_servlet_api_6_0_33.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ws_xmlschema_xmlschema_core_2_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ws_xmlschema_xmlschema_core_2_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_7_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_7_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_lgpl_1_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_lgpl_1_8_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_lgpl_1_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_lgpl_1_8_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_2_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_8_1_14_v20131031.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_8_1_14_v20131031.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_8_1_14_v20131031.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_8_1_14_v20131031.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_8_1_14_v20131031.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_8_1_14_v20131031.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_8_1_14_v20131031.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_8_1_14_v20131031.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_8_1_14_v20131031.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_8_1_14_v20131031.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_8_1_14_v20131031.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_8_1_14_v20131031.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_web_jstl_impl_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_web_jstl_impl_1_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20140107.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20140107.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_6_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_6_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_6_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_6_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_6_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_6_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_3_2_6_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_3_2_6_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_2_6_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_2_6_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_6_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__wsdl4j_wsdl4j_1_6_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__wsdl4j_wsdl4j_1_6_3.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_resolver_xml_resolver_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_resolver_xml_resolver_1_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/pages/cargo/left.jsp" afterPath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/pages/cargo/left.jsp" />
+      <change beforePath="$PROJECT_DIR$/bin/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/title.jsp" afterPath="$PROJECT_DIR$/bin/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/title.jsp" />
+      <change beforePath="$PROJECT_DIR$/qggy.iml" afterPath="$PROJECT_DIR$/qggy.iml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/HomeController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/teacher/classlist.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/teacher/classlist.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/trade/jTradeListz.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/trade/jTradeListz.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cargo/left.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cargo/left.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/title.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/title.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/classes/beans.xml" afterPath="$PROJECT_DIR$/target/classes/beans.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/BaseController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/BaseController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/HomeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/adv/AdvController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/adv/AdvController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/area/AreaController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/area/AreaController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/category/CategoryController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/category/CategoryController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/classs/ClasssController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/classs/ClasssController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/course/CourseController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/course/CourseController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phoneattendance/PhoneAttendanceController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phoneattendance/PhoneAttendanceController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phoneclasss/PhoneClasssController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phoneclasss/PhoneClasssController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonerecharge/PhoneRechargeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonerecharge/PhoneRechargeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonerefund/PhoneRefundController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonerefund/PhoneRefundController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonesystemUser/PhoneSysUserController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonesystemUser/PhoneSysUserController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonetrade/PhoneTradeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonetrade/PhoneTradeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonetradedetail/PhoneTradeDetailController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonetradedetail/PhoneTradeDetailController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonetransfer/PhoneTransferController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonetransfer/PhoneTransferController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonewithdraw/PhoneWithdrawController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonewithdraw/PhoneWithdrawController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/rank/RankController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/rank/RankController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/recharge/RechargeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/recharge/RechargeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/refund/RefundApplyController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/refund/RefundApplyController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/refund/RefundController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/refund/RefundController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/role/RoleController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/role/RoleController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/student/StudentController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/student/StudentController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/systemUser/SysUserController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/systemUser/SysUserController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/test/DataInsertController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/test/DataInsertController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/trade/TradeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/trade/TradeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/tradedetail/TradeDetailController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/tradedetail/TradeDetailController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/transfer/TransferController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/transfer/TransferController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/withdraw/WithdrawController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/withdraw/WithdrawController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/domain/AcToken.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/domain/AcToken.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/interceptor/MainInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/interceptor/MainInterceptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/interceptor/SysAutIdentiInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/interceptor/SysAutIdentiInterceptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/interceptor/UserAutIdentiInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/interceptor/UserAutIdentiInterceptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/AdvMapper.xml" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/AdvMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/SysUserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/SysUserMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/TransferMapper.xml" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/TransferMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/pagination/PageInterceptor$ReflectUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/pagination/PageInterceptor$ReflectUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/pagination/PageInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/pagination/PageInterceptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/AuthCodeParams.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/AuthCodeParams.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/PreOrderParams.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/PreOrderParams.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/RefundOrderParams.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/RefundOrderParams.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/TransfersParams.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/TransfersParams.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/service/impl/TradeDetailServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/service/impl/TradeDetailServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/service/impl/WXPayServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/service/impl/WXPayServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/qg/wxpay/CodeUtils.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/qg/wxpay/CodeUtils.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/qg/wxpay/MyWxPayConfig.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/qg/wxpay/MyWxPayConfig.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/Arith.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/Arith.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/DateConverter.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/DateConverter.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/DownloadUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/DownloadUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/ImgFontByte.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/ImgFontByte.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/Template.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/Template.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/UtilFuns.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/UtilFuns.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/file/FileUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/file/FileUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/file/PoiUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/file/PoiUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/target/classes/springmvc-servlet.xml" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT.war" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/beans.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/beans.xml" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/BaseController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/BaseController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/HomeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/adv/AdvController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/adv/AdvController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/area/AreaController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/area/AreaController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/category/CategoryController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/category/CategoryController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/classs/ClasssController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/classs/ClasssController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/course/CourseController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/course/CourseController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phoneattendance/PhoneAttendanceController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phoneattendance/PhoneAttendanceController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phoneclasss/PhoneClasssController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phoneclasss/PhoneClasssController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonerecharge/PhoneRechargeController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonerecharge/PhoneRechargeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonerefund/PhoneRefundController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonerefund/PhoneRefundController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonesystemUser/PhoneSysUserController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonesystemUser/PhoneSysUserController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonetrade/PhoneTradeController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonetrade/PhoneTradeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonetradedetail/PhoneTradeDetailController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonetradedetail/PhoneTradeDetailController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonetransfer/PhoneTransferController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonetransfer/PhoneTransferController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonewithdraw/PhoneWithdrawController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonewithdraw/PhoneWithdrawController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/rank/RankController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/rank/RankController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/recharge/RechargeController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/recharge/RechargeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/refund/RefundApplyController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/refund/RefundApplyController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/refund/RefundController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/refund/RefundController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/role/RoleController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/role/RoleController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/student/StudentController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/student/StudentController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/systemUser/SysUserController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/systemUser/SysUserController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/test/DataInsertController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/test/DataInsertController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/trade/TradeController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/trade/TradeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/tradedetail/TradeDetailController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/tradedetail/TradeDetailController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/transfer/TransferController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/transfer/TransferController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/withdraw/WithdrawController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/withdraw/WithdrawController.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/domain/AcToken.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/domain/AcToken.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/interceptor/MainInterceptor.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/interceptor/MainInterceptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/interceptor/SysAutIdentiInterceptor.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/interceptor/SysAutIdentiInterceptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/interceptor/UserAutIdentiInterceptor.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/interceptor/UserAutIdentiInterceptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/AdvMapper.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/AdvMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/StudentMapper.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/StudentMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/SysUserMapper.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/SysUserMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/TransferMapper.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/TransferMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/pagination/PageInterceptor$ReflectUtil.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/pagination/PageInterceptor$ReflectUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/pagination/PageInterceptor.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/pagination/PageInterceptor.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/AuthCodeParams.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/AuthCodeParams.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/PreOrderParams.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/PreOrderParams.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/RefundOrderParams.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/RefundOrderParams.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/TransfersParams.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/TransfersParams.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/service/impl/TradeDetailServiceImpl.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/service/impl/TradeDetailServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/service/impl/WXPayServiceImpl.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/service/impl/WXPayServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/qg/wxpay/CodeUtils.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/qg/wxpay/CodeUtils.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/qg/wxpay/MyWxPayConfig.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/qg/wxpay/MyWxPayConfig.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/Arith.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/Arith.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/DateConverter.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/DateConverter.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/DownloadUtil.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/DownloadUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/ImgFontByte.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/ImgFontByte.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/Template.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/Template.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/UtilFuns.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/UtilFuns.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/file/FileUtil.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/file/FileUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/file/PoiUtil.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/file/PoiUtil.class" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/jdbc.properties" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/jdbc.properties" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/springmvc-servlet.xml" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/adv/jAdvUpdate.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/adv/jAdvUpdate.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/classs/jClasssUpdate.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/classs/jClasssUpdate.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/course/jCourseCreate.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/course/jCourseCreate.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/course/jCourseUpdate.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/course/jCourseUpdate.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/phoneuser/Main.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/phoneuser/Main.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/sysuser/jSysUserUpdate.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/sysuser/jSysUserUpdate.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/teacher/classlist.html" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/teacher/classlist.html" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/trade/jTradeListz.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/trade/jTradeListz.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/trade/jTradeView.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/trade/jTradeView.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/trade/myinfo.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/trade/myinfo.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/cargo/left.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/cargo/left.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/title.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/title.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/skin/default/css/login.css" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/skin/default/css/login.css" />
+      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/skin/default/css/title.css" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/skin/default/css/title.css" />
     </list>
+    <list id="78662e8c-9b3e-46b1-804a-82d403c421de" name="Failed commit: Default (4)" comment="根据uid获取用户" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,146 +258,11 @@
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="qggy" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="PhoneClasssController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phoneclasss/PhoneClasssController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/phoneuser/Main.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="2" column="64" lean-forward="false" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhoneUserHomeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/PhoneUserHomeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="e#1034#1035#0" expanded="true" />
-                <element signature="e#1089#1090#0" expanded="true" />
-                <element signature="e#1202#1203#0" expanded="true" />
-                <element signature="e#1272#1273#0" expanded="true" />
-                <element signature="e#1390#1391#0" expanded="true" />
-                <element signature="e#1462#1463#0" expanded="true" />
-                <element signature="e#1558#1559#0" expanded="true" />
-                <element signature="e#1610#1611#0" expanded="true" />
-                <element signature="e#1935#1936#0" expanded="true" />
-                <element signature="e#1992#1993#0" expanded="true" />
-                <element signature="e#2109#2110#0" expanded="true" />
-                <element signature="e#2181#2182#0" expanded="true" />
-                <element signature="e#2286#2287#0" expanded="true" />
-                <element signature="e#2350#2351#0" expanded="true" />
-                <element signature="e#2452#2453#0" expanded="true" />
-                <element signature="e#2511#2512#0" expanded="true" />
-                <element signature="e#2634#2635#0" expanded="true" />
-                <element signature="e#2708#2709#0" expanded="true" />
-                <element signature="e#3266#3267#0" expanded="true" />
-                <element signature="e#3341#3342#0" expanded="true" />
-                <element signature="e#3445#3446#0" expanded="true" />
-                <element signature="e#3506#3507#0" expanded="true" />
-                <element signature="e#3629#3630#0" expanded="true" />
-                <element signature="e#3703#3704#0" expanded="true" />
-                <element signature="e#3807#3808#0" expanded="true" />
-                <element signature="e#3868#3869#0" expanded="true" />
-                <element signature="e#4259#4260#0" expanded="true" />
-                <element signature="e#4318#4319#0" expanded="true" />
-                <element signature="e#4434#4435#0" expanded="true" />
-                <element signature="e#4492#4493#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserAutIdentiInterceptortest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/interceptor/UserAutIdentiInterceptortest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhoneStudentController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myclass.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/phoneuser/myclass.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="69" lean-forward="true" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyWxPayConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/qg/wxpay/MyWxPayConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JsApiPay.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/qg/wxpay/JsApiPay.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="becomedaoshi.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/phoneuser/becomedaoshi.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2911">
-              <caret line="83" column="35" lean-forward="true" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cellOrderDetail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/phoneuser/cellOrderDetail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -193,33 +273,45 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>10</find>
-      <find>update</find>
-      <find>phone/user/main.action</find>
-      <find>交易人行嘛</find>
-      <find>交易人姓名</find>
-      <find>交易人类型</find>
-      <find>退款理由</find>
-      <find>申请退款</find>
-      <find>button</find>
-      <find>教师管理</find>
-      <find>navMenubar</find>
-      <find>确认退课</find>
-      <find>我的账户</find>
-      <find>myrefund.action</find>
-      <find>/phone</find>
-      <find>/phone/user</find>
-      <find>myclass.action</find>
-      <find>findbyOID.action</find>
-      <find>returncourse.action</find>
+      <find>teacherclasslist.action</find>
+      <find>http://localhost:8082/qggy/phone/user/main.action</find>
+      <find>/basicinfo/teachercourse/listclass.action</find>
+      <find>teacherclass</find>
+      <find>user</find>
+      <find>phone/user/basicinfo/teachercourse/listclass.action</find>
+      <find>ClassTradetail</find>
+      <find>ClassTradetailVORM</find>
+      <find>teacherClassl</find>
+      <find>basicinfo/teacher/classlist.html</find>
+      <find>queryCourse</find>
+      <find>select</find>
+      <find>getper</find>
+      <find>classlistDe</find>
+      <find>teachercla</find>
+      <find>teacherclasslist</find>
+      <find>classlistd</find>
+      <find>phone/user/teacher</find>
+      <find>tomcat</find>
+      <find>jk/dao</find>
+      <find>baseinfoLeft.action</find>
+      <find>/baseinfo/left.jsp</find>
+      <find>/baseinfoLeft.action</find>
+      <find>tm_separator</find>
+      <find>topmenu</find>
+      <find>menuContent</find>
+      <find>cargoLeft.action</find>
+      <find>财务管理</find>
+      <find>basicinfo/trade/list.action</find>
+      <find>财务</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/phoneuser</dir>
+      <dir>E:\qingguo\qggy\src\main\webapp\WEB-INF\pages</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -237,26 +329,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/course/CourseController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itcast/qg/wxpay/QRCode.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/course/fxPhCourseDetail.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/course/jCourseView.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/course/PhCourseView.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/student/jStudentView.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/teacher/jTeacherView.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/course/jCourseUpdate.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itcast/jk/domain/Student.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/error.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/student/jStudentUpdate.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/Main.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itcast/jk/interceptor/UserAutIdentiInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/student/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/cn/itcast/jk/mapper/TeacherCourse.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/trade/jTradeList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/trade/jTradeListf.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/trade/jTradeListz.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/trade/TradeController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/cn/itcast/jk/mapper/TradeMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/refund/jRefundListz.jsp" />
@@ -283,6 +366,20 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/phoneuser/Main.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/phoneuser/cellOrderDetail.html" />
         <option value="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/PhoneUserHomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/teacher/classlist.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/beans.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/activity/activityLeft.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/title.jsp" />
+        <option value="$PROJECT_DIR$/bin/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/title.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/activity/activityLeft.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Score/scoreLeft.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/title.jsp" />
+        <option value="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/pages/cargo/left.jsp" />
+        <option value="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/pages/home/title.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/trade/jTradeListz.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cargo/left.jsp" />
       </list>
     </option>
   </component>
@@ -300,6 +397,11 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="D:\java\maven\jk_repository\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -337,9 +439,11 @@
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="140" />
+    <option name="y" value="16" />
+    <option name="width" value="1366" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -357,42 +461,245 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qggy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qggy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="qggy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qggy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qggy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qggy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qggy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qggy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qggy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qggy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qggy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qggy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itcast" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qggy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qggy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itcast" type="462c0819:PsiDirectoryNode" />
+              <item name="jk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qggy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qggy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qggy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qggy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qggy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qggy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qggy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qggy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="cargo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3658088" />
-    <property name="FullScreen" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\qingguo\qggy\src\main\webapp\WEB-INF\pages" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\qingguo\qggy\src\main\webapp\WEB-INF\pages\basicinfo\activity" />
+      <recent name="E:\qingguo\qggy\src\main\webapp\WEB-INF\pages\basicinfo\Score" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="Tomcat Server.tomcat">
-    <configuration default="false" name="qggy [package,install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="qggy [compile]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="compile" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
+    <configuration name="qggy [package,install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -415,7 +722,40 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
-      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.73" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -495,14 +835,97 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method />
+    </configuration>
+    <configuration name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.73" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <file path="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/qggy" />
+          </settings>
+        </file>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_qggy_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49764" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JProfiler">
+        <option name="jreHome" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JProfiler">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
@@ -557,29 +980,6 @@
         <option name="SUPPORT_LIB_ENABLED" value="true" />
         <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -674,55 +1074,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -737,36 +1088,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -846,14 +1167,6 @@
       </MavenSettings>
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
     <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -894,43 +1207,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -961,127 +1237,19 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.73" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <file path="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT.war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </file>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_qggy_2" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="49764" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="JProfiler">
-        <option name="jreHome" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JProfiler">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method />
-    </configuration>
-    <configuration default="false" name="qggy [compile]" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="compile" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
     </configuration>
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat" />
-      <item index="1" class="java.lang.String" itemvalue="Maven.qggy [compile]" />
-      <item index="2" class="java.lang.String" itemvalue="Maven.qggy [package,install]" />
+      <item index="0" class="java.lang.String" itemvalue="Maven.qggy [compile]" />
+      <item index="1" class="java.lang.String" itemvalue="Maven.qggy [package,install]" />
+      <item index="2" class="java.lang.String" itemvalue="Tomcat Server.tomcat" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Maven.qggy [package,install]" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
     <option name="externalProjectsViewState">
@@ -1090,6 +1258,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -1107,6 +1278,17 @@
       <workItem from="1521453155778" duration="3658000" />
       <workItem from="1521458721493" duration="6783000" />
       <workItem from="1521620669636" duration="10797000" />
+      <workItem from="1525752744094" duration="9313000" />
+      <workItem from="1525778210032" duration="5364000" />
+      <workItem from="1525953709234" duration="44000" />
+      <workItem from="1526277555352" duration="20000" />
+      <workItem from="1526278061491" duration="64000" />
+      <workItem from="1526298792303" duration="6405000" />
+      <workItem from="1526343133109" duration="2144000" />
+      <workItem from="1526358073370" duration="3051000" />
+      <workItem from="1526451182096" duration="9471000" />
+      <workItem from="1526479304994" duration="187000" />
+      <workItem from="1526555406810" duration="30000" />
     </task>
     <task id="LOCAL-00001" summary="初始版本">
       <created>1521460448883</created>
@@ -1175,7 +1357,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53476000" />
+    <option name="totallyTimeSpent" value="89569000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1187,47 +1369,46 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41675285" sideWeight="0.55153376" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2916236" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23742332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944787" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969324" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1582213" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2926577" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988626" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14167528" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18097208" sideWeight="0.44846627" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36434108" sideWeight="0.5085653" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2916236" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23742332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36434108" sideWeight="0.4914347" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19799778" sideWeight="0.44846627" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988626" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988626" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3184049" sideWeight="0.47807637" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24250536" sideWeight="0.47807637" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25153375" sideWeight="0.5219236" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2688728" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944787" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969324" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25276074" sideWeight="0.51192147" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2926577" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2688728" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -1271,451 +1452,370 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itcast/jk/mapper/RefundMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="53" column="27" lean-forward="true" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
-          <folding>
-            <marker date="1521446811300" expanded="true" signature="1416:2049" ph="SELECT * FRO... refund" />
-            <marker date="1521446811300" expanded="true" signature="2157:2234" ph="SELECT * FRO... refund" />
-            <marker date="1521446811300" expanded="true" signature="2485:3059" ph="INSERT INTO refund... " />
-            <marker date="1521446811300" expanded="true" signature="3175:3696" ph="UPDATE refun... " />
-            <marker date="1521446811300" expanded="true" signature="3789:3923" ph="UPDATE refun... " />
-          </folding>
+        <state relative-caret-position="675">
+          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/refund/jRefundListf.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="26" column="42" lean-forward="true" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/refund/jRefundListz.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="33" column="10" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="33" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/course/jCourseListf.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/course/jCourseListz.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/recharge/jRechargeList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/refund/jRefundList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages-1/basicinfo/student/jStudentView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/domain/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/classs/jClasssListf.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="24" column="106" lean-forward="false" selection-start-line="24" selection-start-column="106" selection-end-line="24" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/classs/ClasssController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1075">
-          <caret line="78" column="9" lean-forward="true" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itcast/jk/mapper/TradeDetailMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="103" column="13" lean-forward="true" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
-          <folding>
-            <marker date="1521449758100" expanded="true" signature="3076:3473" ph="SELECT * FRO... COURSE_ID" />
-            <marker date="1521449758100" expanded="true" signature="3115:3440" ph="SELECT COURS... trade_detail" />
-            <marker date="1521449758100" expanded="true" signature="3582:4133" ph="SELECT * FRO... trade_detail" />
-            <marker date="1521449758100" expanded="true" signature="4238:4321" ph="SELECT * FRO... trade_detail" />
-            <marker date="1521449758100" expanded="true" signature="4420:4992" ph="SELECT t1.*,... trade_detail" />
-            <marker date="1521449758100" expanded="true" signature="5236:5698" ph="INSERT INTO trade_detail... " />
-            <marker date="1521449758100" expanded="true" signature="5819:6330" ph="UPDATE trade... " />
-            <marker date="1521449758100" expanded="true" signature="6415:6468" ph="DELETE FROM " />
-            <marker date="1521449758100" expanded="true" signature="6812:6894" ph="UPDATE trade... " />
-            <marker date="1521449758100" expanded="true" signature="6993:7254" ph="UPDATE trade... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/classs/jClasssListz.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/classs/jClasssList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/course/jCourseList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="10" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="31" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/course/CourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="94" column="17" lean-forward="true" selection-start-line="92" selection-start-column="16" selection-end-line="94" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/student/jStudentList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="32" column="68" lean-forward="false" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/teacher/jTeacher.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="29" column="60" lean-forward="false" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/teacher/jTeacherz.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReadMe.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/src/main/java/cn/itcast/jk/controller/BaseController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/itcast/jk/mapper/StudentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-          <folding>
-            <marker date="1521710197669" expanded="true" signature="1518:2368" ph="select * fro... student" />
-            <marker date="1521710197669" expanded="true" signature="1965:2042" ph="select Teach... teacher_course" />
-            <marker date="1521710197669" expanded="true" signature="2468:2529" ph="select * fro... student" />
-            <marker date="1521710197669" expanded="true" signature="2768:3294" ph="insert into student... " />
-            <marker date="1521710197669" expanded="true" signature="3411:4910" ph="update stude... " />
-            <marker date="1521710197669" expanded="true" signature="4995:5050" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/css/extreme/extremecomponents.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1449">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/css/swiper.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/css/viewdetail.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/css/vjpage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/skin/default/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-65">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/skin/default/images/button/update.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/skin/default/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="1079" column="21" lean-forward="false" selection-start-line="1079" selection-start-column="21" selection-end-line="1079" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/phoneuser/myrecharge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2654">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/refund/RefundController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-400">
-          <caret line="63" column="53" lean-forward="true" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phonerefund/PhoneRefundController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2929">
-          <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/pages-1/basicinfo/course/PhCourseDetailreturn.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="30" column="110" lean-forward="false" selection-start-line="30" selection-start-column="110" selection-end-line="30" selection-end-column="129" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/teacher/jTeacherf.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phoneattendance/PhoneAttendanceController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="79" column="41" lean-forward="true" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/student/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="129" column="19" lean-forward="false" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/sysadmin/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/interceptor/UserAutIdentiInterceptortest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/qg/wxpay/JsApiPay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/qg/wxpay/MyWxPayConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/phoneuser/myclass.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="69" lean-forward="true" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phoneclasss/PhoneClasssController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/phoneuser/becomedaoshi.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2911">
-          <caret line="83" column="35" lean-forward="true" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
-          <folding />
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/phoneuser/Main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="2" column="64" lean-forward="false" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+        <state relative-caret-position="2800">
+          <caret line="112" column="28" lean-forward="false" selection-start-line="112" selection-start-column="28" selection-end-line="112" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/teacher/classlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/java/maven/jk_repository/org/mybatis/mybatis-spring/1.2.0/mybatis-spring-1.2.0-sources.jar!/org/mybatis/spring/support/SqlSessionDaoSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/dao/impl/ClasssDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/dao/impl/CourseDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/dao/impl/RoleDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/dao/impl/SysUserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/java/maven/jk_repository/org/mybatis/mybatis/3.2.2/mybatis-3.2.2-sources.jar!/org/apache/ibatis/session/SqlSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="63" column="14" lean-forward="false" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/phoneuser/cellOrderDetail.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cxf-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/PhoneUserHomeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1202#1203#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1390#1391#0" expanded="true" />
-            <element signature="e#1462#1463#0" expanded="true" />
-            <element signature="e#1558#1559#0" expanded="true" />
-            <element signature="e#1610#1611#0" expanded="true" />
-            <element signature="e#1935#1936#0" expanded="true" />
-            <element signature="e#1992#1993#0" expanded="true" />
-            <element signature="e#2109#2110#0" expanded="true" />
-            <element signature="e#2181#2182#0" expanded="true" />
-            <element signature="e#2286#2287#0" expanded="true" />
-            <element signature="e#2350#2351#0" expanded="true" />
-            <element signature="e#2452#2453#0" expanded="true" />
-            <element signature="e#2511#2512#0" expanded="true" />
-            <element signature="e#2634#2635#0" expanded="true" />
-            <element signature="e#2708#2709#0" expanded="true" />
-            <element signature="e#3266#3267#0" expanded="true" />
-            <element signature="e#3341#3342#0" expanded="true" />
-            <element signature="e#3445#3446#0" expanded="true" />
-            <element signature="e#3506#3507#0" expanded="true" />
-            <element signature="e#3629#3630#0" expanded="true" />
-            <element signature="e#3703#3704#0" expanded="true" />
-            <element signature="e#3807#3808#0" expanded="true" />
-            <element signature="e#3868#3869#0" expanded="true" />
-            <element signature="e#4259#4260#0" expanded="true" />
-            <element signature="e#4318#4319#0" expanded="true" />
-            <element signature="e#4434#4435#0" expanded="true" />
-            <element signature="e#4492#4493#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/backspringmvc-servlet.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="500">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/vo/AdvVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/domain/AcToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/dao/AdvDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/dao/impl/AdvDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="27" column="57" lean-forward="false" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/dao/impl/BaseDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sqlMapConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="72" lean-forward="true" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1125">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/msg.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/baseinfo/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/stat/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-526">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/stat/left.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-701">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/left.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2850">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/homeurl.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-451">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/baseinfo/left.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/target/qggy-0.0.1-SNAPSHOT/skin/default/css/title.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900">
+          <caret line="66" column="1" lean-forward="false" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/fmain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/homeurl.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qggy.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-675">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5425">
+          <caret line="217" column="20" lean-forward="true" selection-start-line="217" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/title.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="242" column="60" lean-forward="true" selection-start-line="242" selection-start-column="60" selection-end-line="242" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/title.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="245" column="130" lean-forward="false" selection-start-line="245" selection-start-column="130" selection-end-line="245" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="110" column="5" lean-forward="false" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/title.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="259" column="0" lean-forward="true" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Score/scoreLeft.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/phoneuser/myorder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1455">
+          <caret line="168" column="33" lean-forward="true" selection-start-line="168" selection-start-column="33" selection-end-line="168" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/pages/cargo/left.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="29" column="91" lean-forward="true" selection-start-line="29" selection-start-column="91" selection-end-line="29" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/pages/home/title.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="243" column="119" lean-forward="false" selection-start-line="243" selection-start-column="119" selection-end-line="243" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/olmsgList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3025">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/pages-1/cargo/left.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/activity/activityLeft.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/baselist.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/trade/TradeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="64" column="52" lean-forward="false" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cargo/left.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1550">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/trade/jTradeListz.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
           <folding />
         </state>
       </provider>
@@ -1763,7 +1863,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1780,6 +1880,7 @@
             <option name="proportions">
               <list>
                 <option value="0.3658088" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

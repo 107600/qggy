@@ -88,7 +88,10 @@
                 <tr>
                     <td class="columnTitle_mustbe">课程封面图片：</td>
                     <td class="tableContent"><input type="file"
-                                                    name="courseCover" id="pic_file" value="${obj.courseCover}"/> <br/>
+                                                    name="courseCover" id="pic_file" value="${obj.courseCover}"/>
+                        <c:if test="${obj.courseCover == null}"><font color="red">该课程目前没有封面图片</font></c:if>
+                        <c:if test="${obj.courseCover == null}"><font color="red">该课程目前已有封面图片，再次上传会覆盖原来的封面</font></c:if>
+
                     </td>
                 </tr>
                 <tr style="height: 10px">

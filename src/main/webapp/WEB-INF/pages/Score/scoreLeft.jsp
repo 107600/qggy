@@ -23,27 +23,17 @@
             <img src="${ctx}/skin/default/images/icon/document_into.png"/>
         </div>
         <div class="panel-header">
-            <div class="panel-title">财务管理</div>
+            <div class="panel-title">积分管理</div>
             <div class="panel-content">
                 <ul>
-                    <li><a href="${ctx}/basicinfo/trade/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">订单管理</a>
+
+
+                    <li><a href="${ctx}"
+                           onclick="linkHighlighted(this)" target="main" id="aa_1">信用积分</a>
                     </li>
 
-                    <li><a href="${ctx}/basicinfo/refund/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">退款管理</a>
-                    </li>
-                    <li><a href="${ctx}/basicinfo/withdraw/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">提现管理</a>
-                    </li>
-                    <li><a href="${ctx}/basicinfo/transfer/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">转账管理</a>
-                    </li>
-                    <li><a href="${ctx}/basicinfo/recharge/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">充值管理</a>
-                    </li>
                     <li><a href="${ctx}"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">押金管理</a>
+                           onclick="linkHighlighted(this)" target="main" id="aa_1">公益积分</a>
                     </li>
 
 
@@ -57,7 +47,6 @@
         <div class="sidebar_b_r"></div>
     </div>
 </div>
-
 
 </body>
 </html>

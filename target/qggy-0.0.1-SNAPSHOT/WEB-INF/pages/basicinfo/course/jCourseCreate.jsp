@@ -92,14 +92,14 @@
                     </tr>
                     <tr>
                         <td class="columnTitle_mustbe">课程价格：</td>
-                        <td class="tableContent"><input type="text"
+                        <td class="tableContent"><input type="number" class="coursePrice"
                                                         name="coursePrice" maxlength="10"/><br/></td>
                     </tr>
                     <tr style="height: 10px">
                     </tr>
                     <tr>
                         <td class="columnTitle_mustbe">最低开班人数：</td>
-                        <td class="tableContent"><input type="text" name="openNum" maxlength="10"/><br/></td>
+                        <td class="tableContent"><input type="number" name="openNum" maxlength="10"/><br/></td>
                     </tr>
                     <tr style="height: 10px">
                     </tr>
@@ -156,5 +156,6 @@
         var ele = document.getElementById("txt");
         ele.value = content;
     }
+
 </script>
 </html>

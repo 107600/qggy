@@ -157,11 +157,11 @@
             $.prompt({
                 title: '提现',
                 text: '请输入提现金额 (可提金额 <font color="red">' + money
-                + '</font> 元,提现金额不得小于1元)',
+                + '</font> 元,提现金额不得小于100元)',
                 input: money,
                 empty: false, // 是否允许为空
                 onOK: function (input) {
-                    if (input <= money & input >= 1) {
+                    if (input <= money & input >= 100) {
                         var a = document.createElement("a");
                         //a.setAttribute("href", "javascript:alert(10);");
                         a.setAttribute("href",
@@ -170,7 +170,7 @@
                         //$.alert("请打开注释");
                         a.click();
                     } else {
-                        $.alert("输入提现金额大于可提金额");
+                        $.alert("输入提现金额不符合要求");
                     }
                 },
                 onCancel: function () {
@@ -181,7 +181,7 @@
     }
     function tiqutoxianjin(money) {
         //http://jqweui.com/components#dialog
-        var real = (money * 0.97).toFixed(2);
+        var real = (money * 0.95).toFixed(2);
         if (money > 0) {
             //如果参数过多，建议通过 object 方式传入
             $
@@ -189,7 +189,7 @@
                     title: '提取至充值余额,请输入金额',
                     text: '(课程余额 <font color="red">'
                     + money
-                    + '</font> 元,手续费 <font color="red">3%</font> ,实际到账金额 <font color="red">'
+                    + '</font> 元,手续费 <font color="red">5%</font> ,实际到账金额 <font color="red">'
                     + real + '</font> 元，如果使用课程余额购买课程，则不收取手续费)',
                     input: money,
                     empty: false, // 是否允许为空
@@ -238,12 +238,12 @@
     }
     function suretiqutoxianjin(money) {
         //http://jqweui.com/components#dialog
-        var real = (money * 0.97).toFixed(2);
+        var real = (money * 0.95).toFixed(2);
         $.confirm({
             title: '提取至充值余额',
             text: '提取余额 <font color="red">' + money
             + '</font> 元,手续费 <font color="red">'
-            + (money * 0.03).toFixed(2)
+            + (money * 0.05).toFixed(2)
             + '</font> 元,实际到账金额 <font color="red">' + real
             + '</font> 元',
             onOK: function () {

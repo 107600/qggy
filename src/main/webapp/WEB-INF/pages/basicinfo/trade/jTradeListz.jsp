@@ -5,9 +5,40 @@
 <%@ include file="../../baselist.jsp" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <head>
     <title></title>
 </head>
+<script type="text/javascript">
+    $(function () {
+        $("#activityType").click(function () {
+            if ($(this).hasClass("textbox-title")){
+
+            }else{
+                // 添加字体加粗效果
+                $("#activityType").toggleClass("textbox-title")
+                $("#classType").toggleClass("textbox-title")
+
+            }
+
+
+        })
+
+        $("#classType").click(function () {
+            if($(this).hasClass("textbox-title")){
+
+            }
+            else{
+                $("#classType").toggleClass("textbox-title")
+                $("#activityType").toggleClass("textbox-title")
+
+            }
+
+        })
+    });
+
+</script>
+
 <body>
 <form name="icform" method="post">
 
@@ -23,6 +54,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="textbox-inner-header" style="float: right">
+
+        <div><a id="classType" class="textbox-title" style="font-size: medium;cursor: pointer" >课程</a>|<a
+                id="activityType" style="font-size: medium;cursor: pointer">活动</a></div>
     </div>
 
     <div class="textbox-header">

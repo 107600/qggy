@@ -62,7 +62,9 @@
                             <tr>
                                 <td class="columnTitle_mustbe">广告封面图片：</td>
                                 <td class="tableContent"><input type="file"
-                                                                name="advCover" value="${dataList.advertiseCover}"/>
+                                                                name="advCover"/>
+                                    <c:if test="${dataList.advertiseCover == null}"><font color="red">该广告目前没有封面图片</font></c:if>
+                                    <c:if test="${dataList.advertiseCover!= null}"><font color="red">该广告目前已有封面图片，再次上传会覆盖原来的封面</font></c:if>
                                 </td>
                             </tr>
                             <tr style="height: 10px">

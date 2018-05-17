@@ -104,6 +104,17 @@ public class HomeController {
         return "/baseinfo/left.jsp";
     }
 
+    //活动管理跳转
+    @RequestMapping("/activityManage.action")
+    public String activityLeft(){
+        return "/activity/activityLeft.jsp";
+    }
+    //积分管理跳转
+    @RequestMapping("/scoreManage.action")
+    public String scoreLeft(){
+        return "/Score/scoreLeft.jsp";
+    }
+
     // 统计分析
 
     @RequestMapping("/statMain.action")

@@ -43,7 +43,6 @@
     background: url("../images/login/logo.png") no-repeat -2px 2px;
     height: 91px;
     white-space: nowrap;
-    overflow: hiddle;
 }
 
 .headerBg {
@@ -77,7 +76,6 @@
     color: white;
     height: 29px;
     cursor: pointer;
-    overflow: hiddle;
 }
 
 #tm_separator {

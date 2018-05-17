@@ -56,6 +56,10 @@
             }
             obj.style.background = 'url("${ctx}/skin/default/images/title/button_bg.jpg") no-repeat';
             obj.style.color = "#fff";
+
+
+
+
             obj.style.fontWeight = 'bold';
             obj.style.padding = '6px 11x 5px 13px;';
             obj.blur();		//去掉图片的焦点框,使界面看起来漂亮 updated by tony
@@ -246,8 +250,14 @@
                                                            onclick="top.leftFrame.location.href='statLeft.action';top.main.location.href='statMain.action';linkHighlightMenu(this);">统计分析</span><span
                             id="tm_separator3"></span><span id="topmenu"
                                                            onclick="top.leftFrame.location.href='baseinfoLeft.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">课程管理</span><span
-                            id="tm_separator4"></span><span id="topmenu"
+
+                            id="tm_separator6"></span><span id="topmenu"
+                                                            onclick="top.leftFrame.location.href='activityManage.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">活动管理</span><span
+                            id="tm_separator1"></span><span id="topmenu"
+                                                            onclick="top.leftFrame.location.href='scoreManage.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">积分管理</span><span
+                            id="tm_separator2"><span id="topmenu"
                                                            onclick="top.leftFrame.location.href='sysadminLeft.action';top.main.location.href='sysadminMain.action';linkHighlightMenu(this);">系统管理</span>
+
                     </div>
                 </div>
                 <span id="rightKey" onmouseover="periodOffset(this, 'right')"><img

@@ -11,8 +11,6 @@
     <link rel="stylesheet" rev="stylesheet" type="text/css" href="${ctx}/skin/default/css/title.css" media="all"/>
 
     <script type="text/javascript" src="${ctx}/components/jquery-ui/jquery-1.2.6.js"></script>
-    <script language="javascript" src="${ctx}/js/pngfix_map.js"></script>
-    <script language="javascript" src="${ctx}/js/common.js"></script>
     <!-- 调用外部 JavaScript 脚本语言 -->
 
     <script language="javascript">
@@ -58,6 +56,10 @@
             }
             obj.style.background = 'url("${ctx}/skin/default/images/title/button_bg.jpg") no-repeat';
             obj.style.color = "#fff";
+
+
+
+
             obj.style.fontWeight = 'bold';
             obj.style.padding = '6px 11x 5px 13px;';
             obj.blur();		//去掉图片的焦点框,使界面看起来漂亮 updated by tony
@@ -216,8 +218,8 @@
 <div class="PositionFrame_black" id="PositionFrame"></div>
 <div id="userInfo" style="z-index:999;" onclick="HideLoginDiv()" title="点击关闭">
     <img src="${ctx}/skin/default/images/title/avataronline.gif" border="0" style="margin-top:-1px;"/>
-    您好：<strong>${_CURRENT_USER.realName}</strong>&nbsp;&nbsp;|
-    您所属单位：<strong title="${_CURRENT_USER.dept.deptNameFull}">${_CURRENT_USER.dept.deptName}</strong>&nbsp;&nbsp;
+    您好：<strong>${sessionScope.sysUserVO.name}</strong>&nbsp;&nbsp;|
+    您所属单位：<strong>${sessionScope.sysUserVO.areaName}</strong>&nbsp;&nbsp;
     <img src="${ctx}/skin/default/images/title/close.gif" border="0"/>
 </div>
 
@@ -242,14 +244,20 @@
                 <div id="mask">
                     <div id="menuContent"><span id="topmenu"
                                                 onclick="top.location.href='fmain.action';linkHighlightMenu(this);">系统首页</span><span
-                            id="tm_separator"></span><span id="topmenu"
+                            id="tm_separator1"></span><span id="topmenu"
                                                            onclick="top.leftFrame.location.href='cargoLeft.action';top.main.location.href='cargoMain.action';linkHighlightMenu(this);">财务管理</span><span
-                            id="tm_separator"></span><span id="topmenu"
+                            id="tm_separator2"></span><span id="topmenu"
                                                            onclick="top.leftFrame.location.href='statLeft.action';top.main.location.href='statMain.action';linkHighlightMenu(this);">统计分析</span><span
-                            id="tm_separator"></span><span id="topmenu"
+                            id="tm_separator3"></span><span id="topmenu"
                                                            onclick="top.leftFrame.location.href='baseinfoLeft.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">课程管理</span><span
-                            id="tm_separator"></span><span id="topmenu"
+
+                            id="tm_separator6"></span><span id="topmenu"
+                                                            onclick="top.leftFrame.location.href='activityManage.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">活动管理</span><span
+                            id="tm_separator1"></span><span id="topmenu"
+                                                            onclick="top.leftFrame.location.href='scoreManage.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">积分管理</span><span
+                            id="tm_separator2"><span id="topmenu"
                                                            onclick="top.leftFrame.location.href='sysadminLeft.action';top.main.location.href='sysadminMain.action';linkHighlightMenu(this);">系统管理</span>
+
                     </div>
                 </div>
                 <span id="rightKey" onmouseover="periodOffset(this, 'right')"><img

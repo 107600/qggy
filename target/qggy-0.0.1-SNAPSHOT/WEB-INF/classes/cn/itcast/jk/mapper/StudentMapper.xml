@@ -2,7 +2,6 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
 <mapper namespace="cn.itcast.jk.mapper.StudentMapper">
     <!-- resultMap映射 -->
     <resultMap type="cn.itcast.jk.domain.Student" id="studentRM">
@@ -45,7 +44,7 @@
         <if test="likes!=null">and LIKES like CONCAT('%',#{likes},'%')</if>
         <if test="namelikes!=null">and USER_NAME like CONCAT('%',#{namelikes},'%')</if>
         <if test="state!=null and state!=1">and STATE!=1 </if>
-        order by USER_ID DESC
+        order by id DESC
     </select>
 
     <!-- 查询一个 -->

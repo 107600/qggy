@@ -26,6 +26,7 @@
         transfer
         WHERE 1 = 1
         <if test="transferUserid!=null">AND TRANSFER_USERID=#{transferUserid}</if>
+        <if test="areaId!=null">AND AREA_ID=#{areaId}</if>
         order by TRANSFER_TIME
     </select>
     <select id="get" parameterType="string" resultMap="TransferRM">

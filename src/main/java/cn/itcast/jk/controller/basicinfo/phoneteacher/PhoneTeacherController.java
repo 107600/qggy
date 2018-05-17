@@ -71,6 +71,8 @@ public class PhoneTeacherController extends BaseController {
         Map<String, String> paramap = new HashMap<>();
         paramap.put("teacherId", student.getId());
         paramap.put("classsState", state + "");
+        System.out.println(student.getId());
+        System.out.println(state);
 
         List<ClassTradetail> dataList = teacherCourseService.getpersonal(paramap);
 

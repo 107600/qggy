@@ -40,7 +40,7 @@
                 <table class="commonTable" cellspacing="1">
                     <tr>
                         <td class="columnTitle_mustbe">班级名称：</td>
-                        <td class="tableContent"><input type="text" name="className" maxlength="10"
+                        <td class="tableContent"><input type="text" name="className" maxlength="100"
                                                         value="${obj.className}"/></td>
                     </tr>
                     <tr style="height: 10px">
