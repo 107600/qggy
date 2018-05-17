@@ -1067,7 +1067,7 @@
       <workItem from="1526358073370" duration="3051000" />
       <workItem from="1526451182096" duration="9471000" />
       <workItem from="1526479304994" duration="187000" />
-      <workItem from="1526555406810" duration="3341000" />
+      <workItem from="1526555406810" duration="4280000" />
     </task>
     <task id="LOCAL-00001" summary="初始版本">
       <created>1521460448883</created>
@@ -1150,7 +1150,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92880000" />
+    <option name="totallyTimeSpent" value="93819000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1202,6 +1202,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
