@@ -5,238 +5,8 @@
     <list id="951e4b92-82ea-43dd-aaca-848c20e2ed30" name="Failed commit: Default" comment="同上" />
     <list id="da868344-6d64-465b-a6f2-e6ad0bfa5111" name="Failed commit: Default (3)" comment="根据uid获取用户" />
     <list default="true" id="e72fd958-2a28-49c1-98f4-f2126c8f7079" name="Default" comment="根据uid获取用户">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/Score/scoreLeft.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/activity/activityLeft.jsp" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/qggy_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/qggy_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_wxpay_wxpay_sdk_0_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_wxpay_wxpay_sdk_0_0_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_pre8.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_2_16.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_2_16.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_2_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_2_7.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_7.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_12.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_5.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_0_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jstl_jstl_api_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jstl_jstl_api_1_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jexcelapi_jxl_2_4_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jexcelapi_jxl_2_4_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jfree_jcommon_1_0_16.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jfree_jcommon_1_0_16.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jfree_jfreechart_1_0_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jfree_jfreechart_1_0_13.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_9.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_13.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_10.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_core_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_core_3_0_0_milestone2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_soap_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_soap_3_0_0_milestone2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_xml_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_xml_3_0_0_milestone2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_databinding_jaxb_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_databinding_jaxb_3_0_0_milestone2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_jaxws_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_jaxws_3_0_0_milestone2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_simple_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_simple_3_0_0_milestone2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_transports_http_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_transports_http_3_0_0_milestone2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_transports_http_jetty_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_transports_http_jetty_3_0_0_milestone2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_addr_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_addr_3_0_0_milestone2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_policy_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_policy_3_0_0_milestone2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_wsdl_3_0_0_milestone2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_wsdl_3_0_0_milestone2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_servlet_3_0_spec_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_servlet_3_0_spec_1_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_neethi_neethi_3_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_neethi_neethi_3_0_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_9.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_9.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_9.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_servlet_api_6_0_33.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_servlet_api_6_0_33.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ws_xmlschema_xmlschema_core_2_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ws_xmlschema_xmlschema_core_2_1_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_7_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_7_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_lgpl_1_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_lgpl_1_8_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_lgpl_1_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_lgpl_1_8_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_2_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_8_1_14_v20131031.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_8_1_14_v20131031.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_8_1_14_v20131031.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_8_1_14_v20131031.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_8_1_14_v20131031.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_8_1_14_v20131031.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_8_1_14_v20131031.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_8_1_14_v20131031.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_8_1_14_v20131031.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_8_1_14_v20131031.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_8_1_14_v20131031.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_8_1_14_v20131031.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_web_jstl_impl_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_web_jstl_impl_1_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20140107.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20140107.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_6_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_6_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_6_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_6_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_6_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_6_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_3_2_6_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_3_2_6_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_2_6_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_2_6_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_6_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_6_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__wsdl4j_wsdl4j_1_6_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__wsdl4j_wsdl4j_1_6_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_resolver_xml_resolver_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_resolver_xml_resolver_1_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_4_1.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/pages/cargo/left.jsp" afterPath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/pages/cargo/left.jsp" />
-      <change beforePath="$PROJECT_DIR$/bin/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/title.jsp" afterPath="$PROJECT_DIR$/bin/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/title.jsp" />
-      <change beforePath="$PROJECT_DIR$/qggy.iml" afterPath="$PROJECT_DIR$/qggy.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/HomeController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/teacher/classlist.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/teacher/classlist.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/trade/jTradeListz.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicinfo/trade/jTradeListz.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cargo/left.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cargo/left.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/title.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/title.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/classes/beans.xml" afterPath="$PROJECT_DIR$/target/classes/beans.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/BaseController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/BaseController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/HomeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/adv/AdvController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/adv/AdvController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/area/AreaController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/area/AreaController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/category/CategoryController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/category/CategoryController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/classs/ClasssController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/classs/ClasssController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/course/CourseController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/course/CourseController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phoneattendance/PhoneAttendanceController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phoneattendance/PhoneAttendanceController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phoneclasss/PhoneClasssController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phoneclasss/PhoneClasssController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonerecharge/PhoneRechargeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonerecharge/PhoneRechargeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonerefund/PhoneRefundController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonerefund/PhoneRefundController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonesystemUser/PhoneSysUserController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonesystemUser/PhoneSysUserController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonetrade/PhoneTradeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonetrade/PhoneTradeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonetradedetail/PhoneTradeDetailController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonetradedetail/PhoneTradeDetailController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonetransfer/PhoneTransferController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonetransfer/PhoneTransferController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonewithdraw/PhoneWithdrawController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/phonewithdraw/PhoneWithdrawController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/rank/RankController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/rank/RankController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/recharge/RechargeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/recharge/RechargeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/refund/RefundApplyController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/refund/RefundApplyController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/refund/RefundController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/refund/RefundController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/role/RoleController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/role/RoleController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/student/StudentController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/student/StudentController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/systemUser/SysUserController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/systemUser/SysUserController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/test/DataInsertController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/test/DataInsertController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/trade/TradeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/trade/TradeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/tradedetail/TradeDetailController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/tradedetail/TradeDetailController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/transfer/TransferController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/transfer/TransferController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/withdraw/WithdrawController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/basicinfo/withdraw/WithdrawController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/domain/AcToken.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/domain/AcToken.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/interceptor/MainInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/interceptor/MainInterceptor.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/interceptor/SysAutIdentiInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/interceptor/SysAutIdentiInterceptor.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/interceptor/UserAutIdentiInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/interceptor/UserAutIdentiInterceptor.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/AdvMapper.xml" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/AdvMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/SysUserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/SysUserMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/TransferMapper.xml" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/mapper/TransferMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/pagination/PageInterceptor$ReflectUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/pagination/PageInterceptor$ReflectUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/pagination/PageInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/pagination/PageInterceptor.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/AuthCodeParams.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/AuthCodeParams.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/PreOrderParams.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/PreOrderParams.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/RefundOrderParams.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/RefundOrderParams.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/TransfersParams.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/params/TransfersParams.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/service/impl/TradeDetailServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/service/impl/TradeDetailServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/service/impl/WXPayServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/service/impl/WXPayServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/qg/wxpay/CodeUtils.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/qg/wxpay/CodeUtils.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/qg/wxpay/MyWxPayConfig.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/qg/wxpay/MyWxPayConfig.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/Arith.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/Arith.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/DateConverter.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/DateConverter.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/DownloadUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/DownloadUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/ImgFontByte.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/ImgFontByte.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/Template.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/Template.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/UtilFuns.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/UtilFuns.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/file/FileUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/file/FileUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/itcast/util/file/PoiUtil.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/util/file/PoiUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/target/classes/springmvc-servlet.xml" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT.war" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/beans.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/beans.xml" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/BaseController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/BaseController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/HomeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/adv/AdvController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/adv/AdvController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/area/AreaController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/area/AreaController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/category/CategoryController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/category/CategoryController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/classs/ClasssController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/classs/ClasssController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/course/CourseController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/course/CourseController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phoneattendance/PhoneAttendanceController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phoneattendance/PhoneAttendanceController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phoneclasss/PhoneClasssController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phoneclasss/PhoneClasssController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonerecharge/PhoneRechargeController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonerecharge/PhoneRechargeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonerefund/PhoneRefundController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonerefund/PhoneRefundController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonestudent/PhoneStudentController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonesystemUser/PhoneSysUserController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonesystemUser/PhoneSysUserController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phoneteacher/PhoneTeacherController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonetrade/PhoneTradeController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonetrade/PhoneTradeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonetradedetail/PhoneTradeDetailController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonetradedetail/PhoneTradeDetailController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonetransfer/PhoneTransferController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonetransfer/PhoneTransferController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonewithdraw/PhoneWithdrawController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/phonewithdraw/PhoneWithdrawController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/rank/RankController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/rank/RankController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/recharge/RechargeController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/recharge/RechargeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/refund/RefundApplyController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/refund/RefundApplyController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/refund/RefundController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/refund/RefundController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/role/RoleController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/role/RoleController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/student/StudentController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/student/StudentController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/systemUser/SysUserController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/systemUser/SysUserController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/test/DataInsertController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/test/DataInsertController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/trade/TradeController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/trade/TradeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/tradedetail/TradeDetailController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/tradedetail/TradeDetailController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/transfer/TransferController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/transfer/TransferController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/withdraw/WithdrawController.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/controller/basicinfo/withdraw/WithdrawController.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/domain/AcToken.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/domain/AcToken.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/interceptor/MainInterceptor.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/interceptor/MainInterceptor.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/interceptor/SysAutIdentiInterceptor.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/interceptor/SysAutIdentiInterceptor.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/interceptor/UserAutIdentiInterceptor.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/interceptor/UserAutIdentiInterceptor.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/AdvMapper.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/AdvMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/StudentMapper.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/StudentMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/SysUserMapper.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/SysUserMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/TransferMapper.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/mapper/TransferMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/pagination/PageInterceptor$ReflectUtil.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/pagination/PageInterceptor$ReflectUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/pagination/PageInterceptor.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/pagination/PageInterceptor.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/AuthCodeParams.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/AuthCodeParams.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/PreOrderParams.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/PreOrderParams.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/RefundOrderParams.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/RefundOrderParams.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/TransfersParams.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/params/TransfersParams.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/service/impl/TradeDetailServiceImpl.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/service/impl/TradeDetailServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/service/impl/WXPayServiceImpl.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/jk/service/impl/WXPayServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/qg/wxpay/CodeUtils.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/qg/wxpay/CodeUtils.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/qg/wxpay/MyWxPayConfig.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/qg/wxpay/MyWxPayConfig.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/Arith.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/Arith.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/DateConverter.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/DateConverter.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/DownloadUtil.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/DownloadUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/ImgFontByte.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/ImgFontByte.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/Template.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/Template.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/UtilFuns.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/UtilFuns.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/file/FileUtil.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/file/FileUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/file/PoiUtil.class" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/cn/itcast/util/file/PoiUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/jdbc.properties" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/jdbc.properties" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/classes/springmvc-servlet.xml" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/adv/jAdvUpdate.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/adv/jAdvUpdate.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/classs/jClasssUpdate.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/classs/jClasssUpdate.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/course/jCourseCreate.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/course/jCourseCreate.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/course/jCourseUpdate.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/course/jCourseUpdate.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/phoneuser/Main.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/phoneuser/Main.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/sysuser/jSysUserUpdate.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/sysuser/jSysUserUpdate.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/teacher/classlist.html" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/teacher/classlist.html" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/trade/jTradeListz.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/trade/jTradeListz.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/trade/jTradeView.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/trade/jTradeView.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/trade/myinfo.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/basicinfo/trade/myinfo.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/cargo/left.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/cargo/left.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/title.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/home/title.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/pages/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/skin/default/css/login.css" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/skin/default/css/login.css" />
-      <change beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/skin/default/css/title.css" afterPath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/skin/default/css/title.css" />
     </list>
     <list id="78662e8c-9b3e-46b1-804a-82d403c421de" name="Failed commit: Default (4)" comment="根据uid获取用户" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1288,7 +1058,7 @@
       <workItem from="1526358073370" duration="3051000" />
       <workItem from="1526451182096" duration="9471000" />
       <workItem from="1526479304994" duration="187000" />
-      <workItem from="1526555406810" duration="30000" />
+      <workItem from="1526555406810" duration="269000" />
     </task>
     <task id="LOCAL-00001" summary="初始版本">
       <created>1521460448883</created>
@@ -1353,11 +1123,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521709496230</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="根据uid获取用户">
+      <created>1526555517151</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1526555517152</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89569000" />
+    <option name="totallyTimeSpent" value="89808000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1721,6 +1498,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="110" column="5" lean-forward="false" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
