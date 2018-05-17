@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+         pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!doctype html>
 <html>
 
@@ -50,6 +50,7 @@
         </div>
 
 
+
     </div>
 </div>
 
@@ -61,57 +62,54 @@
         style="width: 80%; margin-left: 10%;margin-top: 0.2rem;margin-bottom: 0.2rem;">
     <a href="javascript:;" id="submit-btn" class="weui-btn weui-btn_warn">确认支付</a>
 </div>
+<input type="hidden" value=${wxJsApiParam} id="wxJsApiParam" >
 
 
 </body>
 <script type="text/javascript">
-    $(function () {
+    var jsonParam=document.getElementById("wxJsApiParam").value;
+    $(function() {
         $('#submit-btn')
             .click(
-                function (event) {
-
-
-                    callpay();
-
-
-                });
-
+                function(event) {
+                    $.ajax({
+                        url : "${pageContext.request.contextPath}/phone/user/basicinfo/trade/czinsert.action",
+                        data : {},
+                        type : "get",
+                        dataType : "json",
+                        //很重要!!!.  预期服务器返回的数据类型
+                        error : function(XMLHttpRequest,
+                                         textStatus, errorThrown) {
+                            alert("订单发起错误，请重新支付");
+                            alert(XMLHttpRequest.status);
+                            alert(XMLHttpRequest.readyState);
+                            alert(textStatus);
+                        },
+                        success : function(data) {
+                            //只有后台预插入成功才会调用微信支付
+                            callpay(data[0].id);
+                        }
+                    });
+                }
+            );
     });
 </script>
 <script type="text/javascript">
     //var json = ${wxJsApiParam};必须在同一行
     var json = ${wxJsApiParam};
     //alert("["+JSON.stringify(json)+"]");
-    function jsApiCall() {
+    function jsApiCall(id) {
         WeixinJSBridge
             .invoke('getBrandWCPayRequest',
                 json,//josn串
-                function (res) {
+                function(res) {
                     WeixinJSBridge.log(res.err_msg);
                     if (res.err_msg == "get_brand_wcpay_request:ok") {
-                        $
-                            .ajax({
-                                url: "${pageContext.request.contextPath}/phone/user/basicinfo/trade/czinsert.action",
-                                data: {},
-                                type: "get",
-                                dataType: "json", //很重要!!!.  预期服务器返回的数据类型
-                                error: function (XMLHttpRequest,
-                                                 textStatus, errorThrown) {
-                                    alert("付款成功，存入数据库失败，请联系管理员");
-                                    alert(XMLHttpRequest.status);
-                                    alert(XMLHttpRequest.readyState);
-                                    alert(textStatus);
-                                },
-                                success: function (data) {
-
-                                    window.location.href = "http://wxtest.iamlj.com/qggy/phone/public/basicinfo/trade/czsucess.action?id=" + data[0].id;
-                                }
-                            });
-
+                        window.location.href = "http://wxtest.iamlj.com/qggy/phone/public/basicinfo/trade/czsucess.action?id="+id;
                     }
                 });
     }
-    function callpay() {
+    function callpay(id) {
         if (typeof WeixinJSBridge == "undefined") {
             if (document.addEventListener) {
                 document.addEventListener('WeixinJSBridgeReady', jsApiCall,
@@ -121,7 +119,7 @@
                 document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
             }
         } else {
-            jsApiCall();
+            jsApiCall(id);
         }
     }
 </script>

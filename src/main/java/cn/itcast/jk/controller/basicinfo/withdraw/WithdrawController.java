@@ -95,7 +95,7 @@ public class WithdrawController extends BaseController {
     /**
      * 提现
      *
-     * @param ids
+     * @param id
      * @return
      */
     @RequestMapping("/basicinfo/withdraw/getmoneysure.action")

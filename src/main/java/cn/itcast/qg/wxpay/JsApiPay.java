@@ -15,12 +15,13 @@ public class JsApiPay {
     private double countmoney;
     private double weixinmoney;
     private double xianjin;
-
+    // 无论是内部交易还是微信交易，必须使用paypreorder.action中
+    // 生成tradeid作为数据表中的交易ID，为了能够回滚
+    private String tradeid;
 
     /**
      * 用户ID
      */
-
 
     /**
      * 课程ID
@@ -137,7 +138,6 @@ public class JsApiPay {
         this.body = body;
     }
 
-
     public String getPrepayid() {
         return prepayid;
     }
@@ -153,7 +153,6 @@ public class JsApiPay {
     public void setOuttradeno(String outtradeno) {
         this.outtradeno = outtradeno;
     }
-
 
     public int getAmount() {
         return amount;
@@ -225,6 +224,14 @@ public class JsApiPay {
 
     public void setXianjin(double xianjin) {
         this.xianjin = xianjin;
+    }
+
+    public String getTradeid() {
+        return tradeid;
+    }
+
+    public void setTradeid(String tradeid) {
+        this.tradeid = tradeid;
     }
 
 }

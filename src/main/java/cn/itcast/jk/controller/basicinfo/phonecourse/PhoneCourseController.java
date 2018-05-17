@@ -191,4 +191,9 @@ public class PhoneCourseController extends BaseController {
         return "/basicinfo/course/fxPhCourseDetail.jsp";
     }
 
+    //app接口转向课程列表
+    @RequestMapping("/app/user/courseList.action")
+    public String appToCourseList() {
+        return "redirect:/phone/public/basicinfo/course/view.action";
+    }
 }

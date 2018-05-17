@@ -35,8 +35,12 @@
             <bean class="cn.itcast.jk.interceptor.LoginInterceptor"></bean>
         </mvc:interceptor>
         <mvc:interceptor>
+            <mvc:mapping path="/app/user/**"/>
+            <bean class="cn.itcast.jk.interceptor.appInterceptor"></bean>
+        </mvc:interceptor>
+        <mvc:interceptor>
             <mvc:mapping path="/phone/user/**"/>
-            <bean class="cn.itcast.jk.interceptor.UserAutIdentiInterceptortest"></bean>
+            <bean class="cn.itcast.jk.interceptor.UserAutIdentiInterceptor"></bean>
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/phone/sys/**"/>

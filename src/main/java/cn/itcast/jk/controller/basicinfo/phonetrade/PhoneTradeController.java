@@ -32,7 +32,6 @@ import cn.itcast.jk.service.CourseService;
 import cn.itcast.jk.service.StudentService;
 import cn.itcast.jk.service.TradeDetailService;
 import cn.itcast.jk.service.TradeService;
-import cn.itcast.jk.service.WXPayService;
 import cn.itcast.jk.vo.TradeVO;
 import cn.itcast.qg.wxpay.CodeUtils;
 import cn.itcast.qg.wxpay.JsApiPay;
@@ -61,13 +60,10 @@ public class PhoneTradeController extends BaseController {
     CourseService courseService;
     @Resource
     TradeDetailService tradedetailService;
-    @Resource
-    WXPayService wXPayService;
 
     // 列表
     @RequestMapping("/phone/user/basicinfo/trade/list.action")
-    public
-    @ResponseBody
+    public @ResponseBody
     String list(HttpSession session, int state) {
         Student s = (Student) session.getAttribute("user");
 
@@ -81,7 +77,8 @@ public class PhoneTradeController extends BaseController {
 
         JsonConfig config = new JsonConfig();
         config.setIgnoreDefaultExcludes(false);
-        config.registerJsonValueProcessor(java.util.Date.class, new JsonDateValueProcessor());
+        config.registerJsonValueProcessor(java.util.Date.class,
+                new JsonDateValueProcessor());
         JSONArray jsonObject = JSONArray.fromObject(dataList, config);
         // System.out.println(jsonObject.toString());
         return jsonObject.toString();
@@ -89,8 +86,7 @@ public class PhoneTradeController extends BaseController {
 
     // 个人充值查询
     @RequestMapping("/phone/user/basicinfo/trade/listrecharge.action")
-    public
-    @ResponseBody
+    public @ResponseBody
     String listrecharge(HttpSession session, int category) {
         Student s = (Student) session.getAttribute("user");
 
@@ -100,7 +96,8 @@ public class PhoneTradeController extends BaseController {
         List<Trade> dataList = tradeService.find(map);
         JsonConfig config = new JsonConfig();
         config.setIgnoreDefaultExcludes(false);
-        config.registerJsonValueProcessor(java.util.Date.class, new JsonDateValueProcessor());
+        config.registerJsonValueProcessor(java.util.Date.class,
+                new JsonDateValueProcessor());
         JSONArray jsonObject = JSONArray.fromObject(dataList, config);
 
         return jsonObject.toString();
@@ -108,14 +105,14 @@ public class PhoneTradeController extends BaseController {
 
     // 个人充值查询
     @RequestMapping("/phone/user/basicinfo/trade/listrechargeone.action")
-    public
-    @ResponseBody
+    public @ResponseBody
     String listrechargeone(HttpSession session, String id) {
 
         Trade dataList = tradeService.get(id);
         JsonConfig config = new JsonConfig();
         config.setIgnoreDefaultExcludes(false);
-        config.registerJsonValueProcessor(java.util.Date.class, new JsonDateValueProcessor());
+        config.registerJsonValueProcessor(java.util.Date.class,
+                new JsonDateValueProcessor());
         JSONArray jsonObject = JSONArray.fromObject(dataList, config);
 
         return jsonObject.toString();
@@ -128,7 +125,8 @@ public class PhoneTradeController extends BaseController {
         Student student = (Student) session.getAttribute("user");
         DecimalFormat df = new DecimalFormat("######0.00");
         // 更新课程余额
-        String xianjin = df.format(student.getXianjin() - dataList.getWeixinmoney());
+        String xianjin = df.format(student.getXianjin()
+                - dataList.getWeixinmoney());
         model.addAttribute("xianjin", xianjin);
         model.addAttribute("trade", dataList);
 
@@ -148,16 +146,22 @@ public class PhoneTradeController extends BaseController {
             model.addAttribute("wxpay", 0.00);
         } else {
             model.addAttribute("coursepay", s.getAvailableAssets());
-            if (s.getAvailableAssets() + s.getXianjin() > course.getCoursePrice()) {
+            if (s.getAvailableAssets() + s.getXianjin() > course
+                    .getCoursePrice()) {
                 model.addAttribute("wxpay", 0.00);
-                model.addAttribute("xianjinpay", Double.parseDouble(
-                        new DecimalFormat("######0.00").format(course.getCoursePrice() - s.getAvailableAssets())));
+                model.addAttribute("xianjinpay", Double
+                        .parseDouble(new DecimalFormat("######0.00")
+                                .format(course.getCoursePrice()
+                                        - s.getAvailableAssets())));
 
             } else {
                 model.addAttribute("xianjinpay", s.getXianjin());
 
-                model.addAttribute("wxpay", Double.parseDouble(new DecimalFormat("######0.00")
-                        .format(course.getCoursePrice() - s.getAvailableAssets() - s.getXianjin())));
+                model.addAttribute("wxpay", Double
+                        .parseDouble(new DecimalFormat("######0.00")
+                                .format(course.getCoursePrice()
+                                        - s.getAvailableAssets()
+                                        - s.getXianjin())));
             }
         }
 
@@ -170,6 +174,7 @@ public class PhoneTradeController extends BaseController {
     public String czpaypre(double money, HttpSession session, Model model) {
 
         JsApiPay jspay = new JsApiPay();
+        jspay.setTradeid(OrderUtil.getOrderNo());
         jspay.setTotalfee(money);
         jspay.setCountmoney(0);
         jspay.setWeixinmoney(money);
@@ -189,17 +194,21 @@ public class PhoneTradeController extends BaseController {
         unifiedOrderParams.put("out_trade_no", out_trade_no);
         unifiedOrderParams.put("notify_url", MyWxPayConfig.NOTIFY_URL);
         System.out.println(jspay.getWeixinmoney() * 100);
-        unifiedOrderParams.put("total_fee", (int) (jspay.getWeixinmoney() * 100) + "");
-        unifiedOrderParams.put("openid", ((Student) session.getAttribute("user")).getUserOpenid());
+        unifiedOrderParams.put("total_fee",
+                (int) (jspay.getWeixinmoney() * 100) + "");
+        unifiedOrderParams.put("openid",
+                ((Student) session.getAttribute("user")).getUserOpenid());
 
         Map<String, String> jsApiParams = null;
         String wxJsApiParam = null;
         try {
-            unifiedOrderParams.put("sign", WXPayUtil.generateSignature(unifiedOrderParams, MyWxPayConfig.KEY));
+            unifiedOrderParams.put("sign", WXPayUtil.generateSignature(
+                    unifiedOrderParams, MyWxPayConfig.KEY));
             // System.out.println(WXPayUtil.mapToXml(unifiedOrderParams));
             Map<String, String> unifiedOrderResult;
 
-            unifiedOrderResult = new WXPay(new MyWxPayConfig()).unifiedOrder(unifiedOrderParams);
+            unifiedOrderResult = new WXPay(new MyWxPayConfig())
+                    .unifiedOrder(unifiedOrderParams);
 
             String prepay_id = unifiedOrderResult.get("prepay_id");
             System.out.println("prepay_Id" + prepay_id + "++++++++++++++");
@@ -207,12 +216,15 @@ public class PhoneTradeController extends BaseController {
             jspay.setPrepayid(prepay_id);
             jsApiParams = new HashMap<String, String>();
             jsApiParams.put("appId", MyWxPayConfig.APPID);
-            jsApiParams.put("timeStamp", System.currentTimeMillis() / 1000 + "");
+            jsApiParams
+                    .put("timeStamp", System.currentTimeMillis() / 1000 + "");
             jsApiParams.put("package", "prepay_id=" + prepay_id);
             jsApiParams.put("nonceStr", WXPayUtil.generateNonceStr());
             jsApiParams.put("signType", WXPayConstants.MD5);
 
-            jsApiParams.put("paySign", WXPayUtil.generateSignature(jsApiParams, MyWxPayConfig.KEY));
+            jsApiParams
+                    .put("paySign", WXPayUtil.generateSignature(jsApiParams,
+                            MyWxPayConfig.KEY));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -236,8 +248,9 @@ public class PhoneTradeController extends BaseController {
 
     // 生成预订单
     @RequestMapping(value = "/phone/user/basicinfo/trade/paypreorder.action", method = RequestMethod.POST)
-    public String paypre(String[] userName, String[] phoneNumber, Model model, String id, int amount, String remark,
-                         HttpServletRequest request, HttpSession session) throws UnsupportedEncodingException {
+    public String paypre(String[] userName, String[] phoneNumber, Model model,
+                         String id, int amount, String remark, HttpServletRequest request,
+                         HttpSession session) throws UnsupportedEncodingException {
 
         List<Student> list = new ArrayList<Student>();
         System.out.println(userName.length + "比较" + amount);
@@ -264,6 +277,7 @@ public class PhoneTradeController extends BaseController {
         double sum = cd.getCoursePrice() * amount;
         System.out.println("sum" + sum);
         JsApiPay jspay = new JsApiPay();
+        jspay.setTradeid(OrderUtil.getOrderNo());
         jspay.setTotalfee(sum);
         if (sum <= user.getAvailableAssets()) {
             jspay.setCountmoney(sum);
@@ -273,14 +287,15 @@ public class PhoneTradeController extends BaseController {
             if (sum <= user.getAvailableAssets() + user.getXianjin()) {
                 jspay.setCountmoney(user.getAvailableAssets());
                 jspay.setWeixinmoney(0.00);
-                jspay.setXianjin(
-                        Double.parseDouble(new DecimalFormat("######0.00").format(sum - user.getAvailableAssets())));
+                jspay.setXianjin(Double.parseDouble(new DecimalFormat(
+                        "######0.00").format(sum - user.getAvailableAssets())));
                 System.out.println("xianjin" + jspay.getXianjin());
             } else {
                 jspay.setCountmoney(user.getAvailableAssets());
                 jspay.setXianjin(user.getXianjin());
-                jspay.setWeixinmoney(Double.parseDouble(
-                        new DecimalFormat("######0.00").format(sum - user.getAvailableAssets() - user.getXianjin())));
+                jspay.setWeixinmoney(Double.parseDouble(new DecimalFormat(
+                        "######0.00").format(sum - user.getAvailableAssets()
+                        - user.getXianjin())));
 
             }
         }
@@ -309,17 +324,21 @@ public class PhoneTradeController extends BaseController {
             unifiedOrderParams.put("nonce_str", WXPayUtil.generateNonceStr());
             unifiedOrderParams.put("out_trade_no", out_trade_no);
             unifiedOrderParams.put("notify_url", MyWxPayConfig.NOTIFY_URL);
-            unifiedOrderParams.put("total_fee", (int) (jspay.getWeixinmoney() * 100) + "");
-            unifiedOrderParams.put("openid", ((Student) session.getAttribute("user")).getUserOpenid());
+            unifiedOrderParams.put("total_fee",
+                    (int) (jspay.getWeixinmoney() * 100) + "");
+            unifiedOrderParams.put("openid",
+                    ((Student) session.getAttribute("user")).getUserOpenid());
 
             Map<String, String> jsApiParams = null;
             String wxJsApiParam = null;
             try {
-                unifiedOrderParams.put("sign", WXPayUtil.generateSignature(unifiedOrderParams, MyWxPayConfig.KEY));
+                unifiedOrderParams.put("sign", WXPayUtil.generateSignature(
+                        unifiedOrderParams, MyWxPayConfig.KEY));
                 // System.out.println(WXPayUtil.mapToXml(unifiedOrderParams));
                 Map<String, String> unifiedOrderResult;
 
-                unifiedOrderResult = new WXPay(new MyWxPayConfig()).unifiedOrder(unifiedOrderParams);
+                unifiedOrderResult = new WXPay(new MyWxPayConfig())
+                        .unifiedOrder(unifiedOrderParams);
                 System.out.println(WXPayUtil.mapToXml(unifiedOrderResult));
                 String prepay_id = unifiedOrderResult.get("prepay_id");
                 System.out.println("prepay_Id" + prepay_id + "++++++++++++++");
@@ -327,12 +346,14 @@ public class PhoneTradeController extends BaseController {
                 jspay.setPrepayid(prepay_id);
                 jsApiParams = new HashMap<String, String>();
                 jsApiParams.put("appId", MyWxPayConfig.APPID);
-                jsApiParams.put("timeStamp", System.currentTimeMillis() / 1000 + "");
+                jsApiParams.put("timeStamp", System.currentTimeMillis() / 1000
+                        + "");
                 jsApiParams.put("package", "prepay_id=" + prepay_id);
                 jsApiParams.put("nonceStr", WXPayUtil.generateNonceStr());
                 jsApiParams.put("signType", WXPayConstants.MD5);
 
-                jsApiParams.put("paySign", WXPayUtil.generateSignature(jsApiParams, MyWxPayConfig.KEY));
+                jsApiParams.put("paySign", WXPayUtil.generateSignature(
+                        jsApiParams, MyWxPayConfig.KEY));
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -352,7 +373,7 @@ public class PhoneTradeController extends BaseController {
 
             model.addAttribute("jspay", jspay);
             session.setAttribute("jspay", jspay);
-            model.addAttribute("wxJsApiParam", "123");
+            model.addAttribute("wxJsApiParam", "noweixintrade");
         }
         return "/basicinfo/trade/paymoney.jsp";
 
@@ -360,14 +381,14 @@ public class PhoneTradeController extends BaseController {
 
     // 查看
     @RequestMapping("/phone/user/basicinfo/trade/toview.action")
-    public
-    @ResponseBody
+    public @ResponseBody
     String toview(String id) {
         System.out.println(id + "000000000000");
         TradeVO obj = tradeService.view(id);
         JsonConfig config = new JsonConfig();
         config.setIgnoreDefaultExcludes(false);
-        config.registerJsonValueProcessor(java.util.Date.class, new JsonDateValueProcessor());
+        config.registerJsonValueProcessor(java.util.Date.class,
+                new JsonDateValueProcessor());
         JSONArray jsonObject = JSONArray.fromObject(obj, config);
 
         return jsonObject.toString();
@@ -380,8 +401,10 @@ public class PhoneTradeController extends BaseController {
         TradeVO obj = tradeService.view(id);
         Student student = (Student) session.getAttribute("user");
         System.out.println(student);
-        if (student != null && obj.getTradedetails().size() == 1
-                && obj.getTradedetails().get(0).getUserId().equals(student.getId())) {
+        if (student != null
+                && obj.getTradedetails().size() == 1
+                && obj.getTradedetails().get(0).getUserId()
+                .equals(student.getId())) {
             System.out.println("bunengfenxiang");
             return "redirect:/phone/user/myorder.action";
         } else {
@@ -392,28 +415,13 @@ public class PhoneTradeController extends BaseController {
         }
     }
 
-    // 下单付款
+    // 无论是微信支付还是内部账户支付，都做插入，唯一的区别就是微信支付的详细数据会在之后的查询时填充完成
+    // （微信支付可能成功或失败,微信支付的详细数据会在之后的查询时填充完成或删除）
+    // 内部账户支付要更新数据库和session中的user，使用paypreorder.action中生成tradeid作为数据表中的tradeid，失败时作为回滚依据（如果回滚失败就真失败了）
     @RequestMapping(value = "/phone/user/basicinfo/trade/orderinsert.action", method = RequestMethod.GET)
-    public
-    @ResponseBody
+    public @ResponseBody
     String orderinsert(HttpServletRequest request) {
-        // System.out.println("YYYYYYYYYYYYYYYYYYYY");
         JsApiPay jspay = (JsApiPay) request.getSession().getAttribute("jspay");
-        System.out.println("RRRRRRRRRRRRRRRRRRR" + jspay.getTransactionid());
-        if (jspay.getWeixinmoney() > 0) {
-            Map<String, String> orderResult = wXPayService.QueryOrderByOut_Trade_No(jspay.getOuttradeno());
-            if (orderResult != null) {
-                jspay.setBanktype(orderResult.get("bank_type"));
-                jspay.setTransactionid(orderResult.get("transaction_id"));
-                jspay.setFeetype(orderResult.get("fee_type"));
-                jspay.setDeviceinfo(orderResult.get("device_info"));
-                jspay.setTradetype(orderResult.get("trade_type"));
-                jspay.setTimeend(orderResult.get("time_end"));
-                jspay.setCashfee(Double.parseDouble(orderResult.get("cash_fee").trim()));
-                // jspay.setTotalfee(Double.parseDouble(orderResult.get("total_fee")));
-            }
-        }
-
         Trade trade = new Trade();
         trade.setCategory(0);
         trade.setTotalFee(jspay.getTotalfee());
@@ -423,28 +431,25 @@ public class PhoneTradeController extends BaseController {
         trade.setXianjinPay(jspay.getXianjin());
         trade.setState(0);
         trade.setPayTime(new Date());
-        trade.setBankType(jspay.getBanktype());
-        trade.setCashFee(jspay.getCashfee() / 100);
-        trade.setDeviceInfo(jspay.getDeviceinfo());
-        trade.setFeeType(jspay.getFeetype());
         trade.setOutTradeNo(jspay.getOuttradeno());
-        trade.setTimeEnd(jspay.getTimeend());
-        trade.setTradeType(jspay.getTradetype());
-        trade.setTransactionId(jspay.getTransactionid());
-        trade.setId(OrderUtil.getOrderNo());
+        trade.setId(jspay.getTradeid());
         Student s = (Student) request.getSession().getAttribute("user");
         // System.out.println("s.getAvailableAssets()" +
         // s.getAvailableAssets());
         // System.out.println("jspay.getCountmoney()" + jspay.getCountmoney());
-        String temp = new DecimalFormat("######0.00").format(s.getAvailableAssets() - jspay.getCountmoney());
+        String temp = new DecimalFormat("######0.00").format(s
+                .getAvailableAssets() - jspay.getCountmoney());
         s.setAvailableAssets(Double.parseDouble(temp));
         // System.out.println("s.setAvailableAssets()" +
         // s.getAvailableAssets());
-        String xinjin = new DecimalFormat("######0.00").format(s.getXianjin() - jspay.getXianjin());
+        String xinjin = new DecimalFormat("######0.00").format(s.getXianjin()
+                - jspay.getXianjin());
         s.setXianjin(Double.parseDouble(xinjin));
+
         studentService.update(s);
         // 更新session中user
         request.getSession().setAttribute("user", s);
+        System.out.println(s.getUserName() + "In orderinsert.action");
 
         trade.setPayUserId(s.getId());
         trade.setPayUserName(s.getUserName());
@@ -456,7 +461,8 @@ public class PhoneTradeController extends BaseController {
         tradeService.insert(trade);
         for (int i = 0; i < jspay.getStudentlist().size(); i++) {
             Map<String, String> paraMap = new HashMap<String, String>();
-            paraMap.put("phoneNumber", jspay.getStudentlist().get(i).getPhoneNumber());
+            paraMap.put("phoneNumber", jspay.getStudentlist().get(i)
+                    .getPhoneNumber());
             paraMap.put("userName", jspay.getStudentlist().get(i).getUserName());
 
             List<Student> ss = studentService.find(paraMap);
@@ -510,25 +516,10 @@ public class PhoneTradeController extends BaseController {
 
     // 下单付款
     @RequestMapping(value = "/phone/user/basicinfo/trade/czinsert.action", method = RequestMethod.GET)
-    public
-    @ResponseBody
+    public @ResponseBody
     String czinsert(HttpServletRequest request) {
-        System.out.println("YYYYYYYYYYYYYYYYYYYY");
-        JsApiPay jspay = (JsApiPay) request.getSession().getAttribute("czjspay");
-        System.out.println("RRRRRRRRRRRRRRRRRRR" + jspay.getTransactionid());
-        if (jspay.getWeixinmoney() > 0) {
-            Map<String, String> orderResult = wXPayService.QueryOrderByOut_Trade_No(jspay.getOuttradeno());
-            if (orderResult != null) {
-                jspay.setBanktype(orderResult.get("bank_type"));
-                jspay.setTransactionid(orderResult.get("transaction_id"));
-                jspay.setFeetype(orderResult.get("fee_type"));
-                jspay.setDeviceinfo(orderResult.get("device_info"));
-                jspay.setTradetype(orderResult.get("trade_type"));
-                jspay.setTimeend(orderResult.get("time_end"));
-                jspay.setCashfee(Double.parseDouble(orderResult.get("cash_fee").trim()));
-                // jspay.setTotalfee(Double.parseDouble(orderResult.get("total_fee")));
-            }
-        }
+        JsApiPay jspay = (JsApiPay) request.getSession()
+                .getAttribute("czjspay");
 
         Trade trade = new Trade();
         trade.setCategory(1);
@@ -539,20 +530,15 @@ public class PhoneTradeController extends BaseController {
         trade.setXianjinPay(jspay.getXianjin());
         trade.setState(0);
         trade.setPayTime(new Date());
-        trade.setBankType(jspay.getBanktype());
-        trade.setCashFee(jspay.getCashfee() / 100);
-        trade.setDeviceInfo(jspay.getDeviceinfo());
-        trade.setFeeType(jspay.getFeetype());
         trade.setOutTradeNo(jspay.getOuttradeno());
-        trade.setTimeEnd(jspay.getTimeend());
-        trade.setTradeType(jspay.getTradetype());
-        trade.setTransactionId(jspay.getTransactionid());
-        trade.setId(OrderUtil.getOrderNo());
+
+        trade.setId(jspay.getTradeid());
         Student s = (Student) request.getSession().getAttribute("user");
         // System.out.println("s.getAvailableAssets()" +
         // s.getAvailableAssets());
         // System.out.println("jspay.getCountmoney()" + jspay.getCountmoney());
-        String temp = new DecimalFormat("######0.00").format(s.getXianjin() + jspay.getTotalfee());
+        String temp = new DecimalFormat("######0.00").format(s.getXianjin()
+                + jspay.getTotalfee());
         s.setXianjin(Double.parseDouble(temp));
         // System.out.println("s.setAvailableAssets()" +
         // s.getAvailableAssets());
@@ -560,6 +546,7 @@ public class PhoneTradeController extends BaseController {
         studentService.update(s);
         // 更新session中user
         request.getSession().setAttribute("user", s);
+        System.out.println(s.getUserName() + "In czinsert.action");
 
         trade.setPayUserId(s.getId());
         trade.setPayUserName(s.getUserName());
@@ -572,6 +559,37 @@ public class PhoneTradeController extends BaseController {
 
         request.getSession().removeAttribute("czjspay");
         JSONArray jsonObject = JSONArray.fromObject(trade);
+        return jsonObject.toString();
+
+    }
+
+    // 只能回滚内部账户支付，因为微信支付失败时，微信负责回滚给用户，微信支付失败的详细数据会在之后的查询时填充完成或删除
+    @RequestMapping(value = "/phone/user/basicinfo/trade/rollbackinsert.action", method = RequestMethod.GET)
+    public @ResponseBody
+    String rollbackinsert(HttpServletRequest request) {
+        Student s = (Student) request.getSession().getAttribute("user");
+        JsApiPay jspay = (JsApiPay) request.getSession()
+                .getAttribute("czjspay");
+
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("id", s.getId());
+        Student datas = (Student) studentService.find(params);
+
+        if (datas.getAvailableAssets() != s.getAvailableAssets()
+                || datas.getXianjin() != s.getXianjin()) {
+            // 数据库已插入，session未更新
+            request.getSession().setAttribute("user", s);
+            TradeVO tradevo = tradeService.view(jspay.getTradeid());
+            if (tradevo != null) {
+                tradeService.deleteById(jspay.getTradeid());
+                if (tradevo.getTradedetails() != null) {
+                    for (TradeDetail td : tradevo.getTradedetails()) {
+                        tradedetailService.deleteById(td.getId());
+                    }
+                }
+            }
+        }
+        JSONArray jsonObject = JSONArray.fromObject("success");
         return jsonObject.toString();
 
     }

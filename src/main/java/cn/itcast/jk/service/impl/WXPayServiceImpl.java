@@ -23,6 +23,7 @@ import com.github.wxpay.sdk.WXPayUtil;
  * 支付服务
  *
  * @author Administrator
+ *
  */
 @Service
 public class WXPayServiceImpl implements WXPayService {
@@ -42,10 +43,14 @@ public class WXPayServiceImpl implements WXPayService {
         // 默认使用MD5
         Map<String, String> resultResult;
         try {
-            orderParams.put("sign", WXPayUtil.generateSignature(orderParams, MyWxPayConfig.KEY));
+            orderParams
+                    .put("sign", WXPayUtil.generateSignature(orderParams,
+                            MyWxPayConfig.KEY));
             resultResult = wxPay.orderQuery(orderParams);
             String return_code = resultResult.get("return_code");
-            if (return_code.equals("SUCCESS")) {
+            if (return_code.equals("SUCCESS")
+                    && resultResult.get("result_code").equals("SUCCESS")
+                    && resultResult.get("trade_state").equals("SUCCESS")) {
                 return resultResult;
             } else if (return_code.equals("NOTENOUGH")) {
                 System.out.println("余额不足 用户帐号余额不足  ");
@@ -106,12 +111,15 @@ public class WXPayServiceImpl implements WXPayService {
 
     /**
      * 提现,返回XML数据 <return_code><![CDATA[SUCCESS]]></return_code>
+     *
      */
     @Override
     public String transfers(AbstractParams transfersParams) {
         try {
-            return wxPay.requestWithCert(MyWxPayConfig.TRANSFERS, transfersParams.getParams(),
-                    myWxPayConfig.getHttpConnectTimeoutMs(), myWxPayConfig.getHttpReadTimeoutMs());
+            return wxPay.requestWithCert(MyWxPayConfig.TRANSFERS,
+                    transfersParams.getParams(),
+                    myWxPayConfig.getHttpConnectTimeoutMs(),
+                    myWxPayConfig.getHttpReadTimeoutMs());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -135,7 +143,8 @@ public class WXPayServiceImpl implements WXPayService {
             httpURLConnection = (HttpURLConnection) connection;
             // 获取响应输入流
             InputStream inStream = httpURLConnection.getInputStream();
-            String result = CodeUtils.getResponseBodyAsString(inStream, "utf-8");
+            String result = CodeUtils
+                    .getResponseBodyAsString(inStream, "utf-8");
             // System.out.println(result);
             JSONObject res = new JSONObject(result);
             AcToken acToken = new AcToken();
