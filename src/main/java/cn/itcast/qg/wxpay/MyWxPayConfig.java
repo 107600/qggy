@@ -80,6 +80,16 @@ public class MyWxPayConfig implements WXPayConfig {
 	 */
     public final static int LOG_LEVENL = 0;
 
+    /*
+  * 网站URL地址
+  */
+    public final static String WAP_URL = "http://wxtest.iamlj.com";
+
+    /*
+     * 网站名
+     */
+    public final static String WAP_NAME = "青果公益";
+
     public String getAppID() {
 
         return MyWxPayConfig.APPID;

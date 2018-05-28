@@ -174,7 +174,6 @@ public class PhoneTradeController extends BaseController {
     public String czpaypre(double money, HttpSession session, Model model) {
 
         JsApiPay jspay = new JsApiPay();
-        jspay.setTradeid(OrderUtil.getOrderNo());
         jspay.setTotalfee(money);
         jspay.setCountmoney(0);
         jspay.setWeixinmoney(money);
@@ -246,11 +245,12 @@ public class PhoneTradeController extends BaseController {
 
     }
 
-    // 生成预订单
+    // 生成预订单,isweixin为1，表示为微信内置浏览器
     @RequestMapping(value = "/phone/user/basicinfo/trade/paypreorder.action", method = RequestMethod.POST)
     public String paypre(String[] userName, String[] phoneNumber, Model model,
-                         String id, int amount, String remark, HttpServletRequest request,
-                         HttpSession session) throws UnsupportedEncodingException {
+                         String id, int amount, String remark, int isweixin,
+                         HttpServletRequest request, HttpSession session)
+            throws UnsupportedEncodingException {
 
         List<Student> list = new ArrayList<Student>();
         System.out.println(userName.length + "比较" + amount);
@@ -315,58 +315,111 @@ public class PhoneTradeController extends BaseController {
         // jspay.setTotalfee(totalfee);
         // 统一下单参数
         if (jspay.getWeixinmoney() > 0) {
-            Map<String, String> unifiedOrderParams = new HashMap<String, String>();
-            unifiedOrderParams.put("appid", MyWxPayConfig.APPID);
-            unifiedOrderParams.put("mch_id", MyWxPayConfig.MCHID);
-            unifiedOrderParams.put("device_info", "WEB");
-            unifiedOrderParams.put("body", body);
-            unifiedOrderParams.put("trade_type", "JSAPI");
-            unifiedOrderParams.put("nonce_str", WXPayUtil.generateNonceStr());
-            unifiedOrderParams.put("out_trade_no", out_trade_no);
-            unifiedOrderParams.put("notify_url", MyWxPayConfig.NOTIFY_URL);
-            unifiedOrderParams.put("total_fee",
-                    (int) (jspay.getWeixinmoney() * 100) + "");
-            unifiedOrderParams.put("openid",
-                    ((Student) session.getAttribute("user")).getUserOpenid());
-
-            Map<String, String> jsApiParams = null;
-            String wxJsApiParam = null;
-            try {
-                unifiedOrderParams.put("sign", WXPayUtil.generateSignature(
-                        unifiedOrderParams, MyWxPayConfig.KEY));
-                // System.out.println(WXPayUtil.mapToXml(unifiedOrderParams));
-                Map<String, String> unifiedOrderResult;
-
-                unifiedOrderResult = new WXPay(new MyWxPayConfig())
-                        .unifiedOrder(unifiedOrderParams);
-                System.out.println(WXPayUtil.mapToXml(unifiedOrderResult));
-                String prepay_id = unifiedOrderResult.get("prepay_id");
-                System.out.println("prepay_Id" + prepay_id + "++++++++++++++");
-
-                jspay.setPrepayid(prepay_id);
-                jsApiParams = new HashMap<String, String>();
-                jsApiParams.put("appId", MyWxPayConfig.APPID);
-                jsApiParams.put("timeStamp", System.currentTimeMillis() / 1000
-                        + "");
-                jsApiParams.put("package", "prepay_id=" + prepay_id);
-                jsApiParams.put("nonceStr", WXPayUtil.generateNonceStr());
-                jsApiParams.put("signType", WXPayConstants.MD5);
-
-                jsApiParams.put("paySign", WXPayUtil.generateSignature(
-                        jsApiParams, MyWxPayConfig.KEY));
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-
-            wxJsApiParam = CodeUtils.mapToJson(jsApiParams);
-            System.out.println(wxJsApiParam.toString());
 
             model.addAttribute("course", cd);
+            if (isweixin == 1) {
+                // 微信内置浏览器
+                String wxJsApiParam = null;
+                Map<String, String> unifiedOrderParams = new HashMap<String, String>();
+                unifiedOrderParams.put("appid", MyWxPayConfig.APPID);
+                unifiedOrderParams.put("mch_id", MyWxPayConfig.MCHID);
+                unifiedOrderParams.put("device_info", "WEB");
+                unifiedOrderParams.put("body", body);
+                unifiedOrderParams.put("trade_type", "JSAPI");
+                unifiedOrderParams.put("nonce_str",
+                        WXPayUtil.generateNonceStr());
+                unifiedOrderParams.put("out_trade_no", out_trade_no);
+                unifiedOrderParams.put("notify_url", MyWxPayConfig.NOTIFY_URL);
+                unifiedOrderParams.put("total_fee",
+                        (int) (jspay.getWeixinmoney() * 100) + "");
+                unifiedOrderParams.put("openid", ((Student) session
+                        .getAttribute("user")).getUserOpenid());
+                Map<String, String> jsApiParams = null;
+                try {
+                    unifiedOrderParams.put("sign", WXPayUtil.generateSignature(
+                            unifiedOrderParams, MyWxPayConfig.KEY));
+                    // System.out.println(WXPayUtil.mapToXml(unifiedOrderParams));
+                    Map<String, String> unifiedOrderResult;
 
-            model.addAttribute("jspay", jspay);
-            session.setAttribute("jspay", jspay);
-            model.addAttribute("wxJsApiParam", wxJsApiParam);
-            // model.addAttribute("notifyUrl", MyWxPayConfig.NOTIFY_URL);
+                    unifiedOrderResult = new WXPay(new MyWxPayConfig())
+                            .unifiedOrder(unifiedOrderParams);
+                    System.out.println(WXPayUtil.mapToXml(unifiedOrderResult));
+                    String prepay_id = unifiedOrderResult.get("prepay_id");
+                    System.out.println("prepay_Id:\t\t" + prepay_id
+                            + "++++++++");
+
+                    jspay.setPrepayid(prepay_id);
+                    jsApiParams = new HashMap<String, String>();
+                    jsApiParams.put("appId", MyWxPayConfig.APPID);
+                    jsApiParams.put("timeStamp", System.currentTimeMillis()
+                            / 1000 + "");
+                    jsApiParams.put("package", "prepay_id=" + prepay_id);
+                    jsApiParams.put("nonceStr", WXPayUtil.generateNonceStr());
+                    jsApiParams.put("signType", WXPayConstants.MD5);
+                    jsApiParams.put("paySign", WXPayUtil.generateSignature(
+                            jsApiParams, MyWxPayConfig.KEY));
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+
+                wxJsApiParam = CodeUtils.mapToJson(jsApiParams);
+                System.out.println(wxJsApiParam.toString());
+                session.setAttribute("jspay", jspay);
+                model.addAttribute("wxJsApiParam", wxJsApiParam);
+                model.addAttribute("jspay", jspay);
+                // model.addAttribute("notifyUrl", MyWxPayConfig.NOTIFY_URL);
+
+                return "/basicinfo/trade/paymoney.jsp";
+            } else {
+
+                // 第三方浏览器,https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_20&index=1
+                Map<String, String> unifiedOrderParams = new HashMap<String, String>();
+                unifiedOrderParams.put("appid", MyWxPayConfig.APPID);
+                unifiedOrderParams.put("mch_id", MyWxPayConfig.MCHID);
+                unifiedOrderParams.put("device_info", "WEB");
+                unifiedOrderParams.put("body", body);
+                unifiedOrderParams.put("trade_type", "MWEB");
+                unifiedOrderParams.put("nonce_str",
+                        WXPayUtil.generateNonceStr());
+                unifiedOrderParams.put("out_trade_no", out_trade_no);
+                //订单插入可以写在notify_url里
+                unifiedOrderParams.put("notify_url", MyWxPayConfig.NOTIFY_URL);
+                unifiedOrderParams.put("total_fee",
+                        (int) (jspay.getWeixinmoney() * 100) + "");
+                unifiedOrderParams.put("openid", ((Student) session
+                        .getAttribute("user")).getUserOpenid());
+                unifiedOrderParams.put("spbill_create_ip",
+                        request.getRemoteAddr());
+                unifiedOrderParams.put("scene_info",
+                        "{\"h5_info\": {\"type\":\"Wap\",\"wap_url\": \""
+                                + MyWxPayConfig.WAP_URL + "\",\"wap_name\": \""
+                                + MyWxPayConfig.WAP_NAME + "\"}}");
+
+                try {
+                    unifiedOrderParams.put("sign", WXPayUtil.generateSignature(
+                            unifiedOrderParams, MyWxPayConfig.KEY));
+                    System.out.println(WXPayUtil.mapToXml(unifiedOrderParams));
+                    Map<String, String> unifiedOrderResult;
+
+                    unifiedOrderResult = new WXPay(new MyWxPayConfig())
+                            .unifiedOrder(unifiedOrderParams);
+                    System.out.println(WXPayUtil.mapToXml(unifiedOrderResult));
+                    String prepay_id = unifiedOrderResult.get("prepay_id");
+                    String mweb_url = unifiedOrderResult.get("mweb_url");
+                    System.out.println("mweb_url:\t\t" + mweb_url + "--------");
+                    jspay.setPrepayid(prepay_id);
+
+                    session.setAttribute("mweb_url", mweb_url);
+                    model.addAttribute("mweb_url", mweb_url);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+
+                session.setAttribute("jspay", jspay);
+                model.addAttribute("jspay", jspay);
+                return "/basicinfo/trade/apppaymoney.jsp";
+            }
+
         } else {
             System.out.println("不产生微信支付");
             model.addAttribute("course", cd);
@@ -374,8 +427,9 @@ public class PhoneTradeController extends BaseController {
             model.addAttribute("jspay", jspay);
             session.setAttribute("jspay", jspay);
             model.addAttribute("wxJsApiParam", "noweixintrade");
+
+            return "/basicinfo/trade/paymoney.jsp";
         }
-        return "/basicinfo/trade/paymoney.jsp";
 
     }
 
@@ -415,10 +469,9 @@ public class PhoneTradeController extends BaseController {
         }
     }
 
-    // 无论是微信支付还是内部账户支付，都做插入，唯一的区别就是微信支付的详细数据会在之后的查询时填充完成
-    // （微信支付可能成功或失败,微信支付的详细数据会在之后的查询时填充完成或删除）
-    // 内部账户支付要更新数据库和session中的user，使用paypreorder.action中生成tradeid作为数据表中的tradeid，失败时作为回滚依据（如果回滚失败就真失败了）
-    @RequestMapping(value = "/phone/user/basicinfo/trade/orderinsert.action", method = RequestMethod.GET)
+    // 无论是微信支付还是内部账户支付，都做插入，唯一的区别就是微信支付的详细数据会在之后的查询时与微信交互更新数据或者删除（失败删除）
+    // 使用paypreorder.action中生成jspay设置的tradeid作为数据表中的tradeid，失败时作为回滚依据（如果回滚失败就真失败了）
+    @RequestMapping(value = "/phone/user/basicinfo/trade/orderinsert.action")
     public @ResponseBody
     String orderinsert(HttpServletRequest request) {
         JsApiPay jspay = (JsApiPay) request.getSession().getAttribute("jspay");

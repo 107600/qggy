@@ -13,7 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.github.wxpay.sdk.WXPayUtil;
-
 import cn.itcast.jk.controller.BaseController;
 import cn.itcast.jk.domain.UrRo;
 import cn.itcast.jk.domain.Withdraw;
@@ -42,7 +41,8 @@ public class WithdrawController extends BaseController {
     // 列表
     @RequestMapping("/basicinfo/withdraw/list.action")
     public String list(HttpServletRequest request, Model model, String state) {
-        SysUserVO sys = (SysUserVO) request.getSession().getAttribute("sysUserVO");
+        SysUserVO sys = (SysUserVO) request.getSession().getAttribute(
+                "sysUserVO");
         Map<String, String> map = new HashMap<>();
 
         for (UrRo r : sys.getRoles()) {
@@ -99,10 +99,12 @@ public class WithdrawController extends BaseController {
      * @return
      */
     @RequestMapping("/basicinfo/withdraw/getmoneysure.action")
-    public String getmoneysure(HttpServletRequest request, String id, int state) {
+    public String getmoneysure(HttpServletRequest request, String id,
+                               int state, Model model) {
         // openid
         if (state == 1) {
-            SysUserVO sysUserVO = (SysUserVO) request.getSession().getAttribute("sysUserVO");
+            SysUserVO sysUserVO = (SysUserVO) request.getSession()
+                    .getAttribute("sysUserVO");
 
             Withdraw withdraw = withdrawService.get(id);
             withdraw.setDealUserId(sysUserVO.getId());
@@ -127,10 +129,9 @@ public class WithdrawController extends BaseController {
             params.setRe_user_name(withdraw.getUserName());
             params.setSpbill_create_ip(MyWxPayConfig.IP);
             String result = wxPayService.transfers(params);
-            // String result = null;
 
             // 跳过微信
-            /*
+			/*
 			 * withdraw.setDealUserId(sysUserVO.getId());
 			 * withdraw.setDealUserName(sysUserVO.getName());
 			 * withdraw.setDealOpenId(sysUserVO.getOpenid());
@@ -141,13 +142,16 @@ public class WithdrawController extends BaseController {
 
             if (null != result) {
                 int index = result.indexOf("return_code");
-                String return_code = result.substring(index + 21, result.indexOf("return_code", index + 20) - 5);
+                String return_code = result.substring(index + 21,
+                        result.indexOf("return_code", index + 20) - 5);
                 if (return_code.equals("SUCCESS")) {
                     index = result.indexOf("result_code");
-                    String result_code = result.substring(index + 21, result.indexOf("result_code", index + 20) - 5);
+                    String result_code = result.substring(index + 21,
+                            result.indexOf("result_code", index + 20) - 5);
                     if (result_code.equals("SUCCESS")) {
                         index = result.indexOf("payment_no");
-                        String payment_no = result.substring(index + 20, result.indexOf("payment_no", index + 20) - 5);
+                        String payment_no = result.substring(index + 20,
+                                result.indexOf("payment_no", index + 20) - 5);
                         index = result.indexOf("payment_time");
                         String payment_time = result.substring(index + 22,
                                 result.indexOf("payment_time", index + 20) - 5);
@@ -157,33 +161,77 @@ public class WithdrawController extends BaseController {
                         // 处理人信息
                         withdraw.setState(2);
                         withdrawService.update(withdraw);
-                        return "redirect:/basicinfo/withdraw/list.action?state=1";
+                        model.addAttribute("message", withdraw.getUserName()
+                                + "退款成功");
+                        model.addAttribute("url",
+                                "/basicinfo/withdraw/list.action?state=1");
                     } else {
                         index = result.indexOf("err_code");
-                        String err_code = result.substring(index + 18, result.indexOf("err_code", index + 20) - 5);
+                        String err_code = result.substring(index + 18,
+                                result.indexOf("err_code", index + 20) - 5);
                         System.out.println("err_code:" + err_code);
                         System.out.println(result);
+                        model.addAttribute("message", result);
+                        model.addAttribute("url",
+                                "/basicinfo/withdraw/list.action?state=2");
                     }
                 } else if (return_code.equals("AMOUNT_LIMIT")) {
                     System.out.println("付款金额不能小于最低限额");
+                    model.addAttribute("message", "付款金额不能小于最低限额\n" + result);
+                    model.addAttribute("url",
+                            "/basicinfo/withdraw/list.action?state=2");
                 } else if (return_code.equals("PARAM_ERROR")) {
                     System.out.println("参数错误");
                     System.out.println(result);
+                    model.addAttribute("message", "参数错误\n" + result);
+                    model.addAttribute("url",
+                            "/basicinfo/withdraw/list.action?state=2");
                 } else if (return_code.equals("NOTENOUGH")) {
                     System.out.println("余额不足");
+                    model.addAttribute("message", "余额不足\n" + result);
+                    model.addAttribute("url",
+                            "/basicinfo/withdraw/list.action?state=2");
                 } else if (return_code.equals("SEND_FAILED")) {
                     System.out.println("付款错误 付款失败，请换单号重试 ");
+                    model.addAttribute("message", "付款错误 付款失败，请换单号重试\n" + result);
+                    model.addAttribute("url",
+                            "/basicinfo/withdraw/list.action?state=2");
                 } else if (return_code.equals("NAME_MISMATCH")) {
                     System.out.println("姓名校验出错");
+                    model.addAttribute("message", "姓名校验出错\n" + result);
+                    model.addAttribute("url",
+                            "/basicinfo/withdraw/list.action?state=2");
                 } else if (return_code.equals("MONEY_LIMIT")) {
                     System.out.println("已经达到今日付款总额上限/已达到付款给此用户额度上限");
+                    model.addAttribute("message",
+                            "已经达到今日付款总额上限/已达到付款给此用户额度上限\n" + result);
+                    model.addAttribute("url",
+                            "/basicinfo/withdraw/list.action?state=2");
                 } else if (return_code.equals("CA_ERROR")) {
                     System.out.println("证书出错");
+                    model.addAttribute("message", "证书出错\n" + result);
+                    model.addAttribute("url",
+                            "/basicinfo/withdraw/list.action?state=2");
                 } else if (return_code.equals("V2_ACCOUNT_SIMPLE_BAN")) {
                     System.out.println("无法给非实名用户付款");
+                    model.addAttribute("message", "无法给非实名用户付款\n" + result);
+                    model.addAttribute("url",
+                            "/basicinfo/withdraw/list.action?state=2");
                 } else if (return_code.equals("SYSTEMERROR")) {
-                    System.out.println("系统错误，请重试 请使用原单号以及原请求参数重试，否则可能造成重复支付等资金风险 ");
+                    System.out
+                            .println("系统错误，请重试 请使用原单号以及原请求参数重试，否则可能造成重复支付等资金风险 ");
+                    model.addAttribute("message",
+                            "系统错误，请重试 请使用原单号以及原请求参数重试，否则可能造成重复支付等资金风险\n"
+                                    + result);
+                    model.addAttribute("url",
+                            "/basicinfo/withdraw/list.action?state=2");
+                } else {
+                    System.out.println(result);
+                    model.addAttribute("message", "\n" + result);
+                    model.addAttribute("url",
+                            "/basicinfo/withdraw/list.action?state=2");
                 }
+                return "/basicinfo/withdraw/jWithdrawMes.jsp";
             }
 
             return "redirect:/basicinfo/withdraw/list.action?state=2";
@@ -191,4 +239,5 @@ public class WithdrawController extends BaseController {
         }
         return null;
     }
+
 }

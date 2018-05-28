@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+         pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!doctype html>
 <html>
 
@@ -11,6 +11,8 @@
 <head>
     <meta charset="utf-8">
     <title>填写订单信息</title>
+
+
 
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,8 +50,8 @@
             <p class="weui-media-box__desc">课程单价：${course.coursePrice}</p>
             <p class="weui-media-box__desc">课程所属区域：${course.areaName}</p>
 
-        </div>
-    </a>
+        </div> </a>
+
 
 
 </div>
@@ -85,8 +87,7 @@
             </div>
             <div class="weui-cell__bd">
                 <p>本人</p>
-            </div>
-        </label>
+            </div> </label>
 
     </div>
 
@@ -97,8 +98,8 @@
         </table>
 
     </div>
-    <input type="hidden" name="userName"/><input type="hidden"
-                                                 name="phoneNumber"/>
+    <input type="hidden" name="userName" /><input type="hidden"
+                                                  name="phoneNumber" />
 
     <div class="weui-cells" style="margin-top: 0px">
         <div class="weui-cell">
@@ -130,6 +131,7 @@
             <div class="weui-cell__ft" id="coursepay">${coursepay}</div>
 
 
+
         </div>
         <div class="weui-cell">
             <div class="weui-cell__bd">
@@ -140,6 +142,7 @@
             <div class="weui-cell__ft" id="xianjinpay">${xianjinpay}</div>
 
 
+
         </div>
         <div class="weui-cell">
             <div class="weui-cell__bd">
@@ -148,6 +151,7 @@
 
 
             <div class="weui-cell__ft" id="wxpay">${wxpay}</div>
+
 
 
         </div>
@@ -165,49 +169,65 @@
         </div>
         <div
                 style="width: 80%; margin-left: 10% ;margin-top: 0.2rem;margin-bottom: 0.2rem;">
-            <input type="hidden" value="${course.id }" name="id"> <a
-                href="javascript:;" id="submit-btn" class="weui-btn weui-btn_warn">确认订单</a>
+            <input type="hidden" value="${course.id }" name="id">
+            <input type="text" value="" name="isweixin" id="isweixin">
+
+
+            <a
+                    href="javascript:;" id="submit-btn" class="weui-btn weui-btn_warn">确认订单</a>
         </div>
 
     </div>
 </form>
 </body>
 <script type="text/javascript">
-    $(function () {
+    function is_weixin() {
 
-        $('#submit-btn').click(function (event) {
+    }
+    $(function() {
 
-            var x = document.getElementsByName("userName");
-            var y = document.getElementsByName("phoneNumber");
-            for (var i = 0; i < x.length - 1; i++) {
-                if (x[i].value == "") {
-                    $(x[i]).attr('placeholder', "姓名不能为空");
+        $('#submit-btn').click(function(event) {
+
+            var x=document.getElementsByName("userName");
+            var y=document.getElementsByName("phoneNumber");
+            for(var i=0;i<x.length-1;i++){
+                if(x[i].value==""){
+                    $(x[i]).attr('placeholder',"姓名不能为空");
                     x[i].focus();
                     return;
                 }
             }
-            for (var j = 0; j < y.length - 1; j++) {
-                value = y[j].value;
+            for(var j=0;j<y.length-1;j++){
+                value=y[j].value;
                 if (value != null && value != "") {
                     if (!(/^1[3|4|5|7|8][0-9]{9}$/.test(value))) {
                         //alert("不是完整的11位手机号或者正确的手机号前七位");
                         $(y[j]).val("");
-                        $(y[j]).attr('placeholder', "请输入正确手机号码");
+                        $(y[j]).attr('placeholder',"请输入正确手机号码");
                         y[j].focus();
                         return;
                     }
                 } else {
 
-                    $(y[j]).attr('placeholder', "手机号码不能为空");
+                    $(y[j]).attr('placeholder',"手机号码不能为空");
                     y[j].focus();
                     return;
                 }
+            }
+            var ua = window.navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+                //alert(1);
+                $("#isweixin").val("1");
+
+            } else {
+                //alert(2);
+                $('#isweixin').val("2");
             }
             $("#form").submit();
 
         });
         var num1 = 0;
-        $("#s11").on('click', function (e) {
+        $("#s11").on('click', function(e) {
 
             if (num1 % 2 == 0) {
 
@@ -225,23 +245,22 @@
 
                 total.html(totalmoney);
                 var wepay = $("#wxpay");
-                var xinjinpay = $("#xianjinpay");
-                var coursepay = $("#coursepay");
+                var xinjinpay=$("#xianjinpay");
+                var coursepay=$("#coursepay");
 
                 var coursemoney = document.getElementById("coursemoney").innerHTML;
                 var xianjinmoney = document.getElementById("xianjinmoney").innerHTML;
 
                 if (numSub(totalmoney, coursemoney) > 0) {
-                    if (numSub(numSub(totalmoney, coursemoney), xianjinmoney) > 0) {
+                    if(numSub(numSub(totalmoney, coursemoney), xianjinmoney)>0){
                         wepay.html(numSub(numSub(totalmoney, coursemoney), xianjinmoney));
                         xinjinpay.html(xianjinmoney);
                         coursepay.html(coursemoney);
                     }
-                    else {
+                    else{
                         wepay.html(0.00);
                         xinjinpay.html(numSub(totalmoney, coursemoney));
-                        coursepay.html(coursemoney);
-                    }
+                        coursepay.html(coursemoney);}
 
                 } else {
                     wepay.html(0.00);
@@ -259,11 +278,11 @@
     });
     $("#buy-num").val(1);
 
-    $('.weui-count__decrease').click(function (e) {
+    $('.weui-count__decrease').click(function(e) {
         delet();
 
     })
-    $('.weui-count__increase').click(function (e) {
+    $('.weui-count__increase').click(function(e) {
         add();
     })
     function add() {
@@ -290,23 +309,22 @@
             + '<div class="weui-cell"><div class="weui-cell__hd"><label class="weui-label">姓名</label></div><div class="weui-cell__bd"> <input class="weui-input" type="text" name="userName"   placeholder="请输入姓名"></div></div>'
             + ' <div class="weui-cell"><div class="weui-cell__hd"><label class="weui-label">电话</label></div><div class="weui-cell__bd"><input class="weui-input" type="tel" name="phoneNumber"  placeholder="请输入电话号码"></div></div>';
         var wepay = $("#wxpay");
-        var xinjinpay = $("#xianjinpay");
-        var coursepay = $("#coursepay");
+        var xinjinpay=$("#xianjinpay");
+        var coursepay=$("#coursepay");
 
         var coursemoney = document.getElementById("coursemoney").innerHTML;
         var xianjinmoney = document.getElementById("xianjinmoney").innerHTML;
 
         if (numSub(totalmoney, coursemoney) > 0) {
-            if (numSub(numSub(totalmoney, coursemoney), xianjinmoney) > 0) {
+            if(numSub(numSub(totalmoney, coursemoney), xianjinmoney)>0){
                 wepay.html(numSub(numSub(totalmoney, coursemoney), xianjinmoney));
                 xinjinpay.html(xianjinmoney);
                 coursepay.html(coursemoney);
             }
-            else {
+            else{
                 wepay.html(0.00);
                 xinjinpay.html(numSub(totalmoney, coursemoney));
-                coursepay.html(coursemoney);
-            }
+                coursepay.html(coursemoney);}
 
         } else {
             wepay.html(0.00);
@@ -332,23 +350,22 @@
 
         total.html(totalmoney);
         var wepay = $("#wxpay");
-        var xinjinpay = $("#xianjinpay");
-        var coursepay = $("#coursepay");
+        var xinjinpay=$("#xianjinpay");
+        var coursepay=$("#coursepay");
 
         var coursemoney = document.getElementById("coursemoney").innerHTML;
         var xianjinmoney = document.getElementById("xianjinmoney").innerHTML;
 
         if (numSub(totalmoney, coursemoney) > 0) {
-            if (numSub(numSub(totalmoney, coursemoney), xianjinmoney) > 0) {
+            if(numSub(numSub(totalmoney, coursemoney), xianjinmoney)>0){
                 wepay.html(numSub(numSub(totalmoney, coursemoney), xianjinmoney));
                 xinjinpay.html(xianjinmoney);
                 coursepay.html(coursemoney);
             }
-            else {
+            else{
                 wepay.html(0.00);
                 xinjinpay.html(numSub(totalmoney, coursemoney));
-                coursepay.html(coursemoney);
-            }
+                coursepay.html(coursemoney);}
 
         } else {
             wepay.html(0.00);
