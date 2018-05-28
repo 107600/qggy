@@ -44,6 +44,7 @@
         <if test="likes!=null">and LIKES like CONCAT('%',#{likes},'%')</if>
         <if test="namelikes!=null">and USER_NAME like CONCAT('%',#{namelikes},'%')</if>
         <if test="state!=null and state!=1">and STATE!=1 </if>
+        <if test="userPhone!=null">and PHONE_NUMBER=#{userPhone} </if>
         order by id DESC
     </select>
 

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+         pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!doctype html>
 <html>
 
@@ -46,8 +46,8 @@
             <p class="weui-media-box__desc">课程单价：${course.coursePrice}</p>
             <p class="weui-media-box__desc">课程所属区域：${course.areaName}</p>
 
-        </div>
-    </a>
+        </div> </a>
+
 
 
 </div>
@@ -114,6 +114,7 @@
         <div class="weui-cell__ft" id="wepay">${jspay.xianjin}</div>
 
 
+
     </div>
     <div class="weui-cell">
         <div class="weui-cell__bd">
@@ -122,6 +123,7 @@
 
 
         <div class="weui-cell__ft" id="wepay">${jspay.weixinmoney}</div>
+
 
 
     </div>
@@ -134,6 +136,7 @@
         <div class="weui-cell__ft" id="wepay">${jspay.remark}</div>
 
 
+
     </div>
 
     <div
@@ -142,76 +145,103 @@
     </div>
 
 </div>
-
+<input type="hidden" value=${wxJsApiParam} id="wxJsApiParam" >
 </body>
 <script type="text/javascript">
-    $(function () {
-        $('#submit-btn')
-            .click(
-                function (event) {
-                    var json = ${wxJsApiParam};
-                    if (json == "123") {
-
-                        $
-                            .ajax({
-                                url: "${pageContext.request.contextPath}/phone/user/basicinfo/trade/orderinsert.action",
-                                data: {},
-                                type: "get",
-                                dataType: "json", //很重要!!!.  预期服务器返回的数据类型
-                                error: function (XMLHttpRequest,
-                                                 textStatus, errorThrown) {
-                                    alert("付款成功，存入数据库失败，请联系管理员");
+    var jsonParam=document.getElementById("wxJsApiParam").value;
+    $(function() {
+        $('#submit-btn').click(
+            function(event) {
+                //alert(jsonParam);
+                if (jsonParam == "noweixintrade") {
+                    //alert("1");
+                    //账户付款
+                    $.ajax({
+                        url : "${pageContext.request.contextPath}/phone/user/basicinfo/trade/orderinsert.action",
+                        data : {},
+                        type : "get",
+                        dataType : "json",
+                        //很重要!!!.  预期服务器返回的数据类型
+                        error : function(XMLHttpRequest,textStatus, errorThrown) {
+                            //账户回滚
+                            $.ajax({
+                                url : "${pageContext.request.contextPath}/phone/user/basicinfo/trade/rollbackinsert.action",
+                                data : {},
+                                type : "get",
+                                dataType : "json",
+                                //很重要!!!.  预期服务器返回的数据类型
+                                error : function(
+                                    XMLHttpRequest,
+                                    textStatus,
+                                    errorThrown) {
+                                    //回滚失败
+                                    alert("账户付款失败，请联系管理员");
                                     alert(XMLHttpRequest.status);
                                     alert(XMLHttpRequest.readyState);
                                     alert(textStatus);
                                 },
-                                success: function (data) {
-                                    window.location.href = "http://wxtest.iamlj.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id=" + data[0].id;
+                                success : function(
+                                    data) {
+                                    //回滚成功，重新支付
+                                    alert("付款失败，请重新支付");
+                                    //window.location.href = "http://qingguocloud.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id="+data[0].id;
                                 }
                             });
-
-                    } else {
-                        callpay();
-                    }
-
-                });
+                            //alert("付款成功，存入数据库失败，请联系管理员");
+                            //alert(XMLHttpRequest.status);
+                            //alert(XMLHttpRequest.readyState);
+                            //alert(textStatus);
+                        },
+                        success : function(data) {
+                            window.location.href = "http://qingguocloud.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id="
+                                + data[0].id;
+                        }
+                    });
+                } else {
+                    //alert("2");
+                    $.ajax({
+                        url : "${pageContext.request.contextPath}/phone/user/basicinfo/trade/orderinsert.action",
+                        data : {},
+                        type : "get",
+                        dataType : "json",
+                        //很重要!!!.  预期服务器返回的数据类型
+                        error : function(XMLHttpRequest,
+                                         textStatus, errorThrown) {
+                            alert("订单发起错误，请重新支付");
+                            alert(XMLHttpRequest.status);
+                            alert(XMLHttpRequest.readyState);
+                            alert(textStatus);
+                        },
+                        success : function(data) {
+                            //只有后台预插入成功才会调用微信支付
+                            callpay(data[0].id);
+                        }
+                    });
+                }
+            });
 
     });
 </script>
 <script type="text/javascript">
-    //var json = ${wxJsApiParam};必须在同一行
+    //var json = ${wxJsApiParam};
+    //必须在同一行
+    //这里必须这样用下述形式，否则只出现支付窗口，却一闪而逝，无法输入密码的情况
     var json = ${wxJsApiParam};
     //alert("["+JSON.stringify(json)+"]");
-    function jsApiCall() {
+    function jsApiCall(id) {
         WeixinJSBridge
             .invoke('getBrandWCPayRequest',
                 json,//josn串
-                function (res) {
+                function(res) {
                     WeixinJSBridge.log(res.err_msg);
                     if (res.err_msg == "get_brand_wcpay_request:ok") {
-                        $
-                            .ajax({
-                                url: "${pageContext.request.contextPath}/phone/user/basicinfo/trade/orderinsert.action",
-                                data: {},
-                                type: "get",
-                                dataType: "json", //很重要!!!.  预期服务器返回的数据类型
-                                error: function (XMLHttpRequest,
-                                                 textStatus, errorThrown) {
-                                    alert("付款成功，存入数据库失败，请联系管理员");
-                                    alert(XMLHttpRequest.status);
-                                    alert(XMLHttpRequest.readyState);
-                                    alert(textStatus);
-                                },
-                                success: function (data) {
-
-                                    window.location.href = "http://wxtest.iamlj.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id=" + data[0].id;
-                                }
-                            });
-
+                        //alert("3");
+                        //alert("http://qingguocloud.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id=" + id);
+                        window.location.href = "http://qingguocloud.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id=" + id;
                     }
                 });
     }
-    function callpay() {
+    function callpay(id) {
         if (typeof WeixinJSBridge == "undefined") {
             if (document.addEventListener) {
                 document.addEventListener('WeixinJSBridgeReady', jsApiCall,
@@ -221,7 +251,7 @@
                 document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
             }
         } else {
-            jsApiCall();
+            jsApiCall(id);
         }
     }
 </script>

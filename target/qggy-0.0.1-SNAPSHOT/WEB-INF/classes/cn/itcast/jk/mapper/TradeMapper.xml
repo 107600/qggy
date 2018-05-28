@@ -149,16 +149,25 @@
     <update id="update" parameterType="cn.itcast.jk.domain.Trade">
         update trade
         <set>
-            <if test="state != null">STATE=#{state, jdbcType=VARCHAR},</if>
+            <if test="state != null">STATE=#{state},</if>
+            <if test="bankType != null">BANK_TYPE=#{bankType},</if>
+            <if test="transactionId != null">TRANSACTION_ID=#{transactionId},</if>
+            <if test="feeType != null">FEE_TYPE=#{feeType},</if>
+            <if test="deviceInfo != null">DEVICE_INFO=#{deviceInfo},</if>
+            <if test="tradeType != null">TRADE_TYPE=#{tradeType},</if>
+            <if test="timeEnd != null">TIME_END=#{timeEnd},</if>
+            <if test="cashFee != null">CASH_FEE=#{cashFee},</if>
+            <if test="payTime != null">PAY_TIME=#{payTime}</if>
         </set>
         where TRADE_ID=#{id}
     </update>
 
     <!-- 删除一条 -->
     <delete id="deleteById" parameterType="string">
-        delete from trade
-        where
-        AREA_ID=#{cid}
+        DELETE
+        FROM
+        trade
+        WHERE TRADE_ID =#{cid}
     </delete>
 
     <!-- 删除多条（一维字符串数组） -->

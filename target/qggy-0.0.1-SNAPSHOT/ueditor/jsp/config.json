@@ -21,7 +21,7 @@
   /* 图片压缩最长边限制 */
   "imageInsertAlign": "none",
   /* 插入的图片浮动方式 */
-  "imageUrlPrefix": "http://wxtest.iamlj.com/qggy/",
+  "imageUrlPrefix": "http://qingguocloud.com/qggy/",
   /* 图片访问路径前缀 */
   "imagePathFormat": "images/contentimg/{yyyy}{mm}{dd}/{time}{rand:6}",
   /* 上传保存路径,可以自定义保存路径和文件名格式 */
@@ -47,7 +47,7 @@
   /* 上传保存路径,可以自定义保存路径和文件名格式 */
   "scrawlMaxSize": 2048000,
   /* 上传大小限制，单位B */
-  "scrawlUrlPrefix": "http://wxtest.iamlj.com/qggy/",
+  "scrawlUrlPrefix": "http://qingguocloud.com/qggy/",
   /* 图片访问路径前缀 */
   "scrawlInsertAlign": "none",
   /* 截图工具上传 */
@@ -55,7 +55,7 @@
   /* 执行上传截图的action名称 */
   "snapscreenPathFormat": "image/contentimg/{yyyy}{mm}{dd}/{time}{rand:6}",
   /* 上传保存路径,可以自定义保存路径和文件名格式 */
-  "snapscreenUrlPrefix": "http://wxtest.iamlj.com/qggy/",
+  "snapscreenUrlPrefix": "http://qingguocloud.com/qggy/",
   /* 图片访问路径前缀 */
   "snapscreenInsertAlign": "none",
   /* 插入的图片浮动方式 */
@@ -72,7 +72,7 @@
   /* 提交的图片列表表单名称 */
   "catcherPathFormat": "image/contentimg/{yyyy}{mm}{dd}/{time}{rand:6}",
   /* 上传保存路径,可以自定义保存路径和文件名格式 */
-  "catcherUrlPrefix": "http://wxtest.iamlj.com/qggy/",
+  "catcherUrlPrefix": "http://qingguocloud.com/qggy/",
   /* 图片访问路径前缀 */
   "catcherMaxSize": 2048000,
   /* 上传大小限制，单位B */
@@ -92,7 +92,7 @@
   /* 提交的视频表单名称 */
   "videoPathFormat": "images/video/{yyyy}{mm}{dd}/{time}{rand:6}",
   /* 上传保存路径,可以自定义保存路径和文件名格式 */
-  "videoUrlPrefix": "http://wxtest.iamlj.com/qggy/",
+  "videoUrlPrefix": "http://qingguocloud.com/qggy/",
   /* 视频访问路径前缀 */
   "videoMaxSize": 102400000,
   /* 上传大小限制，单位B，默认100MB */
@@ -124,7 +124,7 @@
   /* 提交的文件表单名称 */
   "filePathFormat": "images/file/{yyyy}{mm}{dd}/{time}{rand:6}",
   /* 上传保存路径,可以自定义保存路径和文件名格式 */
-  "fileUrlPrefix": "http://wxtest.iamlj.com/qggy/",
+  "fileUrlPrefix": "http://qingguocloud.com/qggy/",
   /* 文件访问路径前缀 */
   "fileMaxSize": 51200000,
   /* 上传大小限制，单位B，默认50MB */

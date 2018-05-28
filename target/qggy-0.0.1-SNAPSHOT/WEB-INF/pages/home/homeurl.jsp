@@ -14,17 +14,17 @@
 <div class="textbox">
 
     <h2>学员注册链接：
-        http://wxtest.iamlj.com/qggy/phone/user/basicinfo/student/tocreate.action</h2>
+        http://qingguocloud.com/qggy/phone/user/basicinfo/student/tocreate.action</h2>
 </div>
 <div class="textbox">
 
     <h2>管理员注册链接：
-        http://wxtest.iamlj.com/qggy/phone/sys/basicinfo/sysuser/tocreate.action</h2>
+        http://qingguocloud.com/qggy/phone/sys/basicinfo/sysuser/tocreate.action</h2>
 </div>
 <div class="textbox">
 
     <h2>导师注册链接：
-        http://wxtest.iamlj.com/qggy/phone/user/basicinfo/teacher/tocreateteacher.action</h2>
+        http://qingguocloud.com/qggy/phone/user/basicinfo/teacher/tocreateteacher.action</h2>
 </div>
 </body>
 
