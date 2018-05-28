@@ -9,7 +9,7 @@ JAVA_OPTS="$JAVA_OPTS -Djava.security.egd=file:/dev/./urandom"
 tomcat server <Connector port="80" protocol="org.apache.coyote.http11.Http11Protocol" maxHttpHeaderSize="8192" maxThreads="1000" minSpareThreads="100" maxSpareThreads="1000" minProcessors="100" maxProcessors="1000" enableLookups="false" compression="on" compressionMinSize="2048" compressableMimeType="text/html,text/xml,text/javascript,text/css,text/plain" connectionTimeout="20000" URIEncoding="utf-8" acceptCount="1000" redirectPort="8443" disableUploadTimeout="true" />
 tomcat cala JAVA_OPTS="-Xms1024m -Xmx2048m -XX: PermSize=256M -XX:MaxNewSize=256m -XX:MaxPermSize=256m"
 
-网址  "http://wxtest.iamlj.com/qggy"
+网址  "http://qingguocloud.com"
 
 cn.itcast.qg.wxpay.MyWxPayConfig.java
 webapp.ueditor.jsp.config.json
