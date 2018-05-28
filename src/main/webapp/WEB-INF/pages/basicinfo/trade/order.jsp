@@ -170,7 +170,7 @@
         <div
                 style="width: 80%; margin-left: 10% ;margin-top: 0.2rem;margin-bottom: 0.2rem;">
             <input type="hidden" value="${course.id }" name="id">
-            <input type="text" value="" name="isweixin" id="isweixin">
+            <input type="text" value="" name="isweixin" id="isweixin" style = "display:none">
 
 
             <a
