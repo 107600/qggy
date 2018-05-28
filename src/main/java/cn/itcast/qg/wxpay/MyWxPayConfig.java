@@ -15,7 +15,7 @@ public class MyWxPayConfig implements WXPayConfig {
 	 * KEY：商户支付密钥，参考开户邮件设置（必须配置） APPSECRET：公众帐号secert（仅JSAPI支付的时候需要配置）
 	 */
     // public final static String APPID = "wxa5696d8241cb626c";
-    public final static String HTTP_URL = "http://wxtest.iamlj.com/qggy";
+    public final static String HTTP_URL = "http://qingguocloud.com/qggy";
 
     public final static String APPID = "wxb12c86bf0b51f2fd";
     // 操作设置操作密码 ABCD1234-
@@ -44,7 +44,7 @@ public class MyWxPayConfig implements WXPayConfig {
     /**
      * 网址前缀
      */
-    public final static String PRE_URL = "http://wxtest.iamlj.com/qggy";
+    public final static String PRE_URL = "http://qingguocloud.com/qggy";
     /**
      * 模板消息前缀
      */
@@ -54,7 +54,7 @@ public class MyWxPayConfig implements WXPayConfig {
 	/*
 	 * 支付结果通知回调url，用于商户接收支付结果
 	 */
-    public final static String NOTIFY_URL = "http://wxtest.iamlj.com/qggy/PaySuccessServlet";
+    public final static String NOTIFY_URL = "http://qingguocloud.com/qggy/PaySuccessServlet";
 
     // =======【商户系统后台机器IP】=====================================
 	/*
@@ -83,7 +83,7 @@ public class MyWxPayConfig implements WXPayConfig {
     /*
   * 网站URL地址
   */
-    public final static String WAP_URL = "http://wxtest.iamlj.com";
+    public final static String WAP_URL = "http://qingguocloud.com";
 
     /*
      * 网站名

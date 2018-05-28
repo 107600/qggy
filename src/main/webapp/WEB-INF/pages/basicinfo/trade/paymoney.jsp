@@ -184,7 +184,7 @@
                                     data) {
                                     //回滚成功，重新支付
                                     alert("付款失败，请重新支付");
-                                    //window.location.href = "http://wxtest.iamlj.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id="+data[0].id;
+                                    //window.location.href = "http://qingguocloud.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id="+data[0].id;
                                 }
                             });
                             //alert("付款成功，存入数据库失败，请联系管理员");
@@ -193,7 +193,7 @@
                             //alert(textStatus);
                         },
                         success : function(data) {
-                            window.location.href = "http://wxtest.iamlj.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id="
+                            window.location.href = "http://qingguocloud.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id="
                                 + data[0].id;
                         }
                     });
@@ -236,8 +236,8 @@
                     WeixinJSBridge.log(res.err_msg);
                     if (res.err_msg == "get_brand_wcpay_request:ok") {
                         //alert("3");
-                        //alert("http://wxtest.iamlj.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id=" + id);
-                        window.location.href = "http://wxtest.iamlj.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id=" + id;
+                        //alert("http://qingguocloud.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id=" + id);
+                        window.location.href = "http://qingguocloud.com/qggy/phone/public/basicinfo/trade/fenxiang.action?id=" + id;
                     }
                 });
     }

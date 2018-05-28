@@ -613,7 +613,7 @@
                         },
                         success: function (data) {
 
-                            window.location.href = "http://wxtest.iamlj.com/qggy/myorder.html";
+                            window.location.href = "http://qingguocloud.com/qggy/myorder.html";
                         }
                     });
 
@@ -655,7 +655,7 @@
                                 },
                                 success: function (data) {
 
-                                    window.location.href = "http://wxtest.iamlj.com/example/myorder.html";
+                                    window.location.href = "http://qingguocloud.com/example/myorder.html";
                                 }
                             });
 

@@ -105,7 +105,7 @@
                 function(res) {
                     WeixinJSBridge.log(res.err_msg);
                     if (res.err_msg == "get_brand_wcpay_request:ok") {
-                        window.location.href = "http://wxtest.iamlj.com/qggy/phone/public/basicinfo/trade/czsucess.action?id="+id;
+                        window.location.href = "http://qingguocloud.com/qggy/phone/public/basicinfo/trade/czsucess.action?id="+id;
                     }
                 });
     }

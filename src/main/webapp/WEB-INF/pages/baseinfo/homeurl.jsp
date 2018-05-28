@@ -15,13 +15,13 @@
     <h1></h1>
     <h1></h1>
     <h2>学员注册链接：
-        http://wxtest.iamlj.com/qggy/phone/user/basicinfo/student/tocreate.action</h2>
+        http://qingguocloud.com/qggy/phone/user/basicinfo/student/tocreate.action</h2>
 
     <h2>管理员注册链接：
-        http://wxtest.iamlj.com/qggy/phone/sys/basicinfo/sysuser/tocreate.action</h2>
+        http://qingguocloud.com/qggy/phone/sys/basicinfo/sysuser/tocreate.action</h2>
 
     <h2>导师注册链接：
-        http://wxtest.iamlj.com/qggy/basicinfo/teacher/tocreate.action</h2>
+        http://qingguocloud.com/qggy/basicinfo/teacher/tocreate.action</h2>
 </div>
 </body>
 
