@@ -26,7 +26,8 @@ public class CodeUtils {
      * @return
      * @失败时抛异常WxPayException
      */
-    public static Map<String, String> GetOpenidAndAccessTokenFromCode(String code) {
+    public static Map<String, String> GetOpenidAndAccessTokenFromCode(
+            String code) {
         try {
             // 构造获取openid及access_token的url
             Map<String, String> params = new TreeMap<String, String>();
@@ -34,7 +35,8 @@ public class CodeUtils {
             params.put("secret", MyWxPayConfig.APPSECRET);
             params.put("code", code);
             params.put("grant_type", "authorization_code");
-            String url = CodeUtils.mapToPath(params, MyWxPayConfig.ACCESS_TOKEN_URL);
+            String url = CodeUtils.mapToPath(params,
+                    MyWxPayConfig.ACCESS_TOKEN_URL);
             // System.out.println(url);
             // 请求url以获取数据
             URL localURL = new URL(url);
@@ -43,12 +45,14 @@ public class CodeUtils {
             // 获取响应输入流
             InputStream inStream = httpURLConnection.getInputStream();
             String result = getResponseBodyAsString(inStream, "utf-8");
-            // System.out.println(result);
+            System.out.println(result);
+            inStream.close();
             return CodeUtils.jsonToMap(result);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
-        return null;
+        Map<String, String> map = new HashMap<String, String>();
+        return map;
     }
 
     // {
@@ -93,7 +97,8 @@ public class CodeUtils {
         return sb.substring(0, sb.length() - 1) + "}";
     }
 
-    public static String getResponseBodyAsString(InputStream is, String ResponseCharSet) throws IOException {
+    public static String getResponseBodyAsString(InputStream is,
+                                                 String ResponseCharSet) throws IOException {
 
         InputStreamReader isr = new InputStreamReader(is, ResponseCharSet);
         java.io.BufferedReader br = new java.io.BufferedReader(isr);
@@ -103,9 +108,7 @@ public class CodeUtils {
             sb.append(tempbf);
             sb.append("\r\n");
         }
-        br.close();
         isr.close();
-        is.close();
         return sb.toString();
     }
 
@@ -117,7 +120,8 @@ public class CodeUtils {
      * @return
      * @throws Exception
      */
-    public static String mapToPath(Map<String, String> params, String path) throws Exception {
+    public static String mapToPath(Map<String, String> params, String path)
+            throws Exception {
         Map<String, String> map = new TreeMap<String, String>(params);
         for (Entry<?, ?> en : map.entrySet()) {
             path += en.getKey() + "=" + en.getValue() + "&";
