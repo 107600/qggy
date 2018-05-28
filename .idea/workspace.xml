@@ -4,11 +4,7 @@
     <list id="f4213a49-df61-431c-90da-7a1c309f3c4a" name="Failed commit: Default (2)" comment="根据uid获取用户" />
     <list id="951e4b92-82ea-43dd-aaca-848c20e2ed30" name="Failed commit: Default" comment="同上" />
     <list id="da868344-6d64-465b-a6f2-e6ad0bfa5111" name="Failed commit: Default (3)" comment="根据uid获取用户" />
-    <list default="true" id="e72fd958-2a28-49c1-98f4-f2126c8f7079" name="Default" comment="域名改为qingguocloud">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/lib/c3p0-0.9.5-pre8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/qggy-0.0.1-SNAPSHOT/WEB-INF/lib/mchange-commons-java-0.2.7.jar" afterPath="" />
+    <list default="true" id="e72fd958-2a28-49c1-98f4-f2126c8f7079" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/BaseController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/BaseController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/HomeController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/PhoneUserHomeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/itcast/jk/controller/PhoneUserHomeController.class" />
@@ -295,6 +291,9 @@
     <option name="PUSH_TAGS">
       <GitPushTagMode />
     </option>
+    <push-targets>
+      <push-target-info repo="$PROJECT_DIR$" source="init" target-remote="origin" target-branch="master" />
+    </push-targets>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -1249,7 +1248,7 @@
       <workItem from="1526555406810" duration="4280000" />
       <workItem from="1527495601530" duration="790000" />
       <workItem from="1527496412116" duration="28000" />
-      <workItem from="1527496447778" duration="12145000" />
+      <workItem from="1527496447778" duration="12222000" />
     </task>
     <task id="LOCAL-00001" summary="初始版本">
       <created>1521460448883</created>
@@ -1370,11 +1369,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527513465494</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="优化仓库不必要的文件夹">
+      <created>1527513848380</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1527513848380</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106782000" />
+    <option name="totallyTimeSpent" value="106859000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1471,7 +1477,8 @@
     <MESSAGE value="h5支付模块添加，退款余额不足时页面跳转" />
     <MESSAGE value="order.jsp隐式提交框修改" />
     <MESSAGE value="域名改为qingguocloud" />
-    <option name="LAST_COMMIT_MESSAGE" value="域名改为qingguocloud" />
+    <MESSAGE value="优化仓库不必要的文件夹" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化仓库不必要的文件夹" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
