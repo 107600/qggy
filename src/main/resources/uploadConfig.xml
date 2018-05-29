@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="cn.itcast.jk.config.UploadConfig">
+        <property name="uploadImgConfigMap">
+            <map>
+                <!--图片上传路径配置-->
+                <entry key="url" value="C:\apache-tomcat-7.0.42\webapps\qggy\images\cover\"/>
+            </map>
+        </property>
+    </bean>
+</beans>

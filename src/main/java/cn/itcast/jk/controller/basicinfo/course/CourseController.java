@@ -16,7 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import cn.itcast.jk.config.UploadConfig;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -55,6 +57,8 @@ import cn.itcast.jk.vo.SysUserVO;
  */
 @Controller
 public class CourseController extends BaseController {
+    @Autowired
+    UploadConfig uploadConfig;
     @Resource
     CourseService courseService;
     @Resource
@@ -157,7 +161,7 @@ public class CourseController extends BaseController {
             // rename file
             String localFileName = System.currentTimeMillis() + ".jpg";
             // 上传到images/cover目录下
-            String path = request.getSession().getServletContext().getRealPath("/images/cover/" + localFileName);
+            String path = (String) uploadConfig.getUploadImgConfigMap().get("url") + localFileName;
             File localFile = new File(path); // 文件路径（路径+文件名）
             if (!localFile.exists()) {
                 localFile.createNewFile();
@@ -237,7 +241,7 @@ public class CourseController extends BaseController {
                 // rename file
                 String localFileName = System.currentTimeMillis() + ".jpg";
                 // 上传到images/cover目录下
-                String path = request.getSession().getServletContext().getRealPath("/images/cover/" + localFileName);
+                String path = uploadConfig.getUploadImgConfigMap().get("url") + localFileName;
                 File localFile = new File(path); // 文件路径（路径+文件名）
                 if (!localFile.exists()) {
                     localFile.createNewFile();
@@ -267,10 +271,7 @@ public class CourseController extends BaseController {
             course.setCoursePrice(Double.parseDouble(multipartRequest.getParameter("coursePrice")));
             course.setOpenNumber(Integer.parseInt(multipartRequest.getParameter("openNum")));
             course.setCourseRemark(multipartRequest.getParameter("courseRemark"));
-            // System.out.println("beizhu" +
-            // multipartRequest.getParameter("courseRemark"));
             course.setCourseContent(multipartRequest.getParameter("courseContent"));
-            // System.out.println(course.toString());
             int state = Integer.parseInt(multipartRequest.getParameter("state"));
             if (state == 3) {
                 course.setState(2);
@@ -303,7 +304,6 @@ public class CourseController extends BaseController {
         HashMap<String, String> paraMap = new HashMap<>();
         paraMap.put("id", id);
         CourseadvVO obj = courseService.see(paraMap);
-        // System.out.println("leibie="+obj.getAdvertisements().get(0).getAdcategory());
         model.addAttribute("obj", obj);
 
         return "/basicinfo/course/jCourseView.jsp";

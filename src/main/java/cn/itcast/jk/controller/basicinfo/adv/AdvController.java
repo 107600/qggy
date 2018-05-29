@@ -15,7 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import cn.itcast.jk.config.UploadConfig;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -45,6 +47,8 @@ import cn.itcast.jk.vo.SysUserVO;
  */
 @Controller
 public class AdvController extends BaseController {
+    @Autowired
+    UploadConfig uploadConfig;
     @Resource
     CourseService courseService;
     @Resource
@@ -151,8 +155,8 @@ public class AdvController extends BaseController {
             // String fileName = file.getOriginalFilename();
             // rename file
             String localFileName = System.currentTimeMillis() + ".jpg";
-            // 上传到images/cover目录下
-            String path = request.getSession().getServletContext().getRealPath("/images/cover/" + localFileName);
+            //path由spring的config加载
+            String path = uploadConfig.getUploadImgConfigMap().get("url") + localFileName;
             File localFile = new File(path); // 文件路径（路径+文件名）
             if (!localFile.exists()) {
                 localFile.createNewFile();
@@ -224,7 +228,7 @@ public class AdvController extends BaseController {
                 // rename file
                 String localFileName = System.currentTimeMillis() + ".jpg";
                 // 上传到images/cover目录下
-                String path = request.getSession().getServletContext().getRealPath("/images/cover/" + localFileName);
+                String path = uploadConfig.getUploadImgConfigMap().get("url") + localFileName;
                 File localFile = new File(path); // 文件路径（路径+文件名）
                 if (!localFile.exists()) {
                     localFile.createNewFile();

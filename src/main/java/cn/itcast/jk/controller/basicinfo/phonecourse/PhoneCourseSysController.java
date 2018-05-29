@@ -10,8 +10,10 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import cn.itcast.jk.config.UploadConfig;
 import net.sf.json.JSONArray;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,6 +39,8 @@ import cn.itcast.jk.vo.CourseVO;
  */
 @Controller
 public class PhoneCourseSysController extends BaseController {
+    @Autowired
+    UploadConfig uploadConfig;
     @Resource
     CourseService courseService;
     @Resource
@@ -59,15 +63,8 @@ public class PhoneCourseSysController extends BaseController {
         List<CourseVO> dataList = courseService.view(null);
         //System.out.println("[" + dataList.size() + "]");
         model.addAttribute("dataList", dataList); // 将数据传递到页面
-
         JSONArray jsonObject = JSONArray.fromObject(dataList);
-        //System.out.println("[" + jsonObject.toString() + "]");
-        //System.out.println("[" + dataList.get(0).getClass() + "]");
-//		System.out.println("["
-//				+ JSONArray.fromObject(dataList.get(0).getCourses()).toString()
-//				+ "]");
         model.addAttribute("successInfo", jsonObject.toString());
-
         return "/basicinfo/course/PhCourseView.jsp"; // 转向页面
     }
 
@@ -85,12 +82,10 @@ public class PhoneCourseSysController extends BaseController {
     public String tocreate(Model model) {
         List<Rank> rankdataList = rankService.find(null);
         model.addAttribute("rankList", rankdataList);
-
         List<Category> categorydataList = categoryService.find(null);
         model.addAttribute("categoryList", categorydataList);
         return "/basicinfo/course/jCourseCreate.jsp";
     }
-
     @RequestMapping("/phone/sys/basicinfo/course/insert.action")
     public String insert(HttpServletRequest request, HttpServletResponse response) {
         try {
@@ -104,7 +99,7 @@ public class PhoneCourseSysController extends BaseController {
             // rename file
             String localFileName = System.currentTimeMillis() + ".jpg";
             // 上传到images/cover目录下
-            String path = request.getSession().getServletContext().getRealPath("/images/cover/" + localFileName);
+            String path = uploadConfig.getUploadImgConfigMap().get("url")+localFileName;
             File localFile = new File(path); // 文件路径（路径+文件名）
             if (!localFile.exists()) {
                 localFile.createNewFile();
@@ -130,8 +125,6 @@ public class PhoneCourseSysController extends BaseController {
             course.setOpenNumber(Integer.parseInt(multipartRequest.getParameter("openNum")));
             course.setCourseRemark(request.getParameter("courseRemark"));
             course.setCourseContent(multipartRequest.getParameter("courseContent"));
-            //System.out.println(multipartRequest.getParameter("courseContent") + " ========");
-            //System.out.println(course.toString());
 
 
             courseService.insert(course);
