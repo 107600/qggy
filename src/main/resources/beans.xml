@@ -64,4 +64,5 @@
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
     </aop:config>
 
+    <import resource="uploadConfig.xml"/>
 </beans>
