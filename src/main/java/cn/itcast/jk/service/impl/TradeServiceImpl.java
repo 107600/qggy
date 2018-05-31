@@ -1,6 +1,7 @@
 package cn.itcast.jk.service.impl;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -12,9 +13,11 @@ import org.springframework.stereotype.Service;
 
 import cn.itcast.jk.dao.TradeDao;
 import cn.itcast.jk.dao.TradeDetailDao;
+import cn.itcast.jk.domain.Student;
 import cn.itcast.jk.domain.Trade;
 import cn.itcast.jk.domain.TradeDetail;
 import cn.itcast.jk.pagination.Page;
+import cn.itcast.jk.service.StudentService;
 import cn.itcast.jk.service.TradeService;
 import cn.itcast.jk.service.WXPayService;
 import cn.itcast.jk.vo.TradeVO;
@@ -33,6 +36,8 @@ public class TradeServiceImpl implements TradeService {
     TradeDetailDao tradeDetailDao;
     @Resource
     WXPayService wXPayService;
+    @Resource
+    StudentService studentService;
 
     @Override
     public List<Trade> findPage(Page<?> page) {
@@ -75,6 +80,15 @@ public class TradeServiceImpl implements TradeService {
                 tradeDao.update(t);
                 return false;
             } else {
+                if (t.getCategory() == 1) {
+                    // 更新账户金额
+                    Student student = studentService.get(t.getPayUserOpenid());
+                    String temp = new DecimalFormat("######0.00")
+                            .format(student.getXianjin() - t.getTotalFee());
+                    student.setXianjin(Double.parseDouble(temp));
+                    studentService.update(student);
+
+                }
                 tradeDao.deleteById(t.getId());
                 Map<String, Object> paraMap = new HashMap<String, Object>();
                 paraMap.put("tradeId", t.getId());
@@ -89,8 +103,6 @@ public class TradeServiceImpl implements TradeService {
         }
         return false;
     }
-
-
 
     public Trade get(Serializable id) {
         Trade t = tradeDao.get(id);
@@ -179,6 +191,15 @@ public class TradeServiceImpl implements TradeService {
                 tradeDao.update(tr);
                 t = tradeDao.view(tradeId);
             } else {
+                if (t.getCategory() == 1) {
+                    // 更新账户金额
+                    Student student = studentService.get(t.getPayUserOpenid());
+                    String temp = new DecimalFormat("######0.00")
+                            .format(student.getXianjin() - t.getTotalFee());
+                    student.setXianjin(Double.parseDouble(temp));
+                    studentService.update(student);
+
+                }
                 tradeDao.deleteById(t.getId());
                 Map<String, Object> paraMap = new HashMap<String, Object>();
                 paraMap.put("tradeId", t.getId());
