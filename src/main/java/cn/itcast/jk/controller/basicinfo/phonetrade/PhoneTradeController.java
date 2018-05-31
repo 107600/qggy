@@ -620,7 +620,7 @@ public class PhoneTradeController extends BaseController {
             return jsonObject.toString();
         }catch (Throwable t){
             t.printStackTrace();
-            log.error(t.getStackTrace());
+            log.error(t.getMessage());
             return t.getMessage();
         }
     }
