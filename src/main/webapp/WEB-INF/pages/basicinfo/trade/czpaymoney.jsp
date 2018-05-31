@@ -78,12 +78,9 @@
                         type : "get",
                         dataType : "json",
                         //很重要!!!.  预期服务器返回的数据类型
-                        error : function(XMLHttpRequest,
-                                         textStatus, errorThrown) {
+                        error : function(data) {
                             alert("订单发起错误，请重新支付");
-                            alert(XMLHttpRequest.status);
-                            alert(XMLHttpRequest.readyState);
-                            alert(textStatus);
+                            alert(data);
                         },
                         success : function(data) {
                             //只有后台预插入成功才会调用微信支付
