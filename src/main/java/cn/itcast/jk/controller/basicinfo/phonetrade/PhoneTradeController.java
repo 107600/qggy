@@ -654,7 +654,6 @@ public class PhoneTradeController extends BaseController {
         }
         JSONArray jsonObject = JSONArray.fromObject("success");
         return jsonObject.toString();
-
     }
 
 }
