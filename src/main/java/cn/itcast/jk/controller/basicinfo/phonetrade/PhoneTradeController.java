@@ -174,6 +174,7 @@ public class PhoneTradeController extends BaseController {
     public String czpaypre(double money, HttpSession session, Model model) {
 
         JsApiPay jspay = new JsApiPay();
+        jspay.setTradeid(OrderUtil.getOrderNo());
         jspay.setTotalfee(money);
         jspay.setCountmoney(0);
         jspay.setWeixinmoney(money);
@@ -662,6 +663,7 @@ public class PhoneTradeController extends BaseController {
         }
         JSONArray jsonObject = JSONArray.fromObject("success");
         return jsonObject.toString();
+
     }
 
 }
