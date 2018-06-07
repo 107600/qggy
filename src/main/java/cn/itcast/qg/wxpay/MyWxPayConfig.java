@@ -11,7 +11,7 @@ public class MyWxPayConfig implements WXPayConfig {
 
     // =======【基本信息设置】=====================================
     /*
-	 * 微信公众号信息配置wxa5696d8241cb626c APPID：绑定支付的APPID（必须配置） MCHID：商户号（必须配置）
+     * 微信公众号信息配置wxa5696d8241cb626c APPID：绑定支付的APPID（必须配置） MCHID：商户号（必须配置）
 	 * KEY：商户支付密钥，参考开户邮件设置（必须配置） APPSECRET：公众帐号secert（仅JSAPI支付的时候需要配置）
 	 */
     public final static String HTTP_URL = "http://qingguocloud.com/qggy";
@@ -21,9 +21,9 @@ public class MyWxPayConfig implements WXPayConfig {
     public final static String APPSECRET = "db0900116f692dfa4d294950e13b3ad5";
     public final static String OAUTH_AUTHORIZE_URL = "https://open.weixin.qq.com/connect/oauth2/authorize?";
     public final static String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/sns/oauth2/access_token?";
-	/*
-	 * 证书路径,注意应该填写绝对路径（仅退款、撤销订单时需要）
-	 */
+    /*
+     * 证书路径,注意应该填写绝对路径（仅退款、撤销订单时需要）
+     */
     public final static String SSLCERT_PATH = "C:\\Users\\Administrator\\Desktop\\cert\\cert\\apiclient_cert.p12";
     public final static String SSLCERT_PASSWORD = MCHID;
     /**
@@ -82,6 +82,9 @@ public class MyWxPayConfig implements WXPayConfig {
      * 网站名
      */
     public final static String WAP_NAME = "青果公益";
+
+
+    public final static String WXNOTIFY_URL = HTTP_URL + "/basicinfo/weixinpay/notify.action";
 
     public String getAppID() {
 

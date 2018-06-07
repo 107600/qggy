@@ -1,9 +1,7 @@
 package cn.itcast.jk.service.impl;
 
 import java.io.Serializable;
-import java.text.DecimalFormat;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -12,14 +10,9 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import cn.itcast.jk.dao.TradeDao;
-import cn.itcast.jk.dao.TradeDetailDao;
-import cn.itcast.jk.domain.Student;
 import cn.itcast.jk.domain.Trade;
-import cn.itcast.jk.domain.TradeDetail;
 import cn.itcast.jk.pagination.Page;
-import cn.itcast.jk.service.StudentService;
 import cn.itcast.jk.service.TradeService;
-import cn.itcast.jk.service.WXPayService;
 import cn.itcast.jk.vo.TradeVO;
 
 /**
@@ -32,12 +25,6 @@ import cn.itcast.jk.vo.TradeVO;
 public class TradeServiceImpl implements TradeService {
     @Resource
     TradeDao tradeDao;
-    @Resource
-    TradeDetailDao tradeDetailDao;
-    @Resource
-    WXPayService wXPayService;
-    @Resource
-    StudentService studentService;
 
     @Override
     public List<Trade> findPage(Page<?> page) {
@@ -46,70 +33,11 @@ public class TradeServiceImpl implements TradeService {
 
     @Override
     public List<Trade> find(Map<?, ?> paraMap) {
-        return tradeFilter(tradeDao.find(paraMap));
-    }
-
-    // 更新数据库
-    private List<Trade> tradeFilter(List<Trade> list) {
-        Iterator<Trade> it = list.iterator();
-        while (it.hasNext()) {
-            if (tradeFilterOne(it.next())) {
-                it.remove();
-            }
-        }
-        if (list.size() == 0) {
-            return null;
-        }
-        return list;
-    }
-
-    // 更新数据库，返回true，要删除Trade
-    private boolean tradeFilterOne(Trade t) {
-        if (t.getWeixinmoney() > 0 && t.getTransactionId() == null) {
-            Map<String, String> orderResult = wXPayService
-                    .QueryOrderByOut_Trade_No(t.getOutTradeNo());
-            if (orderResult != null) {
-                t.setBankType(orderResult.get("bank_type"));
-                t.setTransactionId(orderResult.get("transaction_id"));
-                t.setFeeType(orderResult.get("fee_type"));
-                t.setDeviceInfo(orderResult.get("device_info"));
-                t.setTradeType(orderResult.get("trade_type"));
-                t.setTimeEnd(orderResult.get("time_end"));
-                t.setCashFee(Double.parseDouble(orderResult.get("cash_fee")
-                        .trim()));
-                tradeDao.update(t);
-                return false;
-            } else {
-                if (t.getCategory() == 1) {
-                    // 更新账户金额
-                    Student student = studentService.get(t.getPayUserOpenid());
-                    String temp = new DecimalFormat("######0.00")
-                            .format(student.getXianjin() - t.getTotalFee());
-                    student.setXianjin(Double.parseDouble(temp));
-                    studentService.update(student);
-
-                }
-                tradeDao.deleteById(t.getId());
-                Map<String, Object> paraMap = new HashMap<String, Object>();
-                paraMap.put("tradeId", t.getId());
-                List<TradeDetail> list = tradeDetailDao.find(paraMap);
-                if (list != null) {
-                    for (TradeDetail td : list) {
-                        tradeDetailDao.deleteById(td.getId());
-                    }
-                }
-                return true;
-            }
-        }
-        return false;
+        return tradeDao.find(paraMap);
     }
 
     public Trade get(Serializable id) {
-        Trade t = tradeDao.get(id);
-        if (tradeFilterOne(t)) {
-            return null;
-        }
-        return t;
+        return tradeDao.get(id);
     }
 
     public void insert(Trade trade) {
@@ -155,64 +83,7 @@ public class TradeServiceImpl implements TradeService {
 
     @Override
     public TradeVO view(String tradeId) {
-        return tradeFilterMore(tradeId);
-    }
-
-    private TradeVO tradeFilterMore(String tradeId) {
-        TradeVO t = tradeDao.view(tradeId);
-        if (t.getWeixinmoney() > 0 && t.getTransactionId() == null) {
-            Map<String, String> orderResult = wXPayService
-                    .QueryOrderByOut_Trade_No(t.getOutTradeNo());
-            if (orderResult != null) {
-                Trade tr = new Trade();
-                tr.setId(t.getId());
-                tr.setOutTradeNo(t.getOutTradeNo());
-                tr.setPayUserId(t.getPayUserId());
-                tr.setPayUserName(t.getPayUserName());
-                tr.setPayUserOpenid(t.getPayUserOpenid());
-                tr.setBankType(orderResult.get("bank_type"));
-                tr.setTransactionId(orderResult.get("transaction_id"));
-                tr.setFeeType(orderResult.get("fee_type"));
-                tr.setDeviceInfo(orderResult.get("device_info"));
-                tr.setTradeType(orderResult.get("trade_type"));
-                tr.setTimeEnd(orderResult.get("time_end"));
-                tr.setCashFee(Double.parseDouble(orderResult.get("cash_fee")
-                        .trim()) / 100);
-                tr.setCategory(t.getCategory());
-                tr.setTotalFee(t.getTotalFee());
-                tr.setFmoney(t.getTotalFee());
-                tr.setWeixinmoney(t.getWeixinmoney());
-                tr.setCountmoney(t.getCountmoney());
-                tr.setXianjinPay(t.getXianjinPay());
-                tr.setState(Integer.parseInt(t.getState()));
-                tr.setAreaId(t.getAreaId());
-                tr.setAreaName(t.getAreaName());
-                tr.setName(t.getName());
-                tradeDao.update(tr);
-                t = tradeDao.view(tradeId);
-            } else {
-                if (t.getCategory() == 1) {
-                    // 更新账户金额
-                    Student student = studentService.get(t.getPayUserOpenid());
-                    String temp = new DecimalFormat("######0.00")
-                            .format(student.getXianjin() - t.getTotalFee());
-                    student.setXianjin(Double.parseDouble(temp));
-                    studentService.update(student);
-
-                }
-                tradeDao.deleteById(t.getId());
-                Map<String, Object> paraMap = new HashMap<String, Object>();
-                paraMap.put("tradeId", t.getId());
-                List<TradeDetail> list = tradeDetailDao.find(paraMap);
-                if (list != null) {
-                    for (TradeDetail td : list) {
-                        tradeDetailDao.deleteById(td.getId());
-                    }
-                }
-                t = null;
-            }
-        }
-        return t;
+        return tradeDao.view(tradeId);
     }
 
     @Override

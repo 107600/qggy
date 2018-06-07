@@ -38,7 +38,7 @@
         $
             .ajax({
                 url: "/qggy/phone/user/basicinfo/student/findbyOID.action", //请求地址
-                type: "GET", //请求方式
+                type: "POST", //请求方式
                 data: "{timestamp=" + new Date().getTime() + "}",
                 dataType: "json",
                 contentType: 'application/json;charset=utf-8', //指定为json类型

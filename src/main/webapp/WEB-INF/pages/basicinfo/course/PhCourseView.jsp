@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta http-equiv="charset" content="UTF-8">
-    <title>�����΢</title>
+    <title>文化普及</title>
     <link rel="stylesheet" type="text/css"
           href="${pageContext.request.contextPath}/css/reset.css"/>
     <link rel="stylesheet" type="text/css"

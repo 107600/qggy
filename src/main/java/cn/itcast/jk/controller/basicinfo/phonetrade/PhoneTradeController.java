@@ -15,8 +15,6 @@ import javax.servlet.http.HttpSession;
 import net.sf.json.JSONArray;
 import net.sf.json.JsonConfig;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -62,8 +60,6 @@ public class PhoneTradeController extends BaseController {
     CourseService courseService;
     @Resource
     TradeDetailService tradedetailService;
-
-    private static final Log log = LogFactory.getLog(PhoneTradeController.class);
 
     // 列表
     @RequestMapping("/phone/user/basicinfo/trade/list.action")
@@ -178,7 +174,6 @@ public class PhoneTradeController extends BaseController {
     public String czpaypre(double money, HttpSession session, Model model) {
 
         JsApiPay jspay = new JsApiPay();
-        jspay.setTradeid(OrderUtil.getOrderNo());
         jspay.setTotalfee(money);
         jspay.setCountmoney(0);
         jspay.setWeixinmoney(money);
@@ -196,7 +191,7 @@ public class PhoneTradeController extends BaseController {
         unifiedOrderParams.put("trade_type", "JSAPI");
         unifiedOrderParams.put("nonce_str", WXPayUtil.generateNonceStr());
         unifiedOrderParams.put("out_trade_no", out_trade_no);
-        unifiedOrderParams.put("notify_url", MyWxPayConfig.NOTIFY_URL);
+        unifiedOrderParams.put("notify_url", MyWxPayConfig.WXNOTIFY_URL);
         System.out.println(jspay.getWeixinmoney() * 100);
         unifiedOrderParams.put("total_fee",
                 (int) (jspay.getWeixinmoney() * 100) + "");
@@ -334,7 +329,7 @@ public class PhoneTradeController extends BaseController {
                 unifiedOrderParams.put("nonce_str",
                         WXPayUtil.generateNonceStr());
                 unifiedOrderParams.put("out_trade_no", out_trade_no);
-                unifiedOrderParams.put("notify_url", MyWxPayConfig.NOTIFY_URL);
+                unifiedOrderParams.put("notify_url", MyWxPayConfig.WXNOTIFY_URL);
                 unifiedOrderParams.put("total_fee",
                         (int) (jspay.getWeixinmoney() * 100) + "");
                 unifiedOrderParams.put("openid", ((Student) session
@@ -387,7 +382,6 @@ public class PhoneTradeController extends BaseController {
                 unifiedOrderParams.put("nonce_str",
                         WXPayUtil.generateNonceStr());
                 unifiedOrderParams.put("out_trade_no", out_trade_no);
-                //订单插入可以写在notify_url里
                 unifiedOrderParams.put("notify_url", MyWxPayConfig.NOTIFY_URL);
                 unifiedOrderParams.put("total_fee",
                         (int) (jspay.getWeixinmoney() * 100) + "");
@@ -487,7 +481,13 @@ public class PhoneTradeController extends BaseController {
         trade.setWeixinmoney(jspay.getWeixinmoney());
         trade.setCountmoney(jspay.getCountmoney());
         trade.setXianjinPay(jspay.getXianjin());
-        trade.setState(0);
+        // 微信金额大于0
+        if (jspay.getWeixinmoney() > 0.00) {
+            // 未同步状态
+            trade.setState(7);
+        } else {
+            trade.setState(0);
+        }
         trade.setPayTime(new Date());
         trade.setOutTradeNo(jspay.getOuttradeno());
         trade.setId(jspay.getTradeid());
@@ -538,7 +538,13 @@ public class PhoneTradeController extends BaseController {
                 detail.setAreaName(course.getAreaName());
                 detail.setClassprice(course.getCoursePrice());
                 detail.setCourseCover(course.getCourseCover());
-
+                // 微信金额大于0
+                if (jspay.getWeixinmoney() > 0.00) {
+                    // 未同步状态
+                    detail.setTradeState(7);
+                } else {
+                    detail.setTradeState(0);
+                }
                 tradedetailService.insert(detail);
 
             } else {
@@ -559,7 +565,13 @@ public class PhoneTradeController extends BaseController {
                 detail.setAreaName(course.getAreaName());
                 detail.setClassprice(course.getCoursePrice());
                 detail.setCourseCover(course.getCourseCover());
-
+                // 微信金额大于0
+                if (jspay.getWeixinmoney() > 0.00) {
+                    // 未同步状态
+                    detail.setTradeState(7);
+                } else {
+                    detail.setTradeState(0);
+                }
                 tradedetailService.insert(detail);
 
             }
@@ -576,54 +588,50 @@ public class PhoneTradeController extends BaseController {
     @RequestMapping(value = "/phone/user/basicinfo/trade/czinsert.action", method = RequestMethod.GET)
     public @ResponseBody
     String czinsert(HttpServletRequest request) {
-        try {
-            JsApiPay jspay = (JsApiPay) request.getSession()
-                    .getAttribute("czjspay");
+        JsApiPay jspay = (JsApiPay) request.getSession()
+                .getAttribute("czjspay");
 
-            Trade trade = new Trade();
-            trade.setCategory(1);
-            trade.setTotalFee(jspay.getTotalfee());
-            trade.setFmoney(jspay.getTotalfee());
-            trade.setWeixinmoney(jspay.getWeixinmoney());
-            trade.setCountmoney(jspay.getCountmoney());
-            trade.setXianjinPay(jspay.getXianjin());
-            trade.setState(0);
-            trade.setPayTime(new Date());
-            trade.setOutTradeNo(jspay.getOuttradeno());
+        Trade trade = new Trade();
+        trade.setCategory(1);
+        trade.setTotalFee(jspay.getTotalfee());
+        trade.setFmoney(jspay.getTotalfee());
+        trade.setWeixinmoney(jspay.getWeixinmoney());
+        trade.setCountmoney(jspay.getCountmoney());
+        trade.setXianjinPay(jspay.getXianjin());
+        // 未同步状态
+        trade.setState(7);
+        request.getSession().setAttribute("sync", 1);
 
-            trade.setId(jspay.getTradeid());
-            Student s = (Student) request.getSession().getAttribute("user");
-            // System.out.println("s.getAvailableAssets()" +
-            // s.getAvailableAssets());
-            // System.out.println("jspay.getCountmoney()" + jspay.getCountmoney());
-            String temp = new DecimalFormat("######0.00").format(s.getXianjin()
-                    + jspay.getTotalfee());
-            s.setXianjin(Double.parseDouble(temp));
-            // System.out.println("s.setAvailableAssets()" +
-            // s.getAvailableAssets());
+        trade.setPayTime(new Date());
+        trade.setOutTradeNo(jspay.getOuttradeno());
 
-            studentService.update(s);
-            // 更新session中user
-            request.getSession().setAttribute("user", s);
-            System.out.println(s.getUserName() + "In czinsert.action");
+        trade.setId(jspay.getTradeid());
+        Student s = (Student) request.getSession().getAttribute("user");
+        // System.out.println("s.getAvailableAssets()" +
+        // s.getAvailableAssets());
+        // System.out.println("jspay.getCountmoney()" + jspay.getCountmoney());
+        String temp = new DecimalFormat("######0.00").format(s.getXianjin()
+                + jspay.getTotalfee());
+        s.setXianjin(Double.parseDouble(temp));
+        // System.out.println("s.setAvailableAssets()" +
+        // s.getAvailableAssets());
 
-            trade.setPayUserId(s.getId());
-            trade.setPayUserName(s.getUserName());
-            trade.setPayUserOpenid(s.getUserOpenid());
+        studentService.update(s);
+        System.out.println(s.getUserName() + "In czinsert.action");
 
-            trade.setAreaId(s.getAreaId());
-            trade.setAreaName(s.getAreaName());
-            trade.setName("充值");
-            tradeService.insert(trade);
+        trade.setPayUserId(s.getId());
+        trade.setPayUserName(s.getUserName());
+        trade.setPayUserOpenid(s.getUserOpenid());
 
-            request.getSession().removeAttribute("czjspay");
-            JSONArray jsonObject = JSONArray.fromObject(trade);
-            return jsonObject.toString();
-        }catch (Throwable t){
-            t.printStackTrace();
-            log.error(t.getMessage());
-            return t.getMessage();
-        }
+        trade.setAreaId(s.getAreaId());
+        trade.setAreaName(s.getAreaName());
+        trade.setName("充值");
+        tradeService.insert(trade);
+
+        request.getSession().removeAttribute("czjspay");
+        JSONArray jsonObject = JSONArray.fromObject(trade);
+        return jsonObject.toString();
+
     }
 
     // 只能回滚内部账户支付，因为微信支付失败时，微信负责回滚给用户，微信支付失败的详细数据会在之后的查询时填充完成或删除

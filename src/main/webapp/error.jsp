@@ -11,6 +11,6 @@
     <title>禁止登陆</title>
 </head>
 <body>
-黑名单禁止登陆
+黑名单禁止登陆！
 </body>
 </html>
