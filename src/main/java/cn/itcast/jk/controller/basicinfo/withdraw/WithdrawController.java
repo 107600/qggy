@@ -227,7 +227,7 @@ public class WithdrawController extends BaseController {
                             "/basicinfo/withdraw/list.action?state=2");
                 } else {
                     System.out.println(result);
-                    model.addAttribute("message", "\n" + result);
+                    model.addAttribute("message", result);
                     model.addAttribute("url",
                             "/basicinfo/withdraw/list.action?state=2");
                 }

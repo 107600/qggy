@@ -44,6 +44,15 @@ public class UserAutIdentiInterceptor implements HandlerInterceptor {
         }
         System.out.println(request.getRequestURI());
         if (user != null) {
+            // session中同步user（只要sync不为空）
+            if(session.getAttribute("sync")!=null){
+                //System.out.println("sync");
+                //做user被数据库同步
+                session.setAttribute("user",studentService.get(user.getUserOpenid()));
+                //移除sync
+                session.removeAttribute("sync");
+                System.out.println("session从数据库同步，防止当前session与数据库不一致"+user.getXianjin());
+            }
             //用户已经登录，当用户浏览器输入注册页面，自动跳转到个人中心
             if (request.getRequestURL().indexOf("/phone/user/basicinfo/student/tocreate.action") >= 0) {
                 request.getRequestDispatcher("/phone/user/main.action").forward(request, response);

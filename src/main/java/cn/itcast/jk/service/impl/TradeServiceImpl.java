@@ -41,8 +41,6 @@ public class TradeServiceImpl implements TradeService {
     }
 
     public void insert(Trade trade) {
-        // trade.setId(UUID.randomUUID().toString()); //设置UUID
-        trade.setState(0); // 默认启用状态
         tradeDao.insert(trade);
     }
 
