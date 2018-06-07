@@ -12,7 +12,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import cn.itcast.jk.controller.NotifyController;
 import cn.itcast.jk.dao.TradeDao;
 import cn.itcast.jk.dao.TradeDetailDao;
 import cn.itcast.jk.service.*;
