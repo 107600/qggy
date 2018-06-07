@@ -126,15 +126,15 @@ public class PhoneTradeController extends BaseController {
 
     @RequestMapping("/phone/public/basicinfo/trade/czsucess.action")
     public String czsucess(HttpSession session, String id, Model model) {
-
         Trade dataList = tradeService.get(id);
-        //Student student = (Student) session.getAttribute("user");
-        Student student = studentService.get(((Student)session.getAttribute("user")).getUserOpenid());
-        DecimalFormat df = new DecimalFormat("######0.00");
-        // 更新课程余额
-        String xianjin = df.format(student.getXianjin()
-                - dataList.getTotalFee());
-        model.addAttribute("xianjin", xianjin);
+//        //Student student = (Student) session.getAttribute("user");
+//        Student student = studentService.get(((Student)session.getAttribute("user")).getUserOpenid());
+//        DecimalFormat df = new DecimalFormat("######0.00");
+//        // 更新课程余额
+//
+//        String xianjin = df.format(student.getXianjin()
+//                - dataList.getTotalFee());
+//        model.addAttribute("xianjin", xianjin);
         model.addAttribute("trade", dataList);
 
         return "/basicinfo/trade/czsucess.jsp";
@@ -665,7 +665,8 @@ public class PhoneTradeController extends BaseController {
 
     // 查看
     @RequestMapping("/notify.action")
-    public void wxPayNotify() {
+    public void wxPayNotify() throws InterruptedException {
+        Thread.currentThread().sleep(2000);
         log.info("通知接口進入，開始過濾");
         Map<String, Object> map = new HashMap<>();
         // 所有未同步订单
@@ -674,8 +675,34 @@ public class PhoneTradeController extends BaseController {
         if (list != null) {
             for (Trade t : list) {
                 log.info(t.getId()+","+t.getState());
-                Map<String, String> orderResult = wXPayService
-                        .QueryOrderByOut_Trade_No(t.getOutTradeNo());
+//                微信訂單同步
+                Map<String, String> orderParams = new HashMap<String, String>();
+                orderParams.put("appid", MyWxPayConfig.APPID);
+                orderParams.put("mch_id", MyWxPayConfig.MCHID);
+                orderParams.put("out_trade_no", t.getOutTradeNo());
+                orderParams.put("nonce_str", WXPayUtil.generateNonceStr());
+                // 默认使用MD5
+                Map<String, String> orderResult=null;
+                try {
+                    orderParams
+                            .put("sign", WXPayUtil.generateSignature(orderParams,
+                                    MyWxPayConfig.KEY));
+                    orderResult = new WXPay(new MyWxPayConfig()).orderQuery(orderParams);
+                    String return_code = orderResult.get("return_code");
+                    log.info("return code :"+CodeUtils.mapToJson(orderResult));
+                    if (return_code.equals("SUCCESS")
+                            && orderResult.get("result_code").equals("SUCCESS")
+                            && orderResult.get("trade_state").equals("SUCCESS")) {
+
+
+                    } else if (return_code.equals("NOTENOUGH")) {
+                        System.out.println("余额不足 用户帐号余额不足  ");
+                    }else{
+                        orderResult=null;
+                    }
+                } catch (Exception e) {
+                    log.info(e.getMessage());
+                }
                 // 支付成功
                 if (orderResult != null) {
                     //充值成功，需要更新账户
@@ -718,20 +745,6 @@ public class PhoneTradeController extends BaseController {
                         log.info("子订单更新成功");
                     }
                 } else {
-                    //充值失败，需要更新账户
-                    if (t.getCategory() == 1) {
-                        // 回滚账户金额
-                        Student student = studentService.get(t
-                                .getPayUserOpenid());
-                        String temp = new DecimalFormat("######0.00")
-                                .format(student.getXianjin() - t.getTotalFee());
-                        log.info("回滚钱账户金额："+student.getXianjin());
-                        log.info("充值回滚金额："+t.getTotalFee());
-                        student.setXianjin(Double.parseDouble(temp));
-                        studentService.update(student);
-                        log.info("回滚之后的金额："+student.getXianjin());
-
-                    }
                     //删掉当前订单
                     tradeDao.deleteById(t.getId());
                     Map<String, Object> paraMap = new HashMap<String, Object>();

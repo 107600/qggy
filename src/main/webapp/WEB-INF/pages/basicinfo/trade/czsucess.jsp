@@ -46,18 +46,6 @@
             <span class="weui-form-preview__value">${trade.id}</span>
         </div>
         <div class="weui-form-preview__item">
-            <label class="weui-form-preview__label">充值前现金账户余额</label>
-            <span class="weui-form-preview__value">${xianjin}</span>
-        </div>
-        <div class="weui-form-preview__item">
-            <label class="weui-form-preview__label">充值金额</label>
-            <span class="weui-form-preview__value">${trade.weixinmoney}</span>
-        </div>
-        <div class="weui-form-preview__item">
-            <label class="weui-form-preview__label">充值后现金账户余额</label>
-            <span class="weui-form-preview__value">${sessionScope.user.xianjin}</span>
-        </div>
-        <div class="weui-form-preview__item">
             <label class="weui-form-preview__label">充值时间</label>
             <span class="weui-form-preview__value"><fmt:formatDate value="${trade.payTime}"
                                                                    pattern="yyyy-MM-dd HH:mm:ss"/></span>
