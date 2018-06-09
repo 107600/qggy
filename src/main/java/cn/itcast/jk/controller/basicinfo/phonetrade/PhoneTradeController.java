@@ -1,5 +1,6 @@
 package cn.itcast.jk.controller.basicinfo.phonetrade;
 
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ import cn.itcast.jk.service.*;
 import net.sf.json.JSONArray;
 import net.sf.json.JsonConfig;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
@@ -665,46 +667,61 @@ public class PhoneTradeController extends BaseController {
 
     // 查看
     @RequestMapping("/notify.action")
-    public void wxPayNotify() throws InterruptedException {
-        Thread.currentThread().sleep(2000);
-        log.info("通知接口進入，開始過濾");
+    public void wxPayNotify(HttpServletRequest request) throws Exception {
+        log.info("通知接口");
+        String inputLine;
+        //回调信息
+        String notityXml = "";
+        try {
+            while ((inputLine = request.getReader().readLine()) != null) {
+                notityXml += inputLine;
+            }
+            request.getReader().close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.error("get notify error");
+            log.error(e.getMessage());
+        }
+        if (StringUtils.isEmpty(notityXml)) {
+            log.error("notify is empty");
+        }
+        //回调的拿到的map
+        Map<String,String> notifyMap = WXPayUtil.xmlToMap(notityXml);
         Map<String, Object> map = new HashMap<>();
-        // 所有未同步订单
+        // 根据回调信息查到订单
         map.put("state", 7);
+        map.put("outTradeNo",notifyMap.get("out_trade_no"));
         List<Trade> list = tradeDao.find(map);
+        log.info("对应当前订单："+list.size()+","+list.get(0).getOutTradeNo());
         if (list != null) {
             for (Trade t : list) {
-                log.info(t.getId()+","+t.getState());
-//                微信訂單同步
-                Map<String, String> orderParams = new HashMap<String, String>();
-                orderParams.put("appid", MyWxPayConfig.APPID);
-                orderParams.put("mch_id", MyWxPayConfig.MCHID);
-                orderParams.put("out_trade_no", t.getOutTradeNo());
-                orderParams.put("nonce_str", WXPayUtil.generateNonceStr());
-                // 默认使用MD5
-                Map<String, String> orderResult=null;
-                try {
-                    orderParams
-                            .put("sign", WXPayUtil.generateSignature(orderParams,
-                                    MyWxPayConfig.KEY));
-                    orderResult = new WXPay(new MyWxPayConfig()).orderQuery(orderParams);
-                    String return_code = orderResult.get("return_code");
-                    log.info("return code :"+CodeUtils.mapToJson(orderResult));
-                    if (return_code.equals("SUCCESS")
-                            && orderResult.get("result_code").equals("SUCCESS")
-                            && orderResult.get("trade_state").equals("SUCCESS")) {
-
-
-                    } else if (return_code.equals("NOTENOUGH")) {
-                        System.out.println("余额不足 用户帐号余额不足  ");
-                    }else{
-                        orderResult=null;
-                    }
-                } catch (Exception e) {
-                    log.info(e.getMessage());
-                }
-                // 支付成功
-                if (orderResult != null) {
+//                Map<String, String> orderParams = new HashMap<String, String>();
+//                orderParams.put("appid", MyWxPayConfig.APPID);
+//                orderParams.put("mch_id", MyWxPayConfig.MCHID);
+//                orderParams.put("out_trade_no", t.getOutTradeNo());
+//                orderParams.put("nonce_str", WXPayUtil.generateNonceStr());
+//                // 默认使用MD5
+//                Map<String, String> orderResult=null;
+//                try {
+//                    orderParams
+//                            .put("sign", WXPayUtil.generateSignature(orderParams,
+//                                    MyWxPayConfig.KEY));
+//                    orderResult = new WXPay(new MyWxPayConfig()).orderQuery(orderParams);
+//                    String return_code = orderResult.get("return_code");
+//                    log.info("return code :"+CodeUtils.mapToJson(orderResult));
+//                    if (return_code.equals("SUCCESS")
+//                            && orderResult.get("result_code").equals("SUCCESS")
+//                            && orderResult.get("trade_state").equals("SUCCESS")) {
+//
+//
+//                    } else if (return_code.equals("NOTENOUGH")) {
+//                        System.out.println("余额不足 用户帐号余额不足  ");
+//                    }else{
+//                        orderResult=null;
+//                    }
+//                } catch (Exception e) {
+//                    log.info(e.getMessage());
+//                }
                     //充值成功，需要更新账户
                     if (t.getCategory() == 1) {
                         // 跟新账户金额
@@ -716,23 +733,19 @@ public class PhoneTradeController extends BaseController {
                         log.info("更新前账户金额："+student.getXianjin());
                         log.info("充值金额："+t.getTotalFee());
                         student.setXianjin(Double.parseDouble(temp));
-
                         studentService.update(student);
                         log.info("更新后的金额："+student.getXianjin());
                     }
-
-
-                    t.setBankType(orderResult.get("bank_type"));
-                    t.setTransactionId(orderResult.get("transaction_id"));
-                    t.setFeeType(orderResult.get("fee_type"));
-                    t.setDeviceInfo(orderResult.get("device_info"));
-                    t.setTradeType(orderResult.get("trade_type"));
-                    t.setTimeEnd(orderResult.get("time_end"));
-                    t.setCashFee(Double.parseDouble(orderResult.get("cash_fee")
+                    t.setBankType(notifyMap.get("bank_type"));
+                    t.setTransactionId(notifyMap.get("transaction_id"));
+                    t.setFeeType(notifyMap.get("fee_type"));
+                    t.setDeviceInfo(notifyMap.get("device_info"));
+                    t.setTradeType(notifyMap.get("trade_type"));
+                    t.setTimeEnd(notifyMap.get("time_end"));
+                    t.setCashFee(Double.parseDouble(notifyMap.get("cash_fee")
                             .trim()));
                     t.setState(0);
                     tradeDao.update(t);
-
                     Map<String, Object> paraMap = new HashMap<String, Object>();
                     paraMap.put("tradeId", t.getId());
                     List<TradeDetail> list2 = tradeDetailDao.find(paraMap);
@@ -744,22 +757,23 @@ public class PhoneTradeController extends BaseController {
                         }
                         log.info("子订单更新成功");
                     }
-                } else {
-                    //删掉当前订单
-                    tradeDao.deleteById(t.getId());
-                    Map<String, Object> paraMap = new HashMap<String, Object>();
-                    paraMap.put("tradeId", t.getId());
-                    List<TradeDetail> list2 = tradeDetailDao.find(paraMap);
-                    if (list2 != null) {
-                        for (TradeDetail td : list2) {
-                            tradeDetailDao.deleteById(td.getId());
-                        }
-                    }
-                    log.info("删除订单失败");
                 }
-            }
-        }
+        }}}
+//                } else {
+//                    //删掉当前订单
+//                    tradeDao.deleteById(t.getId());
+//                    Map<String, Object> paraMap = new HashMap<String, Object>();
+//                    paraMap.put("tradeId", t.getId());
+//                    List<TradeDetail> list2 = tradeDetailDao.find(paraMap);
+//                    if (list2 != null) {
+//                        for (TradeDetail td : list2) {
+//                            tradeDetailDao.deleteById(td.getId());
+//                        }
+//                    }
+//                    log.info("删除订单失败");
+//                }
+//            }
+//        }
+//    }
 
-    }
-
-}
+//}
