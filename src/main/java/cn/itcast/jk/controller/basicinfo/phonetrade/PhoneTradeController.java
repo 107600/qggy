@@ -468,10 +468,10 @@ public class PhoneTradeController extends BaseController {
                 && obj.getTradedetails().size() == 1
                 && obj.getTradedetails().get(0).getUserId()
                 .equals(student.getId())) {
-            System.out.println("bunengfenxiang");
+            log.info("订单只有一个人，不跳转分享页面");
             return "redirect:/phone/user/myorder.action";
         } else {
-            System.out.println("fenxiang");
+            log.info("订单跳转分享页面");
             model.addAttribute("obj", obj);
 
             return "/basicinfo/trade/ordersuccess.jsp";
@@ -695,33 +695,6 @@ public class PhoneTradeController extends BaseController {
         log.info("对应当前订单："+list.size()+","+list.get(0).getOutTradeNo());
         if (list != null) {
             for (Trade t : list) {
-//                Map<String, String> orderParams = new HashMap<String, String>();
-//                orderParams.put("appid", MyWxPayConfig.APPID);
-//                orderParams.put("mch_id", MyWxPayConfig.MCHID);
-//                orderParams.put("out_trade_no", t.getOutTradeNo());
-//                orderParams.put("nonce_str", WXPayUtil.generateNonceStr());
-//                // 默认使用MD5
-//                Map<String, String> orderResult=null;
-//                try {
-//                    orderParams
-//                            .put("sign", WXPayUtil.generateSignature(orderParams,
-//                                    MyWxPayConfig.KEY));
-//                    orderResult = new WXPay(new MyWxPayConfig()).orderQuery(orderParams);
-//                    String return_code = orderResult.get("return_code");
-//                    log.info("return code :"+CodeUtils.mapToJson(orderResult));
-//                    if (return_code.equals("SUCCESS")
-//                            && orderResult.get("result_code").equals("SUCCESS")
-//                            && orderResult.get("trade_state").equals("SUCCESS")) {
-//
-//
-//                    } else if (return_code.equals("NOTENOUGH")) {
-//                        System.out.println("余额不足 用户帐号余额不足  ");
-//                    }else{
-//                        orderResult=null;
-//                    }
-//                } catch (Exception e) {
-//                    log.info(e.getMessage());
-//                }
                     //充值成功，需要更新账户
                     if (t.getCategory() == 1) {
                         // 跟新账户金额
@@ -758,8 +731,9 @@ public class PhoneTradeController extends BaseController {
                         log.info("子订单更新成功");
                     }
                 }
-        }}}
-//                } else {
+        }
+    }
+}
 //                    //删掉当前订单
 //                    tradeDao.deleteById(t.getId());
 //                    Map<String, Object> paraMap = new HashMap<String, Object>();
