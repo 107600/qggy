@@ -94,6 +94,9 @@
                                 <c:if test="${o.state==6}">
                                     <font color="green">已开课</font>
                                 </c:if>
+                                <c:if test="${o.state==7}">
+                                    <font color="green">未完成</font>
+                                </c:if>
                             </td>
                         </tr>
                     </c:forEach>
