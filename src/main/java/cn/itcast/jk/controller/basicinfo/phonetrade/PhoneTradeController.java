@@ -468,8 +468,9 @@ public class PhoneTradeController extends BaseController {
                 && obj.getTradedetails().size() == 1
                 && obj.getTradedetails().get(0).getUserId()
                 .equals(student.getId())) {
-            log.info("订单只有一个人，不跳转分享页面");
-            return "redirect:/phone/user/myorder.action";
+            model.addAttribute("obj", obj);
+            log.info("订单只有一个人，跳转分享页面1");
+            return "/basicinfo/trade/ordersuccess1.jsp";
         } else {
             log.info("订单跳转分享页面");
             model.addAttribute("obj", obj);
