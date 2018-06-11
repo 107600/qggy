@@ -40,7 +40,7 @@
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/phone/user/**"/>
-            <bean class="cn.itcast.jk.interceptor.UserAutIdentiInterceptor"></bean>
+            <bean class="cn.itcast.jk.interceptor.UserAutIdentiInterceptortest"></bean>
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/phone/sys/**"/>
