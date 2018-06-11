@@ -37,7 +37,7 @@
                     </li>
 
 
-                    <li><a href="${ctx}/"
+                    <li><a href="${ctx}/basicinfo/activity/list.action"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">第三方活动审核</a>
                     </li>
                     <li><a href="${ctx}/"
