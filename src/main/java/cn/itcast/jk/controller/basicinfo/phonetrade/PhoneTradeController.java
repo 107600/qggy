@@ -693,7 +693,6 @@ public class PhoneTradeController extends BaseController {
         map.put("state", 7);
         map.put("outTradeNo",notifyMap.get("out_trade_no"));
         List<Trade> list = tradeDao.find(map);
-        log.info("对应当前订单："+list.size()+","+list.get(0).getOutTradeNo());
         if (list != null) {
             for (Trade t : list) {
                     //充值成功，需要更新账户

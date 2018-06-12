@@ -131,7 +131,7 @@ public class WithdrawController extends BaseController {
             String result = wxPayService.transfers(params);
 
             // 跳过微信
-			/*
+            /*
 			 * withdraw.setDealUserId(sysUserVO.getId());
 			 * withdraw.setDealUserName(sysUserVO.getName());
 			 * withdraw.setDealOpenId(sysUserVO.getOpenid());
@@ -170,74 +170,74 @@ public class WithdrawController extends BaseController {
                         String err_code = result.substring(index + 18,
                                 result.indexOf("err_code", index + 20) - 5);
                         System.out.println("err_code:" + err_code);
+                        System.out.println("return_code:" + return_code);
                         System.out.println(result);
-                        model.addAttribute("message", result);
-                        model.addAttribute("url",
-                                "/basicinfo/withdraw/list.action?state=2");
+
+                        if (err_code.equals("AMOUNT_LIMIT")) {
+                            System.out.println("付款金额不能小于最低限额");
+                            model.addAttribute("message", "付款金额不能小于最低限额\n" + result);
+                            model.addAttribute("url",
+                                    "/basicinfo/withdraw/list.action?state=2");
+                        } else if (err_code.equals("PARAM_ERROR")) {
+                            System.out.println("参数错误");
+                            System.out.println(result);
+                            model.addAttribute("message", "参数错误\n" + result);
+                            model.addAttribute("url",
+                                    "/basicinfo/withdraw/list.action?state=2");
+                        } else if (err_code.equals("NOTENOUGH")) {
+                            System.out.println("余额不足");
+                            model.addAttribute("message", "余额不足\n" + result);
+                            model.addAttribute("url",
+                                    "/basicinfo/withdraw/list.action?state=2");
+                        } else if (err_code.equals("SEND_FAILED")) {
+                            System.out.println("付款错误 付款失败，请换单号重试 ");
+                            model.addAttribute("message", "付款错误 付款失败，请换单号重试\n" + result);
+                            model.addAttribute("url",
+                                    "/basicinfo/withdraw/list.action?state=2");
+                        } else if (err_code.equals("NAME_MISMATCH")) {
+                            System.out.println("姓名校验出错");
+                            model.addAttribute("message", "姓名校验出错\n" + result);
+                            model.addAttribute("url",
+                                    "/basicinfo/withdraw/list.action?state=2");
+                        } else if (err_code.equals("MONEY_LIMIT")) {
+                            System.out.println("已经达到今日付款总额上限/已达到付款给此用户额度上限");
+                            model.addAttribute("message",
+                                    "已经达到今日付款总额上限/已达到付款给此用户额度上限\n" + result);
+                            model.addAttribute("url",
+                                    "/basicinfo/withdraw/list.action?state=2");
+                        } else if (err_code.equals("CA_ERROR")) {
+                            System.out.println("证书出错");
+                            model.addAttribute("message", "证书出错\n" + result);
+                            model.addAttribute("url",
+                                    "/basicinfo/withdraw/list.action?state=2");
+                        } else if (err_code.equals("V2_ACCOUNT_SIMPLE_BAN")) {
+                            System.out.println("无法给非实名用户付款");
+                            model.addAttribute("message", "无法给非实名用户付款\n" + result);
+                            model.addAttribute("url",
+                                    "/basicinfo/withdraw/list.action?state=2");
+                        } else if (err_code.equals("SYSTEMERROR")) {
+                            System.out
+                                    .println("系统错误，请重试 请使用原单号以及原请求参数重试，否则可能造成重复支付等资金风险 ");
+                            model.addAttribute("message",
+                                    "系统错误，请重试 请使用原单号以及原请求参数重试，否则可能造成重复支付等资金风险\n"
+                                            + result);
+                            model.addAttribute("url",
+                                    "/basicinfo/withdraw/list.action?state=2");
+                        } else {
+                            System.out.println(result);
+                            model.addAttribute("message", result);
+                            model.addAttribute("url",
+                                    "/basicinfo/withdraw/list.action?state=2");
+                        }
                     }
-                } else if (return_code.equals("AMOUNT_LIMIT")) {
-                    System.out.println("付款金额不能小于最低限额");
-                    model.addAttribute("message", "付款金额不能小于最低限额\n" + result);
-                    model.addAttribute("url",
-                            "/basicinfo/withdraw/list.action?state=2");
-                } else if (return_code.equals("PARAM_ERROR")) {
-                    System.out.println("参数错误");
-                    System.out.println(result);
-                    model.addAttribute("message", "参数错误\n" + result);
-                    model.addAttribute("url",
-                            "/basicinfo/withdraw/list.action?state=2");
-                } else if (return_code.equals("NOTENOUGH")) {
-                    System.out.println("余额不足");
-                    model.addAttribute("message", "余额不足\n" + result);
-                    model.addAttribute("url",
-                            "/basicinfo/withdraw/list.action?state=2");
-                } else if (return_code.equals("SEND_FAILED")) {
-                    System.out.println("付款错误 付款失败，请换单号重试 ");
-                    model.addAttribute("message", "付款错误 付款失败，请换单号重试\n" + result);
-                    model.addAttribute("url",
-                            "/basicinfo/withdraw/list.action?state=2");
-                } else if (return_code.equals("NAME_MISMATCH")) {
-                    System.out.println("姓名校验出错");
-                    model.addAttribute("message", "姓名校验出错\n" + result);
-                    model.addAttribute("url",
-                            "/basicinfo/withdraw/list.action?state=2");
-                } else if (return_code.equals("MONEY_LIMIT")) {
-                    System.out.println("已经达到今日付款总额上限/已达到付款给此用户额度上限");
-                    model.addAttribute("message",
-                            "已经达到今日付款总额上限/已达到付款给此用户额度上限\n" + result);
-                    model.addAttribute("url",
-                            "/basicinfo/withdraw/list.action?state=2");
-                } else if (return_code.equals("CA_ERROR")) {
-                    System.out.println("证书出错");
-                    model.addAttribute("message", "证书出错\n" + result);
-                    model.addAttribute("url",
-                            "/basicinfo/withdraw/list.action?state=2");
-                } else if (return_code.equals("V2_ACCOUNT_SIMPLE_BAN")) {
-                    System.out.println("无法给非实名用户付款");
-                    model.addAttribute("message", "无法给非实名用户付款\n" + result);
-                    model.addAttribute("url",
-                            "/basicinfo/withdraw/list.action?state=2");
-                } else if (return_code.equals("SYSTEMERROR")) {
-                    System.out
-                            .println("系统错误，请重试 请使用原单号以及原请求参数重试，否则可能造成重复支付等资金风险 ");
-                    model.addAttribute("message",
-                            "系统错误，请重试 请使用原单号以及原请求参数重试，否则可能造成重复支付等资金风险\n"
-                                    + result);
-                    model.addAttribute("url",
-                            "/basicinfo/withdraw/list.action?state=2");
-                } else {
-                    System.out.println(result);
-                    model.addAttribute("message", result);
-                    model.addAttribute("url",
-                            "/basicinfo/withdraw/list.action?state=2");
+                    return "/basicinfo/withdraw/jWithdrawMes.jsp";
                 }
-                return "/basicinfo/withdraw/jWithdrawMes.jsp";
+
+                return "redirect:/basicinfo/withdraw/list.action?state=2";
+
             }
-
-            return "redirect:/basicinfo/withdraw/list.action?state=2";
-
+            return null;
         }
         return null;
     }
-
 }
