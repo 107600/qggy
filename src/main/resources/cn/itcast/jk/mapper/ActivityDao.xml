@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itcast.jk.dao.scanCon.ActivityDao">
+	<resultMap id="activity" type="Activity">
+		<result property="num" column="num" />
+		<result property="type" column="type" />
+		<result property="theme" column="theme" />
+		<result property="time" column="time" />
+		<result property="place" column="place" />
+		<result property="state" column="state" />
+	</resultMap>
+	<!-- Select SQL -->
+	<sql id="activitySelector">
+		SELECT
+			<if test="fields != null">
+				${fields}
+			</if>
+			<if test="fields == null">
+		num,type,theme,time,place,state
+			</if>
+		FROM dsf_activity
+	</sql>
+	<sql id="activityListWhere">
+		<where>
+				<if test="num != null">
+					and num=#{num}
+				</if>
+				<if test="type != null">
+				<if test="typeLike == false">
+					and type=#{type}
+				</if>
+				<if test="typeLike == true">
+					and  type like "%"#{type}"%"
+				</if>
+				</if>
+				<if test="theme != null">
+				<if test="themeLike == false">
+					and theme=#{theme}
+				</if>
+				<if test="themeLike == true">
+					and  theme like "%"#{theme}"%"
+				</if>
+				</if>
+				<if test="time != null">
+				<if test="timeLike == false">
+					and time=#{time}
+				</if>
+				<if test="timeLike == true">
+					and  time like "%"#{time}"%"
+				</if>
+				</if>
+				<if test="place != null">
+				<if test="placeLike == false">
+					and place=#{place}
+				</if>
+				<if test="placeLike == true">
+					and  place like "%"#{place}"%"
+				</if>
+				</if>
+				<if test="state != null">
+				<if test="stateLike == false">
+					and state=#{state}
+				</if>
+				<if test="stateLike == true">
+					and  state like "%"#{state}"%"
+				</if>
+				</if>
+		</where>
+	</sql>
+
+	<sql id="activityListOrder">
+		<if test="orderFields != null and orderFields.size >0">
+		order by 
+			<foreach collection="orderFields" separator="," item="orderField">
+				${orderField.fieldName} ${orderField.order}
+			</foreach>
+		</if>
+	</sql>
+
+	<sql id="activityListLimit">
+		<if test="startRow != null">
+			limit #{startRow},#{pageSize}
+		</if>
+	</sql>
+
+	<!-- 根据主键查询 -->
+	<select id="getActivityByKey" resultMap="activity" parameterType="hashMap">
+		SELECT num,type,theme,time,place,state FROM dsf_activity
+		WHERE
+		num=#{num}
+	</select>
+	<select id="getActivitysByKeys" resultMap="activity" parameterType="ArrayList">
+		SELECT num,type,theme,time,place,state FROM dsf_activity
+		WHERE
+		num in
+		<foreach collection="list" separator="," item="num" open="(" close=")">
+			#{num}
+		</foreach>
+	</select>
+
+	<!-- 根据主键删除 -->
+	<delete id="deleteByKey" parameterType="hashMap">
+		DELETE FROM dsf_activity
+		WHERE
+		num=#{num}
+	</delete>
+
+	<!-- 根据主键批量删除 -->
+	<delete id="deleteByKeys">
+		DELETE FROM dsf_activity
+		WHERE
+		num in
+		<foreach collection="list" separator="," item="num" open="(" close=")">
+			#{num}
+		</foreach>
+	</delete>
+
+	<!-- 根据主键更新 -->
+	<update id="updateActivityByKey" parameterType="Activity">
+		UPDATE dsf_activity
+		<set>
+			<trim suffixOverrides=",">
+				<if test="num != null">
+					num = #{num},
+				</if>
+				<if test="type != null">
+					type = #{type},
+				</if>
+				<if test="theme != null">
+					theme = #{theme},
+				</if>
+				<if test="time != null">
+					time = #{time},
+				</if>
+				<if test="place != null">
+					place = #{place},
+				</if>
+				<if test="state != null">
+					state = #{state}
+				</if>
+			</trim>
+		</set>
+		WHERE
+		num=#{num}
+	</update>
+	<!-- 分页 -->
+	<select id="getActivityListWithPage" parameterType="ActivityQuery" resultMap="activity">
+		<include refid="activitySelector" />
+		<include refid="activityListWhere" />
+		<include refid="activityListOrder" />
+		<include refid="activityListLimit" />
+	</select>
+	<!-- 数据总数 -->
+	<select id="getActivityListCount" parameterType="ActivityQuery" resultType="int">
+		SELECT count(1) FROM dsf_activity
+		<include refid="activityListWhere" />
+	</select>
+	<!-- 数据集合 -->
+	<select id="getActivityList" parameterType="ActivityQuery" resultMap="activity">
+		<include refid="activitySelector" />
+		<include refid="activityListWhere" />
+		<include refid="activityListOrder" />
+	</select>
+	<!-- 添加 -->
+	<insert id="addActivity" parameterType="Activity">
+		INSERT INTO dsf_activity
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+				<if test="num != null">
+					num,
+				</if>
+				<if test="type != null">
+					type,
+				</if>
+				<if test="theme != null">
+					theme,
+				</if>
+				<if test="time != null">
+					time,
+				</if>
+				<if test="place != null">
+					place,
+				</if>
+				<if test="state != null">
+					state
+				</if>
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+					<if test="num != null">
+						#{num},
+					</if>
+					<if test="type != null">
+						#type},
+					</if>
+					<if test="theme != null">
+						#{theme},
+					</if>
+					<if test="time != null">
+						#{time},
+					</if>
+					<if test="place != null">
+						#{place},
+					</if>
+					<if test="state != null">
+						#{state}
+					</if>
+		</trim>
+	</insert>
+</mapper>

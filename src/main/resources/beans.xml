@@ -18,8 +18,10 @@
     <context:property-placeholder location="classpath:jdbc.properties"/>
 
     <!-- 2. 包扫描dao,service -->
-    <context:component-scan base-package="cn.itcast.jk.dao,cn.itcast.jk.service"/>
-
+    <context:component-scan base-package="cn.itcast.jk.dao,cn.itcast.jk.dao.scanCon,cn.itcast.jk.service"/>
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage"  value="cn.itcast.jk.dao.scanCon"/>
+    </bean>
 
     <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
         <property name="driverClassName" value="${jdbc.driverClassName}" />
@@ -35,6 +37,7 @@
         <!-- 整合mybatis，包扫描 mapper文件 -->
         <property name="configLocation" value="classpath:sqlMapConfig.xml"/>
         <property name="mapperLocations" value="classpath:cn/itcast/jk/mapper/*.xml"/>
+        <property name="typeAliasesPackage" value="cn.itcast.jk.domain,cn.itcast.jk.controller.query"/>
     </bean>
 
 
