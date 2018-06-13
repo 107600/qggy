@@ -209,7 +209,7 @@
                             href="${pageContext.request.contextPath}/phone/public/basicinfo/student/agreement.action">《青果巷子网站使用协议》</a>
 				</b> </span>
         </p>
-        <input id="zc" type="buttom" value="提交申请" readonly/>
+        <a href="kcyj.action"  input id="zc" type="buttom" value="提交申请" readonly/>
     </form>
 </div>
 </body>

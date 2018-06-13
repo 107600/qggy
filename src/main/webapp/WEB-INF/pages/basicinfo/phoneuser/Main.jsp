@@ -83,12 +83,22 @@
     <div class="weui-grid__icon">
         <img src="${pageContext.request.contextPath}/images/Phone/pay.png" alt="">
     </div>
-    <p class="weui-grid__label">我的提现记录</p></a> <a href="/qggy/phone/user/myRecharge.action"
+    <p class="weui-grid__label">我的提现记录</p></a> <a href="/qggy/phone/user/myyajin.action"
                                                   class="weui-grid js_grid">
     <div class="weui-grid__icon">
         <img src="${pageContext.request.contextPath}/images/Phone/remark.png" alt="">
     </div>
-    <p class="weui-grid__label">我的充值记录</p></a> <a
+    <p class="weui-grid__label">我的押金</p></a>
+    <a href="/qggy/phone/user/myRecharge.action"
+                                                  class="weui-grid js_grid">
+    <div class="weui-grid__icon">
+        <img src="${pageContext.request.contextPath}/images/Phone/remark.png" alt="">
+    </div>
+    <p class="weui-grid__label">我的充值记录</p>
+
+    </a>
+
+    <a
         href="/qggy/phone/user/myattendance.action" class="weui-grid js_grid">
     <div class="weui-grid__icon">
         <img src="${pageContext.request.contextPath}/images/Phone/kaoqin.png" alt="">
