@@ -131,6 +131,37 @@ public class PhoneUserHomeController {
         return "/basicinfo/phoneuser/myrecharge.html";
     }
 
+    // 押金
+    @RequestMapping("/phone/user/myyajin.action")
+    public String myyajin() {
+        return "/basicinfo/phoneuser/gryj.html";
+    }
+
+    // 个人押金
+    @RequestMapping("/phone/user/myyajin1.action")
+    public String myyajin1() {
+        return "/basicinfo/phoneuser/gryj2.html";
+    }
+
+    // 个人押金2
+    @RequestMapping("/phone/user/myyajin2.action")
+    public String myyajin2() {
+        return "/basicinfo/phoneuser/gryj3.html";
+    }
+
+    // 个人押金3
+    @RequestMapping("/phone/user/myyajin3.action")
+    public String myyajin3() {
+        return "/basicinfo/phoneuser/gryj.html";
+    }
+
+    // 导师课程押金
+    @RequestMapping("/phone/user/kcyj.action")
+    public String kcyj() {
+        return "/basicinfo/phoneuser/kcyj.html";
+    }
+
+
     // 充值详情
     @RequestMapping("/phone/user/myRechargedetail.action")
     public String myRechargedetail(String id) {
