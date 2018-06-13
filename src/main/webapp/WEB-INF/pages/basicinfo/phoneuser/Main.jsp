@@ -102,49 +102,6 @@
         <p class="weui-grid__label">我的考勤记录</p>
     </a>
     <a href="/qggy/phone/user/mytransfer.action" class="weui-grid js_grid">
-        <p class="weui-grid__label">我的课程</p></a> <a
-        href="/qggy/phone/user/myinfo.action" class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/account.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的账户</p></a> <a
-        href="/qggy/phone/user/myrefund.action" class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/shopping.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的退款记录</p></a> <a
-        href="/qggy/phone/user/myorder.action" class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/dingdan.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的订单</p></a> <a
-        href="/qggy/phone/user/mywithdraw.action" class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/pay.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的提现记录</p></a> <a href="/qggy/phone/user/myyajin.action"
-                                                  class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/remark.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的押金</p></a>
-    <a href="/qggy/phone/user/myRecharge.action"
-                                                  class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/remark.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的充值记录</p>
-
-    </a>
-
-    <a
-        href="/qggy/phone/user/myattendance.action" class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/kaoqin.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的考勤记录</p></a>
-    <a
-            href="/qggy/phone/user/mytransfer.action" class="weui-grid js_grid">
         <div class="weui-grid__icon">
             <img src="${pageContext.request.contextPath}/images/Phone/transferaccounts.png" alt="">
         </div>
