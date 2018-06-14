@@ -54,90 +54,149 @@
     <div class="ueseText">
         <h3 id="userName"></h3>
         <p id="phoneNumber"></p>
-        <p id="accountMoney">账户余额：</p>
+        <p id="accountMoney">账户余额</p>
     </div>
 </div>
+<div>账户</div>
+<div class="weui-grids">
+    <a href="/qggy/phone/user/myclass.action" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="${pageContext.request.contextPath}/images/Phone/account.png" alt="">
+        </div>
+        <p class="weui-grid__label">我的账户</p>
+    </a>
+    <a href="/qggy/phone/user/myinfo.action" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="${pageContext.request.contextPath}/images/Phone/score.png" alt="">
+        </div>
+        <p class="weui-grid__label">我的积分</p>
+    </a>
+    <a href="/qggy/phone/user/myrefund.action" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="${pageContext.request.contextPath}/images/Phone/refund.png" alt="">
+        </div>
+        <p class="weui-grid__label">我的退款记录</p>
+    </a>
+    <a href="/qggy/phone/user/myorder.action" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="${pageContext.request.contextPath}/images/Phone/order.png" alt="">
+        </div>
+        <p class="weui-grid__label">我的订单</p>
+    </a>
+    <a href="/qggy/phone/user/mywithdraw.action" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="${pageContext.request.contextPath}/images/Phone/withdrawdeposit.png" alt="">
+        </div>
+        <p class="weui-grid__label">我的提现记录</p>
+    </a>
+    <a href="/qggy/phone/user/myRecharge.action" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="${pageContext.request.contextPath}/images/Phone/deposit.png" alt="">
+        </div>
+        <p class="weui-grid__label">我的充值记录</p>
+    </a>
+    <a href="/qggy/phone/user/myattendance.action" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="${pageContext.request.contextPath}/images/Phone/checkin.png" alt="">
+        </div>
+        <p class="weui-grid__label">我的考勤记录</p>
+    </a>
+    <a href="/qggy/phone/user/mytransfer.action" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="${pageContext.request.contextPath}/images/Phone/transferaccounts.png" alt="">
+        </div>
+        <p class="weui-grid__label">我的转账记录</p>
+    </a>
+</div>
+
 <div>会员</div>
 <div class="weui-grids">
     <a href="/qggy/phone/user/myclass.action" class="weui-grid js_grid">
         <div class="weui-grid__icon">
-            <img src="${pageContext.request.contextPath}/images/Phone/course.png" alt="">
+            <img src="${pageContext.request.contextPath}/images/Phone/mycourse.png" alt="">
         </div>
-        <p class="weui-grid__label">我的课程</p></a> <a
-        href="/qggy/phone/user/myinfo.action" class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/account.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的账户</p></a> <a
-        href="/qggy/phone/user/myrefund.action" class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/shopping.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的退款记录</p></a> <a
-        href="/qggy/phone/user/myorder.action" class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/dingdan.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的订单</p></a> <a
-        href="/qggy/phone/user/mywithdraw.action" class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/pay.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的提现记录</p></a> <a href="/qggy/phone/user/myyajin.action"
-                                                  class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/remark.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的押金</p></a>
-    <a href="/qggy/phone/user/myRecharge.action"
-                                                  class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/remark.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的充值记录</p>
-
+        <p class="weui-grid__label">我的课程</p>
+    </a>
+    <a href="/qggy/phone/user/myinfo.action" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="${pageContext.request.contextPath}/images/Phone/activity.png" alt="">
+        </div>
+        <p class="weui-grid__label">活动列表</p>
     </a>
 
-    <a
-        href="/qggy/phone/user/myattendance.action" class="weui-grid js_grid">
-    <div class="weui-grid__icon">
-        <img src="${pageContext.request.contextPath}/images/Phone/kaoqin.png" alt="">
-    </div>
-    <p class="weui-grid__label">我的考勤记录</p></a>
-    <a
-            href="/qggy/phone/user/mytransfer.action" class="weui-grid js_grid">
-        <div class="weui-grid__icon">
-            <img src="${pageContext.request.contextPath}/images/Phone/kaoqin.png" alt="">
-        </div>
-        <p class="weui-grid__label">我的转账记录</p></a>
     <c:if test="${state==1}">
-        <a
-                href="/qggy/phone/user/becomedaoshi.action" class="weui-grid js_grid">
+        <a href="/qggy/phone/user/becomedaoshi.action" class="weui-grid js_grid">
             <div class="weui-grid__icon">
-                <img src="${pageContext.request.contextPath}/images/Phone/kaoqin.png" alt="">
+                <img src="${pageContext.request.contextPath}/images/Phone/teacher.png" alt="">
             </div>
-            <p class="weui-grid__label">成为公益导师</p></a></c:if>
+            <p class="weui-grid__label">成为公益导师</p>
+        </a>
+    </c:if>
+    <a href="/qggy/phone/user/activitycenter.action" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="${pageContext.request.contextPath}/images/Phone/find.png" alt="">
+        </div>
+        <p class="weui-grid__label">发现活动</p>
+    </a>
 </div>
+
 <c:if test="${state==3}">
     <div>公益导师</div>
     <div class="weui-grids">
         <a href="/qggy/phone/user/teacherclasslist.action" class="weui-grid js_grid">
             <div class="weui-grid__icon">
+                <img src="${pageContext.request.contextPath}/images/Phone/class.png" alt="">
+            </div>
+            <p class="weui-grid__label">班级列表</p>
+        </a>
+        <a href="/qggy/phone/user/teachercourselist.action" class="weui-grid js_grid">
+            <div class="weui-grid__icon">
                 <img src="${pageContext.request.contextPath}/images/Phone/course.png" alt="">
             </div>
-            <p class="weui-grid__label">班级列表</p></a> <a
-            href="/qggy/phone/user/teachercourselist.action" class="weui-grid js_grid">
-        <div class="weui-grid__icon">
-            <img src="${pageContext.request.contextPath}/images/Phone/account.png" alt="">
-        </div>
-        <p class="weui-grid__label">课程列表</p></a>
-        <a
-                href="/qggy/phone/user/myattendance.action" class="weui-grid js_grid">
+            <p class="weui-grid__label">课程列表</p>
+        </a>
+        <a href="/qggy/phone/user/myattendance.action" class="weui-grid js_grid">
             <div class="weui-grid__icon">
-                <img src="${pageContext.request.contextPath}/images/Phone/account.png" alt="">
+                <img src="${pageContext.request.contextPath}/images/Phone/remuneration.png" alt="">
             </div>
-            <p class="weui-grid__label">我的薪酬</p></a>
+            <p class="weui-grid__label">我的薪酬</p>
+        </a>
+        <a href="/qggy/phone/user/teachercourselist.action" class="weui-grid js_grid">
+            <div class="weui-grid__icon">
+                <img src="${pageContext.request.contextPath}/images/Phone/application.png" alt="">
+            </div>
+            <p class="weui-grid__label">我的申请记录</p>
+        </a>
+        <a href="/qggy/phone/user/teachercourselist.action" class="weui-grid js_grid">
+            <div class="weui-grid__icon">
+                <img src="${pageContext.request.contextPath}/images/Phone/activity.png" alt="">
+            </div>
+            <p class="weui-grid__label">活动列表</p>
+        </a>
+        <a href="/qggy/phone/user/activitycenter.action" class="weui-grid js_grid">
+            <div class="weui-grid__icon">
+                <img src="${pageContext.request.contextPath}/images/Phone/find.png" alt="">
+            </div>
+            <p class="weui-grid__label">发现活动</p>
+        </a>
+    </div>
+</c:if>
 
+<c:if test="${state==3}">
+    <div>匠人</div>
+    <div class="weui-grids">
+        <a href="/qggy/phone/user/teacherclasslist.action" class="weui-grid js_grid">
+            <div class="weui-grid__icon">
+                <img src="${pageContext.request.contextPath}/images/Phone/activity.png" alt="">
+            </div>
+            <p class="weui-grid__label">活动列表</p>
+        </a>
+        <a href="/qggy/phone/user/activitycenter.action" class="weui-grid js_grid">
+            <div class="weui-grid__icon">
+                <img src="${pageContext.request.contextPath}/images/Phone/find.png" alt="">
+            </div>
+            <p class="weui-grid__label">发现活动</p>
+        </a>
     </div>
 </c:if>
 </body>

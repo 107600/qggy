@@ -189,6 +189,10 @@ public class PhoneUserHomeController {
         return "/basicinfo/phoneuser/becomedaoshi.jsp";
     }
 
+    //活动中心
+    @RequestMapping("/phone/user/activitycenter.action")
+    public String activitycenter() { return "/basicinfo/phoneuser/activitycenter.html";}
+
     //确认内部转账
     @RequestMapping("/phone/user/suretiqutoxianjin.action")
     public String myTransfer(double money) {
