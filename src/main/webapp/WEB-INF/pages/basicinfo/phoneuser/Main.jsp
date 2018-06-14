@@ -124,14 +124,14 @@
         <p class="weui-grid__label">活动列表</p>
     </a>
 
-    <c:if test="${state==1}">
+    <%--<c:if test="${state==1}">--%>
         <a href="/qggy/phone/user/becomedaoshi.action" class="weui-grid js_grid">
             <div class="weui-grid__icon">
                 <img src="${pageContext.request.contextPath}/images/Phone/teacher.png" alt="">
             </div>
             <p class="weui-grid__label">成为公益导师</p>
         </a>
-    </c:if>
+    <%--</c:if>--%>
     <a href="/qggy/phone/user/activitycenter.action" class="weui-grid js_grid">
         <div class="weui-grid__icon">
             <img src="${pageContext.request.contextPath}/images/Phone/find.png" alt="">
