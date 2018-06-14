@@ -6,6 +6,36 @@
 		<title>活动押金</title>
 		<link rel="stylesheet" href="css/jquery-weui.css" />
 		<link rel="stylesheet" href="css/weui.css" />
+        <script src="../../weui/lib/jquery-2.1.4.js"></script>
+        <script src="../../weui/js/jquery-weui.min.js"></script>
+        <script type="text/javascript" src='../../js/swiper.js'
+                charset='utf-8'></script>
+        <script type='text/javascript'>
+            window.onload = function setPersonInfo() {
+                var time = {timestamp:new Date().getTime()};
+                $.ajax({
+                    url: "/qggy/phone/user/basicinfo/student/findbyOID.action", //请求地址
+                    type: "POST", //请求方式
+                    data: time,
+                    dataType: "json",
+                    contentType: 'application/json;charset=utf-8', //指定为json类型
+                    success: function (response) {
+                        var userName = document.getElementById("userName");
+                        var phoneNumber = document.getElementById("phoneNumber");
+                        var accountMoney = document.getElementById("accountMoney");
+                        userName.innerHTML = response[0].userName;
+                        phoneNumber.innerHTML = response[0].phoneNumber;
+                        accountMoney.innerHTML = response[0].availableAssets;
+                    },
+                    fail: function (status) {
+                        alert("接口调用异常" + status);
+                    }
+                });
+            };
+
+            //accountMoney.innerHTML="<font color='red'>this</font>"; 解析标签，修饰真正的输出/输出红色的this
+            //accountMoney.text="<font color='red'>this</font>"; 将标签当做输出/输出<font color='red'>this</font>
+        </script>
 	</head>
 	<body>
 		<div class="weui-panel weui-panel_access">
@@ -26,11 +56,11 @@
   <div class="weui-form-preview__bd">
     <div class="weui-form-preview__item">
       <label class="weui-form-preview__label">姓名</label>
-      <span class="weui-form-preview__value">展佳俊</span>
+      <span class="weui-form-preview__value"id="userName"></span>
     </div>
     <div class="weui-form-preview__item">
       <label class="weui-form-preview__label">电话</label>
-      <span class="weui-form-preview__value">11223344556</span>
+      <span class="weui-form-preview__value"id="phoneNumber"></span>
     </div>
       <div class="weui-form-preview__item">
       <label class="weui-form-preview__label">押金金额</label>
@@ -38,11 +68,11 @@
     </div>
     <div class="weui-form-preview__item">
       <label class="weui-form-preview__label">账户余额</label>
-      <span class="weui-form-preview__value">0.00</span>
+      <span class="weui-form-preview__value"id="accountMoney"></span>
     </div>
       <div class="weui-form-preview__item">
       <label class="weui-form-preview__label">微信支付金额</label>
-      <span class="weui-form-preview__value">99.00</span>
+      <span class="weui-form-preview__value">96.00</span>
     </div>
 
   </div>
