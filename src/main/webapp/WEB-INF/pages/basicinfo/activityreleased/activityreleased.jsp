@@ -15,9 +15,9 @@
 <head>
     <meta charset="UTF-8">
     <title>模块介绍</title>
-    <link rel="stylesheet" rev="stylesheet" type="text/css" href="css/main.css" media="all"/>
-    <script src="jquery.2.0.0.js"></script>
-    <script src="linkageMenu.js"></script>
+    <link rel="stylesheet" rev="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css" media="all"/>
+    <script src="${pageContext.request.contextPath}/weui/lib/jquery-2.1.4.js"></script>
+    <script src="${pageContext.request.contextPath}/js/linkageMenu.js"></script>
 
     <script>
         function changeProvince(code) {

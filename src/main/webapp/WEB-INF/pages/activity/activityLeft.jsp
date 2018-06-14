@@ -32,7 +32,7 @@
                            onclick="linkHighlighted(this)" target="main" id="aa_1">活动广告管理</a>
                     </li>
 
-                    <li><a href="${ctx}"
+                    <li><a href="${ctx}/basicinfo/activityreleased/list.action"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">青果活动发布</a>
                     </li>
 
