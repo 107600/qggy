@@ -72,10 +72,13 @@
 
     //TODO---state字段对应什么状态需要修改
     function getState(val) {
-        if (val == 1) {
+        if (val == 2) {
             return "已到账";
         }
         else if (val == 0) {
+            return "提现中";
+        }
+        else if (val == 1) {
             return "提现中";
         }
     }
