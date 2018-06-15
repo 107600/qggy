@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <title>本月酬金</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../../weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../../weui/css/jquery-weui.min.css">
+ </head>
+ <style>
+ .weui-media-box_appmsg .weui-media-box__hd {
+    margin-right: .8em;
+    width: 80px;
+    line-height: 80px;
+}
+
+.weui-media-box {
+    padding: 10px;
+}
+
+.weui-panel__bd{
+	font-size:2em;
+	font-weight: bold;
+	text-align: center;
+}
+.weui-panel__bdsecond{
+	font-size:0.75em
+}
+.weui-btn{
+	width:80% ;
+	
+}
+</style>
+</head>
+<body>
+	<div class="weui-panel weui-panel_access">
+        <div class="weui-panel__bd">我的本月酬金</div>     
+    </div>
+   
+   	<div class="weui-panel__bdsecond">
+        <div class="weui-panel__bd">课程酬金结算</div>
+    </div>
+   
+  <div class="weui-form-preview">
+    <div class="weui-form-preview__bd">
+      <div class="weui-form-preview__item">
+        <label class="weui-form-preview__label">xxx课程</label>
+        <span class="weui-form-preview__value">200元</span>
+      </div>
+
+      <div class="weui-form-preview__item">
+        <label class="weui-form-preview__label">xxx课程</label>
+        <span class="weui-form-preview__value">300元</span>
+      </div>
+
+      <div class="weui-form-preview__item">
+        <label class="weui-form-preview__label">xxx课程</label>
+        <span class="weui-form-preview__value">400元</span>
+      </div>
+    </div>
+  </div>
+
+   <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">本月课程应结</label></div>
+                <div class="weui-cell__bd">
+                   <input class="weui-input" type="text"  placeholder="xxx元">
+                </div>
+   </div>
+     <div><a href="/qggy/phone/user/myBillHistory.action"
+             class="weui-btn weui-btn_disabled weui-btn_default">查看历史账单</a></div>
+
+    <!--以下是课程酬金结算-->
+   <div class="weui-panel__bdsecond">
+      <div class="weui-panel__bd">活动酬金结算</div>     
+   </div> 
+   
+<div class="weui-form-preview">
+ 
+    <div class="weui-form-preview__bd">
+    <div class="weui-form-preview__item">
+      <label class="weui-form-preview__label">xxx活动</label>
+      <span class="weui-form-preview__value">200元</span>
+    </div>
+    <div class="weui-form-preview__item">
+      <label class="weui-form-preview__label">xxx活动</label>
+      <span class="weui-form-preview__value">300元</span>
+    </div>
+    <div class="weui-form-preview__item">
+      <label class="weui-form-preview__label">xxx活动</label>
+      <span class="weui-form-preview__value">400元</span>
+    </div>
+  </div>
+  </div>
+ <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">本月活动应结</label></div>
+          <div class="weui-cell__bd">
+             <input class="weui-input" type="text"  placeholder="xxx元">
+          </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">历史未结金额</label></div>
+                <div class="weui-cell__bd">
+                   <input class="weui-input" type="text"  placeholder="xxx元">
+                </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">总计未结金额</label></div>
+                <div class="weui-cell__bd">
+                   <input class="weui-input" type="text"  placeholder="xxx元">
+                </div>
+        </div>
+        
+         <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">预结金额 </label></div>
+                <div class="weui-cell__bd">
+                   <input class="weui-input" type="text" placeholder="请输入">
+                </div>
+        </div>
+        <div><a href="/qggy/phone/user/myBillHistory.action" class="weui-btn weui-btn_disabled weui-btn_default">查看历史账单</a>
+        	<a href="" class="weui-btn weui-btn_primary">申请酬金结算</a>
+        </div> 
+</body>
+</html>

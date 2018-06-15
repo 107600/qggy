@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>申请记录</title>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 设置屏幕自适应 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+    <link rel="stylesheet" href="../../weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../../weui/css/jquery-weui.min.css">
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<!-- <link rel="stylesheet" href="css/demos.css"> -->
+	 <style>
+		 .weui-media-box_appmsg .weui-media-box__hd {
+		    margin-right: .8em;
+		    width: 80px;
+		    line-height: 80px;
+		}
+
+		.weui-media-box {
+		    padding: 10px;
+		}
+
+		.weui-panel__bd{
+			font-size:2em;
+			font-weight: bold;
+			text-align: center;
+		}
+		.weui-panel__bdsecond{
+			font-size:0.75em
+		}
+		.weui-btn{
+			width:80% ;
+			
+}
+</style>
+</head>
+
+<body>
+	<div align="middle">
+		<h1>历史账单查询</h1>	
+	</div>
+<!-- 
+	<div class="weui-tab">
+	  <div class="weui-navbar">
+	    <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+	      五月
+	    </a>
+	    <a class="weui-navbar__item" href="#tab2">
+	      四月
+	    </a>
+	    <a class="weui-navbar__item" href="#tab2">
+	      三月
+	    </a>
+	    <a class="weui-navbar__item" href="#tab2">
+	      二月
+	    </a>
+	    <a class="weui-navbar__item" href="#tab2">
+	      一月
+	    </a>
+	    <a class="weui-navbar__item" href="#tab2">
+	      十二月
+	    </a>
+	  </div>
+	</div> -->
+
+ <div class="weui-tab">
+  <div class="weui-navbar">
+    <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+      五月
+    </a>
+    <a class="weui-navbar__item" href="#tab2">
+      四月
+    </a>
+    <a class="weui-navbar__item" href="#tab3">
+      三月
+    </a>
+    <a class="weui-navbar__item" href="#tab4">
+      二月
+    </a>
+    <a class="weui-navbar__item" href="#tab5">
+      一月
+    </a>
+    <a class="weui-navbar__item" href="#tab6">
+      十二月
+    </a>
+  </div>
+  <div class="weui-tab__bd">
+    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+        <div class="weui-panel__bdsecond">
+    <div class="weui-panel__bd">课程酬金结算</div>     
+  </div> 
+   
+  <div class="weui-form-preview">
+    <div class="weui-form-preview__bd">
+      <div class="weui-form-preview__item">
+        <label class="weui-form-preview__label">xxx课程</label>
+        <span class="weui-form-preview__value">200元</span>
+      </div>
+      <div class="weui-form-preview__item">
+        <label class="weui-form-preview__label">xxx课程</label>
+        <span class="weui-form-preview__value">300元</span>
+      </div>
+      <div class="weui-form-preview__item">
+        <label class="weui-form-preview__label">xxx课程</label>
+        <span class="weui-form-preview__value">400元</span>
+      </div>
+    </div>
+  </div>
+
+   <div class="weui-cell">
+    <div class="weui-cell__hd"><label class="weui-label">本月课程应结</label></div>
+     <div class="weui-cell__bd">
+       <input class="weui-input" type="text"  placeholder="xxx元">
+     </div>
+   </div>
+
+   <div class="weui-panel__bdsecond">
+      <div class="weui-panel__bd">活动酬金结算</div>     
+   </div> 
+
+   <div class="weui-form-preview">
+    <div class="weui-form-preview__bd">
+     <div class="weui-form-preview__item">
+      <label class="weui-form-preview__label">xxx活动</label>
+      <span class="weui-form-preview__value">200元</span>
+     </div>
+     <div class="weui-form-preview__item">
+      <label class="weui-form-preview__label">xxx活动</label>
+      <span class="weui-form-preview__value">300元</span>
+     </div>
+     <div class="weui-form-preview__item">
+      <label class="weui-form-preview__label">xxx活动</label>
+      <span class="weui-form-preview__value">400元</span>
+     </div>
+  	</div>
+   </div>
+   <div class="weui-cell">
+    <div class="weui-cell__hd"><label class="weui-label">本月课程应结:</label></div>
+     <div class="weui-cell__bd">
+       <input class="weui-input" type="text"  placeholder="xxx元">
+     </div>
+   </div>
+
+   <div class="weui-cell">
+    <div class="weui-cell__hd"><label class="weui-label">总计未结金额:</label></div>
+     <div class="weui-cell__bd">
+       <input class="weui-input" type="text"  placeholder="xxx元">
+     </div>
+   </div>
+    </div>
+    <div id="tab2" class="weui-tab__bd-item">
+      <h1>页面二</h1>
+    </div>
+  </div>
+</div>
+
+<div><a href="/qggy/phone/user/myMonthReward.action" class="weui-btn weui-btn_disabled weui-btn_default">返回</a></div>
+
+
+<!--   <div class="weui-panel weui-panel_access">
+    <div class="weui-panel__bd">我的本月酬金</div>     
+  </div>  -->
+   
+<!--   <div class="weui-panel__bdsecond">
+    <div class="weui-panel__bd">课程酬金结算</div>     
+  </div> 
+   
+  <div class="weui-form-preview">
+    <div class="weui-form-preview__bd">
+      <div class="weui-form-preview__item">
+        <label class="weui-form-preview__label">xxx课程</label>
+        <span class="weui-form-preview__value">200元</span>
+      </div>
+      <div class="weui-form-preview__item">
+        <label class="weui-form-preview__label">xxx课程</label>
+        <span class="weui-form-preview__value">300元</span>
+      </div>
+      <div class="weui-form-preview__item">
+        <label class="weui-form-preview__label">xxx课程</label>
+        <span class="weui-form-preview__value">400元</span>
+      </div>
+    </div>
+  </div>
+
+   <div class="weui-cell">
+    <div class="weui-cell__hd"><label class="weui-label">本月课程应结</label></div>
+     <div class="weui-cell__bd">
+       <input class="weui-input" type="text"  placeholder="xxx元">
+     </div>
+   </div>
+
+   <div class="weui-panel__bdsecond">
+      <div class="weui-panel__bd">活动酬金结算</div>     
+   </div> 
+
+   <div class="weui-form-preview">
+    <div class="weui-form-preview__bd">
+	    <div class="weui-form-preview__item">
+	      <label class="weui-form-preview__label">xxx活动</label>
+	      <span class="weui-form-preview__value">200元</span>
+	    </div>
+	    <div class="weui-form-preview__item">
+	      <label class="weui-form-preview__label">xxx活动</label>
+	      <span class="weui-form-preview__value">300元</span>
+	    </div>
+	    <div class="weui-form-preview__item">
+	      <label class="weui-form-preview__label">xxx活动</label>
+	      <span class="weui-form-preview__value">400元</span>
+	    </div>
+  	</div>
+   </div>
+   <div class="weui-cell">
+    <div class="weui-cell__hd"><label class="weui-label">本月课程应结:</label></div>
+     <div class="weui-cell__bd">
+       <input class="weui-input" type="text"  placeholder="xxx元">
+     </div>
+   </div>
+
+   <div class="weui-cell">
+    <div class="weui-cell__hd"><label class="weui-label">总计未结金额:</label></div>
+     <div class="weui-cell__bd">
+       <input class="weui-input" type="text"  placeholder="xxx元">
+     </div>
+   </div> -->
+
+</body>
+</html>
+

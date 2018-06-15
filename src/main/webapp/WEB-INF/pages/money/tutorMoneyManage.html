@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>导师酬金管理</title>
+    <link rel="stylesheet" rev="stylesheet" type="text/css"
+          href="../../skin/default/css/main.css" media="all"/>
+    <link rel="stylesheet" rev="stylesheet" type="text/css"
+          href="../../css/extreme/extremecomponents.css"/>
+    <link rel="stylesheet" rev="stylesheet" type="text/css"
+          href="../../css/extreme/extremesite.css"/>
+    <link rel="stylesheet" rev="stylesheet" type="text/css"
+          href="../../css/viewdetail.css"/>
+
+    <link rel="stylesheet" rev="stylesheet" type="text/css"
+          href="../../skin/default/css/default.css" media="all"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <style type="text/css">
+        .modelTitle{
+            text-align: center;
+        }
+
+    	.tableBody{
+    		text-align: left;
+		    border-top: 1px solid #b7dad6;
+		    border-bottom: 1px solid #c1e1dd;
+		    padding: 6px;
+    	}
+    </style>
+
+</head>
+<body>
+<form name="icform" method="post">
+
+    <table class="modelTable" cellspacing="1">
+        <thead>
+        <tr>
+            <td  colspan="8" class="modelTitle">导师酬金管理</td>
+        </tr>
+        </thead>
+
+    </table>
+
+    <div id="menubar">
+        <div id="middleMenubar">
+            <div id="innerMenubar">
+                <div id="navMenubar">
+                    <ul>
+                        <li id="view"><a href="#"
+                                         onclick="formSubmit('toview.action','_self');this.blur();">查看</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="textbox-header">
+        <div class="textbox-inner-header">
+
+            <div class="textbox-title">
+                员工编号:<input type="text" name="likes" id="likes1">
+                姓名:<input type="text" name="likes" id="likes2">
+                审核状态:<input type="text" name="likes" id="likes3">
+                <a href="#" onclick="formSubmit('list.action','_self');">查询</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="textbox" id="centerTextbox">
+        <div class="textbox-header">
+            <div class="textbox-inner-header">
+                <div class="textbox-title">申请酬金列表</div>
+            </div>
+        </div>
+
+        <div>
+
+            <div class="eXtremeTable">
+                <table id="ec_table" class="tableRegion" width="98%">
+                    <thead>
+                    <tr>
+                        <td class="tableHeader"><input type="checkbox" name="selid"
+                        ></td>
+                        <td class="tableHeader">序号</td>
+                        <td class="tableHeader">员工编号</td>
+                        <td class="tableHeader">姓名</td>
+                        <td class="tableHeader">上月结转金额</td>
+                        <td class="tableHeader">本月金额</td>
+                        <td class="tableHeader">本月申请结算</td>
+                        <td class="tableHeader">本月结余</td>
+                        <td class="tableHeader">审核状态</td>
+                        <td class="tableHeader">可选择的操作</td>
+                    </tr>
+                    </thead>
+                    <tbody class="tableBody">
+
+                        <tr>
+	                        <td class="tableBody"><input type="checkbox"/></td>
+	                        <td class="tableBody">1</td>
+	                        <td class="tableBody">001</td>
+	                        <td class="tableBody">李四</td>
+	                        <td class="tableBody">800</td>
+	                        <td class="tableBody">200</td>
+	                        <td class="tableBody">800</td>
+	                        <td class="tableBody">200</td>
+	                        <td class="tableBody">已审核</td>
+	                        <td class="tableBody">
+	                        	<a href="/qggy/basicinfo/money/checkMonthRecord.action" target="_Blank">查看本月记录</a>
+	                        	<a href="/qggy/basicinfo/money/checkHistoryRecord.action" target="_Blank">查看历史记录</a>
+	                        	<a href="#">审核通过</a>
+	                        	<a href="#">审核未通过</a>
+	                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+</form>
+</body>
+</html>

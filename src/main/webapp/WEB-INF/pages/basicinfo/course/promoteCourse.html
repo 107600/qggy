@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>课程发起管理</title>
+	<link rel="stylesheet" rev="stylesheet" type="text/css"
+      href="../../css/extreme/extremecomponents.css"/>
+	<link rel="stylesheet" rev="stylesheet" type="text/css"
+      href="../../css/extreme/extremesite.css"/>
+	<link rel="stylesheet" rev="stylesheet" type="text/css"
+      href="../../css/viewdetail.css"/>
+    <link rel="stylesheet" rev="stylesheet" type="text/css"
+      href="../../skin/default/css/default.css" media="all"/>
+    <link rel="stylesheet" rev="stylesheet" type="text/css"
+          href="../../skin/default/css/main.css" media="all"/>
+
+    <style type="text/css">
+    	.tableBody{
+    		text-align: left;
+		    border-top: 1px solid #b7dad6;
+		    border-bottom: 1px solid #c1e1dd;
+		    padding: 6px;
+    	}
+    </style>
+
+
+</head>
+<body>
+<form name="icform" method="post">
+
+    <table class="modelTable" cellspacing="1">
+        <tr>
+            <td colspan="2" class="modelTitle" style="text-align: center;">课程发起管理</td>
+        </tr>
+    </table>
+
+    <div class="textbox-header">
+        <div class="textbox-inner-header">
+
+            <div class="textbox-title">
+                课程类别:<input type="text" name="likes" id="likes1" value="${likes}">
+                课程名称:<input type="text" name="likes" id="likes2" value="${likes}">
+                上课时间:<input type="text" name="likes" id="likes3" value="${likes}">
+                上课区域:<input type="text" name="likes" id="likes4" value="${likes}">
+                <a href="#" onclick="formSubmit('list.action','_self');">查询</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="textbox" id="centerTextbox">
+        <div class="textbox-header">
+            <div class="textbox-inner-header">
+                <div class="textbox-title">课程列表</div>
+            </div>
+        </div>
+
+        <div>
+
+            <div class="eXtremeTable">
+                <table id="ec_table" class="tableRegion" width="98%">
+                    <thead>
+                    <tr>
+                        <td class="tableHeader"><input type="checkbox" name="selid"
+                        ></td>
+                        <td class="tableHeader">序号</td>
+                        <td class="tableHeader">课程类别</td>
+                        <td class="tableHeader">课程名称</td>
+                        <td class="tableHeader">上课时间</td>
+                        <td class="tableHeader">上课区域</td>
+                        <td class="tableHeader">想参与本课程的学生人数</td>
+                        <td class="tableHeader">想参与本课程的教师人数</td>
+                        <td class="tableHeader">审核状态</td>
+                        <td class="tableHeader">可选择的操作</td>
+                    </tr>
+                    </thead>
+                    <tbody class="tableBody">
+
+                        <tr>
+	                        <td class="tableBody"><input type="checkbox"/></td>
+	                        <td class="tableBody">1</td>
+	                        <td class="tableBody">大类</td>
+	                        <td class="tableBody">茶艺</td>
+	                        <td class="tableBody">周六上午9:00-11:00</td>
+	                        <td class="tableBody">杨浦区</td>
+	                        <td class="tableBody">32</td>
+	                        <td class="tableBody">3</td>
+	                        <td class="tableBody">已审核</td>
+	                        <td class="tableBody">
+	                        	<a href="/qggy/basicinfo/course/checkPromoteCourse.action" target="_Blank">查看详细信息</a>
+	                        	<a href="#">审核未通过</a>
+	                        	<a href="#">确认发布</a>
+	                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+</form>
+</body>
+</html>
