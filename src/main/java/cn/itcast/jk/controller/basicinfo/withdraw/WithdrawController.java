@@ -168,6 +168,7 @@ public class WithdrawController extends BaseController {
                     } else {
                         //提现状态设为未通过，提示用户未通过，需要走人工
                         Withdraw unCheckedWithdraw = new Withdraw();
+                        unCheckedWithdraw.setId(id);
                         unCheckedWithdraw.setState(3);
                         withdrawService.update(unCheckedWithdraw);
                         index = result.indexOf("err_code");
