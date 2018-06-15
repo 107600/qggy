@@ -166,6 +166,10 @@ public class WithdrawController extends BaseController {
                         model.addAttribute("url",
                                 "/basicinfo/withdraw/list.action?state=1");
                     } else {
+                        //提现状态设为未通过，提示用户未通过，需要走人工
+                        Withdraw unCheckedWithdraw = new Withdraw();
+                        unCheckedWithdraw.setState(3);
+                        withdrawService.update(unCheckedWithdraw);
                         index = result.indexOf("err_code");
                         String err_code = result.substring(index + 18,
                                 result.indexOf("err_code", index + 20) - 5);
