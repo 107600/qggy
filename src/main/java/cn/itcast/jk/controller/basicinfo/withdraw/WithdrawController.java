@@ -1,5 +1,6 @@
 package cn.itcast.jk.controller.basicinfo.withdraw;
 
+import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -173,10 +174,18 @@ public class WithdrawController extends BaseController {
                         unCheckedWithdraw.setState(3);
                         withdrawService.update(unCheckedWithdraw);
                         //未通过讲提现金额加至现金账户
-                        Student student = studentService.get(withdraw.getUserId());
+                        Map queryMap = new HashMap();
+                        queryMap.put("id",withdraw.getUserId());
+                        List<Student> studentList = studentService.find(queryMap);
                         //重新计算扣手续费的钱再添加至个人现金账户
-                        student.setXianjin(student.getXianjin()+withdraw.getMoney()/0.95);
-                        studentService.update(student);
+                        if (studentList.size()>0) {
+                            Student student = studentList.get(0);
+                            DecimalFormat df = new DecimalFormat("######0.00");
+                            student.setXianjin(Double.valueOf(df.format(student.getXianjin() + withdraw.getMoney() / 0.95)));
+                            studentService.update(student);
+                        }else {
+                            throw new RuntimeException("数据异常，该提现用户不存在");
+                        }
                         index = result.indexOf("err_code");
                         String err_code = result.substring(index + 18,
                                 result.indexOf("err_code", index + 20) - 5);
