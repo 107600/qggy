@@ -47,6 +47,15 @@ public class MainInterceptor implements HandlerInterceptor {
         if (user != null) {
             //1.从session判断用户是否已经登录；如果登录放行
             System.out.println("1.从session判断用户是否已经登录；如果登录放行");
+            // session中同步user（只要sync不为空）
+            if(session.getAttribute("sync")!=null){
+                //System.out.println("sync");
+                //做user被数据库同步
+                session.setAttribute("user",studentService.get(user.getUserOpenid()));
+                //移除sync
+                session.removeAttribute("sync");
+                System.out.println("session从数据库同步，防止当前session与数据库不一致");
+            }
             return true;
         } else {
             //2.session未登录，判断当前域中是否存在code

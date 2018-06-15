@@ -1,5 +1,6 @@
 package cn.itcast.jk.controller.basicinfo.phonetrade;
 
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -12,9 +13,15 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import cn.itcast.jk.dao.TradeDao;
+import cn.itcast.jk.dao.TradeDetailDao;
+import cn.itcast.jk.service.*;
 import net.sf.json.JSONArray;
 import net.sf.json.JsonConfig;
 
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,11 +34,6 @@ import cn.itcast.jk.domain.JsonDateValueProcessor;
 import cn.itcast.jk.domain.Student;
 import cn.itcast.jk.domain.Trade;
 import cn.itcast.jk.domain.TradeDetail;
-import cn.itcast.jk.service.AreaService;
-import cn.itcast.jk.service.CourseService;
-import cn.itcast.jk.service.StudentService;
-import cn.itcast.jk.service.TradeDetailService;
-import cn.itcast.jk.service.TradeService;
 import cn.itcast.jk.vo.TradeVO;
 import cn.itcast.qg.wxpay.CodeUtils;
 import cn.itcast.qg.wxpay.JsApiPay;
@@ -53,13 +55,19 @@ public class PhoneTradeController extends BaseController {
     @Resource
     TradeService tradeService;
     @Resource
-    AreaService areaService;
-    @Resource
     StudentService studentService;
     @Resource
     CourseService courseService;
     @Resource
     TradeDetailService tradedetailService;
+    @Resource
+    TradeDao tradeDao;
+    @Resource
+    WXPayService wXPayService;
+    @Resource
+    TradeDetailDao tradeDetailDao;
+
+    private static final Log log = LogFactory.getLog(PhoneTradeController.class);
 
     // 列表
     @RequestMapping("/phone/user/basicinfo/trade/list.action")
@@ -120,14 +128,15 @@ public class PhoneTradeController extends BaseController {
 
     @RequestMapping("/phone/public/basicinfo/trade/czsucess.action")
     public String czsucess(HttpSession session, String id, Model model) {
-
         Trade dataList = tradeService.get(id);
-        Student student = (Student) session.getAttribute("user");
-        DecimalFormat df = new DecimalFormat("######0.00");
-        // 更新课程余额
-        String xianjin = df.format(student.getXianjin()
-                - dataList.getWeixinmoney());
-        model.addAttribute("xianjin", xianjin);
+//        //Student student = (Student) session.getAttribute("user");
+//        Student student = studentService.get(((Student)session.getAttribute("user")).getUserOpenid());
+//        DecimalFormat df = new DecimalFormat("######0.00");
+//        // 更新课程余额
+//
+//        String xianjin = df.format(student.getXianjin()
+//                - dataList.getTotalFee());
+//        model.addAttribute("xianjin", xianjin);
         model.addAttribute("trade", dataList);
 
         return "/basicinfo/trade/czsucess.jsp";
@@ -459,10 +468,11 @@ public class PhoneTradeController extends BaseController {
                 && obj.getTradedetails().size() == 1
                 && obj.getTradedetails().get(0).getUserId()
                 .equals(student.getId())) {
-            System.out.println("bunengfenxiang");
-            return "redirect:/phone/user/myorder.action";
+            model.addAttribute("obj", obj);
+            log.info("订单只有一个人，跳转分享页面1");
+            return "/basicinfo/trade/ordersuccess1.jsp";
         } else {
-            System.out.println("fenxiang");
+            log.info("订单跳转分享页面");
             model.addAttribute("obj", obj);
 
             return "/basicinfo/trade/ordersuccess.jsp";
@@ -482,34 +492,33 @@ public class PhoneTradeController extends BaseController {
         trade.setWeixinmoney(jspay.getWeixinmoney());
         trade.setCountmoney(jspay.getCountmoney());
         trade.setXianjinPay(jspay.getXianjin());
+
+        Student s = (Student) request.getSession().getAttribute("user");
+
         // 微信金额大于0
+        log.info(jspay.getWeixinmoney()+"==============");
         if (jspay.getWeixinmoney() > 0.00) {
             // 未同步状态
             trade.setState(7);
+            log.info("微信支付");
         } else {
+            //不產生微信支付
             trade.setState(0);
+            String temp = new DecimalFormat("######0.00").format(s
+                    .getAvailableAssets() - jspay.getCountmoney());
+            s.setAvailableAssets(Double.parseDouble(temp));
+            String xinjin = new DecimalFormat("######0.00").format(s.getXianjin()
+                    - jspay.getXianjin());
+            s.setXianjin(Double.parseDouble(xinjin));
+            // 更新session中user
+            request.getSession().setAttribute("user", s);
+            System.out.println(s.getUserName() + "In orderinsert.action");
+            studentService.update(s);
+            log.info("不產生微信支付");
         }
         trade.setPayTime(new Date());
         trade.setOutTradeNo(jspay.getOuttradeno());
         trade.setId(jspay.getTradeid());
-        Student s = (Student) request.getSession().getAttribute("user");
-        // System.out.println("s.getAvailableAssets()" +
-        // s.getAvailableAssets());
-        // System.out.println("jspay.getCountmoney()" + jspay.getCountmoney());
-        String temp = new DecimalFormat("######0.00").format(s
-                .getAvailableAssets() - jspay.getCountmoney());
-        s.setAvailableAssets(Double.parseDouble(temp));
-        // System.out.println("s.setAvailableAssets()" +
-        // s.getAvailableAssets());
-        String xinjin = new DecimalFormat("######0.00").format(s.getXianjin()
-                - jspay.getXianjin());
-        s.setXianjin(Double.parseDouble(xinjin));
-
-        studentService.update(s);
-        // 更新session中user
-        request.getSession().setAttribute("user", s);
-        System.out.println(s.getUserName() + "In orderinsert.action");
-
         trade.setPayUserId(s.getId());
         trade.setPayUserName(s.getUserName());
         trade.setPayUserOpenid(s.getUserOpenid());
@@ -517,6 +526,7 @@ public class PhoneTradeController extends BaseController {
         trade.setAreaId(course.getAreaId());
         trade.setAreaName(course.getAreaName());
         trade.setName(course.getCourseName());
+        log.info("state"+trade.getState());
         tradeService.insert(trade);
         for (int i = 0; i < jspay.getStudentlist().size(); i++) {
             Map<String, String> paraMap = new HashMap<String, String>();
@@ -608,16 +618,6 @@ public class PhoneTradeController extends BaseController {
 
         trade.setId(jspay.getTradeid());
         Student s = (Student) request.getSession().getAttribute("user");
-        // System.out.println("s.getAvailableAssets()" +
-        // s.getAvailableAssets());
-        // System.out.println("jspay.getCountmoney()" + jspay.getCountmoney());
-        String temp = new DecimalFormat("######0.00").format(s.getXianjin()
-                + jspay.getTotalfee());
-        s.setXianjin(Double.parseDouble(temp));
-        // System.out.println("s.setAvailableAssets()" +
-        // s.getAvailableAssets());
-
-        studentService.update(s);
         System.out.println(s.getUserName() + "In czinsert.action");
 
         trade.setPayUserId(s.getId());
@@ -666,4 +666,88 @@ public class PhoneTradeController extends BaseController {
 
     }
 
+    // 查看
+    @RequestMapping("/notify.action")
+    public void wxPayNotify(HttpServletRequest request) throws Exception {
+        log.info("通知接口");
+        String inputLine;
+        //回调信息
+        String notityXml = "";
+        try {
+            while ((inputLine = request.getReader().readLine()) != null) {
+                notityXml += inputLine;
+            }
+            request.getReader().close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.error("get notify error");
+            log.error(e.getMessage());
+        }
+        if (StringUtils.isEmpty(notityXml)) {
+            log.error("notify is empty");
+        }
+        //回调的拿到的map
+        Map<String,String> notifyMap = WXPayUtil.xmlToMap(notityXml);
+        Map<String, Object> map = new HashMap<>();
+        // 根据回调信息查到订单
+        map.put("state", 7);
+        map.put("outTradeNo",notifyMap.get("out_trade_no"));
+        List<Trade> list = tradeDao.find(map);
+        if (list != null) {
+            for (Trade t : list) {
+                    //充值成功，需要更新账户
+                    if (t.getCategory() == 1) {
+                        // 跟新账户金额
+                        Student student = studentService.get(t
+                                .getPayUserOpenid());
+                        String temp = new DecimalFormat("######0.00").format(student.getXianjin()
+                                + t.getTotalFee());
+
+                        log.info("更新前账户金额："+student.getXianjin());
+                        log.info("充值金额："+t.getTotalFee());
+                        student.setXianjin(Double.parseDouble(temp));
+                        studentService.update(student);
+                        log.info("更新后的金额："+student.getXianjin());
+                    }
+                    t.setBankType(notifyMap.get("bank_type"));
+                    t.setTransactionId(notifyMap.get("transaction_id"));
+                    t.setFeeType(notifyMap.get("fee_type"));
+                    t.setDeviceInfo(notifyMap.get("device_info"));
+                    t.setTradeType(notifyMap.get("trade_type"));
+                    t.setTimeEnd(notifyMap.get("time_end"));
+                    t.setCashFee(Double.parseDouble(notifyMap.get("cash_fee")
+                            .trim()));
+                    t.setState(0);
+                    tradeDao.update(t);
+                    Map<String, Object> paraMap = new HashMap<String, Object>();
+                    paraMap.put("tradeId", t.getId());
+                    List<TradeDetail> list2 = tradeDetailDao.find(paraMap);
+                    if (list2 != null) {
+                        for (TradeDetail td : list2) {
+                            td.setTradeState(0);
+                            log.info(t.getId());
+                            tradeDetailDao.update(td);
+                        }
+                        log.info("子订单更新成功");
+                    }
+                }
+        }
+    }
 }
+//                    //删掉当前订单
+//                    tradeDao.deleteById(t.getId());
+//                    Map<String, Object> paraMap = new HashMap<String, Object>();
+//                    paraMap.put("tradeId", t.getId());
+//                    List<TradeDetail> list2 = tradeDetailDao.find(paraMap);
+//                    if (list2 != null) {
+//                        for (TradeDetail td : list2) {
+//                            tradeDetailDao.deleteById(td.getId());
+//                        }
+//                    }
+//                    log.info("删除订单失败");
+//                }
+//            }
+//        }
+//    }
+
+//}

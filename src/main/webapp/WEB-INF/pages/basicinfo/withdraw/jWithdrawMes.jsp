@@ -9,7 +9,7 @@
 	<br>
 	<br>
 	<div style="width: 80%;padding-left: 10%;">
-		<h3>${message}</h3>
+		<h3 >${message}</h3>
 		<br> <a href="${ctx}${url}" style="font-size: 20px;">返回链接</a>
 	</div>
 	<br>

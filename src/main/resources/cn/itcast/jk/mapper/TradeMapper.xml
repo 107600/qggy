@@ -88,6 +88,7 @@
         <if test="areaId!=null">AND AREA_ID=#{areaId}</if>
         <if test="category!=null">AND CATEGORY=#{category}</if>
         <if test="likes != null">and PAY_USER_NAME like CONCAT('%',#{likes},'%')</if>
+        <if test="outTradeNo!=null">AND OUT_TRADE_NO=#{outTradeNo}</if>
         ORDER BY TRADE_ID desc
     </select>
     <!-- 查询 -->

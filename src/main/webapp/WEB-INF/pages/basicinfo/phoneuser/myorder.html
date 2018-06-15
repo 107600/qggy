@@ -155,6 +155,8 @@
             return "已退款";
         } else if (val == 5) {
             return "已完成";
+        } else if (val == 7) {
+            return "未支付";
         }
     }
     function histroyOrder() {
@@ -175,41 +177,44 @@
                     var allclass = document.getElementById("histroyclass");
                     allclass.innerHTML = "";
                     for (var i = 0; i < response.length; i++) {
-                        //参见http://jqweui.com/components#panel
-                        var a = document.createElement("a");
-                        //TODO
-                        a.setAttribute("href",
-                            "/qggy/phone/user/orderDetail.action?id="
-                            + response[i].id);
-                        a.setAttribute("class",
-                            "weui-media-box weui-media-box_appmsg");
+                        //未支付不展示
+                        if (response[i].state != 7) {
+                            //参见http://jqweui.com/components#panel
+                            var a = document.createElement("a");
+                            //TODO
+                            a.setAttribute("href",
+                                "/qggy/phone/user/orderDetail.action?id="
+                                + response[i].id);
+                            a.setAttribute("class",
+                                "weui-media-box weui-media-box_appmsg");
 
 
-                        var div3 = document.createElement("div");
-                        div3.setAttribute("class", "weui-media-box__hd");
-                        var img = document.createElement("img");
-                        img.setAttribute("class", "weui-media-box__thumb");
-                        img.setAttribute("src", "../../images/phoneuser/order.png");
-                        div3.appendChild(img);
+                            var div3 = document.createElement("div");
+                            div3.setAttribute("class", "weui-media-box__hd");
+                            var img = document.createElement("img");
+                            img.setAttribute("class", "weui-media-box__thumb");
+                            img.setAttribute("src", "../../images/phoneuser/order.png");
+                            div3.appendChild(img);
 
-                        var div4 = document.createElement("div");
-                        div4.setAttribute("class",
-                            "weui-media-box__bd");
-                        var h4 = document.createElement("h4");
-                        h4.setAttribute("class",
-                            "weui-media-box__title");
-                        //&emsp;==\t
-                        h4.innerHTML = response[i].name;
-                        var p = document.createElement("p");
-                        p.setAttribute("class", "weui-media-box__desc");
-                        p.innerHTML = "总价: " + response[i].totalFee
-                            + "   时间: " + response[i].payTime
-                            + "<br>状态 :" + getState(response[i].state);
-                        div4.appendChild(h4);
-                        div4.appendChild(p);
-                        a.appendChild(div3);
-                        a.appendChild(div4);
-                        allclass.appendChild(a);
+                            var div4 = document.createElement("div");
+                            div4.setAttribute("class",
+                                "weui-media-box__bd");
+                            var h4 = document.createElement("h4");
+                            h4.setAttribute("class",
+                                "weui-media-box__title");
+                            //&emsp;==\t
+                            h4.innerHTML = response[i].name;
+                            var p = document.createElement("p");
+                            p.setAttribute("class", "weui-media-box__desc");
+                            p.innerHTML = "总价: " + response[i].totalFee
+                                + "   时间: " + response[i].payTime
+                                + "<br>状态 :" + getState(response[i].state);
+                            div4.appendChild(h4);
+                            div4.appendChild(p);
+                            a.appendChild(div3);
+                            a.appendChild(div4);
+                            allclass.appendChild(a);
+                        }
                     }
                 }
             });

@@ -10,7 +10,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>充值成功</title>
+    <title>成功</title>
+
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no">
@@ -25,16 +27,13 @@
           href="${pageContext.request.contextPath}/weui/css/jquery-weui.min.css">
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/weui/css/jquery-weui.css">
-
+    <script src="https://one.teegon.com/jslib/t-charging.min.js"></script>
 </head>
-
 <body>
 <div class="weui-msg">
-    <div class="weui-msg__icon-area"><img src="${pageContext.request.contextPath}/images/gzh.jpg"></div>
+    <div class="weui-msg__icon-area"><img src="${pageContext.request.contextPath}/images/gzh.jpg"></i></div>
     <div class="weui-msg__text-area">
-        <h2 class="weui-msg__title">充值成功</h2>
-        <p class="weui-msg__desc">您可以在我的充值记录中查看该订单</p>
-
+        <h2 class="weui-msg__title">购买成功</h2>
     </div>
 
 </div>
@@ -42,25 +41,18 @@
 <div class="weui-form-preview">
     <div class="weui-form-preview__bd">
         <div class="weui-form-preview__item">
-            <label class="weui-form-preview__label">充值订单编号</label>
-            <span class="weui-form-preview__value">${trade.id}</span>
+            <label class="weui-form-preview__label">课程名称</label>
+            <span class="weui-form-preview__value"><a
+                    href="/qggy/phone/public/basicinfo/course/phonecoursedetail1.action?id=${obj.tradedetails[0].courseId}">${obj.name }</a></span>
         </div>
         <div class="weui-form-preview__item">
-            <label class="weui-form-preview__label">充值时间</label>
-            <span class="weui-form-preview__value"><fmt:formatDate value="${trade.payTime}"
-                                                                   pattern="yyyy-MM-dd HH:mm:ss"/></span>
+            <label class="weui-form-preview__label">所属区域</label>
+            <span class="weui-form-preview__value">${obj.areaName }</span>
         </div>
-
-
     </div>
 </div>
-
 <div class="weui-footer">
 
 </div>
-
-
 </body>
-
 </html>
-

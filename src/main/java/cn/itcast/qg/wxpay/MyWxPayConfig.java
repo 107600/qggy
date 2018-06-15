@@ -84,7 +84,7 @@ public class MyWxPayConfig implements WXPayConfig {
     public final static String WAP_NAME = "青果公益";
 
 
-    public final static String WXNOTIFY_URL = HTTP_URL + "/basicinfo/weixinpay/notify.action";
+    public final static String WXNOTIFY_URL = "http://qingguocloud.com/qggy/notify.action";
 
     public String getAppID() {
 
