@@ -8,6 +8,7 @@ import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import cn.itcast.jk.domain.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -171,6 +172,11 @@ public class WithdrawController extends BaseController {
                         unCheckedWithdraw.setId(id);
                         unCheckedWithdraw.setState(3);
                         withdrawService.update(unCheckedWithdraw);
+                        //未通过讲提现金额加至现金账户
+                        Student student = studentService.get(withdraw.getUserId());
+                        //重新计算扣手续费的钱再添加至个人现金账户
+                        student.setXianjin(student.getXianjin()+withdraw.getMoney()/0.95);
+                        studentService.update(student);
                         index = result.indexOf("err_code");
                         String err_code = result.substring(index + 18,
                                 result.indexOf("err_code", index + 20) - 5);
