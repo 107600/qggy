@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import cn.itcast.jk.config.UploadConfig;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -451,5 +452,18 @@ public class CourseController extends BaseController {
         courseService.uprecommend(paramap);
         return "redirect:/basicinfo/course/list.action";
 
+    }
+
+    //列表，显示课程发起的所有记录
+    //课程发起的含义是:统计对该门课程感兴趣的人数，由管理员决定是否开课
+    @RequestMapping("/basicinfo/course/coursePromote.action")
+    public String coursePromote(Model model, HttpSession session, String likes){
+        return "basicinfo/course/promoteCourse.html";
+    }
+
+    //显示发起的课程的详细信息
+    @RequestMapping("/basicinfo/course/checkPromoteCourse.action")
+    public String checkCoursePromote(Model model, HttpSession session, String likes){
+        return "basicinfo/course/checkPromoteCourse.html";
     }
 }

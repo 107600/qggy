@@ -29,6 +29,7 @@ public class HomeController {
         return "/index.jsp"; // 首页，删除根目录下index.jsp，否则上面url将被拦截进不来
     }
 
+    //管理员判断
     @RequestMapping(value = "/fmain.action")
     public String fmain(SysUser sysUser, HttpSession session, Model model) {
         System.out.println("jinru");
@@ -109,6 +110,32 @@ public class HomeController {
     public String activityLeft(){
         return "/activity/activityLeft.jsp";
     }
+
+    //酬金管理跳转
+    @RequestMapping("/moneyManage.action")
+    public String moneyLeft(){
+        return "/money/moneyLeft.jsp";
+    }
+
+    //酬金main页面跳转
+    @RequestMapping("/moneyMain.action")
+    public String moneyMain(){
+        return "/money/moneyMain.jsp";
+    }
+
+    //老师管理跳转
+    @RequestMapping("/teacherManage.action")
+    public String teacherLeft(){
+        return "/teacher/teacherLeft.jsp";
+    }
+
+    //老师main页面跳转
+    @RequestMapping("/teacherMain.action")
+    public String teacherMain(){
+        return "/teacher/teacherMain.jsp";
+    }
+
+
     //积分管理跳转
     @RequestMapping("/scoreManage.action")
     public String scoreLeft(){
@@ -116,7 +143,6 @@ public class HomeController {
     }
 
     // 统计分析
-
     @RequestMapping("/statMain.action")
     public String statMain() {
         return "/stat/main.jsp";

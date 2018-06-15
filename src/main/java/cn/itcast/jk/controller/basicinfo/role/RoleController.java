@@ -45,7 +45,6 @@ public class RoleController extends BaseController {
         }
 
         // 将数据传递到页面
-
         return "/baseinfo/error.jsp";
 
     }

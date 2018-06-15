@@ -28,7 +28,6 @@ public class TransferController extends BaseController {
     TransferService transferService;
 
     // 列表
-
     @RequestMapping("/basicinfo/transfer/list.action")
     public String list(HttpSession session, Model model) {
         SysUserVO sysUserVO = (SysUserVO) session.getAttribute("sysUserVO");
@@ -51,7 +50,6 @@ public class TransferController extends BaseController {
         }
 
         // 将数据传递到页面
-
         return "/baseinfo/error.jsp";
 
 

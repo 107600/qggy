@@ -60,7 +60,8 @@
     </resultMap>
 
     <!-- 查询 -->
-    <select id="find" parameterType="map" resultMap="classsRM">SELECT
+    <select id="find" parameterType="map" resultMap="classsRM">
+        SELECT
         *
         FROM
         classs

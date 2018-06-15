@@ -37,9 +37,14 @@ public class UserAutIdentiInterceptortest implements HandlerInterceptor {
             System.out.println("自动登录");
             request.getSession().setAttribute("user", student);
             return true;
+        }else {
+            System.out.println("转向其他页面");
+            request.setAttribute("userOpenid","ovrWG1VMq4dJkswjCYfJ4qHBix4A");
+            request.getRequestDispatcher("/Userregister.jsp").forward(request,response);
+            return false;
         }
 
-        return true;
+//        return true;
     }
 
 }

@@ -27,24 +27,29 @@
             <div class="panel-content">
                 <ul>
 
-
                     <li><a href="${ctx}/basicinfo/course/list.action"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">课程信息</a>
                     </li>
 
                     <li><a href="${ctx}/basicinfo/adv/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">广告管理</a>
+                           onclick="linkHighlighted(this)" target="main" id="aa_2">广告管理</a>
                     </li>
 
 
                     <li><a href="${ctx}/basicinfo/tradedetail/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">报名管理</a>
+                           onclick="linkHighlighted(this)" target="main" id="aa_3">报名管理</a>
                     </li>
+
                     <li><a href="${ctx}/basicinfo/classs/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">班级管理</a>
+                           onclick="linkHighlighted(this)" target="main" id="aa_4">班级管理</a>
                     </li>
+
                     <li><a href="${ctx}/basicinfo/attendance/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">考勤管理</a>
+                           onclick="linkHighlighted(this)" target="main" id="aa_5">考勤管理</a>
+                    </li>
+
+                    <li><a href="${ctx}/basicinfo/course/coursePromote.action"
+                           onclick="linkHighlighted(this)" target="main" id="aa_6">课程发起管理</a>
                     </li>
                 </ul>
             </div>

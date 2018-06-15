@@ -40,14 +40,15 @@
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/phone/user/**"/>
-            <bean class="cn.itcast.jk.interceptor.UserAutIdentiInterceptor"></bean>
+            <!--之前配置为cn.itcast.jk.interceptor.UserAutIdentiInterceptor-->
+            <!--在最后加上test-->
+            <bean class="cn.itcast.jk.interceptor.UserAutIdentiInterceptortest"></bean>
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/phone/sys/**"/>
             <bean class="cn.itcast.jk.interceptor.SysAutIdentiInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
-
 
     <mvc:annotation-driven/>
 </beans>

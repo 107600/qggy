@@ -78,7 +78,6 @@
             <result property="userPhone" column="USER_PHONE"/>
             <result property="classState" column="CLASS_STATE"/>
 
-
             <result property="courseCover" column="COURSE_COVER"/>
 
         </collection>
@@ -89,13 +88,18 @@
         t1.*,
         t2.*
         FROM
-        trade_detail t1, classs t2
-        where t1.CLASS_ID =
-        t2.CLASS_ID
-        <if test="teacherId!=null">and t2.TEACHER_ID=#{teacherId}</if>
-        <if test="classsState!=null">and t2.CLASSS_STATE=#{classsState}</if>
-        <if test="classsid!=null">and t2.CLASS_ID=#{classsid}</if>
-
+          trade_detail t1, classs t2
+        where
+        t1.CLASS_ID = t2.CLASS_ID
+        <if test="teacherId!=null">
+            and t2.TEACHER_ID=#{teacherId}
+        </if>
+        <if test="classsState!=null">
+            and t2.CLASSS_STATE=#{classsState}
+        </if>
+        <if test="classsid!=null">
+            and t2.CLASS_ID=#{classsid}
+        </if>
         ORDER BY t2.CLASS_TIME ;
     </select>
     <select id="getclassStudent" parameterType="map" resultMap="ClassTradetailVORM">
@@ -106,8 +110,9 @@
         trade_detail t1, classs t2
         where t1.CLASS_ID =
         t2.CLASS_ID
-        <if test="classsid!=null">and t2.CLASS_ID=#{classsid}</if>
-
+        <if test="classsid!=null">
+            and t2.CLASS_ID=#{classsid}
+        </if>
 
     </select>
 

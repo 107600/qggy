@@ -44,11 +44,17 @@
             <tr>
                 <td class="model_intro_left" colspan="2">管理员查看会员上课记录</td>
             </tr>
+            <tr>
+                <td colspan="2" class="subModelTitle">课程发起管理</td>
+            </tr>
+            <tr>
+                <td class="model_intro_left" colspan="2">管理员查看课程发起的记录</td>
+            </tr>
 
             <tfoot>
-            <tr>
-                <td colspan="2" class="tableFooter"></td>
-            </tr>
+                <tr>
+                    <td colspan="2" class="tableFooter"></td>
+                </tr>
             </tfoot>
         </table>
 

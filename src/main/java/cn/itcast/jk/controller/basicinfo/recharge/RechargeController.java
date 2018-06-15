@@ -38,6 +38,7 @@ public class RechargeController extends BaseController {
             {
                 Map<String, String> map = new HashMap<>();
                 map.put("areaId", sysUserVO.getAreaId() + "");
+                //category=1表示充值
                 map.put("category", "1");
                 List<Trade> dataList = tradeService.find(map);
                 model.addAttribute("dataList", dataList); // 将数据传递到页面
@@ -56,7 +57,6 @@ public class RechargeController extends BaseController {
         }
 
         // 将数据传递到页面
-
         return "/baseinfo/error.jsp";
 
 

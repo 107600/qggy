@@ -242,21 +242,16 @@
                         src="${ctx}/skin/default/images/title/left_arrow.png"/></span>
                 <div class="mavMeau_top"></div>
                 <div id="mask">
-                    <div id="menuContent"><span id="topmenu"
-                                                onclick="top.location.href='fmain.action';linkHighlightMenu(this);">系统首页</span><span
-                            id="tm_separator1"></span><span id="topmenu"
-                                                           onclick="top.leftFrame.location.href='cargoLeft.action';top.main.location.href='cargoMain.action';linkHighlightMenu(this);">财务管理</span><span
-                            id="tm_separator2"></span><span id="topmenu"
-                                                           onclick="top.leftFrame.location.href='statLeft.action';top.main.location.href='statMain.action';linkHighlightMenu(this);">统计分析</span><span
-                            id="tm_separator3"></span><span id="topmenu"
-                                                           onclick="top.leftFrame.location.href='baseinfoLeft.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">课程管理</span><span
-
-                            id="tm_separator6"></span><span id="topmenu"
-                                                            onclick="top.leftFrame.location.href='activityManage.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">活动管理</span><span
-                            id="tm_separator1"></span><span id="topmenu"
-                                                            onclick="top.leftFrame.location.href='scoreManage.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">积分管理</span><span
-                            id="tm_separator2"><span id="topmenu"
-                                                           onclick="top.leftFrame.location.href='sysadminLeft.action';top.main.location.href='sysadminMain.action';linkHighlightMenu(this);">系统管理</span>
+                    <div id="menuContent">
+                        <span id="topmenu" onclick="top.location.href='fmain.action';linkHighlightMenu(this);">系统首页</span>
+                        <span id="tm_separator1"></span><span id="topmenu" onclick="top.leftFrame.location.href='cargoLeft.action';top.main.location.href='cargoMain.action';linkHighlightMenu(this);">财务管理</span>
+                        <span id="tm_separator2"></span><span id="topmenu" onclick="top.leftFrame.location.href='statLeft.action';top.main.location.href='statMain.action';linkHighlightMenu(this);">统计分析</span>
+                        <span id="tm_separator3"></span><span id="topmenu" onclick="top.leftFrame.location.href='baseinfoLeft.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">课程管理</span>
+                        <span id="tm_separator4"></span><span id="topmenu" onclick="top.leftFrame.location.href='activityManage.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">活动管理</span>
+                        <span id="tm_separator5"></span><span id="topmenu" onclick="top.leftFrame.location.href='teacherManage.action';top.main.location.href='teacherMain.action';linkHighlightMenu(this);">老师管理</span>
+                        <span id="tm_separator6"></span><span id="topmenu" onclick="top.leftFrame.location.href='moneyManage.action';top.main.location.href='moneyMain.action';linkHighlightMenu(this);">酬金管理</span>
+                        <span id="tm_separator7"></span><span id="topmenu" onclick="top.leftFrame.location.href='scoreManage.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">积分管理</span>
+                        <span id="tm_separator8"></span><span id="topmenu" onclick="top.leftFrame.location.href='sysadminLeft.action';top.main.location.href='sysadminMain.action';linkHighlightMenu(this);">系统管理</span>
 
                     </div>
                 </div>

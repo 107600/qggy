@@ -63,6 +63,32 @@ public class PhoneUserHomeController {
         //return "/basicinfo/phoneuser/myattendance.html";
     }
 
+    //我的申请角色、酬金记录
+    @RequestMapping("/phone/user/myAppliRecord.action")
+    public String myAppliRecord() {
+        return "/basicinfo/phoneuser/money/appliRecord.html";
+
+        //return "/basicinfo/phoneuser/myattendance.html";
+    }
+
+    //申请酬金结算以及查看本月、历史申请酬金记录
+    @RequestMapping("/phone/user/myMonthReward.action")
+    public String myMonthReward() {
+        return "/basicinfo/phoneuser/money/monthReward.html";
+    }
+
+    //查看申请活动、酬金的历史记录
+    @RequestMapping("/phone/user/myBillHistory.action")
+    public String myBillHistory() {
+        return "/basicinfo/phoneuser/money/billHistory.html";
+    }
+
+    //查看申请活动、酬金的历史记录
+    @RequestMapping("/phone/user/myCoursePromote.action")
+    public String myCoursePromote() {
+        return "/basicinfo/phoneuser/coursePromote.html";
+    }
+
     // 退款记录
     @RequestMapping("/phone/user/myrefund.action")
     public String myrefund() {

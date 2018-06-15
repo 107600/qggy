@@ -198,6 +198,7 @@ public class SysUserController extends BaseController {
     // 确认修改密码
     @RequestMapping("/basicinfo/sysuser/surechangepassword.action")
     public String surechangepassword(String password, String password1, HttpSession session, Model model) {
+        //sysUserVO对应后台管理员
         SysUserVO sysUserVO = (SysUserVO) session.getAttribute("sysUserVO");
         if (password.trim().equals(password1.trim())) {
             model.addAttribute("msg", "两次输入密码不能一样！！！");

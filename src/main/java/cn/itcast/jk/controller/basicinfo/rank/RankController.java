@@ -23,6 +23,7 @@ import cn.itcast.jk.vo.SysUserVO;
  * @Company: http://java.itcast.cn
  * @CreateDate: 2014年10月9日
  */
+//课程的初级、中级、高级
 @Controller
 public class RankController extends BaseController {
     @Resource
@@ -43,7 +44,6 @@ public class RankController extends BaseController {
         }
 
         // 将数据传递到页面
-
         return "/baseinfo/error.jsp";
 
     }
