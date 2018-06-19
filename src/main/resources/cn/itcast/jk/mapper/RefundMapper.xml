@@ -51,6 +51,7 @@
             AND AREA_ID = #{areaId}
         </if>
         <if test="likes != null">and REFUND_USERNAME like CONCAT('%',#{likes},'%')</if>
+        <if test="areaLikes != null">and AREA_NAME like CONCAT('%',#{areaLikes},'%')</if>
         order by APPLY_TIME
     </select>
 

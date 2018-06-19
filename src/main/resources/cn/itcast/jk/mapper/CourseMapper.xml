@@ -286,6 +286,7 @@
         <if test="cname!=null">and COURSE_NAME like CONCAT('%',#{cname},'%')</if>
         <if test="id!=null">and COURSE_ID = #{id}</if>
         <if test="likes != null">and COURSE_NAME like CONCAT('%',#{likes},'%')</if>
+        <if test="areaLikes != null">and AREA_NAME like CONCAT('%',#{areaLikes},'%')</if>
         order by COURSE_NAME
     </select>
 </mapper>

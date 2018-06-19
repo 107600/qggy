@@ -53,6 +53,8 @@
                         <td class="tableHeader">区域</td>
                         <td class="tableHeader">上课时间</td>
                         <td class="tableHeader">上课地点</td>
+                        <td class="tableHeader">状态</td>
+                        <td class="tableHeader">操作</td>
                     </tr>
                     </thead>
                     <tbody class="tableBody">
@@ -70,7 +72,15 @@
                             <td>${o.areaName}</td>
                             <td>${o.classTime}</td>
                             <td>${o.classAddress}</td>
+                            <td><c:if test="${o.classstate==0}">[上课中]</c:if>
+                                <c:if test="${o.classstate==1}">[已结课]</c:if>
+                                <c:if test="${o.classstate==2}">[待审查]</c:if>
+                            </td>
 
+                            <td><c:if test="${o.classstate==0}">
+                                <a href="updateState.action?id=${o.id}&classstate=1"><font
+                                        color="green">[结课]</font></a>
+                            </c:if></td>
                         </tr>
                     </c:forEach>
 

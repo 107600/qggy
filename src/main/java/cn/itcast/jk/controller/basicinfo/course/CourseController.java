@@ -76,7 +76,7 @@ public class CourseController extends BaseController {
 
     // 列表
     @RequestMapping("/basicinfo/course/list.action")
-    public String list(Model model, String likes, HttpSession session) {
+    public String list(Model model, String likes, HttpSession session,String queryCondition) {
         SysUserVO sysUserVO = (SysUserVO) session.getAttribute("sysUserVO");
         for (UrRo r : sysUserVO.getRoles()) {
             if (r.getSroleId().equals("1"))// 录入人员
@@ -103,14 +103,26 @@ public class CourseController extends BaseController {
                 return "/basicinfo/course/jCourseListf.jsp";
             } else if (r.getSroleId().equals("3"))// 总部领导
             {
-                Map<String, String> parmap = new HashMap<>();
-                if (!StringUtils.isBlank(likes)) {
-                    parmap.put("likes", likes);
-                }
-                List<Course> dataList = courseService.find(parmap);
-                model.addAttribute("dataList", dataList); // 将数据传递到页面
+                //区域查询
+                if ("2".equals(queryCondition)) {
+                    Map<String, String> parmap = new HashMap<>();
+                    if (!StringUtils.isBlank(likes)) {
+                        parmap.put("areaLikes", likes);
+                    }
+                    List<Course> dataList = courseService.find(parmap);
+                    model.addAttribute("dataList", dataList); // 将数据传递到页面
 
-                return "/basicinfo/course/jCourseListz.jsp";
+                    return "/basicinfo/course/jCourseListz.jsp";
+                } else { //姓名查询
+                    Map<String, String> parmap = new HashMap<>();
+                    if (!StringUtils.isBlank(likes)) {
+                        parmap.put("likes", likes);
+                    }
+                    List<Course> dataList = courseService.find(parmap);
+                    model.addAttribute("dataList", dataList); // 将数据传递到页面
+
+                    return "/basicinfo/course/jCourseListz.jsp";
+                }
             }
         }
         return "/baseinfo/error.jsp";

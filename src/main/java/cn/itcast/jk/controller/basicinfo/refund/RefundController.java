@@ -46,7 +46,7 @@ public class RefundController extends BaseController {
 
     // 列表
     @RequestMapping("/basicinfo/refund/list.action")
-    public String list(Model model, HttpSession session, String likes) {
+    public String list(Model model, HttpSession session, String likes,String queryCondition) {
         SysUserVO sysUserVO = (SysUserVO) session.getAttribute("sysUserVO");
         for (UrRo r : sysUserVO.getRoles()) {
             if (r.getSroleId().equals("19"))//
@@ -63,14 +63,26 @@ public class RefundController extends BaseController {
 
             } else if (r.getSroleId().equals("20"))//
             {
-                Map<String, String> map = new HashMap<>();
-                if (!StringUtils.isBlank(likes)) {
-                    map.put("likes", likes);
-                }
-                List<Refund> dataList = refundService.find(map);
-                model.addAttribute("dataList", dataList); // 将数据传递到页面
+                //区域查询
+                if ("2".equals(queryCondition)){
+                    Map<String, String> map = new HashMap<>();
+                    if (!StringUtils.isBlank(likes)) {
+                        map.put("areaLikes", likes);
+                    }
+                    List<Refund> dataList = refundService.find(map);
+                    model.addAttribute("dataList", dataList); // 将数据传递到页面
 
-                return "/basicinfo/refund/jRefundListz.jsp"; // 转向页面
+                    return "/basicinfo/refund/jRefundListz.jsp"; // 转向页面
+                }else { //姓名查询
+                    Map<String, String> map = new HashMap<>();
+                    if (!StringUtils.isBlank(likes)) {
+                        map.put("likes", likes);
+                    }
+                    List<Refund> dataList = refundService.find(map);
+                    model.addAttribute("dataList", dataList); // 将数据传递到页面
+
+                    return "/basicinfo/refund/jRefundListz.jsp"; // 转向页面
+                }
 
             }
         }

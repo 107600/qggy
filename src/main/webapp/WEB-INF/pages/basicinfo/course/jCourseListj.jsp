@@ -105,7 +105,12 @@
 
                                 <a href="toaddteacher.action?courseId=${o.id}"><font
                                         color="green">[添加老师]</font></a>
-                            </c:if></td>
+                            </c:if>
+                                <c:if test="${o.state==4}">
+                                    <a href="upstate.action?id=${o.id}&state=3"><font
+                                            color="green">[启用]</font></a>
+                                </c:if>
+                            </td>
                         </tr>
                     </c:forEach>
 

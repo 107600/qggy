@@ -69,7 +69,7 @@ public class PhoneTransferController extends BaseController {
 
         student.setAvailableAssets(Double.parseDouble(temp));
         // 更新现金余额
-        temp = df.format(student.getXianjin() + money * 0.95);
+        temp = df.format(student.getXianjin() + money);
         student.setXianjin(Double.parseDouble(temp));
 
         Transfer transfer = new Transfer();
@@ -79,8 +79,8 @@ public class PhoneTransferController extends BaseController {
         transfer.setTransferUseropenid(student.getUserOpenid());
         transfer.setTransferMoney(money);
 
-        transfer.setTransferCommission(Double.parseDouble(df.format(money * 0.05)));
-        transfer.setTransferCash(Double.parseDouble(df.format(money * 0.95)));
+        transfer.setTransferCommission(0);
+        transfer.setTransferCash(Double.parseDouble(df.format(money)));
         transfer.setAreaId(student.getAreaId());
         transfer.setAreaName(student.getAreaName());
         transferService.insert(transfer);

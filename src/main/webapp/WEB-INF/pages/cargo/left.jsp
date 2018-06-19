@@ -31,13 +31,13 @@
                     </li>
 
                     <li><a href="${ctx}/basicinfo/refund/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">退款管理</a>
+                           onclick="linkHighlighted(this)" target="main" id="aa_1">课程退款管理</a>
                     </li>
                     <li><a href="${ctx}/basicinfo/withdraw/list.action"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">提现管理</a>
                     </li>
                     <li><a href="${ctx}/basicinfo/transfer/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">转账管理</a>
+                           onclick="linkHighlighted(this)" target="main" id="aa_1">转账至现金账户管理</a>
                     </li>
                     <li><a href="${ctx}/basicinfo/recharge/list.action"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">充值管理</a>

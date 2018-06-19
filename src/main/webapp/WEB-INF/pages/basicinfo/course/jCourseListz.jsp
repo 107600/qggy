@@ -27,7 +27,12 @@
         <div class="textbox-inner-header">
 
             <div class="textbox-title">
-                请输入课程名<input type="text" name="likes" id="likes" value="${likes}">
+                请选择查询类型<select name="queryCondition" id="queryCondition">
+                <option value="0">请选择</option>
+                <option value="1">课程名</option>
+                <option value="2">区域</option>
+            </select>
+                请输入查询的值<input type="text" name="likes" id="likes" value="${likes}">
                 <a href="#" onclick="formSubmit('list.action','_self');">查询</a>
             </div>
         </div>

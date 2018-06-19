@@ -181,7 +181,7 @@
     }
     function tiqutoxianjin(money) {
         //http://jqweui.com/components#dialog
-        var real = (money * 0.95).toFixed(2);
+        var real = (money).toFixed(2);
         if (money > 0) {
             //如果参数过多，建议通过 object 方式传入
             $
@@ -189,8 +189,8 @@
                     title: '提取至充值余额,请输入金额',
                     text: '(课程余额 <font color="red">'
                     + money
-                    + '</font> 元,手续费 <font color="red">5%</font> ,实际到账金额 <font color="red">'
-                    + real + '</font> 元，如果使用课程余额购买课程，则不收取手续费)',
+                    + '</font> 元,手续费 <font color="red">0</font> ,实际到账金额 <font color="red">'
+                    + real + '</font> 元)',
                     input: money,
                     empty: false, // 是否允许为空
                     onOK: function (input) {

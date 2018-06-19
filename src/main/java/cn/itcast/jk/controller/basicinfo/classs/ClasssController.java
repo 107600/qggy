@@ -331,4 +331,19 @@ public class ClasssController extends BaseController {
 
     }
 
+    // 修改状态
+    @RequestMapping("/basicinfo/classs/updateState.action")
+    public String updateState(Classs classs, HttpServletRequest request) {
+        classsService.update(classs);
+        return "redirect:/basicinfo/classs/list.action";
+    }
+
+    // 后台自助确认
+    @RequestMapping("/basicinfo/classs/backConfirm.action")
+    public String backConfirm(TradeDetail detail, HttpServletRequest request,String classId) {
+        detail.setTradeState(4);
+        detail.setClassState(1);
+        tradeDetailService.update(detail);
+        return "redirect:/basicinfo/classs/toview.action?id="+classId;
+    }
 }

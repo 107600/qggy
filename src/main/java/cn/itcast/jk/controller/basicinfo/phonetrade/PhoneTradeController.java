@@ -715,9 +715,17 @@ public class PhoneTradeController extends BaseController {
                     t.setDeviceInfo(notifyMap.get("device_info"));
                     t.setTradeType(notifyMap.get("trade_type"));
                     t.setTimeEnd(notifyMap.get("time_end"));
+                    /*
+                    * 微信支付的交易金额单位为分
+                    * wiki： https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_2
+                    * */
                     t.setCashFee(Double.parseDouble(notifyMap.get("cash_fee")
-                            .trim()));
+                            .trim())/1000);
                     t.setState(0);
+                    log.info("**********************************");
+                    log.info(notifyMap.get("cash_fee"));
+                    log.info(t.getCashFee());
+                    log.info("**********************************");
                     tradeDao.update(t);
                     Map<String, Object> paraMap = new HashMap<String, Object>();
                     paraMap.put("tradeId", t.getId());

@@ -68,6 +68,7 @@
                         <td class="tableHeader">手机</td>
 
                         <td class="tableHeader">状态</td>
+                        <td class="tableHeader">操作</td>
                     </tr>
                     </thead>
                     <tbody class="tableBody">
@@ -81,6 +82,13 @@
                             <td><c:if test="${td.classState==1}">
                                 <c:if test="${td.tradeState==4}">已确认</c:if>
                                 <c:if test="${td.tradeState==0}">待确认</c:if>
+                            </c:if></td>
+
+                            <td><c:if test="${td.classState==1}">
+                                <c:if test="${td.tradeState==0}">
+                                    <a href="backConfirm.action?id=${td.id}&classId=${obj.classId}"><font
+                                            color="green">[后台确认]</font></a>
+                                </c:if>
                             </c:if></td>
                         </tr>
                     </c:forEach>
