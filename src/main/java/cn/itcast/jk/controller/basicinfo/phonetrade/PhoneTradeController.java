@@ -720,7 +720,7 @@ public class PhoneTradeController extends BaseController {
                     * wiki： https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_2
                     * */
                     t.setCashFee(Double.parseDouble(notifyMap.get("cash_fee")
-                            .trim())/1000);
+                            .trim())/100);
                     t.setState(0);
                     log.info("**********************************");
                     log.info(notifyMap.get("cash_fee"));
