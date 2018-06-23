@@ -3,17 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <!--
- 
-  <link href="dist/lib/weui.min.css" rel="stylesheet">-->
 
   <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css">
   <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.0/css/jquery-weui.min.css">
-  <!--引入外部文件，省市联动的链接-->
-  <script type="text/javascript" src="js/city-picker.js" charset="utf-8"></script>
 
-<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
   <title>课程发起</title>
 
 </head>
@@ -72,27 +65,19 @@
                 </div>
         </div>
         
-        
 
   <div class="weui-cell">
     <div class="weui-cell__hd"><label class="weui-label">课程时间</label></div>
     <div class="weui-cell__bd">
-      <input class="weui-input" type="datetime-local" value="" placeholder="">
+      <!--<input class="weui-input" type="datetime-local" value="" placeholder="">-->
+        <input type="text" id='datetime-picker'/>
     </div>
   </div>
 
-<div class="weui-cell">
-	<div class="weui-cell__hd"><label class="weui-label">上课区域</label></div>
-	<input type="text" id='city-picker'/>
-	<script>
-	  
-	  	$("#city-picker").cityPicker({
-        title: "请选择区域"
-  });
-	  
-	</script>
-</div>
-
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">上课区域</label></div>
+        <input type="text" id='city-picker'/>
+    </div>
 
    <div class="weui-cell">
     <div class="weui-cell__hd"><label class="weui-label">课程简介</label></div>
@@ -105,7 +90,22 @@
     </div>
   </div>
 </div>
-<div><a href="javascript:;" class="weui-btn weui-btn_warn">提交</a></div>
+<div><a href="/qggy/phone/user/basicinfo/trade/toview.action" class="weui-btn weui-btn_warn">提交</a></div>
+
+   <!-- body 最后 -->
+   <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+   <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+   <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/city-picker.min.js"></script>
+
+   <script>
+       $("#datetime-picker").datetimePicker();
+   </script>
+
+   <script>
+       $("#city-picker").cityPicker({
+           title: "请选择收货地址"
+       });
+   </script>
 </body>
 </html>
 

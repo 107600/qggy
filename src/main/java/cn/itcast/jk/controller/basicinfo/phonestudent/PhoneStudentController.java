@@ -43,6 +43,8 @@ public class PhoneStudentController extends BaseController {
     @RequestMapping("/phone/user/basicinfo/student/tocreate.action")
     public String tocreate(Model model, String id, HttpServletRequest request) {
 
+        System.out.println("heheheh=====================================================");
+
         String userOpenid = request.getAttribute("userOpenid").toString();
 
         model.addAttribute("ids", id);
@@ -59,6 +61,7 @@ public class PhoneStudentController extends BaseController {
         HashMap<String, Integer> thirdAreaList = new HashMap<String, Integer>();
         thirdAreaList.put("parentId", 2);
         List<Area> dataList2 = areaService.find(thirdAreaList);
+        System.out.println("haahh");
         model.addAttribute("thirdAreaList", dataList2); // 将数据传递到页面
 
         return "/basicinfo/student/register.jsp";

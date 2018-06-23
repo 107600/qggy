@@ -86,7 +86,6 @@ public class StudentController extends BaseController {
         }
 
         // 将数据传递到页面
-
         return "/baseinfo/error.jsp";
 
     }
@@ -134,7 +133,10 @@ public class StudentController extends BaseController {
 
     // 转向新增页面
     @RequestMapping("/basicinfo/student/tocreate.action")
+//    @RequestMapping("phone/user/basicinfo/student/tocreate.action")
     public String tocreate(Model model, String userOpenid) {
+
+        System.out.println("hahahahhha");
 
         return "/basicinfo/student/register.jsp";
     }

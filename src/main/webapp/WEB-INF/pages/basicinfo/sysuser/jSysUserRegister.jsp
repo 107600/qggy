@@ -341,8 +341,7 @@
         </p>
         <p>
             <input type="checkbox" name="checkbox" id="checkbox" value=""/> <span>我已确认并完全遵守
-				<b><a
-                        href="${pageContext.request.contextPath}/basicinfo/sysuser/agreement.action">《青果公益管理条例》</a>
+				<b><a href="${pageContext.request.contextPath}/basicinfo/sysuser/agreement.action">《青果公益管理条例》</a>
 			</b> </span></p><input id="zc" type="buttom" value="注册" readonly/>
     </form>
 </div>

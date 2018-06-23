@@ -180,7 +180,8 @@
             setInterval(
                 function () {
                     if (0 == t) {
-                        window.location.href = "${pageContext.request.contextPath}/phone/user/basicinfo/student/tocreate.action?id=${id}";
+                        <%--window.location.href = "${pageContext.request.contextPath}/phone/user/basicinfo/student/tocreate.action?id=${id}";--%>
+                        console.log("haha");
                     } else {
                         t -= 1,
                             document
@@ -190,6 +191,7 @@
                     }
                 }, 970);
     }
+
 </script>
 
 <script>
