@@ -292,7 +292,8 @@ public class WithdrawController extends BaseController {
             Student currStudent = new Student();
             currStudent.setId(studentList.get(0).getId());
             //更改现金账户
-            currStudent.setXianjin(studentList.get(0).getXianjin() - withdraw.getMoney());
+            DecimalFormat df = new DecimalFormat(",###.00");
+            currStudent.setXianjin(Double.valueOf(df.format(studentList.get(0).getXianjin() - withdraw.getMoney())));
             studentService.update(currStudent);
             //更改提现的记录状态
             Withdraw currWithdraw = new Withdraw();
