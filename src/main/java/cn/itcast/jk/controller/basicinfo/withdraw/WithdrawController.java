@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import cn.itcast.jk.domain.Student;
 import org.springframework.stereotype.Controller;
@@ -259,5 +260,47 @@ public class WithdrawController extends BaseController {
             return null;
         }
         return null;
+    }
+
+    /*
+    * 转向人工提现页面
+    * */
+    @RequestMapping("/basicinfo/withdraw/toHandWithdraw.action")
+    public String toHandWithdraw(HttpSession session, Model model) {
+        SysUserVO sysUserVO = (SysUserVO) session.getAttribute("sysUserVO");
+        HashMap<String,Integer> queryMap = new HashMap<>();
+        //查找提现失败的提现记录展示
+        queryMap.put("state",3);
+        List<Withdraw> withdraws = withdrawService.find(queryMap);
+        model.addAttribute("dataList", withdraws);
+        //将后台登录的账户传递过去，做权限控制
+        model.addAttribute("sys","超级管理员".equals(sysUserVO.getName()));
+        return "/basicinfo/withdraw/jHandWithdraw.jsp";
+    }
+    /*
+    * 人工提现：实际退款走的线下渠道，本接口只是会减去现金账户的余额
+    * */
+    @RequestMapping("/basicinfo/withdraw/handWithdraw.action")
+    public String handWithdraw(String id, Model model) {
+        Withdraw withdraw = withdrawService.get(id);
+        HashMap<String,String> queryMap = new HashMap<>();
+        queryMap.put("id",withdraw.getUserId());
+        List<Student> studentList = studentService.find(queryMap);
+        if (studentList == null || studentList.size() == 0){
+            throw new RuntimeException("用户不存在，提现失败！");
+        }else {
+            Student currStudent = new Student();
+            currStudent.setId(studentList.get(0).getId());
+            //更改现金账户
+            currStudent.setXianjin(studentList.get(0).getXianjin() - withdraw.getMoney());
+            studentService.update(currStudent);
+            //更改提现的记录状态
+            Withdraw currWithdraw = new Withdraw();
+            currWithdraw.setId(withdraw.getId());
+            //提现完成
+            currWithdraw.setState(2);
+            withdrawService.update(currWithdraw);
+        }
+        return "redirect:/basicinfo/withdraw/toHandWithdraw.action";
     }
 }

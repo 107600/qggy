@@ -42,9 +42,13 @@
                     <li><a href="${ctx}/basicinfo/recharge/list.action"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">充值管理</a>
                     </li>
-                    <li><a href="${ctx}"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">押金管理</a>
+                    <li><a href="${ctx}/basicinfo/withdraw/toHandWithdraw.action"
+                           onclick="linkHighlighted(this)" target="main" id="aa_1">人工提现管理</a>
                     </li>
+                    <%--<li><a href="${ctx}"--%>
+                           <%--onclick="linkHighlighted(this)" target="main" id="aa_1">押金管理</a>--%>
+                    <%--</li>--%>
+
 
                 </ul>
             </div>
