@@ -59,7 +59,7 @@
                         <td class="tableHeader">退款金额</td>
 
                         <td class="tableHeader">申请时间</td>
-
+                        <td class="tableHeader">退款状态</td>
                         <td class="tableHeader">区域</td>
                     </tr>
                     </thead>
@@ -75,6 +75,10 @@
 
                             <td><fmt:formatDate value="${o.applyTime}"
                                                 pattern="yyyy-MM-dd HH:mm"/>
+                            </td>
+                            <td><c:if test="${o.state==0}"><font color="red">退款中</font></c:if>
+                                <c:if test="${o.state==1}"><font color="red">已退款</font></c:if>
+                                <c:if test="${o.state==2}"><font color="red">已完成</font></c:if>
                             </td>
                             <td>${o.areaName}</td>
 

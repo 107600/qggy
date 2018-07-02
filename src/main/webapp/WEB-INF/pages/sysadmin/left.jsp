@@ -24,7 +24,7 @@
             <div class="panel-content">
                 <ul>
                     <li><a href="${ctx}/basicinfo/role/list.action" onclick="linkHighlighted(this)" target="main"
-                           id="aa_1">角色管理</a></li>
+                           id="aa_1">角色管理(限超级管理员)</a></li>
                     <li><a href="${ctx}/basicinfo/student/list.action?state=1"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">学员管理</a>
                     </li>
@@ -32,17 +32,17 @@
                            onclick="linkHighlighted(this)" target="main" id="aa_1">教师管理</a>
                     </li>
                     <li><a href="${ctx}/basicinfo/sysuser/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">管理员管理</a>
+                           onclick="linkHighlighted(this)" target="main" id="aa_1">管理员管理(限超级管理员)</a>
                     </li>
                     <li><a href="${ctx}/basicinfo/area/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">区域管理</a>
+                           onclick="linkHighlighted(this)" target="main" id="aa_1">区域管理(限超级管理员)</a>
                     </li>
                     <li><a href="${ctx}/basicinfo/category/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">课程类别管理</a>
+                           onclick="linkHighlighted(this)" target="main" id="aa_1">课程类别管理(限超级管理员)</a>
                     </li>
 
                     <li><a href="${ctx}/basicinfo/rank/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">课程等级管理</a>
+                           onclick="linkHighlighted(this)" target="main" id="aa_1">课程等级管理(限超级管理员)</a>
                     </li>
                 </ul>
             </div>

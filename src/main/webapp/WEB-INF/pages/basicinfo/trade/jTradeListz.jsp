@@ -88,6 +88,7 @@
                                                        onclick="checkAll('id',this)"></td>
                         <td class="tableHeader">序号</td>
                         <td class="tableHeader">交易类型</td>
+                        <td class="tableHeader">对应课程</td>
                         <td class="tableHeader">总金额</td>
                         <td class="tableHeader">支付人姓名</td>
                         <td class="tableHeader">区域</td>
@@ -109,6 +110,7 @@
                                 充值
                             </c:if> <c:if test="${o.category==2}">商品
                             </c:if> </a></td>
+                            <td>${o.name}</td>
                             <td>${o.totalFee}</td>
                             <td>${o.payUserName}</td>
                             <td>${o.areaName}</td>
