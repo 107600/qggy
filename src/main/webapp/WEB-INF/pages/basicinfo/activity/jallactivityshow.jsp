@@ -35,7 +35,7 @@
 </head>
 
 <body>
-<%--<form name="icform" method="post">--%>
+<form name="icform" method="post">
     <table class="modelTable" cellspacing="1">
         <tr>
             <td colspan="2" class="modelTitle">第三方活动发布管理</td>
@@ -46,12 +46,11 @@
         <div class="textbox-inner-header">
 
             <div class="textbox-title">
-            <form action="/basicinfo/activity/show.action" method="post">
-                活动编号:<input type="text" name="likes" id="likes" value="${likes}">
-                <input type="submit" value="查询"/>
-            </form>
-
-        </div>
+                <form action="/basicinfo/activity/show.action" method="post">
+                    活动编号:<input type="text" name="likes" id="likes" value="${likes}">
+                    <input type="submit" value="查询"/>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -81,7 +80,7 @@
                     </thead>
                     <tbody class="tableBody">
 
-                    <c:forEach  items="${activitys}" var="activity">
+                    <c:forEach  items="${dataList}" var="activity">
                         <tr>
                             <td><input type="checkbox"></td>
                             <td>${activity.num }</td>
@@ -90,6 +89,12 @@
                             <td>${activity.time }</td>
                             <td>${activity.place }</td>
                             <td>${activity.state }</td>
+
+
+
+
+
+
                             <td>
                                 <a href="#" onclick="javascript:location.href=('view.action');this.blur();" target="_self">查看详细信息</a>
 
@@ -127,6 +132,6 @@
 
 
 
-<%--</form>--%>
+</form>
 </body>
 </html>

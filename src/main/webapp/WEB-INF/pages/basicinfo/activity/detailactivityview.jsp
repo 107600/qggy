@@ -1,5 +1,5 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
-<%@ include file="../../baselist.jsp" %>
+<%--<%@ include file="../../baselist.jsp" %>--%>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -12,12 +12,19 @@
         table{
             border:1px solid #666;
         }
+        /*http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js*/
     </style>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="../../../js/vdform.js"></script>
+    <%--<script href="../../../js/jquery-1.4.2.js" type="text/javascript"></script>--%>
+    <%--<script type="text/javascript" href="../../../js/vdform.js"></script>--%>
+    <link rel="stylesheet" rev="stylesheet" type="text/css"
+          href="../../../js/jquery-1.4.2.js"/>
+    <link rel="sty.lesheet" rev="stylesheet" type="text/css"
+          href="../../../js/vdform.js"/>
+
+
 </head>
 <body>
-<br /><br>
+<br /><br />
 <center>
 
 </center>
@@ -27,21 +34,26 @@
         <table border="1px solid #666" align="center">
             <tr>
                 <td> 活动发起单位:</td>
-                <td><input  type="text" name="Name"   validata-options="validType:'Require|Chinese',msg:'不能为空"></td>
+                <td><input  type="text" name="Name"></td>
             </tr>
 
             <tr>
                 <td>活动时间(yyyy-mm-dd)：</td>
-                <td><input name="Birthday" validata-options="validType:'Date',format:'ymd',msg:'日期不存在'"></td>
+                <td><input  type="text" name="time"></td>
+            </tr>
+
+            <tr>
+                <td>活动地点:</td>
+                <td><input  type="text" name="place" ></td>
             </tr>
 
             <tr>
                 <td>活动类型:</td>
-                <td><input   type="text"  name="Nick"></td>
+                <td><input   type="text"   name="type"></td>
             </tr>
             <tr>
                 <td>活动主题:</td>
-                <td><input   type="text"  name="Homepage"></td>
+                <td><input   type="text"  name="theme"></td>
             </tr>
             <tr>
                 <td>活动人数:</td>
@@ -49,45 +61,45 @@
             </tr>
             <tr>
                 <td>活动金额:</td>
-                <td><input   type="text"  name="place"  ></td>
+                <td><input   type="text"  name="money"  ></td>
             </tr>
 
             <td>导师需求：</td>
             <td>
-                <input name="activity-need" value="1" type="checkbox">
+                <input name="teacherneed" value="1" type="checkbox">
                 导师
                 <input   type="text"  name="type" >
-                <input   type="text"  name="teacher-num" >
+                <input   type="text"  name="teachernum" >
                 </tr>
             </td>
 
             <td>志愿者需求：</td>
             <td>
-                <input name="volunteer-need" value="1" type="checkbox">
+                <input name="volunteerneed" value="1" type="checkbox">
                 志愿者
-                <input   type="text"  name="volunteer-num" >
+                <input   type="text"  name="volunteernum" >
                 </tr>
             </td>
 
             <td>观众需求：</td>
             <td>
-                <input name="audience-need" value="1" type="checkbox">
+                <input name="audienceneed" value="1" type="checkbox">
                 观众
-                <input   type="text"  name="audience-num" >
+                <input   type="text"  name="audiencenum" >
                 </tr>
             </td>
 
             <td>匠人需求：</td>
             <td>
-                <input name="craftsman-need" value="1" type="checkbox">
+                <input name="craftsmanneed" value="1" type="checkbox">
                 匠人
-                <input   type="text"  name="craftsman-num" >
+                <input   type="text"  name="craftsmannum" >
                 </tr>
             </td>
 
             <td>场地需求：</td>
             <td>
-                <input name="place-need" value="1" type="checkbox">
+                <input name="placeneed" value="1" type="checkbox">
                 需要场地
                 </tr>
             </td>
@@ -103,10 +115,6 @@
             <tr>
                 <td>活动介绍：</td>
                 <td><textarea name="Description"  >活动介绍</textarea></td>
-            </tr>
-            <tr>
-                <td  style="text-align:center; margin:0 auto"><input name="Submit" type="submit" value="审核通过"></td>
-                <td  style="text-align:center; margin:0 auto"><input name="btn" id='btn' type="button" value="审核不通过"></td>
             </tr>
         </table>
     </form>

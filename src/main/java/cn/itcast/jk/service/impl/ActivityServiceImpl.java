@@ -1,6 +1,7 @@
 package cn.itcast.jk.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import cn.itcast.jk.controller.query.ActivityQuery;
 import cn.itcast.jk.domain.Activity;
@@ -23,6 +24,11 @@ public class ActivityServiceImpl implements ActivityService{
 	public Activity getActivityByKey(Integer num) {
 		// TODO Auto-generated method stub
 		return activityDao.getActivityByKey(num);
+	}
+
+	@Override
+	public List<Activity> find(Map<?, ?> paraMap) {
+		return activityDao.find(paraMap);
 	}
 
 	public List<Activity> getActivitysByKeys(List<Integer> idList) {

@@ -2,13 +2,26 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.itcast.jk.dao.scanCon.ActivityDao">
-	<resultMap id="activity" type="Activity">
+	<resultMap id="activity" type="cn.itcast.jk.domain.Activity">
 		<result property="num" column="num" />
 		<result property="type" column="type" />
 		<result property="theme" column="theme" />
 		<result property="time" column="time" />
 		<result property="place" column="place" />
 		<result property="state" column="state" />
+		<result property="launcher" column="launcher" />
+		<result property="money" column="money" />
+		<result property="teacherneed" column="teacherneed" />
+		<result property="teachernum" column="teachernum" />
+		<result property="volunteerneed" column="volunteerneed" />
+		<result property="volunteernum" column="volunteernum" />
+		<result property="audienceneed" column="audienceneed" />
+		<result property="audiencenum" column="audiencenum" />
+		<result property="craftsmanneed" column="craftsmanneed" />
+		<result property="craftsmannum" column="vcraftsmannum" />
+		<result property="placeneed" column="placeneed" />
+		<result property="introduction" column="introduction" />
+
 	</resultMap>
 	<!-- Select SQL -->
 	<sql id="activitySelector">
@@ -66,6 +79,124 @@
 					and  state like "%"#{state}"%"
 				</if>
 				</if>
+
+			    <if test="launcher != null">
+				<if test="launcherLike == false">
+					and launcher=#{launcher}
+				</if>
+				<if test="launcherLike == true">
+					and  launcher like "%"#{launcher}"%"
+				</if>
+				</if>
+
+
+			    <if test="money != null">
+				<if test="moneyLike == false">
+					and money=#{money}
+				</if>
+				<if test="moneyLike == true">
+					and  money like "%"#{money}"%"
+				</if>
+			    </if>
+
+			    <if test="volunteerneed != null">
+				<if test="volunteerneedLike == false">
+					and volunteerneed=#{volunteerneed}
+				</if>
+				<if test="volunteerneedLike == true">
+					and  volunteerneedlike "%"#{volunteerneed}"%"
+				</if>
+			    </if>
+
+			    <if test="volunteernum != null">
+				<if test="volunteernumLike == false">
+					and volunteernum=#{volunteernum}
+				</if>
+				<if test="volunteernumLike == true">
+					and  volunteernumlike "%"#{volunteernum}"%"
+				</if>
+			    </if>
+
+			    <if test="audienceneed != null">
+				<if test="audienceneedLike == false">
+					and audienceneed=#{audienceneed}
+				</if>
+				<if test="audienceneedLike == true">
+					and  audienceneed like "%"#{audienceneed}"%"
+				</if>
+			    </if>
+
+			    <if test="audiencenum!= null">
+				<if test="audiencenumLike == false">
+					and audiencenum=#{audiencenum}
+				</if>
+				<if test="audiencenumLike == true">
+					and  audiencenum like "%"#{audiencenum}"%"
+				</if>
+				</if>
+
+			    <if test="craftsmanneed != null">
+				<if test="craftsmanneedLike == false">
+					and craftsmanneed=#{craftsmanneed}
+				</if>
+				<if test="craftsmanneedLike == true">
+					and  craftsmanneed like "%"#{craftsmanneed}"%"
+				</if>
+				</if>
+
+			    <if test="craftsmannum != null">
+				<if test="craftsmannumLike == false">
+					and craftsmannum=#{craftsmannum}
+				</if>
+				<if test="craftsmannumLike == true">
+					and  craftsmannum like "%"#{craftsmannum}"%"
+				</if>
+				</if>
+
+			    <if test="placeneed!= null">
+				<if test="placeneedLike == false">
+					and placeneed=#{placeneed}
+				</if>
+				<if test="placeneedLike == true">
+					and  placeneed like "%"#{placeneed}"%"
+				</if>
+				</if>
+
+			    <if test="deposit!= null">
+				<if test="depositLike == false">
+					and deposit=#{deposit}
+				</if>
+				<if test="depositLike == true">
+					and  deposit like "%"#{deposit}"%"
+				</if>
+			    </if>
+
+			    <if test="introduction!= null">
+				<if test="introductionLike == false">
+					and introduction=#{introduction}
+				</if>
+				<if test="introductionLike == true">
+					and  introduction like "%"#{introduction}"%"
+				</if>
+			    </if>
+
+			    <if test="teacherneed!= null">
+				<if test="teacherneedLike == false">
+					and teacherneed=#{teacherneed}
+				</if>
+				<if test="teacherneedLike == true">
+					and  teacherneed like "%"#{teacherneed}"%"
+				</if>
+			    </if>
+
+			    <if test="teachernum != null">
+				<if test="teachernumLike == false">
+					and teachernum=#{teachernum}
+				</if>
+				<if test="teachernumLike == true">
+					and  teachernum like "%"#{teachernum}"%"
+				</if>
+				</if>
 		</where>
 	</sql>
 
@@ -86,12 +217,27 @@
 
 	<!-- 根据主键查询 -->
 	<select id="getActivityByKey" resultMap="activity" parameterType="hashMap">
-		SELECT num,type,theme,time,place,state FROM dsf_activity
+		SELECT num,type,theme,time,place,state,launcher,money,volunteerneed,volunteernum,audienceneed,audiencenum,craftsmanneed,craftsmannum,placeneed,deposit,introduction,teacherneed,teachernum FROM
+		dsf_activity
 		WHERE
 		num=#{num}
 	</select>
+
+     <!--根据主键模糊查询-->
+    <select id="find" resultType="activity"
+            parameterType="hashMap">
+        select * from dsf_activity where 1=1
+        <if test="num!=null">
+            and `num` like '%${num}%'
+        </if>
+    </select>
+
+
+
+
 	<select id="getActivitysByKeys" resultMap="activity" parameterType="ArrayList">
-		SELECT num,type,theme,time,place,state FROM dsf_activity
+		SELECT num,type,theme,time,place,state,launcher,money,volunteerneed,volunteernum,audienceneed,audiencenum,craftsmanneed,craftsmannum,placeneed,deposit,introduction,teacherneed,teachernum
+		FROM dsf_activity
 		WHERE
 		num in
 		<foreach collection="list" separator="," item="num" open="(" close=")">
@@ -139,6 +285,58 @@
 				<if test="state != null">
 					state = #{state}
 				</if>
+
+				<if test="launcher != null">
+					launcher= #{launcher}
+				</if>
+
+				<if test="money != null">
+					money= #{money}
+				</if>
+
+				<if test="volunteerneed != null">
+					volunteerneed= #{volunteerneed}
+				</if>
+
+				<if test="volunteernum != null">
+					volunteernum= #{volunteernum}
+				</if>
+
+				<if test="audienceneed != null">
+					audienceneed= #{audienceneed}
+				</if>
+
+				<if test="audiencenum != null">
+					audiencenum= #{audiencenum}
+				</if>
+
+				<if test="craftsmanneed!= null">
+					craftsmanneed= #{craftsmanneed}
+				</if>
+
+				<if test="craftsmannum!= null">
+					craftsmannum= #{craftsmannum}
+				</if>
+
+				<if test="placeneed!= null">
+					placeneed= #{placeneed}
+				</if>
+
+				<if test="deposit!= null">
+				deposit= #{deposit}
+				</if>
+
+				<if test="introduction!= null">
+					introduction= #{introduction}
+				</if>
+
+				<if test="teacherneed!= null">
+					teacherneed= #{teacherneed}
+				</if>
+
+				<if test="teachernum!= null">
+					teachernum= #{teachernum}
+				</if>
 			</trim>
 		</set>
 		WHERE
@@ -182,8 +380,47 @@
 					place,
 				</if>
 				<if test="state != null">
-					state
+					state,
 				</if>
+			    <if test="launcher != null">
+					launcher,
+			    </if>
+			    <if test="money != null">
+				    money,
+			    </if>
+			    <if test="volunteerneed != null">
+					volunteerneed,
+			    </if>
+			    <if test="volunteernum != null">
+			        volunteernum,
+		        </if>
+			    <if test="audienceneed != null">
+					audienceneed,
+				</if>
+			    <if test="audiencenum != null">
+					audiencenum,
+			    </if>
+			    <if test="craftsmanneed!= null">
+					craftsmanneed,
+			    </if>
+			    <if test="craftsmannum!= null">
+					craftsmannum,
+			    </if>
+			    <if test="placeneed!= null">
+					placeneed,
+				</if>
+			    <if test="deposit!= null">
+			        deposit,
+				</if>
+			    <if test="introduction!= null">
+					introduction,
+		        </if>
+			    <if test="teacherneed!= null">
+					teacherneed,
+			    </if>
+			    <if test="teachernum!= null">
+					teachernum
+			    </if>
 		</trim>
 		VALUES
 		<trim prefix="(" suffix=")" suffixOverrides=",">
@@ -191,7 +428,7 @@
 						#{num},
 					</if>
 					<if test="type != null">
-						#type},
+						#{type},
 					</if>
 					<if test="theme != null">
 						#{theme},
@@ -205,6 +442,42 @@
 					<if test="state != null">
 						#{state}
 					</if>
+                    <if test="launcher != null">
+				        #{launcher},
+					</if>
+			        <if test="volunteerneed != null">
+				        #{volunteerneed},
+					</if>
+			        <if test="volunteernum != null">
+				        #{volunteernum},
+			        </if>
+			        <if test="audienceneed != null">
+				        #{audienceneed},
+			        </if>
+			        <if test="audiencenum != null">
+				        #{audiencenum},
+			        </if>
+			        <if test="craftsmanneed != null">
+				        #{craftsmanneed},
+					</if>
+			        <if test="craftsmannum!= null">
+				        #{craftsmannum},
+					</if>
+			        <if test="placeneed != null">
+				        #{placeneed},
+			        </if>
+			        <if test="deposit != null">
+				        #{deposit},
+			        </if>
+			        <if test="introduction != null">
+				        #{introduction},
+			        </if>
+			        <if test="teacherneed!= null">
+				        #{teacherneed},
+			        </if>
+			        <if test="teachernum!= null">
+				        #{teachernum}
+			        </if>
 		</trim>
 	</insert>
 </mapper>
