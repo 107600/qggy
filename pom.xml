@@ -7,6 +7,18 @@
     <packaging>war</packaging>
     <name>QGGY</name>
     <url>http://maven.apache.org</url>
+    <!--加入中央仓库-->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     <properties>
         <org.springframework.version>3.2.6.RELEASE</org.springframework.version>
     </properties>
@@ -225,6 +237,7 @@
             <artifactId>backport-util-concurrent</artifactId>
             <version>3.1</version>
         </dependency>
+
     </dependencies>
 
     <build>

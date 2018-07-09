@@ -35,7 +35,7 @@
         <result property="activityDescribe" column="activity_describe"/>
     </resultMap>
     <!--value里面是#{pojo的属性名称}-->
-    <insert id="insertIntoActivityReleased" parameterType="ActivityReleased">
+    <insert id="insertIntoActivityReleased" parameterType="cn.itcast.jk.domain.ActivityReleased">
         insert into  activity_release (
             activity_name,
             first_category,

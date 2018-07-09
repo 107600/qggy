@@ -10,11 +10,14 @@ import cn.itcast.jk.controller.BaseController;
 import cn.itcast.jk.domain.ActivityReleased;
 import cn.itcast.jk.service.ActivityReleasedService;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.Errors;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+
 import java.util.Date;
 
 @Controller
@@ -33,6 +36,7 @@ public class ActivityReleasedController extends BaseController {
     @RequestMapping("basicinfo/activityreleased/insertActivity.action")
     @ResponseBody
     public void insertActivity(ActivityReleased activityReleased,
+                               Errors errors,
                                @RequestParam(value = "activityName")String activityName,
                                @RequestParam(value = "firstCategory")String firstCategory,
                                @RequestParam(value = "secondCategory")String secondCategory,
@@ -41,24 +45,24 @@ public class ActivityReleasedController extends BaseController {
                                @RequestParam(value = "activityDate")Date activityDate,
                                @RequestParam(value = "affiliatedCompany")String affiliatedCompany,
 
-                               @RequestParam(value = "isNeedTeacher")Integer isNeedTeacher,
+                               @RequestParam(value = "isNeedTeacher", required = false)Integer isNeedTeacher,
                                @RequestParam(value = "teacherNumbers")Integer teacherNumbers,
                                @RequestParam(value = "teacherDomain")String teacherDomain,
                                @RequestParam(value = "teacherDeposit")Integer teacherDeposit,
                                @RequestParam(value = "teacherReward")Integer teacherReward,
 
-                               @RequestParam(value = "isNeedCraftsman")Integer isNeedCraftsman,
+                               @RequestParam(value = "isNeedCraftsman", required = false)Integer isNeedCraftsman,
                                @RequestParam(value = "craftsmanNumbers")Integer craftsmanNumbers,
                                @RequestParam(value = "craftsmanDomain")String craftsmanDomain,
                                @RequestParam(value = "craftsmanDeposit")Integer craftsmanDeposit,
                                @RequestParam(value = "craftsmanReward")Integer craftsmanReward,
 
-                               @RequestParam(value = "isNeedVolunteer")Integer isNeedVolunteer,
+                               @RequestParam(value = "isNeedVolunteer", required = false)Integer isNeedVolunteer,
                                @RequestParam(value = "volunteerNumbers")Integer volunteerNumbers,
                                @RequestParam(value = "volunteerDeposit")Integer volunteerDeposit,
                                @RequestParam(value = "volunteerReward")Integer volunteerReward,
 
-                               @RequestParam(value = "isNeedAudience")Integer isNeedAudience,
+                               @RequestParam(value = "isNeedAudience", required = false)Integer isNeedAudience,
                                @RequestParam(value = "audienceNumbers")Integer audienceNumbers,
 
                                @RequestParam(value = "placeProvider")String placeProvider,

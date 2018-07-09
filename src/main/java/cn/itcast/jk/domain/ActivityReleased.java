@@ -1,9 +1,4 @@
 package cn.itcast.jk.domain;
-
-
-import com.sun.istack.NotNull;
-
-
 import java.util.Date;
 
 /**
@@ -11,28 +6,25 @@ import java.util.Date;
  * @author 展佳俊
  * @date 2018/7/6 13:38
  */
+
 public class ActivityReleased {
 
     private Integer id;
 
-    @NotNull
     private String activityName;
 
     private String firstCategory;
     private String secondCategory;
 
-    @NotNull
-    private String address;
 
+    private String address;
 
     private Date activityDate;
 
-    @NotNull
+
     private String affiliatedCompany;
 
     private Integer isNeedTeacher;
-
-
     private Integer teacherNumbers;
     private String teacherDomain;
     private Integer teacherDeposit;
