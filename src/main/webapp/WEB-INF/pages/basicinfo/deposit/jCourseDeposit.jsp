@@ -1,14 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: apple
-  Date: 2018/6/13
-  Time: 下午11:17
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" pageEncoding="UTF-8" %>
+<%@ include file="../../baselist.jsp" %>
 <html>
 <head>
-    <title>课程押金管理</title>
+    <title></title>
     <link rel="stylesheet" rev="stylesheet" type="text/css"
           href="css/extreme/extremecomponents.css"/>
     <link rel="stylesheet" rev="stylesheet" type="text/css"
@@ -40,7 +34,7 @@
 <form name="icform" method="post">
     <table class="modelTable" cellspacing="1">
         <tr>
-            <td colspan="2" class="modelTitle">课程押金管理</td>
+            <td colspan="2" class="modelTitle"></td>
         </tr>
     </table>
 

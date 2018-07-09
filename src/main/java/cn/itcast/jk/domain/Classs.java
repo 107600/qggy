@@ -33,9 +33,7 @@ public class Classs implements Serializable {
         this.classstate = classstate;
     }
 
-    public String getId() {
-        return id;
-    }
+    public String getId() { return id; }
 
     public void setId(String id) {
         this.id = id;

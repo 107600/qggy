@@ -156,9 +156,9 @@ public class TradeController extends BaseController {
     }
 
     @RequestMapping(value = "/basicinfo/trade/orderinsert.action", method = RequestMethod.GET)
-    public
+
     @ResponseBody
-    String orderinsert(HttpServletRequest request) {
+    public String orderinsert(HttpServletRequest request) {
         System.out.println("YYYYYYYYYYYYYYYYYYYY");
         JsApiPay jspay = (JsApiPay) request.getSession().getAttribute("jspay");
         System.out.println("RRRRRRRRRRRRRRRRRRR" + jspay.getTransactionid());

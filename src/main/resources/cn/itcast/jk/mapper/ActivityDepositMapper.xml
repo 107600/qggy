@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itcast.jk.mapper.ActivityDepositMapper">
+    <!-- resultMap映射 -->
+    <resultMap type="cn.itcast.jk.domain.ActivityDeposit" id="activityDepositRM">
+        <!-- 主键 -->
+        <id property="id" column="ACTIVITYDEPOSIT_ID"/>
+        <!-- 一般属性 -->
+        <result property="activityDepositName" column="ACTIVITYDEPOSIT_NAME"/>
+        <result property="activityDepositPayTime" column="ACTIVITYDEPOSIT_PAYTIME"/>
+        <result property="activityDepositReturnTime" column="ACTIVITYDEPOSIT_RETURNTIME"/>
+        <result property="activityDepositDetails" column="ACTIVITYDEPOSIT_DETAILS"/>
+        <result property="activityDepositUserName" column="ACTIVITYDEPOSIT_USERNAME"/>
+        <result property="activityDepositPayMoney" column="ACTIVITYDEPOSIT_PAYMONEY"/>
+        <result property="activityDepositReturnMoney" column="ACTIVITYDEPOSIT_RETURNMONEY"/>
+        <result property="activityDepositState" column="ACTIVITYDEPOSIT_STATE"/>
+        <result property="activityDepositUserId" column="ACTIVITYDEPOSIT_USERID"/>
+        <result property="areaName" column="AREA_NAME"/>
+
+    </resultMap>
+
+    <!-- 查询 -->
+    <select id="find" parameterType="map" resultMap="activityDepositRM">
+        SELECT
+        *
+        FROM
+        qingguodbdev.activity_deposit
+
+        WHERE 1=1
+
+        <if test="id!=null">and ACTIVITYDEPOSIT_ID=#{id}</if>
+        <if test="activityDepositUserId!=null">and ACTIVITYDEPOSIT_USERID=#{activityDepositUserId</if>
+        <if test="areaId!=null">AND AREA_ID=#{areaId}</if>
+        <if test="likes != null">and ACTIVITYDEPOSIT_USERNAME like CONCAT('%',#{likes},'%')</if>
+        <if test="activityDepositUserName!=null">and ACTIVITYDEPOSIT_USERNAME=#{activityDepositUserName}</if>
+        <if test="activityDepositState!=null">and ACTIVITYDEPOSIT_STATE=#{activityDepositState}</if>
+
+        order by ACTIVITYDEPOSIT_ID DESC
+
+    </select>
+
+    <!-- 查询一个 -->
+    <select id="get" parameterType="string" resultMap="activityDepositRM">
+        SELECT
+        *
+        FROM
+        qingguodbdev.activity_deposit
+        WHERE ACTIVITYDEPOSIT_ID = #{id}
+    </select>
+
+
+
+    <!-- 新增 oracle jdbc驱动 当这个值为null时，必须告诉它当前字段默认值的类型jdbcType=VARCHAR （mybatis定义）,
+        无效的列类型: 1111; nested exception is java.sql.SQLException mysql不用写 -->
+    <insert id="insert" parameterType="cn.itcast.jk.domain.ActivityDeposit">
+        INSERT INTO ACTIVITYDEPOSIT(
+        ACTIVITYDEPOSIT_ID,
+        ACTIVITYDEPOSIT_NAME,
+        ACTIVITYDEPOSIT_USERNAME,
+        ACTIVITYDEPOSIT_USERID,
+        ACTIVITYDEPOSIT_PAYTIME,
+        ACTIVITYDEPOSIT_RETURNTIME,
+        ACTIVITYDEPOSIT_STATE,
+        ACTIVITYDEPOSIT_PAYMONEY,
+        ACTIVITYDEPOSIT_RETURNMONEY,
+        ACTIVITYDEPOSIT_DETAILS,
+        AREA_ID,
+        AREA_NAME
+       )
+        VALUES
+        (
+        #{id,jdbcType =VARCHAR},
+        #{activityName,jdbcType =VARCHAR },
+        #{activityDepositUserName,jdbcType=VARCHAR},
+        #{activityDepositUserId, jdbcType=VARCHAR},
+        #{activityDepositPayTime},
+        #{activityDepositReturnTime},
+        #{activityDepositDetails, jdbcType=VARCHAR},
+        #{activityDepositPayMoney},
+        #{activityDepositReturnMoney},
+        #{activityDepositState},
+        #{areaId},
+        #{areaName}
+        )
+    </insert>
+
+    <!-- 修改 动态SQL语句 -->
+    <update id="update" parameterType="cn.itcast.jk.domain.ActivityDeposit">
+        UPDATE qingguodbdev.activity_deposit
+        <set>
+            <if test="activityDepositReturnTime != null">ACTIVITYDEPOSIT_RETURNMONEY=#{activityDepositReturnTime, jdbcType=DOUBLE},</if>
+        </set>
+        WHERE ACTIVITYDEPOSIT_ID=#{id}
+    </update>
+
+    <!-- 修改状态 -->
+    <update id="updateState" parameterType="map">
+        UPDATE qingguodbdev.activity_deposit SET ACTIVITYDEPOSIT_STATE=#{state}
+        WHERE ACTIVITYDEPOSIT_STATE IN
+        <foreach collection="ids" item="id" open="(" close=")"
+                 separator=",">
+            #{id}
+        </foreach>
+    </update>
+
+</mapper>

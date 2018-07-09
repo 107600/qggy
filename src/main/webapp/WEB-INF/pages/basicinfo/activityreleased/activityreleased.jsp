@@ -76,7 +76,7 @@
                         <option value="请选择活动小类">请选择活动小类</option>
                         <option value="活动小类">活动小类</option>
                     </select>
-                    <span class="word">
+                  <%--  <span class="word">
 							<select name="province" id="province" onchange="changeProvince(this.value)">
 								<option value="" selected>省/直辖市</option>
 								<c:forEach items="${provinces}" var="province">
@@ -98,7 +98,7 @@
                                         <c:if test="${buyer.town==town.code}">selected="selected"</c:if>>${town.name}</option>
                             </c:forEach>
 							</select>
-						</span>
+						</span>--%>
                 </td>
             </tr>
             <tr>

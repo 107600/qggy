@@ -42,10 +42,10 @@
                     <li><a href="${ctx}/basicinfo/recharge/list.action"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">充值管理</a>
                     </li>
-                    <li><a href="${ctx}/basicinfo/"
+                    <li><a href="${ctx}/basicinfo/deposit/list.action"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">活动押金管理</a>
                     </li>
-                    <li><a href="${ctx}/"
+                    <li><a href="${ctx}/basicinfo/deposit/coursedeposit.action"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">课程押金管理</a>
                     </li>
 

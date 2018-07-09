@@ -2,8 +2,6 @@ package cn.itcast.jk.controller;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -132,33 +130,32 @@ public class PhoneUserHomeController {
     }
 
     // 押金
-    @RequestMapping("/phone/user/myyajin.action")
-    public String myyajin() {
-        return "/basicinfo/phoneuser/gryj.html";
+    @RequestMapping("/phone/user/deposit.action")
+    public String deposit() { return "/basicinfo/phoneuser/mydeposit.html";
     }
 
     // 个人押金
-    @RequestMapping("/phone/user/myyajin1.action")
-    public String myyajin1() {
-        return "/basicinfo/phoneuser/gryj2.html";
+    @RequestMapping("/phone/user/mydeposit.action")
+    public String mydeposit() {
+        return "basicinfo/phoneuser/mydeposit2.html";
     }
 
     // 个人押金2
-    @RequestMapping("/phone/user/myyajin2.action")
-    public String myyajin2() {
-        return "/basicinfo/phoneuser/gryj3.html";
+    @RequestMapping("/phone/user/mydeposit2.action")
+    public String mydeposit2() {
+        return "basicinfo/phoneuser/mydeposit3.html";
     }
 
     // 个人押金3
-    @RequestMapping("/phone/user/myyajin3.action")
-    public String myyajin3() {
-        return "/basicinfo/phoneuser/gryj.html";
+    @RequestMapping("/phone/user/mydeposit3.action")
+    public String mydeposit3() {
+        return "basicinfo/phoneuser/mydeposit.html";
     }
 
     // 导师课程押金
-    @RequestMapping("/phone/user/kcyj.action")
-    public String kcyj() {
-        return "/basicinfo/phoneuser/kcyj.html";
+    @RequestMapping("/phone/user/coursedeposit.action")
+    public String coursedeposit() {
+        return "basicinfo/phoneuser/coursedeposit.html";
     }
 
 

@@ -71,6 +71,12 @@
         </div>
         <p class="weui-grid__label">我的积分</p>
     </a>
+    <a href="mydeposit.action" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="${pageContext.request.contextPath}/images/Phone/score.png" alt="">
+        </div>
+        <p class="weui-grid__label">我的押金</p>
+    </a>
     <a href="/qggy/phone/user/myrefund.action" class="weui-grid js_grid">
         <div class="weui-grid__icon">
             <img src="${pageContext.request.contextPath}/images/Phone/refund.png" alt="">
