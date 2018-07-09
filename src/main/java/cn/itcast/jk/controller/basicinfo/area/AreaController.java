@@ -29,7 +29,7 @@ public class AreaController extends BaseController {
     AreaService areaService;
 
     // 列表
-    @RequestMapping("/basicinfo/area/list.action")
+    @RequestMapping(value = "/basicinfo/area/list.action")
     public String list(Model model, HttpSession session) {
         SysUserVO sysUserVO = (SysUserVO) session.getAttribute("sysUserVO");
         for (UrRo r : sysUserVO.getRoles()) {

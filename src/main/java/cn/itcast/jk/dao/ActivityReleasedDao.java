@@ -1,4 +1,7 @@
 package cn.itcast.jk.dao;
 
-public interface ActivityReleasedDao {
+import cn.itcast.jk.domain.ActivityReleased;
+
+public interface ActivityReleasedDao extends BaseDao<ActivityReleased> {
+    public void insertIntoActivityReleased (ActivityReleased activityReleased);
 }

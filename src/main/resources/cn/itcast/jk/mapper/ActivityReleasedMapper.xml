@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射到ActivityDirectoryMapper接口,namespce是mapper接口的权限定名-->
+<mapper namespace="cn.itcast.jk.mapper.ActivityReleasedMapper">
+    <resultMap type="cn.itcast.jk.domain.ActivityReleased" id="activityReleasedRM">
+        <id property="id" column="id"></id>
+
+        <result property="activityName" column="activity_name"/>
+        <result property="firstCategory" column="first_category"/>
+        <result property="secondCategory" column="second_category"/>
+        <result property="address" column="address"/>
+        <result property="activityDate" column="activity_date"/>
+        <result property="affiliatedCompany" column="affilliated_company"/>
+        <result property="isNeedTeacher" column="isneed_teacher"/>
+        <result property="teacherNumbers" column="teacher_numbers"/>
+        <result property="teacherDomain" column="teacher_domain"/>
+        <result property="teacherDeposit" column="teacher_deposit"/>
+        <result property="teacherReward" column="teacher_reward"/>
+        <result property="isNeedCraftsman" column="isneed_craftsman"/>
+        <result property="craftsmanNumbers" column="craftsman_numbers"/>
+        <result property="craftsmanDomain" column="craftsman_domain"/>
+        <result property="craftsmanDeposit" column="craftsman_deposit"/>
+        <result property="craftsmanReward" column="craftsman_reward"/>
+        <result property="isNeedVolunteer" column="isneed_volunteer"/>
+        <result property="volunteerNumbers" column="volunteer_numbers"/>
+        <result property="volunteerDeposit" column="volunteer_deposit"/>
+        <result property="volunteerReward" column="volunteer_reward"/>
+        <result property="isNeedAudience" column="isneed_audience"/>
+        <result property="audienceNumbers" column="audience_numbers"/>
+        <result property="placeProvider" column="place_provider"/>
+        <result property="traffic" column="traffic"/>
+        <result property="image" column="image"/>
+        <result property="activityDescribe" column="activity_describe"/>
+    </resultMap>
+    <!--value里面是#{pojo的属性名称}-->
+    <insert id="insertIntoActivityReleased" parameterType="ActivityReleased">
+        insert into  activity_release (
+            activity_name,
+            first_category,
+            second_category,
+            address,
+            activity_date,
+            affilliated_company,
+            isneed_teacher,
+            teacher_numbers,
+            teacher_domain,
+            teacher_deposit,
+            teacher_reward,
+            isneed_craftsman,
+            craftsman_numbers,
+            craftsman_domain,
+            craftsman_deposit,
+            craftsman_reward,
+            isneed_volunteer,
+            volunteer_numbers,
+            volunteer_deposit,
+            volunteer_reward,
+            isneed_audience,
+            audience_numbers,
+            place_provider,
+            traffic,
+            image,
+            activity_describe
+        ) value (
+        #{activityName},
+        #{firstCategory},
+        #{secondCategory},
+        #{address},
+        #{activityDate},
+        #{affiliatedCompany},
+        #{isNeedTeacher},
+        #{teacherNumbers},
+        #{teacherDomain},
+        #{teacherDeposit},
+        #{teacherReward},
+        #{isNeedCraftsman},
+        #{craftsmanNumbers},
+        #{craftsmanDomain},
+        #{craftsmanDeposit},
+        #{craftsmanReward},
+        #{isNeedVolunteer},
+        #{volunteerNumbers},
+        #{volunteerDeposit},
+        #{volunteerReward},
+        #{isNeedAudience},
+        #{audienceNumbers},
+        #{placeProvider},
+        #{traffic},
+        #{image},
+        #{activityDescribe}
+        )
+    </insert>
+</mapper>

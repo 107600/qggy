@@ -16,41 +16,86 @@
     <meta charset="UTF-8">
     <title>模块介绍</title>
     <link rel="stylesheet" rev="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css" media="all"/>
-    <script src="${pageContext.request.contextPath}/weui/lib/jquery-2.1.4.js"></script>
+    <%--<script src="${pageContext.request.contextPath}/weui/lib/jquery-2.1.4.js"></script>--%>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="${pageContext.request.contextPath}/js/linkageMenu.js"></script>
-
     <script>
-        function changeProvince(code) {
-            var url = "/buyer/city.shtml";
-            var params = {"code": code};
-            $.post(url, params, function (data) {
-                var citys = data.citys;
-                var html = '<option value="" selected>城市</option>';
-                for (var i = 0; i < citys.length; i++) {
-                    html += '<option value="' + citys[i].code + '">' + citys[i].name + '</option>';
-                }
-                $("#city").html(html);
-                $("#town").html('<option value="" selected>县/区</option>');
-            }, "json");
+        $(function () {
+            insertTeacherDomain("#teacherDomain");
+            insertCraftsmanDomain("#craftsDomain")
+            insertCategory(0, "#first");
+            insertSecondCategory();
+        })
+
+        function insertSecondCategory() {
+            insertCategory($("#first option:selected").val(), "#second");
         }
 
-        function changeCity(code) {
-            var url = "/buyer/town.shtml";
-            var params = {"code": code};
-            $.post(url, params, function (data) {
-                var towns = data.towns;
-                var html = '<option value="" selected>县/区</option>';
-                for (var i = 0; i < towns.length; i++) {
-                    html += '<option value="' + towns[i].code + '">' + towns[i].name + '</option>';
+        function insertCategory(n, m) {
+            $.ajax({
+                url: "/qggy/basicinfo/activitydirectory/activitydirectory.action",
+                type: 'get',
+                data: {id:n},
+                async: false,
+                success: function (data) {
+                    var dataHtml = "";
+                  /*
+                    后台返回的data是含两个json对象的数组
+                    alert(data[0].id);
+                    alert(data[0].activityCategory);
+                    alert(data[1].id);
+                    alert(data[1].activityCategory);
+                  */
+                    $.each(
+                        data, function (index, obj) {
+                            dataHtml += "<option value=" + obj.id + ">" + obj.activityCategory + "</option>";
+                        }
+                    );
+                    $(m).html(dataHtml);
                 }
-                $("#town").html(html);
-            }, "json");
+            })
         }
 
+       //从后台读导师领域
+        function insertTeacherDomain(m) {
+            $.ajax({
+                url: "/qggy/basicinfo/teacherdomain/selectteacherdomain.action",
+                type: 'get',
+                async: false,
+                success: function (data) {
+                    var dataHtml = "<option>请选择导师领域</option>";
+                    $.each(
+                        data, function (index, obj) {
+                            dataHtml += "<option value=" + obj.id + ">" + obj.domainName + "</option>";
+                        }
+                    );
+                    $(m).html(dataHtml);
+                }
+            })
+        }
+
+        //从后台读匠人领域
+        function insertCraftsmanDomain(m) {
+            $.ajax({
+                url: "/qggy/basicinfo/craftsmandomain/selectcraftsmandomain.action",
+                type: 'get',
+                async: false,
+                success: function (data) {
+                    var dataHtml = "<option>请选择匠人领域</option>";
+                    $.each(
+                        data, function (index, obj) {
+                            dataHtml += "<option value=" + obj.id + ">" + obj.domainName + "</option>";
+                        }
+                    );
+                    $(m).html(dataHtml);
+                }
+            })
+        }
     </script>
+
 </head>
 <body>
-<form>
+<form action="insertActivity.action">
     <div class="textbox"></div>
     <div class="modelDiv">
 
@@ -62,57 +107,33 @@
             </tr>
             <tr>
                 <td class="subModelTitle">
-                    活动名称&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="activity-name"
+                    活动名称&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="activityName"
                                                                   placeholder="请输入活动名称">
                 </td>
                 <td class="subModelTitle">
-                    活动类型<!--二级联动技术难点-->
+                    活动类型
                     &nbsp&nbsp&nbsp&nbsp&nbsp
-                    <select name="first-class" id="selectOne">
-                        <option value="请选择活动大类">请选择活动大类</option>
-                        <option value="活动大类">活动大类</option>
+                    <select  id="first" name="firstCategory" onchange="insertSecondCategory()">
+
                     </select>
-                    <select name="second-class" id="selectTwo">
-                        <option value="请选择活动小类">请选择活动小类</option>
-                        <option value="活动小类">活动小类</option>
+                    <select  id="second" name="secondCategory">
+
                     </select>
-                    <span class="word">
-							<select name="province" id="province" onchange="changeProvince(this.value)">
-								<option value="" selected>省/直辖市</option>
-								<c:forEach items="${provinces}" var="province">
-								<option value="${province.code}"
-                                        <c:if test="${buyer.province==province.code}">selected="selected"</c:if>>${province.name}</option>
-                                </c:forEach>
-							</select>
-							<select name="city" id="city" onchange="changeCity(this.value)">
-								<option value="" selected>城市</option>
-								<c:forEach items="${citys}" var="city">
-                                    <option value="${city.code}"
-                                            <c:if test="${buyer.city==city.code}">selected="selected"</c:if>>${city.name}</option>
-                                </c:forEach>
-							</select>
-							<select name="town" id="town">
-								<option value="" selected>县/区</option>
-							<c:forEach items="${towns}" var="town">
-                                <option value="${town.code}"
-                                        <c:if test="${buyer.town==town.code}">selected="selected"</c:if>>${town.name}</option>
-                            </c:forEach>
-							</select>
-						</span>
+
                 </td>
             </tr>
             <tr>
                 <td class="subModelTitle">
-                    活动地点&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="activity-name"
+                    活动地点&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="address"
                                                                   placeholder="请输入活动地点">
                 </td>
                 <td class="subModelTitle">
-                    活动时间&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="date" name="activity-date">
+                    活动时间&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="date" name="activityDate">
                 </td>
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle">
-                    活动所属单位<input type="text" name="activity-name" placeholder="请输入活动所属单位">
+                    活动所属单位<input type="text" name="affiliatedCompany" placeholder="请输入活动所属单位">
                 </td>
             </tr>
             <tr>
@@ -122,29 +143,29 @@
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle">
-                    <input type="checkbox" name="角色">导师&nbsp&nbsp&nbsp&nbsp
-                    <input type="text" name="人数" placeholder="请输入需要人数">
-                    <select>
-                        <option>请选择导师领域</option>
-                    </select>
-                    <input type="text" name="押金" placeholder="请输入导师押金">
-                    <input type="text" name="酬金" placeholder="请输入导师酬金"><br>
-                    <input type="checkbox" name="角色">匠人&nbsp&nbsp&nbsp&nbsp
-                    <input type="text" name="人数" placeholder="请输入需要人数">
-                    <select>
-                        <option>请选择匠人领域</option>
-                    </select>
-                    <input type="text" name="押金" placeholder="请输入匠人押金">
-                    <input type="text" name="酬金" placeholder="请输入匠人酬金"><br>
-                    <input type="checkbox" name="角色">志愿者
-                    <input type="text" name="人数" placeholder="请输入需要人数">
-                    <input type="text" name="押金" placeholder="请输入导师押金">
-                    <input type="text" name="酬金" placeholder="请输入导师酬金"><br>
-                    <input type="checkbox" name="角色">观众&nbsp&nbsp&nbsp&nbsp
-                    <input type="text" name="人数" placeholder="请输入需要人数"><br>
-                    <input type="checkbox" name="角色">场地&nbsp&nbsp&nbsp&nbsp
-                    <select>
-                        <option>请选择导师领域</option>
+                    <input type="checkbox" name="isNeedTeacher" value="1">导师&nbsp&nbsp&nbsp&nbsp
+                    <input type="text" name="teacherNumbers" placeholder="请输入需要人数">
+                    <select id="teacherDomain" name="teacherDomain"></select>
+                    <input type="text" name="teacherDeposit" placeholder="请输入导师押金">
+                    <input type="text" name="teacherReward" placeholder="请输入导师酬金"><br>
+
+                    <input type="checkbox" name="isNeedCraftsman" value="1">匠人&nbsp&nbsp&nbsp&nbsp
+                    <input type="text" name="craftsmanNumbers" placeholder="请输入需要人数">
+                    <select id="craftsDomain" name="craftsmanDomain"></select>
+                    <input type="text" name="craftsmanDeposit" placeholder="请输入匠人押金">
+                    <input type="text" name="craftsmanReward" placeholder="请输入匠人酬金"><br>
+
+                    <input type="checkbox" name="isNeedVolunteer" value="1">志愿者
+                    <input type="text" name="volunteerNumbers" placeholder="请输入需要人数">
+                    <input type="text" name="volunteerDeposit" placeholder="请输入志愿者押金">
+                    <input type="text" name="volunteerReward" placeholder="请输入志愿者酬金"><br>
+
+                    <input type="checkbox" name="isNeedAudience" value="1">观众&nbsp&nbsp&nbsp&nbsp
+                    <input type="text" name="audienceNumbers" placeholder="请输入需要人数"><br>
+
+                    <input type="checkbox">场地&nbsp&nbsp&nbsp&nbsp
+                    <select  name="placeProvider">
+                        <option>请选择场地提供方</option>
                         <option>青果提供</option>
                         <option>第三方提供</option>
                     </select>
@@ -152,18 +173,18 @@
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle">
-                    交通&nbsp&nbsp<input type="text" name="交通" placeholder="请输入附近交通">
-                    活动图片&nbsp&nbsp<input type="file">
+                    交通&nbsp&nbsp<input type="text" name="traffic" placeholder="请输入附近交通">
+                    活动图片&nbsp&nbsp<input type="file" name="image">
                 </td>
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle">
-                    活动描述<textarea style="height: 200px;width: 400px; resize: none"></textarea>
+                    活动描述<textarea style="height: 200px;width: 400px; resize: none" name="activityDescribe"></textarea>
                 </td>
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle" align="center">
-                    <input type="button" value="发布">
+                    <input type="submit" value="发布">
                 </td>
             </tr>
         </table>
