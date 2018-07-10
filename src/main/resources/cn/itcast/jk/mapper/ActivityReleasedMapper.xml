@@ -12,7 +12,7 @@
         <result property="secondCategory" column="second_category"/>
         <result property="address" column="address"/>
         <result property="activityDate" column="activity_date"/>
-        <result property="affiliatedCompany" column="affilliated_company"/>
+        <result property="affiliatedCompany" column="affiliated_company"/>
         <result property="isNeedTeacher" column="isneed_teacher"/>
         <result property="teacherNumbers" column="teacher_numbers"/>
         <result property="teacherDomain" column="teacher_domain"/>
@@ -29,6 +29,7 @@
         <result property="volunteerReward" column="volunteer_reward"/>
         <result property="isNeedAudience" column="isneed_audience"/>
         <result property="audienceNumbers" column="audience_numbers"/>
+        <result property="isNeedPlace" column="isneed_place"/>
         <result property="placeProvider" column="place_provider"/>
         <result property="traffic" column="traffic"/>
         <result property="image" column="image"/>
@@ -42,7 +43,7 @@
             second_category,
             address,
             activity_date,
-            affilliated_company,
+            affiliated_company,
             isneed_teacher,
             teacher_numbers,
             teacher_domain,
@@ -59,6 +60,7 @@
             volunteer_reward,
             isneed_audience,
             audience_numbers,
+            isneed_place,
             place_provider,
             traffic,
             image,
@@ -86,6 +88,7 @@
         #{volunteerReward},
         #{isNeedAudience},
         #{audienceNumbers},
+        #{isNeedPlace},
         #{placeProvider},
         #{traffic},
         #{image},

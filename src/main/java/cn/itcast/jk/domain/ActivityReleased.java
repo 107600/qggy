@@ -44,6 +44,7 @@ public class ActivityReleased {
     private Integer isNeedAudience;
     private Integer audienceNumbers;
 
+    private Integer isNeedPlace;
     private String placeProvider;
     private String traffic;
     private String image;
@@ -231,6 +232,14 @@ public class ActivityReleased {
 
     public void setAudienceNumbers(Integer audienceNumbers) {
         this.audienceNumbers = audienceNumbers;
+    }
+
+    public Integer getIsNeedPlace() {
+        return isNeedPlace;
+    }
+
+    public void setIsNeedPlace(Integer isNeedPlace) {
+        this.isNeedPlace = isNeedPlace;
     }
 
     public String getPlaceProvider() {

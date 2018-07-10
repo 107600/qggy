@@ -21,7 +21,7 @@
     <script src="${pageContext.request.contextPath}/js/linkageMenu.js"></script>
 </head>
 <body>
-<form action="insertActivity.action" onsubmit="return checkForm()">
+<form id="activity_release" action="insertActivity.action" onsubmit="return checkForm()">
     <div class="textbox"></div>
     <div class="modelDiv">
 
@@ -39,11 +39,10 @@
                 <td class="subModelTitle">
                     活动类型
                     &nbsp&nbsp&nbsp&nbsp&nbsp
-                    <select  id="firstCategory" name="firstCategory" onchange="insertSecondCategory()">
-
+                    大类<select  id="firstCategory" name="firstCategory" onchange="insertSecondCategory()">
                     </select>
-                    <select  id="secondCategory" name="secondCategory">
-
+                    小类<select  id="secondCategory" name="secondCategory">
+                        <option>请选择活动类别</option>
                     </select>
 
                 </td>
@@ -54,7 +53,7 @@
                                                                   placeholder="请输入活动地点">
                 </td>
                 <td class="subModelTitle">
-                    活动时间&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="activityDate" type="date" name="activityDate">
+                    活动时间&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="activityDate" type="date" name="activityDate" >
                 </td>
             </tr>
             <tr>
@@ -69,28 +68,28 @@
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle">
-                    <input id="isNeedTeacher" type="checkbox" name="isNeedTeacher" value="0" onchange="changeCheckbox()">导师&nbsp&nbsp&nbsp&nbsp
-                    <input id="teacherNumbers" type="text" name="teacherNumbers" placeholder="请输入需要人数">
-                    <select id="teacherDomain" name="teacherDomain"></select>
-                    <input id="teacherDeposit" type="text" name="teacherDeposit" placeholder="请输入导师押金">
-                    <input id="teacherReward" type="text" name="teacherReward" placeholder="请输入导师酬金"><br>
+                    <input id="isNeedTeacher" type="checkbox" name="isNeedTeacher" value="0" onchange="changeCheckbox(document.getElementById('isNeedTeacher')),showTeacherOrNot(document.getElementById('isNeedTeacher').value)">导师&nbsp&nbsp&nbsp&nbsp
+                    <input id="teacherNumbers" type="text" name="teacherNumbers" placeholder="请输入需要人数" style="display: none">
+                    <select id="teacherDomain" name="teacherDomain" style="display: none"></select>
+                    <input id="teacherDeposit" type="text" name="teacherDeposit" placeholder="请输入导师押金" style="display: none">
+                    <input id="teacherReward" type="text" name="teacherReward" placeholder="请输入导师酬金" style="display: none"><br>
 
-                    <input id="isNeedCraftsman" type="checkbox" name="isNeedCraftsman" value="0" onchange="changeCheckbox(isNeedCraftsman)">匠人&nbsp&nbsp&nbsp&nbsp
-                    <input id="craftsmanNumbers" type="text" name="craftsmanNumbers" placeholder="请输入需要人数">
-                    <select id="craftsmanDomain" name="craftsmanDomain"></select>
-                    <input id="craftsmanDeposit" type="text" name="craftsmanDeposit" placeholder="请输入匠人押金">
-                    <input id="craftsmanReward" type="text" name="craftsmanReward" placeholder="请输入匠人酬金"><br>
+                    <input id="isNeedCraftsman" type="checkbox" name="isNeedCraftsman" value="0" onchange="changeCheckbox(document.getElementById('isNeedCraftsman')),showCraftsmanOrNot(document.getElementById('isNeedCraftsman').value)">匠人&nbsp&nbsp&nbsp&nbsp
+                    <input id="craftsmanNumbers" type="text" name="craftsmanNumbers" placeholder="请输入需要人数" style="display: none">
+                    <select id="craftsmanDomain" name="craftsmanDomain" style="display: none"></select>
+                    <input id="craftsmanDeposit" type="text" name="craftsmanDeposit" placeholder="请输入匠人押金" style="display: none">
+                    <input id="craftsmanReward" type="text" name="craftsmanReward" placeholder="请输入匠人酬金" style="display: none"><br>
 
-                    <input id="isNeedVolunteer" type="checkbox" name="isNeedVolunteer" value="0" onchange="changeCheckbox(isNeedVolunteer)">志愿者
-                    <input id="volunteerNumbers" type="text" name="volunteerNumbers" placeholder="请输入需要人数">
-                    <input id="volunteerDeposit" type="text" name="volunteerDeposit" placeholder="请输入志愿者押金">
-                    <input id="volunteerReward" type="text" name="volunteerReward" placeholder="请输入志愿者酬金"><br>
+                    <input id="isNeedVolunteer" type="checkbox" name="isNeedVolunteer" value="0" onchange="changeCheckbox(document.getElementById('isNeedVolunteer')),showVolunteerOrNot(document.getElementById('isNeedVolunteer').value)">志愿者&nbsp
+                    <input id="volunteerNumbers" type="text" name="volunteerNumbers" placeholder="请输入需要人数" style="display: none">
+                    <input id="volunteerDeposit" type="text" name="volunteerDeposit" placeholder="请输入志愿者押金" style="display: none">
+                    <input id="volunteerReward" type="text" name="volunteerReward" placeholder="请输入志愿者酬金" style="display: none"><br>
 
-                    <input id="isNeedAudience" type="checkbox" name="isNeedAudience" value="0" onchange="changeCheckbox(isNeedAudience)">观众&nbsp&nbsp&nbsp&nbsp
-                    <input id="audienceNumbers" type="text" name="audienceNumbers" placeholder="请输入需要人数"><br>
+                    <input id="isNeedAudience" type="checkbox" name="isNeedAudience" value="0" onchange="changeCheckbox(document.getElementById('isNeedAudience')),showAudienceOrNot(document.getElementById('isNeedAudience').value)">观众&nbsp&nbsp&nbsp&nbsp
+                    <input id="audienceNumbers" type="text" name="audienceNumbers" placeholder="请输入需要人数" style="display: none"><br>
 
-                    <input type="checkbox">场地&nbsp&nbsp&nbsp&nbsp
-                    <select  name="placeProvider">
+                    <input id="isNeedPlace" type="checkbox" name="isNeedPlace" value="0" onchange="changeCheckbox(document.getElementById('isNeedPlace')),showPlaceOrNot(document.getElementById('isNeedPlace').value)">场地&nbsp&nbsp&nbsp&nbsp
+                    <select  id="placeProvider" name="placeProvider" style="display: none">
                         <option>请选择场地提供方</option>
                         <option>青果提供</option>
                         <option>第三方提供</option>
@@ -110,7 +109,7 @@
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle" align="center">
-                    <input type="submit" value="发布">
+                    <input id="release" type="submit" value="发布">
                 </td>
             </tr>
         </table>
@@ -137,7 +136,7 @@
             data: {id:n},
             async: false,
             success: function (data) {
-                var dataHtml = "";
+                var dataHtml = "<option>请选择活动类别</option>";
                 /*
                   后台返回的data是含两个json对象的数组
                   alert(data[0].id);
@@ -195,7 +194,10 @@
     function checkForm(){
         var activityName =  document.getElementById("activityName").value;
         var address=document.getElementById("address").value;
+        var firstCategory = document.getElementById("firstCategory").value;
+        var secondCategory = document.getElementById("secondCategory").value;
         var affiliatedCompany=document.getElementById("affiliatedCompany").value;
+        var activityDate = document.getElementById("activityDate").value;
 
         var isNeedTeacher=document.getElementById("isNeedTeacher").value;
         var isNeedCraftsman=document.getElementById("isNeedCraftsman").value;
@@ -207,6 +209,9 @@
         var volunteerNumbers=document.getElementById("volunteerNumbers").value;
         var audienceNumbers=document.getElementById("audienceNumbers").value;
 
+        var teacherDomain = document.getElementById("teacherDomain").value;
+        var craftsmanDomain = document.getElementById("craftsmanDomain").value;
+
         var teacherDeposit=document.getElementById("teacherDeposit").value;
         var craftsmanDeposit=document.getElementById("craftsmanDeposit").value;
         var volunteerDeposit=document.getElementById("volunteerDeposit").value;
@@ -215,6 +220,7 @@
         var craftsmanReward=document.getElementById("craftsmanReward").value;
         var volunteerReward=document.getElementById("volunteerReward").value;
 
+        var placeProvider=document.getElementById("placeProvider").value;
         var traffic=document.getElementById("traffic").value;
         var image=document.getElementById("image").value;
         var activityDescribe=document.getElementById("activityDescribe").value;
@@ -229,12 +235,22 @@
             alert("活动地点不能为空");
             return false;
         }
+        else if (firstCategory == "请选择活动类别" || secondCategory == "请选择活动类别")
+        {
+            alert("请选择活动类别");
+            return false;
+        }
+        else if(isNull(activityDate))
+        {
+            alert("请选择时间");
+            return false;
+        }
         else if(isNull(affiliatedCompany))
         {
             alert("所属单位不能为空");
             return false;
         }
-        else if (false && isIllNum(teacherNumbers))
+        else if (isNeed(isNeedTeacher) && isIllNum(teacherNumbers))
         {
             alert("导师人数请输入数字");
             return false;
@@ -254,9 +270,19 @@
             alert("观众人数请输入数字");
             return false;
         }
+        else if (isNeed(isNeedTeacher) && teacherDomain == "请选择导师领域")
+        {
+            alert("请选择导师领域");
+            return false;
+        }
         else if (isNeed(isNeedTeacher) && isIllNum(teacherDeposit))
         {
             alert("导师押金请输入数字");
+            return false;
+        }
+        else if (isNeed(isNeedCraftsman) && craftsmanDomain == "请选择匠人领域")
+        {
+            alert("请选择匠人领域");
             return false;
         }
         else if (isNeed(isNeedCraftsman) && isIllNum(craftsmanDeposit))
@@ -269,7 +295,7 @@
             alert("志愿者押金请输入数字");
             return false;
         }
-        else if (isNeed(isNeedCraftsman) && isIllNum(teacherReward))
+        else if (isNeed(isNeedTeacher) && isIllNum(teacherReward))
         {
             alert("导师酬金请输入数字");
             return false;
@@ -282,6 +308,11 @@
         else if (isNeed(isNeedVolunteer) && isIllNum(volunteerReward))
         {
             alert("志愿者酬金请输入数字");
+            return false;
+        }
+        else if (placeProvider == "请选择场地提供方")
+        {
+            alert("请选择场地提供方");
             return false;
         }
         else if (isNull(traffic))
@@ -309,7 +340,7 @@
 
     //判断是否需要相关角色
     function isNeed(x) {
-        return (x != null);
+        return (x == 1);
     }
 
     //判断数字输入是否非法
@@ -326,13 +357,78 @@
          }
      }*/
 
-
-
-    //改变复选框的值
-    function changeCheckbox() {
-        document.getElementById("isNeedTeacher").value = "1";
+    //改变需求复选框的值
+    function changeCheckbox(obj) {
+        obj.value = Math.abs(obj.value-1);
     }
 
+    //显示或隐藏场地
+    function showPlaceOrNot(x) {
+        if (x == 1) {
+            document.getElementById("placeProvider").style.display = "";
+        }else document.getElementById("placeProvider").style.display = "none";
+    }
+
+    //显示或隐藏观众
+    function showAudienceOrNot(x) {
+        if (x == 1) {
+            document.getElementById("audienceNumbers").style.display = "";
+        }else document.getElementById("audienceNumbers").style.display = "none";
+    }
+
+    //显示或隐藏志愿者
+    function showVolunteerOrNot(x) {
+        var volunteerNumbers =document.getElementById("volunteerNumbers");
+        var volunteerDeposit =document.getElementById("volunteerDeposit");
+        var volunteerReward =document.getElementById("volunteerReward");
+            if (x == 1) {
+                volunteerNumbers.style.display = "";
+                volunteerDeposit.style.display = "";
+                volunteerReward.style.display = "";
+            }else {
+                volunteerNumbers.style.display = "none";
+                volunteerDeposit.style.display = "none";
+                volunteerReward.style.display = "none";
+            }
+    }
+
+    //显示或隐藏匠人
+    function showCraftsmanOrNot(x) {
+        var craftsmanNumbers =document.getElementById("craftsmanNumbers");
+        var craftsmanDomain = document.getElementById("craftsmanDomain");
+        var craftsmanDeposit =document.getElementById("craftsmanDeposit");
+        var craftsmanReward =document.getElementById("craftsmanReward");
+        if (x == 1) {
+            craftsmanNumbers.style.display = "";
+            craftsmanDomain.style.display = "";
+            craftsmanDeposit.style.display = "";
+            craftsmanReward.style.display = "";
+        }else {
+            craftsmanNumbers.style.display = "none";
+            craftsmanDomain.style.display = "none";
+            craftsmanDeposit.style.display = "none";
+            craftsmanReward.style.display = "none";
+        }
+    }
+
+    //显示或隐藏导师
+    function showTeacherOrNot(x) {
+        var teacherNumbers =document.getElementById("teacherNumbers");
+        var teacherDomain=document.getElementById("teacherDomain");
+        var teacherDeposit =document.getElementById("teacherDeposit");
+        var teacherReward =document.getElementById("teacherReward");
+        if (x == 1) {
+            teacherNumbers.style.display = "";
+            teacherDomain.style.display = "";
+            teacherDeposit.style.display = "";
+            teacherReward.style.display = "";
+        }else {
+            teacherNumbers.style.display = "none";
+            teacherDomain.style.display = "none";
+            teacherDeposit.style.display = "none";
+            teacherReward.style.display = "none";
+        }
+    }
 </script>
 
 </html>

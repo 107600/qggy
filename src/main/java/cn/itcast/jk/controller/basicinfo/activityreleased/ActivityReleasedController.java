@@ -10,8 +10,6 @@ import cn.itcast.jk.controller.BaseController;
 import cn.itcast.jk.domain.ActivityReleased;
 import cn.itcast.jk.service.ActivityReleasedService;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.Errors;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -36,7 +34,6 @@ public class ActivityReleasedController extends BaseController {
     @RequestMapping("basicinfo/activityreleased/insertActivity.action")
     @ResponseBody
     public void insertActivity(ActivityReleased activityReleased,
-                               Errors errors,
                                @RequestParam(value = "activityName")String activityName,
                                @RequestParam(value = "firstCategory")String firstCategory,
                                @RequestParam(value = "secondCategory")String secondCategory,
@@ -65,11 +62,14 @@ public class ActivityReleasedController extends BaseController {
                                @RequestParam(value = "isNeedAudience", required = false)Integer isNeedAudience,
                                @RequestParam(value = "audienceNumbers")Integer audienceNumbers,
 
+                               @RequestParam(value = "isNeedPlace",required = false)Integer isNeedPlace,
                                @RequestParam(value = "placeProvider")String placeProvider,
                                @RequestParam(value = "traffic")String traffic,
                                @RequestParam(value = "image")String image,
                                @RequestParam(value = "activityDescribe")String activityDescribe
+
                                ) {
+
         activityReleased.setActivityName(activityName);
         activityReleased.setFirstCategory(firstCategory);
         activityReleased.setSecondCategory(secondCategory);
@@ -98,6 +98,7 @@ public class ActivityReleasedController extends BaseController {
         activityReleased.setIsNeedAudience(isNeedAudience);
         activityReleased.setAudienceNumbers(audienceNumbers);
 
+        activityReleased.setIsNeedPlace(isNeedPlace);
         activityReleased.setPlaceProvider(placeProvider);
 
         activityReleased.setTraffic(traffic);
