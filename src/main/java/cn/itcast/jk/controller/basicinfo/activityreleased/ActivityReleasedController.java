@@ -9,6 +9,7 @@ package cn.itcast.jk.controller.basicinfo.activityreleased;
 import cn.itcast.jk.controller.BaseController;
 import cn.itcast.jk.domain.ActivityReleased;
 import cn.itcast.jk.service.ActivityReleasedService;
+import org.apache.http.HttpResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,7 +32,7 @@ public class ActivityReleasedController extends BaseController {
     @Resource
     ActivityReleasedService activityReleasedService;
 
-    @RequestMapping("basicinfo/activityreleased/insertActivity.action")
+    @RequestMapping("/basicinfo/activityreleased/insertActivity.action")
     @ResponseBody
     public void insertActivity(ActivityReleased activityReleased,
                                @RequestParam(value = "activityName")String activityName,
@@ -109,6 +110,9 @@ public class ActivityReleasedController extends BaseController {
 
     }
 
-
+    @RequestMapping(value = "/basicinfo/activityreleased/releasedsuccess.action")
+    public String showSuccess () {
+        return "/basicinfo/activityreleased/releasedsuccess.jsp";
+    }
 
 }

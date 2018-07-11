@@ -16,12 +16,13 @@
     <meta charset="UTF-8">
     <title>模块介绍</title>
     <link rel="stylesheet" rev="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css" media="all"/>
-    <%--<script src="${pageContext.request.contextPath}/weui/lib/jquery-2.1.4.js"></script>--%>
+    <script src="${pageContext.request.contextPath}/weui/lib/jquery-2.1.4.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="${pageContext.request.contextPath}/js/linkageMenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-<form id="activity_release" action="insertActivity.action" onsubmit="return checkForm()">
+<form id="activity_release" @submit="checkform" action="insertActivity.action">
     <div class="textbox"></div>
     <div class="modelDiv">
 
@@ -34,7 +35,7 @@
             <tr>
                 <td class="subModelTitle">
                     活动名称&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="activityName" type="text" name="activityName"
-                                                                  placeholder="请输入活动名称">
+                                                                  placeholder="请输入活动名称" v-model="activityName"><label>{{activityNameError}}</label>
                 </td>
                 <td class="subModelTitle">
                     活动类型
@@ -50,7 +51,7 @@
             <tr>
                 <td class="subModelTitle">
                     活动地点&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="address" type="text" name="address"
-                                                                  placeholder="请输入活动地点">
+                                                                  placeholder="请输入活动地点" v-model="address"><label>{{addressError}}</label>
                 </td>
                 <td class="subModelTitle">
                     活动时间&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="activityDate" type="date" name="activityDate" >
@@ -58,7 +59,7 @@
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle">
-                    活动所属单位<input id="affiliatedCompany" type="text" name="affiliatedCompany" placeholder="请输入活动所属单位">
+                    活动所属单位<input id="affiliatedCompany" type="text" name="affiliatedCompany" placeholder="请输入活动所属单位" v-model="affiliatedCompany"><label>{{affiliatedCompanyError}}</label>
                 </td>
             </tr>
             <tr>
@@ -113,11 +114,93 @@
                 </td>
             </tr>
         </table>
-
     </div>
 </form>
 </body>
 <script>
+    //使用vue来校验表单
+    const vueForm = new Vue({
+        el:'#activity_release',
+        data:{
+            activityName:null,
+            activityNameError:null,
+            address:null,
+            affiliatedCompany:null,
+            activityDate:null,
+            teacherNumbers:null,
+            craftsmanNumbers:null,
+            volunteerNumbers:null,
+            audienceNumbers:null,
+            teacherDeposit:null,
+            craftsmanDeposit:null,
+            volunteerDeposit:null,
+            teacherReward:null,
+            craftsmanReward:null,
+            volunteerReward:null,
+
+            addressError:null,
+            affiliatedCompanyError:null,
+            activityDateError:null,
+            teacherNumbersError:null,
+            craftsmanNumbersError:null,
+            volunteerNumbersError:null,
+            audienceNumbersError:null,
+            teacherDepositError:null,
+            craftsmanDepositError:null,
+            volunteerDepositError:null,
+            teacherRewardError:null,
+            craftsmanRewardError:null,
+            volunteerRewardError:null,
+        },
+        methods:{
+            checkform:function (e) {
+                if (this.activityName) return true;
+                if (!this.activityName) this.activityNameError = "请输入名字";
+
+                if (this.address) return true;
+                if (!this.address) this.addressError = "请输入地址";
+
+                if (this.affiliatedCompany) return true;
+                if (!this.affiliatedCompany) this.affiliatedCompanyError = "请输入所属公司";
+
+                if (this.activityDate) return true;
+                if (!this.activityDate) this.activityDateError = "请输入日期";
+
+                if (this.craftsmanNumbers) return true;
+                if (!this.craftsmanNumbers) this.craftsmanNumbersError = "请输入日期";
+
+                if (this.volunteerNumbers) return true;
+                if (!this.volunteerNumbers) this.volunteerNumbersError = "请输入日期";
+
+                if (this.audienceNumbers) return true;
+                if (!this.audienceNumbers) this.audienceNumbersError = "请输入日期";
+
+                if (this.teacherDeposit) return true;
+                if (!this.teacherDeposit) this.teacherDepositError = "请输入日期";
+
+                if (this.activityDate) return true;
+                if (!this.activityDate) this.activityDateError = "请输入日期";
+
+                if (this.activityDate) return true;
+                if (!this.activityDate) this.activityDateError = "请输入日期";
+
+                if (this.activityDate) return true;
+                if (!this.activityDate) this.activityDateError = "请输入日期";
+
+                if (this.activityDate) return true;
+                if (!this.activityDate) this.activityDateError = "请输入日期";
+
+                if (this.activityDate) return true;
+                if (!this.activityDate) this.activityDateError = "请输入日期";
+
+                if (this.activityDate) return true;
+                if (!this.activityDate) this.activityDateError = "请输入日期";
+
+                e.preventDefault();
+            }
+        }
+    })
+
     $(function () {
         insertTeacherDomain("#teacherDomain");
         insertCraftsmanDomain("#craftsmanDomain")
@@ -190,7 +273,7 @@
         })
     }
 
-    //校验表单
+    //用单纯的js来校验表单
     function checkForm(){
         var activityName =  document.getElementById("activityName").value;
         var address=document.getElementById("address").value;
@@ -220,6 +303,7 @@
         var craftsmanReward=document.getElementById("craftsmanReward").value;
         var volunteerReward=document.getElementById("volunteerReward").value;
 
+        var isNeedPlace = document.getElementById("isNeedPlace").value;
         var placeProvider=document.getElementById("placeProvider").value;
         var traffic=document.getElementById("traffic").value;
         var image=document.getElementById("image").value;
@@ -230,14 +314,19 @@
             alert("活动名称不能为空");
             return false;
         }
+        else if (firstCategory == "请选择活动类别")
+        {
+            alert("请选择活动类别");
+            return false;
+        }
+        else if (secondCategory == "请选择活动类别")
+        {
+            alert("请选择活动类别");
+            return false;
+        }
         else if(isNull(address))
         {
             alert("活动地点不能为空");
-            return false;
-        }
-        else if (firstCategory == "请选择活动类别" || secondCategory == "请选择活动类别")
-        {
-            alert("请选择活动类别");
             return false;
         }
         else if(isNull(activityDate))
@@ -310,7 +399,7 @@
             alert("志愿者酬金请输入数字");
             return false;
         }
-        else if (placeProvider == "请选择场地提供方")
+        else if (isNeed(isNeedPlace) && placeProvider == "请选择场地提供方")
         {
             alert("请选择场地提供方");
             return false;
@@ -331,6 +420,7 @@
             return false;
         }
         else return true;
+
     }
 
     //判断是否为空
