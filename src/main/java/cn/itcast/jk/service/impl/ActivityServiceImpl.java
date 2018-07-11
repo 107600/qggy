@@ -1,5 +1,6 @@
 package cn.itcast.jk.service.impl;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -35,6 +36,11 @@ public class ActivityServiceImpl implements ActivityService{
 		// TODO Auto-generated method stub
 		return activityDao.getActivitysByKeys(idList);
 	}
+
+	public List<Activity> get(Integer num) {
+		return activityDao.get(num);
+	}
+
 
 	public Integer deleteByKey(Integer num) {
 		// TODO Auto-generated method stub

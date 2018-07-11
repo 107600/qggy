@@ -21,7 +21,8 @@
 		<result property="craftsmannum" column="vcraftsmannum" />
 		<result property="placeneed" column="placeneed" />
 		<result property="introduction" column="introduction" />
-
+		<result property="teachertype" column="teachertype" />
+		<result property="people" column="people" />
 	</resultMap>
 	<!-- Select SQL -->
 	<sql id="activitySelector">
@@ -44,7 +45,7 @@
 					and type=#{type}
 				</if>
 				<if test="typeLike == true">
-					and  type like "%"#{type}"%"
+					and type like "%"#{type}"%"
 				</if>
 				</if>
 				<if test="theme != null">
@@ -52,7 +53,7 @@
 					and theme=#{theme}
 				</if>
 				<if test="themeLike == true">
-					and  theme like "%"#{theme}"%"
+					and theme like "%"#{theme}"%"
 				</if>
 				</if>
 				<if test="time != null">
@@ -68,7 +69,7 @@
 					and place=#{place}
 				</if>
 				<if test="placeLike == true">
-					and  place like "%"#{place}"%"
+					and place like "%"#{place}"%"
 				</if>
 				</if>
 				<if test="state != null">
@@ -197,6 +198,25 @@
 					and  teachernum like "%"#{teachernum}"%"
 				</if>
 				</if>
+
+			    <if test="teachertype!= null">
+				<if test="teachertypeLike == false">
+					and teachertype=#{teachertype}
+				</if>
+				<if test="teachertypeLike == true">
+					and  teachertype like "%"#{teachertype}"%"
+				</if>
+			    </if>
+
+			    <if test="people!= null">
+				<if test="people== false">
+					and people=#{people}
+				</if>
+				<if test="peopleLike == true">
+					and   people like "%"#{people}"%"
+				</if>
+			    </if>
+
 		</where>
 	</sql>
 
@@ -217,8 +237,8 @@
 
 	<!-- 根据主键查询 -->
 	<select id="getActivityByKey" resultMap="activity" parameterType="hashMap">
-		SELECT num,type,theme,time,place,state,launcher,money,volunteerneed,volunteernum,audienceneed,audiencenum,craftsmanneed,craftsmannum,placeneed,deposit,introduction,teacherneed,teachernum FROM
-		dsf_activity
+		SELECT num,type,theme,time,place,people,state,launcher,money,volunteerneed,volunteernum,audienceneed,audiencenum,craftsmanneed,craftsmannum,placeneed,deposit,introduction,teacherneed,teachernum,
+	teachertype FROM dsf_activity
 		WHERE
 		num=#{num}
 	</select>
@@ -232,12 +252,22 @@
         </if>
     </select>
 
+	<!-- id查询一个 -->
+	<select id="get" parameterType="Integer" resultType="activity">
+		SELECT
+		*
+		FROM
+		dsf_activity
+		WHERE num= #{num}
+	</select>
+
+
 
 
 
 	<select id="getActivitysByKeys" resultMap="activity" parameterType="ArrayList">
-		SELECT num,type,theme,time,place,state,launcher,money,volunteerneed,volunteernum,audienceneed,audiencenum,craftsmanneed,craftsmannum,placeneed,deposit,introduction,teacherneed,teachernum
-		FROM dsf_activity
+		SELECT num,type,theme,time,place,people,state,launcher,money,volunteerneed,volunteernum,audienceneed,audiencenum,craftsmanneed,craftsmannum,placeneed,deposit,introduction,teacherneed,teachernum,
+		teachertype FROM dsf_activity
 		WHERE
 		num in
 		<foreach collection="list" separator="," item="num" open="(" close=")">
@@ -251,6 +281,7 @@
 		WHERE
 		num=#{num}
 	</delete>
+
 
 	<!-- 根据主键批量删除 -->
 	<delete id="deleteByKeys">
@@ -282,60 +313,67 @@
 				<if test="place != null">
 					place = #{place},
 				</if>
+				<if test="people != null">
+					people = #{people},
+				</if>
 				<if test="state != null">
-					state = #{state}
+					state = #{state},
 				</if>
 
 				<if test="launcher != null">
-					launcher= #{launcher}
+					launcher= #{launcher},
 				</if>
 
 				<if test="money != null">
-					money= #{money}
+					money= #{money},
 				</if>
 
 				<if test="volunteerneed != null">
-					volunteerneed= #{volunteerneed}
+					volunteerneed= #{volunteerneed},
 				</if>
 
 				<if test="volunteernum != null">
-					volunteernum= #{volunteernum}
+					volunteernum= #{volunteernum},
 				</if>
 
 				<if test="audienceneed != null">
-					audienceneed= #{audienceneed}
+					audienceneed= #{audienceneed},
 				</if>
 
 				<if test="audiencenum != null">
-					audiencenum= #{audiencenum}
+					audiencenum= #{audiencenum},
 				</if>
 
 				<if test="craftsmanneed!= null">
-					craftsmanneed= #{craftsmanneed}
+					craftsmanneed= #{craftsmanneed},
 				</if>
 
 				<if test="craftsmannum!= null">
-					craftsmannum= #{craftsmannum}
+					craftsmannum= #{craftsmannum},
 				</if>
 
 				<if test="placeneed!= null">
-					placeneed= #{placeneed}
+					placeneed= #{placeneed},
 				</if>
 
 				<if test="deposit!= null">
-				deposit= #{deposit}
+				    deposit= #{deposit},
 				</if>
 
 				<if test="introduction!= null">
-					introduction= #{introduction}
+					introduction= #{introduction},
 				</if>
 
 				<if test="teacherneed!= null">
-					teacherneed= #{teacherneed}
+					teacherneed= #{teacherneed},
 				</if>
 
 				<if test="teachernum!= null">
-					teachernum= #{teachernum}
+					teachernum= #{teachernum},
+				</if>
+
+				<if test="teachertype!= null">
+					teachertype= #{teachertype},
 				</if>
 			</trim>
 		</set>
@@ -385,6 +423,9 @@
 			    <if test="launcher != null">
 					launcher,
 			    </if>
+			    <if test="people != null">
+				    people,
+			    </if>
 			    <if test="money != null">
 				    money,
 			    </if>
@@ -419,8 +460,11 @@
 					teacherneed,
 			    </if>
 			    <if test="teachernum!= null">
-					teachernum
+					teachernum,
 			    </if>
+			    <if test="teachertype!= null">
+				    teachertype
+				</if>
 		</trim>
 		VALUES
 		<trim prefix="(" suffix=")" suffixOverrides=",">
@@ -442,6 +486,9 @@
 					<if test="state != null">
 						#{state}
 					</if>
+			        <if test="people != null">
+				        #{people}
+			        </if>
                     <if test="launcher != null">
 				        #{launcher},
 					</if>
@@ -476,7 +523,10 @@
 				        #{teacherneed},
 			        </if>
 			        <if test="teachernum!= null">
-				        #{teachernum}
+				        #{teachernum},
+			        </if>
+			        <if test="teachertype!= null">
+				        #{teachertype}
 			        </if>
 		</trim>
 	</insert>

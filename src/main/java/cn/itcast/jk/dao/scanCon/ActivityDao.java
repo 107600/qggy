@@ -2,6 +2,7 @@ package cn.itcast.jk.dao.scanCon;
 import  cn.itcast.jk.controller.query.ActivityQuery;
 import cn.itcast.jk.domain.Activity;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -16,6 +17,7 @@ public interface ActivityDao {
 
     public Integer deleteByKey(Integer num);
 
+    public List<Activity> get(Integer id);
 
     public Integer deleteByKeys(List<Integer> idList);
 

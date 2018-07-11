@@ -31,8 +31,13 @@
             margin: 0px;
 
         }
+
+
     </style>
+
 </head>
+
+
 
 <body>
 <%--<form name="icform" method="post">--%>
@@ -68,22 +73,19 @@
                 <table id="ec_table" class="tableRegion" width="98%">
                     <thead>
                     <tr>
-                        <td class="tableHeader"><input type="checkbox" name="selid"
-                        ></td>
                         <td class="tableHeader">序号</td>
                         <td class="tableHeader">活动类型</td>
                         <td class="tableHeader">活动主题</td>
                         <td class="tableHeader">活动时间</td>
                         <td class="tableHeader">活动地点</td>
                         <td class="tableHeader">审核状态</td>
-                        <td class="tableHeader">可选择的操作</td>
+                        <td class="tableHeader" colspan="3" style="text-align: center">可选择的操作</td>
                     </tr>
                     </thead>
                     <tbody class="tableBody">
 
                     <c:forEach  items="${activitys}" var="activity">
                         <tr>
-                            <td><input type="checkbox"></td>
                             <td>${activity.num }</td>
                             <td>${activity.type }</td>
                             <td>${activity.theme }</td>
@@ -91,13 +93,24 @@
                             <td>${activity.place }</td>
                             <td>${activity.state }</td>
                             <td>
-                                <a href="#" onclick="javascript:location.href=('view.action');this.blur();" target="_self">查看详细信息</a>
+                                <form action="/basicinfo/activity/view.action" method="post">
+                                    <input type="hidden" name=num  value="${activity.num }">
+                                    <input type="submit" value="查看详情"/>
+                                </form>
+                            </td>
 
+                            <td>
+                                <form action="" method="post">
+                                    <input type="hidden" name=num  value="">
+                                    <input type="submit" value="审核未通过"/>
+                                </form>
+                            </td>
 
-                                <%--<div onclick="javascript:location.href='detailactivityview.jsp'" target="_Blank>查看详细信息</div>--%>
-
-                                <a href="#">审核未通过</a>
-                                <a href="#">确认发布</a>
+                            <td>
+                                <form action="" method="post">
+                                    <input type="hidden" name=num  value="">
+                                    <input type="submit" value="确认发布"/>
+                                </form>
                             </td>
 
                         </tr>
@@ -120,13 +133,26 @@
             </div>
         </div>
 
+
     </div>
 
+<%--<script type="text/javascript">--%>
+  <%--$("#detail").click(function () {--%>
+      <%--$.ajax({--%>
+          <%--url:"/basicinfo/activity/view.action",--%>
+          <%--data:{number:${activity.num }},--%>
+          <%--type:"post",--%>
+          <%--datatype:"text",--%>
+          <%--success:function (data) {--%>
+              <%--console.log(data);--%>
+          <%--}--%>
+          <%----%>
+          <%--error:function (data) {--%>
 
+          <%--}--%>
 
-
-
-
-<%--</form>--%>
+      <%--})--%>
+  <%--})--%>
+<%--</script>--%>
 </body>
 </html>

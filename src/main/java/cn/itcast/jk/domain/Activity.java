@@ -15,6 +15,7 @@ public class Activity implements Serializable{
     private String place;
     private String state;
     private String launcher;
+    private int people;
     private double money;
     private int volunteerneed;
     private int audienceneed;
@@ -27,9 +28,25 @@ public class Activity implements Serializable{
     private int teacherneed;
     private String teachernum;
     private String introduction;
+    private String teachertype;
 
 
 
+    public int getPeople() {
+        return people;
+    }
+
+    public void setPeople(int people) {
+        this.people = people;
+    }
+
+    public String getTeachertype() {
+        return teachertype;
+    }
+
+    public void setTeachertype(String teachertype) {
+        this.teachertype = teachertype;
+    }
 
 
     public String getLauncher() {
