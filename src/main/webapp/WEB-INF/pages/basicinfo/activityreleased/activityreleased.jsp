@@ -35,7 +35,7 @@
             <tr>
                 <td class="subModelTitle">
                     活动名称&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="activityName" type="text" name="activityName"
-                                                                  placeholder="请输入活动名称" v-model="activityName"><label>{{activityNameError}}</label>
+                                                                  placeholder="请输入活动名称" v-model="activityName"><label v-bind:style="errorStyle">{{activityNameError}}</label>
                 </td>
                 <td class="subModelTitle">
                     活动类型
@@ -51,15 +51,15 @@
             <tr>
                 <td class="subModelTitle">
                     活动地点&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="address" type="text" name="address"
-                                                                  placeholder="请输入活动地点" v-model="address"><label>{{addressError}}</label>
+                                                                  placeholder="请输入活动地点" v-model="address"><label v-bind:style="errorStyle">{{addressError}}</label>
                 </td>
                 <td class="subModelTitle">
-                    活动时间&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="activityDate" type="date" name="activityDate" >
+                    活动时间&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="activityDate" type="date" name="activityDate" v-model="activityDate"><label v-bind:style="errorStyle">{{activityDateError}}</label>
                 </td>
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle">
-                    活动所属单位<input id="affiliatedCompany" type="text" name="affiliatedCompany" placeholder="请输入活动所属单位" v-model="affiliatedCompany"><label>{{affiliatedCompanyError}}</label>
+                    活动所属单位<input id="affiliatedCompany" type="text" name="affiliatedCompany" placeholder="请输入活动所属单位" v-model="affiliatedCompany"><label v-bind:style="errorStyle">{{affiliatedCompanyError}}</label>
                 </td>
             </tr>
             <tr>
@@ -69,17 +69,17 @@
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle">
-                    <input id="isNeedTeacher" type="checkbox" name="isNeedTeacher" value="0" onchange="changeCheckbox(document.getElementById('isNeedTeacher')),showTeacherOrNot(document.getElementById('isNeedTeacher').value)">导师&nbsp&nbsp&nbsp&nbsp
-                    <input id="teacherNumbers" type="text" name="teacherNumbers" placeholder="请输入需要人数" style="display: none">
-                    <select id="teacherDomain" name="teacherDomain" style="display: none"></select>
-                    <input id="teacherDeposit" type="text" name="teacherDeposit" placeholder="请输入导师押金" style="display: none">
-                    <input id="teacherReward" type="text" name="teacherReward" placeholder="请输入导师酬金" style="display: none"><br>
+                    <input id="isNeedTeacher" type="checkbox" name="isNeedTeacher" value="0" onchange="changeCheckbox(document.getElementById('isNeedTeacher')),showTeacherOrNot(document.getElementById('isNeedTeacher').value)" v-model="isNeedTeacher" @change="showError">导师&nbsp&nbsp&nbsp&nbsp
+                    <input id="teacherNumbers" type="text" name="teacherNumbers" placeholder="请输入需要人数" style="display: none" v-model="teacherNumbers"><label v-bind:style="errorStyle">{{teacherNumbersError}}</label>
+                    <select id="teacherDomain" name="teacherDomain" style="display: none" v-model="teacherDomain"></select><label v-bind:style="errorStyle">{{teacherDomainError}}</label>
+                    <input id="teacherDeposit" type="text" name="teacherDeposit" placeholder="请输入导师押金" style="display: none" v-model="teacherDeposit"><label v-bind:style="errorStyle">{{teacherDepositError}}</label>
+                    <input id="teacherReward" type="text" name="teacherReward" placeholder="请输入导师酬金" style="display: none" v-model="teacherReward"><label v-bind:style="errorStyle">{{teacherRewardError}}</label><br>
 
-                    <input id="isNeedCraftsman" type="checkbox" name="isNeedCraftsman" value="0" onchange="changeCheckbox(document.getElementById('isNeedCraftsman')),showCraftsmanOrNot(document.getElementById('isNeedCraftsman').value)">匠人&nbsp&nbsp&nbsp&nbsp
-                    <input id="craftsmanNumbers" type="text" name="craftsmanNumbers" placeholder="请输入需要人数" style="display: none">
-                    <select id="craftsmanDomain" name="craftsmanDomain" style="display: none"></select>
-                    <input id="craftsmanDeposit" type="text" name="craftsmanDeposit" placeholder="请输入匠人押金" style="display: none">
-                    <input id="craftsmanReward" type="text" name="craftsmanReward" placeholder="请输入匠人酬金" style="display: none"><br>
+                    <input id="isNeedCraftsman" type="checkbox" name="isNeedCraftsman" value="0" onchange="changeCheckbox(document.getElementById('isNeedCraftsman')),showCraftsmanOrNot(document.getElementById('isNeedCraftsman').value)" v-model="isNeedCraftsman" @change="showError">匠人&nbsp&nbsp&nbsp&nbsp
+                    <input id="craftsmanNumbers" type="text" name="craftsmanNumbers" placeholder="请输入需要人数" style="display: none" v-model="craftsmanNumbers"><label v-bind:style="errorStyle">{{craftsmanNumbersError}}</label>
+                    <select id="craftsmanDomain" name="craftsmanDomain" style="display: none" v-model="craftsmanDomain"></select><label v-bind:style="errorStyle">{{craftsmanDomainError}}</label>
+                    <input id="craftsmanDeposit" type="text" name="craftsmanDeposit" placeholder="请输入匠人押金" style="display: none" v-model="craftsmanDeposit"><label v-bind:style="errorStyle">{{craftsmanDepositError}}</label>
+                    <input id="craftsmanReward" type="text" name="craftsmanReward" placeholder="请输入匠人酬金" style="display: none" v-model="craftsmanReward"><label v-bind:style="errorStyle">{{craftsmanRewardError}}</label><br>
 
                     <input id="isNeedVolunteer" type="checkbox" name="isNeedVolunteer" value="0" onchange="changeCheckbox(document.getElementById('isNeedVolunteer')),showVolunteerOrNot(document.getElementById('isNeedVolunteer').value)">志愿者&nbsp
                     <input id="volunteerNumbers" type="text" name="volunteerNumbers" placeholder="请输入需要人数" style="display: none">
@@ -99,13 +99,13 @@
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle">
-                    交通&nbsp&nbsp<input id="traffic" type="text" name="traffic" placeholder="请输入附近交通">
-                    活动图片&nbsp&nbsp<input id="image" type="file" name="image">
+                    交通&nbsp&nbsp<input id="traffic" type="text" name="traffic" placeholder="请输入附近交通" v-model="traffic"><label v-bind:style="errorStyle">{{trafficError}}</label>
+                    活动图片&nbsp&nbsp<input id="image" type="file" name="image" v-model="image"><label v-bind:style="errorStyle">{{imageError}}</label>
                 </td>
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle">
-                    活动描述<textarea id="activityDescribe" style="height: 200px;width: 400px; resize: none" name="activityDescribe"></textarea>
+                    活动描述<textarea id="activityDescribe" style="height: 200px;width: 400px; resize: none" name="activityDescribe" v-model="activityDescribe"></textarea><label v-bind:style="errorStyle">{{activityDescribeError}}</label>
                 </td>
             </tr>
             <tr>
@@ -122,82 +122,124 @@
     const vueForm = new Vue({
         el:'#activity_release',
         data:{
+            errorStyle:{
+                color:'red',
+            },
             activityName:null,
-            activityNameError:null,
             address:null,
             affiliatedCompany:null,
             activityDate:null,
-            teacherNumbers:null,
-            craftsmanNumbers:null,
-            volunteerNumbers:null,
-            audienceNumbers:null,
-            teacherDeposit:null,
-            craftsmanDeposit:null,
-            volunteerDeposit:null,
-            teacherReward:null,
-            craftsmanReward:null,
-            volunteerReward:null,
+            traffic:null,
+            image:null,
+            activityDescribe:null,
 
+            isNeedTeacher:false,
+            teacherNumbers:null,
+            teacherDomain:'请选择导师领域',
+            teacherDeposit:null,
+            teacherReward:null,
+
+            isNeedCraftsman:false,
+            craftsmanNumbers:null,
+            craftsmanDomain:'请选择匠人领域',
+            craftsmanDeposit:null,
+            craftsmanReward:null,
+
+            activityNameError:null,
             addressError:null,
             affiliatedCompanyError:null,
             activityDateError:null,
+            trafficError:null,
+            imageError:null,
+            activityDescribeError:null,
+
             teacherNumbersError:null,
-            craftsmanNumbersError:null,
-            volunteerNumbersError:null,
-            audienceNumbersError:null,
+            teacherDomainError:null,
             teacherDepositError:null,
-            craftsmanDepositError:null,
-            volunteerDepositError:null,
             teacherRewardError:null,
+
+            craftsmanNumbersError:null,
+            craftsmanDomainError:null,
+            craftsmanDepositError:null,
             craftsmanRewardError:null,
-            volunteerRewardError:null,
-        },
+
+            error:'*必填',
+            numerror:'*必填数字'
+
+            },
         methods:{
             checkform:function (e) {
-                if (this.activityName) return true;
-                if (!this.activityName) this.activityNameError = "请输入名字";
+                        this.activityNameError=null,
+                        this.addressError=null,
+                        this.affiliatedCompanyError=null,
+                        this.activityDateError=null,
+                        this.trafficError=null,
+                        this.imageError=null,
+                        this.activityDescribeError=null,
+                        this.teacherNumbersError=null,
+                        this.teacherDomainError=null,
+                        this.teacherDepositError=null,
+                        this.teacherRewardError=null,
+                            this.craftsmanNumbersError=null,
+                            this.craftsmanDomainError=null,
+                            this.craftsmanDepositError=null,
+                            this.craftsmanRewardError=null;
 
-                if (this.address) return true;
-                if (!this.address) this.addressError = "请输入地址";
+                if (this.activityName &&
+                    this.address &&
+                    this.affiliatedCompany &&
+                    this.activityDate &&
+                    this.traffic &&
+                    this.activityDescribe &&
+                    ((this.isNeedTeacher && !isIllNum(this.teacherNumbers)) || !this.isNeedTeacher) &&
+                    ((this.isNeedTeacher && this.teacherDomain!='请选择导师领域') || !this.isNeedTeacher) &&
+                    ((this.isNeedTeacher && !isIllNum(this.teacherDeposit)) || !this.isNeedTeacher) &&
+                    ((this.isNeedTeacher && (!isIllNum(this.teacherReward)) || !this.isNeedTeacher)) &&
 
-                if (this.affiliatedCompany) return true;
-                if (!this.affiliatedCompany) this.affiliatedCompanyError = "请输入所属公司";
+                    ((this.isNeedCraftsman && !isIllNum(this.craftsmanNumbers)) || !this.isNeedCraftsman) &&
+                ((this.isNeedCraftsman && this.craftsmanDomain!='请选择匠人领域') || !this.isNeedCraftsman) &&
+                ((this.isNeedCraftsman && !isIllNum(this.craftsmanDeposit)) || !this.isNeedCraftsman) &&
+                ((this.isNeedCraftsman && (!isIllNum(this.craftsmanReward)) || !this.isNeedCraftsman))) return true;
 
-                if (this.activityDate) return true;
-                if (!this.activityDate) this.activityDateError = "请输入日期";
 
-                if (this.craftsmanNumbers) return true;
-                if (!this.craftsmanNumbers) this.craftsmanNumbersError = "请输入日期";
+                if (!this.activityName) this.activityNameError = this.error;
+                if (!this.address) this.addressError = this.error;
+                if (!this.affiliatedCompany) this.affiliatedCompanyError = this.error;
+                if (!this.activityDate) this.activityDateError = this.error;
+                if (!this.traffic) this.trafficError = this.error;
+                if (!this.image) this.imageError = this.error;
+                if (!this.activityDescribe) this.activityDescribeError = this.error;
+                if (!((this.isNeedTeacher && !isIllNum(this.teacherNumbers)) || !this.isNeedTeacher)) this.teacherNumbersError = this.numerror;
+                if (!((this.isNeedTeacher && this.teacherDomain!='请选择导师领域') || !this.isNeedTeacher)) this.teacherDomainError = this.error;
+                if (!((this.isNeedTeacher && !isIllNum(this.teacherDeposit)) || !this.isNeedTeacher))  this.teacherDepositError =this.numerror;
+                if (!((this.isNeedTeacher && !isIllNum(this.teacherReward)) || !this.isNeedTeacher)) this.teacherRewardError=this.numerror;
 
-                if (this.volunteerNumbers) return true;
-                if (!this.volunteerNumbers) this.volunteerNumbersError = "请输入日期";
-
-                if (this.audienceNumbers) return true;
-                if (!this.audienceNumbers) this.audienceNumbersError = "请输入日期";
-
-                if (this.teacherDeposit) return true;
-                if (!this.teacherDeposit) this.teacherDepositError = "请输入日期";
-
-                if (this.activityDate) return true;
-                if (!this.activityDate) this.activityDateError = "请输入日期";
-
-                if (this.activityDate) return true;
-                if (!this.activityDate) this.activityDateError = "请输入日期";
-
-                if (this.activityDate) return true;
-                if (!this.activityDate) this.activityDateError = "请输入日期";
-
-                if (this.activityDate) return true;
-                if (!this.activityDate) this.activityDateError = "请输入日期";
-
-                if (this.activityDate) return true;
-                if (!this.activityDate) this.activityDateError = "请输入日期";
-
-                if (this.activityDate) return true;
-                if (!this.activityDate) this.activityDateError = "请输入日期";
+                if (!((this.isNeedCraftsman && !isIllNum(this.craftsmanNumbers)) || !this.isNeedCraftsman)) this.craftsmanNumbersError = this.numerror;
+                if (!((this.isNeedCraftsman && this.craftsmanDomain!='请选择匠人领域') || !this.isNeedCraftsman)) this.craftsmanDomainError = this.error;
+                if (!((this.isNeedCraftsman && !isIllNum(this.craftsmanDeposit)) || !this.isNeedCraftsman))  this.craftsmanDepositError =this.numerror;
+                if (!((this.isNeedCraftsman && !isIllNum(this.craftsmanReward)) || !this.isNeedCraftsman)) this.craftsmanRewardError=this.numerror;
 
                 e.preventDefault();
+            },
+            showError:function () {
+                if (!this.isNeedTeacher) {
+                    this.teacherNumbers=null,
+                        this.teacherDomain="请选择导师领域",
+                    this.teacherDeposit=null,
+                        this.teacherReward=null,
+                    this.teacherNumbersError=null,
+                        this.teacherDomainError=null,
+                        this.teacherDepositError=null,
+                        this.teacherRewardError=null;
+                }
+                if (!this.isNeedCraftsman) {
+                    this.craftsmanNumbersError=null,
+                        this.craftsmanDomainError=null,
+                        this.craftsmanDepositError=null,
+                        this.craftsmanRewardError=null;
+                }
             }
+
         }
     })
 
