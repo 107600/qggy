@@ -9,7 +9,6 @@ package cn.itcast.jk.controller.basicinfo.activityreleased;
 import cn.itcast.jk.controller.BaseController;
 import cn.itcast.jk.domain.ActivityReleased;
 import cn.itcast.jk.service.ActivityReleasedService;
-import org.apache.http.HttpResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
