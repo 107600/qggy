@@ -44,7 +44,7 @@ function insertTeacherDomain(m) {
             var dataHtml = "<option>请选择导师领域</option>";
             $.each(
                 data, function (index, obj) {
-                    dataHtml += "<option value=" + obj.id + ">" + obj.domainName + "</option>";
+                    dataHtml += "<option value=" + obj.domainName + ">" + obj.domainName + "</option>";
                 }
             );
             $(m).html(dataHtml);
@@ -61,7 +61,7 @@ function insertCraftsmanDomain(m) {
             var dataHtml = "<option>请选择匠人领域</option>";
             $.each(
                 data, function (index, obj) {
-                    dataHtml += "<option value=" + obj.id + ">" + obj.domainName + "</option>";
+                    dataHtml += "<option value=" + obj.domainName + ">" + obj.domainName + "</option>";
                 }
             );
             $(m).html(dataHtml);

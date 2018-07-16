@@ -52,8 +52,7 @@
                 <table id="ec_table" class="tableRegion" width="98%">
                     <thead>
                     <tr>
-                        <td class="tableHeader"><input type="checkbox" name="selid"
-                                                       onclick="checkAll('id',this)">
+                        <td class="tableHeader"><input type="checkbox" name="selid" onclick="checkAll('id',this)">
                         </td>
                         <td class="tableHeader">序号</td>
                         <td class="tableHeader">活动名称</td>

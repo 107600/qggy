@@ -46,6 +46,9 @@
                     <li><a href="${ctx}/"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">考勤管理</a>
                     </li>
+                    <li><a href="${ctx}/"
+                           onclick="linkHighlighted(this)" target="main" id="aa_1">领域管理</a>
+                    </li>
 
                 </ul>
             </div>
