@@ -10,6 +10,7 @@ import cn.itcast.jk.controller.BaseController;
 import cn.itcast.jk.domain.ActivityReleased;
 import cn.itcast.jk.service.ActivityReleasedService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,19 +18,30 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class ActivityReleasedController extends BaseController {
-    //点击青果活动发布跳转发布页面
+    //注入service
+    @Resource
+    ActivityReleasedService activityReleasedService;//点击青果活动发布跳转发布页面
+
     @RequestMapping("/basicinfo/activityreleased/list.action")
     public  String list() {
         return "/basicinfo/activityreleased/activityreleased.jsp";
     }
 
+    //跳转到活动发布列表
+    @RequestMapping("/basicinfo/activityreleased/activitylist.action")
+    public String activitylist(Model model) {
+        List<ActivityReleased> activityReleaseds = activityReleasedService.findActivityList();
+        model.addAttribute("activitylists",activityReleaseds);
+        return "/basicinfo/activityreleased/activitylist.jsp";
+    }
+
+
     //发布活动
-    //注入service
-    @Resource
-    ActivityReleasedService activityReleasedService;
+
 
     @RequestMapping("/basicinfo/activityreleased/insertActivity.action")
     @ResponseBody

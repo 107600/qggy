@@ -5,7 +5,8 @@ $(function () {
     insertSecondCategory();
 })
 function insertSecondCategory() {
-    insertCategory($("#firstCategory option:selected").val(), "#secondCategory");
+    alert($("#firstCategory option:selected").attr("id"));
+    insertCategory($("#firstCategory option:selected").attr("id"), "#secondCategory");
 }
 function insertCategory(n, m) {
     $.ajax({
@@ -24,13 +25,15 @@ function insertCategory(n, m) {
             */
             $.each(
                 data, function (index, obj) {
-                    dataHtml += "<option value=" + obj.id + ">" + obj.activityCategory + "</option>";
+                    dataHtml += "<option id=" + obj.id + " " + "value=" + obj.activityCategory + ">" + obj.activityCategory + "</option>";
                 }
             );
             $(m).html(dataHtml);
         }
     })
 }
+
+
 //从后台读导师领域
 function insertTeacherDomain(m) {
     $.ajax({

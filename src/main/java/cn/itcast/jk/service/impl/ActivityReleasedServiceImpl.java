@@ -6,6 +6,7 @@ import cn.itcast.jk.service.ActivityReleasedService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class ActivityReleasedServiceImpl implements ActivityReleasedService {
@@ -15,5 +16,10 @@ public class ActivityReleasedServiceImpl implements ActivityReleasedService {
     @Override
     public void insertIntoActivityReleased(ActivityReleased activityReleased) {
         activityReleasedDao.insertIntoActivityReleased(activityReleased);
+    }
+
+    @Override
+    public List<ActivityReleased> findActivityList () {
+       return activityReleasedDao.findActivityList();
     }
 }

@@ -36,6 +36,9 @@
                            onclick="linkHighlighted(this)" target="main" id="aa_1">青果活动发布</a>
                     </li>
 
+                    <li><a href="${ctx}/basicinfo/activityreleased/activitylist.action"
+                           onclick="linkHighlighted(this)" target="main" id="aa_1">活动发布列表</a>
+                    </li>
 
                     <li><a href="${ctx}/basicinfo/activity/list.action"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">第三方活动审核</a>
