@@ -1,111 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css">
-  <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.0/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.0/css/jquery-weui.min.css">
 
-  <title>课程发起</title>
+    <title>课程发起</title>
 
 </head>
 <style>
 
-.weui-media-box_appmsg .weui-media-box__hd {
-    margin-right: .8em;
-    width: 80px;
-    line-height: 80px;
+    .weui-media-box_appmsg .weui-media-box__hd {
+        margin-right: .8em;
+        width: 80px;
+        line-height: 80px;
 
-}
+    }
 
-.weui-media-box {
-    padding: 10px;
+    .weui-media-box {
+        padding: 10px;
 
-}
+    }
 
-.weui-panel__bd{
-	font-size:2em;
-	font-weight: bolder;
-	text-align: center;
-}
-.weui-textarea{
-	 width: 100%;
-    
-}
-.weui-btn_warn{
-	width:80% ;
-}
+    .weui-panel__bd{
+        font-size:2em;
+        font-weight: bolder;
+        text-align: center;
+    }
+    .weui-textarea{
+        width: 100%;
+
+    }
+    .weui-btn_warn{
+        width:80% ;
+    }
 </style>
 
 
 <body>
 
+<!-- action="${pageContext.request.contextPath}/
+    phone/public/basicinfo/sysuser/insert.action"-->
 
-   <div class="weui-panel weui-panel_access">
+<form action="/qggy/phone/user/basicinfo/phonepromotecourse/add.action" method="post">
+
+    <div class="weui-panel weui-panel_access">
         <div class="weui-panel__bd">课程发起</div>
-   </div>
-      <div class="weui-cells weui-cells_form">
+    </div>
+    <div class="weui-cells weui-cells_form">
         <div class="weui-cell">
             <div class="weui-cell__hd"><label class="weui-label">课程类别</label></div>
-               <div class="weui-cell__bd">
-                  <select class="weui_select" name="classcetegory" placeholder="请选择">
-                        <option value="classcetegory1">插花</option>
-                        <option value="classcetegory2">古筝</option>
-                        <option value="classcetegory3">xxx</option>
-                        <option value="classcetegory4">xxxx</option>
-                   </select>            
-                </div>
+            <div class="weui-cell__bd">
+                <select class="weui_select" name="courseCategory" placeholder="请选择">
+                    <option value="插花">插花</option>
+                    <option value="古筝">古筝</option>
+                    <option value="classcetegory3">xxx</option>
+                    <option value="classcetegory4">xxxx</option>
+                </select>
+            </div>
         </div>
-        
+
         <div class="weui-cell">
             <div class="weui-cell__hd"><label class="weui-label">课程名称</label></div>
-                <div class="weui-cell__bd">
-                   <input class="weui-input" type="text"  placeholder="必填">
-                </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" name="courseName"  placeholder="必填">
+            </div>
         </div>
-        
 
-  <div class="weui-cell">
-    <div class="weui-cell__hd"><label class="weui-label">课程时间</label></div>
-    <div class="weui-cell__bd">
-      <!--<input class="weui-input" type="datetime-local" value="" placeholder="">-->
-        <input type="text" id='datetime-picker'/>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">课程时间</label></div>
+            <div class="weui-cell__bd">
+                <!--<input class="weui-input" type="datetime-local" value="" placeholder="">-->
+                <input type="text" id='datetime-picker' name="courseTime1"/>
+            </div>
+        </div>
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">上课区域</label></div>
+            <input type="text" id='city-picker' name="courseAreaName"/>
+        </div>
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">课程简介</label></div>
+        </div>
+
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请输入文本" name="courseIntro" rows="3"></textarea>
+                <div class="weui-textarea-counter"><span>0</span>/200</div>
+            </div>
+        </div>
+
+        <!--<div class="weui-cell">-->
+            <!--<div class="weui-cell__hd"><label class="weui-label">课程发起人</label></div>-->
+            <!--<input type="text" id='coursePromotePerson' name="coursePromotePerson"/>-->
+        <!--</div>-->
     </div>
-  </div>
+    <div><input type="submit" value="注册" class="weui-btn weui-btn_warn"/></div>
+</form>
+<!-- body 最后 -->
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/city-picker.min.js"></script>
 
-    <div class="weui-cell">
-        <div class="weui-cell__hd"><label class="weui-label">上课区域</label></div>
-        <input type="text" id='city-picker'/>
-    </div>
+<script>
+    $("#datetime-picker").datetimePicker();
+</script>
 
-   <div class="weui-cell">
-    <div class="weui-cell__hd"><label class="weui-label">课程简介</label></div>
-   </div>
-
-  <div class="weui-cell">
-    <div class="weui-cell__bd">
-      <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
-      <div class="weui-textarea-counter"><span>0</span>/200</div>
-    </div>
-  </div>
-</div>
-<div><a href="/qggy/phone/user/basicinfo/trade/toview.action" class="weui-btn weui-btn_warn">提交</a></div>
-
-   <!-- body 最后 -->
-   <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
-   <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
-   <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/city-picker.min.js"></script>
-
-   <script>
-       $("#datetime-picker").datetimePicker();
-   </script>
-
-   <script>
-       $("#city-picker").cityPicker({
-           title: "请选择收货地址"
-       });
-   </script>
+<script>
+    $("#city-picker").cityPicker({
+        title: "请选择上课区域"
+    });
+</script>
 </body>
 </html>
 

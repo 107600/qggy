@@ -2,16 +2,24 @@ package cn.itcast.jk.controller;
 
 import javax.servlet.http.HttpSession;
 
+import cn.itcast.jk.domain.PromoteCourse;
+import cn.itcast.jk.service.PromoteCourseService;
 import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cn.itcast.jk.domain.Student;
 
+import java.util.List;
+
 @Controller
 public class PhoneUserHomeController {
+
+    @Autowired
+    private PromoteCourseService promoteCourseService;
 
     @RequestMapping("/phone/user/main.action")
     public String main(Model model, HttpSession session) {
@@ -83,10 +91,19 @@ public class PhoneUserHomeController {
         return "/basicinfo/phoneuser/money/billHistory.html";
     }
 
-    //查看申请活动、酬金的历史记录
+    //课程发起的界面
     @RequestMapping("/phone/user/myCoursePromote.action")
     public String myCoursePromote() {
         return "/basicinfo/phoneuser/coursePromote.html";
+    }
+
+    //课程发起的列表界面
+    @RequestMapping("/phone/user/myCoursePromoteList.action")
+    public String myCoursePromoteList(Model model){
+        List<PromoteCourse> promoteCourseList = promoteCourseService.queryUnChecked();
+        System.out.println(promoteCourseList);
+        model.addAttribute("promoteCourseList",promoteCourseList);
+        return "/basicinfo/phoneuser/coursepromotelist.html";
     }
 
     // 退款记录

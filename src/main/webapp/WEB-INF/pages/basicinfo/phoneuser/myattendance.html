@@ -58,8 +58,7 @@
     function queryCourse() {
 
         var content = document.getElementById("content");
-        $
-            .ajax({
+        $.ajax({
                 url: "/qggy/phone/user/basicinfo/attendance/list.action", //请求地址
                 type: "POST", //请求方式
                 data: "", //请求参数,
@@ -69,14 +68,12 @@
                     //拼标签
                     for (var i = 0; i < response.length; i++) {
                         var div2 = document.createElement("div");
-                        div2
-                            .setAttribute("class",
+                        div2.setAttribute("class",
                                 "weui-media-box__bd");
 
                         if (i == 0) {
                             var hr0 = document.createElement("hr");
-                            hr0
-                                .setAttribute("style",
+                            hr0.setAttribute("style",
                                     "height:1px;border:none;border-top:1px dashed #0066CC;");
                             //hr.innerHTML = response[i].courseName;
                             div2.appendChild(hr0);
@@ -90,8 +87,7 @@
                         div2.appendChild(p);
 
                         var hr = document.createElement("hr");
-                        hr
-                            .setAttribute("style",
+                        hr.setAttribute("style",
                                 "height:1px;border:none;border-top:1px dashed #0066CC;");
 
                         div2.appendChild(hr);

@@ -18,8 +18,15 @@
     <context:property-placeholder location="classpath:jdbc.properties"/>
 
     <!-- 2. 包扫描dao,service -->
-    <context:component-scan base-package="cn.itcast.jk.dao,cn.itcast.jk.service"/>
+    <context:component-scan base-package="cn.itcast.jk.dao*,cn.itcast.jk.service"/>
 
+    <!--<!—自动扫描映射接口—>-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--<!— 指定sql会话工厂，在上面配置过的 —>-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+        <!--<!— 指定基础包，即自动扫描包以及它的子包下的所有映射接口类 —>-->
+        <property name="basePackage" value="cn.itcast.jk.dao2"></property>
+    </bean>
 
     <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
         <property name="driverClassName" value="${jdbc.driverClassName}" />

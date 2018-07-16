@@ -32,14 +32,15 @@ public class UserAutIdentiInterceptortest implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object arg2) throws Exception {
 
 
-        Student student = studentService.get("ovrWG1VMq4dJkswjCYfJ4qHBix4A");
+        Student student = studentService.get("ovrWG1VMq4dJkswjCYfJ4qHBix4B");
+        System.out.println(student);
         if (student != null) {
             System.out.println("自动登录");
             request.getSession().setAttribute("user", student);
             return true;
         }else {
             System.out.println("转向其他页面");
-            request.setAttribute("userOpenid","ovrWG1VMq4dJkswjCYfJ4qHBix4A");
+            request.setAttribute("userOpenid","ovrWG1VMq4dJkswjCYfJ4qHBix4B");
             request.getRequestDispatcher("/Userregister.jsp").forward(request,response);
 //            response.sendRedirect("/Userregister.jsp");
             return false;

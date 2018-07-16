@@ -40,12 +40,14 @@ public class PhoneStudentController extends BaseController {
     AreaService areaService;
 
     // 转向新增页面
-    @RequestMapping("/phone/user/basicinfo/student/tocreate.action")
+    @RequestMapping("/phone/user/basicinfo/student/tocreate1.action")
     public String tocreate(Model model, String id, HttpServletRequest request) {
 
         System.out.println("heheheh=====================================================");
 
         String userOpenid = request.getAttribute("userOpenid").toString();
+
+        System.out.println(userOpenid);
 
         model.addAttribute("ids", id);
 

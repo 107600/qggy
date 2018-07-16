@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="UTF-8" %>
+<%@ page language="java" pageEncoding="" %>
 <%@ include file="../base.jsp" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>

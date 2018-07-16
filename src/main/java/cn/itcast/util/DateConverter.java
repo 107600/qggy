@@ -25,9 +25,59 @@ import org.springframework.web.context.request.WebRequest;
 	
  */
 public class DateConverter implements WebBindingInitializer {
+
+    private static final String dateFormat = "yyyy-MM-dd HH:mm:ss";
+    private static final String shortDateFormat = "yyyy-MM-dd";
+    private static final String dateFormat2 = "yyyy/MM/dd HH:mm:ss";
+    private static final String shortDateFormat2 = "yyyy/MM/dd";
+
     public void initBinder(WebDataBinder binder, WebRequest request) {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         binder.registerCustomEditor(Date.class, new CustomDateEditor(df, true));
         binder.registerCustomEditor(Timestamp.class, new CustomDateEditor(df, true));
+    }
+
+    /**
+     * 字符串转换为日期
+     */
+    public static java.util.Date StringToDate(String timeStr) {
+
+        if (timeStr.isEmpty()) {
+            return null;
+        }
+        timeStr = timeStr.trim();
+        try {
+            SimpleDateFormat formatter;
+            if (timeStr.contains("-")) {
+                if (timeStr.contains(":")) {
+                    formatter = new SimpleDateFormat(dateFormat);
+                } else {
+                    formatter = new SimpleDateFormat(shortDateFormat);
+                }
+                java.util.Date dtDate = formatter.parse(timeStr);
+                return dtDate;
+            } else if (timeStr.contains("/")) {
+                if (timeStr.contains(":")) {
+                    formatter = new SimpleDateFormat(dateFormat2);
+                } else {
+                    formatter = new SimpleDateFormat(shortDateFormat2);
+                }
+                java.util.Date dtDate = formatter.parse(timeStr);
+                return dtDate;
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(String.format("parser %s to Date fail", timeStr));
+        }
+
+        throw new RuntimeException(String.format("parser %s to Date fail", timeStr));
+
+    }
+
+
+    /**
+     * String 转timestamp
+     */
+    public static Timestamp stringToTimestamp(String timeStr){
+        return Timestamp.valueOf(timeStr);
     }
 }

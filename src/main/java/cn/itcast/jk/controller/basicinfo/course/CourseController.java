@@ -5,6 +5,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -17,7 +18,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import cn.itcast.jk.config.UploadConfig;
+import cn.itcast.jk.domain.*;
+import cn.itcast.jk.service.*;
+import cn.itcast.jk.vo.PromoteCourseVO;
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import org.apache.commons.collections.map.HashedMap;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,22 +36,6 @@ import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import cn.itcast.jk.controller.BaseController;
-import cn.itcast.jk.domain.Advertisement;
-import cn.itcast.jk.domain.Area;
-import cn.itcast.jk.domain.Category;
-import cn.itcast.jk.domain.Course;
-import cn.itcast.jk.domain.CourseAdv;
-import cn.itcast.jk.domain.Rank;
-import cn.itcast.jk.domain.Student;
-import cn.itcast.jk.domain.TeacherCourse;
-import cn.itcast.jk.domain.UrRo;
-import cn.itcast.jk.service.AdvService;
-import cn.itcast.jk.service.AreaService;
-import cn.itcast.jk.service.CategoryService;
-import cn.itcast.jk.service.CourseService;
-import cn.itcast.jk.service.RankService;
-import cn.itcast.jk.service.StudentService;
-import cn.itcast.jk.service.TeacherCourseService;
 import cn.itcast.jk.vo.CourseadvVO;
 import cn.itcast.jk.vo.SysUserVO;
 
@@ -74,6 +63,9 @@ public class CourseController extends BaseController {
     TeacherCourseService teacherCourseService;
     @Resource
     StudentService studentService;
+    //发起课程管理的Service
+    @Autowired
+    private PromoteCourseService promoteCourseService;
 
     // 列表
     @RequestMapping("/basicinfo/course/list.action")
@@ -457,13 +449,33 @@ public class CourseController extends BaseController {
     //列表，显示课程发起的所有记录
     //课程发起的含义是:统计对该门课程感兴趣的人数，由管理员决定是否开课
     @RequestMapping("/basicinfo/course/coursePromote.action")
-    public String coursePromote(Model model, HttpSession session, String likes){
-        return "basicinfo/course/promoteCourse.html";
+    public String coursePromote(Model model){
+        //调用quaryAll()方法，找到所有的发起课程
+        List<PromoteCourse> promoteCourseList = promoteCourseService.queryAll();
+        System.out.println(promoteCourseList);
+        //将其放入到model中，进行前台展示
+        model.addAttribute("promoteCourseList",promoteCourseList);
+        return "basicinfo/course/promoteCourse.jsp";
     }
 
     //显示发起的课程的详细信息
     @RequestMapping("/basicinfo/course/checkPromoteCourse.action")
-    public String checkCoursePromote(Model model, HttpSession session, String likes){
-        return "basicinfo/course/checkPromoteCourse.html";
+    public String checkCoursePromote(Model model,
+                                     @RequestParam(value = "promoteCourseId") Integer id){
+        //根据课程id查询该课程的信息
+        PromoteCourse promoteCourse = promoteCourseService.query(id);
+        System.out.println(promoteCourse);
+        //将课程放入model中
+        model.addAttribute("promoteCourse",promoteCourse);
+
+        //根据id查到所需要展示的信息
+        List<PromoteCourseVO> promoteCourseVOList =
+                promoteCourseService.queryPromoteCourseVO(id);
+
+        System.out.println(promoteCourseVOList);
+        //将其放入model中
+        model.addAttribute("promoteCourseVOList",promoteCourseVOList);
+        return "basicinfo/course/checkPromoteCourse.jsp";
     }
+
 }

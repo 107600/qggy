@@ -135,6 +135,13 @@
         </div>
         <p class="weui-grid__label">发起课程</p>　
     </a>
+
+    <a href="/qggy/phone/user/myCoursePromoteList.action" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="../../images/Phone/licai.png" alt="">
+        </div>
+        <p class="weui-grid__label">发起课程列表</p>　
+    </a>
 　
     <c:if test="${state==1}">
         <a href="/qggy/phone/user/becomedaoshi.action" class="weui-grid js_grid">

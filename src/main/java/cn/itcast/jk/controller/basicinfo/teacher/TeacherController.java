@@ -43,7 +43,7 @@ public class TeacherController {
     //显示已注册的导师的详细信息
     @RequestMapping("basicinfo/teacher/tutorRegisted.action")
     public String tutorRegistedList(Model model, HttpSession session, String likes){
-        return "teacher/tutorInformation.html";
+        return "teacher/tutorInformation.jsp";
     }
 
     //显示已注册的匠人的详细信息

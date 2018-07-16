@@ -147,8 +147,10 @@
             <p>花个3分钟创建属于您的个人帐号</p>
             <p>您将在我们的网站享受更多</p>
         </div>
+        <%--<a id="js-alert-btn" class="alert-btn"--%>
+           <%--href="${pageContext.request.contextPath}/phone/user/basicinfo/student/tocreate.action?id=${id}">立即前往注册</a>--%>
         <a id="js-alert-btn" class="alert-btn"
-           href="${pageContext.request.contextPath}/phone/user/basicinfo/student/tocreate.action?id=${id}">立即前往注册</a>
+           href="${pageContext.request.contextPath}/basicinfo/promotecourse/tutorinformation.action?id=${userOpenid}">立即前往注册</a>
     </div>
     <div class="alert-footer clearfix">
         <svg width="46px" height="42px" class="alert-footer-icon">
@@ -180,8 +182,8 @@
             setInterval(
                 function () {
                     if (0 == t) {
-                        <%--window.location.href = "${pageContext.request.contextPath}/phone/user/basicinfo/student/tocreate.action?id=${id}";--%>
-                        console.log("haha");
+                        window.location.href = "${pageContext.request.contextPath}/phone/user/basicinfo/student/tocreate.action?id=${id}";
+                        alert("ahhahahah");
                     } else {
                         t -= 1,
                             document
