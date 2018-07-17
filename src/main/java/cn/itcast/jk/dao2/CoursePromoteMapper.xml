@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 命名空间，作用就是对sql进行分类化管理，可以理解为sql隔离 -->
+
+<mapper namespace="cn.itcast.jk.dao2.CoursePromoteMapper">
+
+    <!--
+    private Integer promoteCourseId; //发起课程对应的课程主键，主键自增
+    private String courseCategory; //发起课程对应的课程种类
+    private String courseName; //发起课程对应的课程名称
+    private Timestamp courseTime; //发起课程对应的上课时间
+    private int courseAreaId; //发起课程对应的上课区域id，可能用不到，先保留
+    private String courseAreaName; //发起课程对应的上课区域地点
+    private String courseIntro; //发起课程对应的课程简介
+    private BigInteger courseNumStu; //对该课程感兴趣的学生人数
+    private BigInteger courseNumTea; //对该课程感兴趣的教师人数
+    private String coursePromotePerson; //课程发起者
+    private String courseUserOpenid; //唯一识别课程发起者的openid
+    -->
+    
+    <resultMap id="resultPromoteCourseMap" type="cn.itcast.jk.domain.PromoteCourse">
+        <!--主键属性-->
+        <id property="promoteCourseId" column="promote_course_id"/>
+        <!--一般属性-->
+        <result property="courseCategory" column="course_category"/>
+        <result property="courseName" column="course_name"/>
+        <result property="courseTime" column="course_time"/>
+        <result property="courseAreaId" column="course_area_id"/>
+        <result property="courseAreaName" column="course_area_name"/>
+        <result property="courseIntro" column="course_intro"/>
+        <result property="courseNumStu" column="course_num_stu"/>
+        <result property="courseNumTea" column="course_num_tea"/>
+        <result property="coursePromotePerson" column="course_promote_person"/>
+        <result property="courseUserOpenid" column="course_user_openid"/>
+        <result property="coursePromoteState" column="course_promote_state"/>
+    </resultMap>
+
+    <!--查找已经发起的所有课程-->
+    <select id="queryAll" resultMap="resultPromoteCourseMap" >
+-- 		select * from promote_course order by course_time group by course_promote_state desc
+        select * from promote_course order by course_time desc
+	</select>
+
+    <!--查找单个发起的课程的详细信息-->
+    <select id="query" parameterType="int" resultMap="resultPromoteCourseMap">
+        select * from promote_course where promote_course_id=#{id}
+    </select>
+
+    <!--电脑端根据条件进行查询-->
+    <select id="queryByParams" parameterType="cn.itcast.jk.domain.PromoteCourse" resultMap="resultPromoteCourseMap">
+        SELECT
+        *
+        FROM
+        promote_course
+        where 1=1
+        <if test="courseCategory != null">
+            and course_category like concat('%',#{courseCategory},'%')
+        </if>
+        <if test="courseName != null">
+            and course_name like concat('%',#{courseName},'%')
+        </if>
+        <if test="courseTimeStr != null">
+            and course_time like '%${courseTimeStr}%'
+        </if>
+        <if test="courseAreaName != null">
+            and course_area_name like concat('%',#{courseAreaName},'%')
+        </if>
+    </select>
+
+    <!--手机端展示发起课程的列表，显示状态为待审核的记录-->
+    <select id="queryUnChecked" resultMap="resultPromoteCourseMap">
+        select * from promote_course where course_promote_state = 0;
+    </select>
+
+    <!--判断数据表中是否有该用户的openid和courseid确定一个人对一门课程感兴趣只能添加一次，
+        如果有，则不能重复添加我想参加
+        select
+            i.user_openid
+        from
+            promote_course p,interest_course i
+        where
+            (i.user_openid='ovrWG1VMq4dJkswjCYfJ4qHBix4A')
+            and (p.promote_course_id=28);
+       -->
+    <select id="queryInterestCourse" parameterType="Map" resultType="String">
+        select user_openid from interest_course where
+        (user_openid=#{userOpenid}) and (course_id=#{courseId})
+    </select>
+
+    <!--添加发起课程-->
+    <insert id="addCoursePromote" parameterType="cn.itcast.jk.domain.PromoteCourse">
+        insert into promote_course(
+          course_category,course_name,course_time,
+          course_area_name,course_intro,course_promote_person,course_user_openid)
+          values (#{courseCategory},#{courseName},#{courseTime},
+            #{courseAreaName},#{courseIntro},#{coursePromotePerson},#{courseUserOpenid})
+    </insert>
+
+    <!--将学生或教师所感兴趣的课程添加到数据表-->
+    <insert id="addInterestCourse" parameterType="Map">
+        insert into interest_course(user_id,user_name,user_openid,course_id,course_name,course_category)
+          values (#{userId},#{userName},#{userOpenid},#{courseId},#{courseCategory},#{courseName})
+    </insert>
+
+    <!--将课程发起的待审核状态改为未审核通过
+        0:待审核
+        1：审核通过
+        2：审核不通过-->
+    <update id="updatePromoteState" parameterType="int">
+        UPDATE promote_course SET course_promote_state='2' WHERE promote_course_id=#{id};
+    </update>
+
+    <!--将课程发起的待审核状态改为审核通过-->
+    <update id="updatePromoteStatePass" parameterType="int">
+        UPDATE promote_course SET course_promote_state='1' WHERE promote_course_id=#{id};
+    </update>
+
+    <!--老师对某一课程感兴趣，人数加1-->
+    <update id="updateTeaNum" parameterType="cn.itcast.jk.domain.PromoteCourse">
+        UPDATE promote_course SET course_num_tea=#{courseNumTea} WHERE promote_course_id=#{promoteCourseId};
+    </update>
+
+    <!--学生对某一课程感兴趣，人数加1-->
+    <update id="updateStuNum" parameterType="cn.itcast.jk.domain.PromoteCourse">
+        UPDATE promote_course SET course_num_stu=#{courseNumStu} WHERE promote_course_id=#{promoteCourseId};
+    </update>
+
+    <!--展示哪些老师、学生对该课程感兴趣的映射
+        对应的实体是promoteCourseVO-->
+    <!--    private String userName; //用户姓名
+    private String courseCategory; //课程种类（领域）
+    private int courseId; //课程的id
+    private int creditPoints; //教师信用积分
+    private String userOpenid; //用户的openid
+    private String userId; //用户的userId
+    private int state; //用户的状态，表明身份（老师、学生或其他）-->
+    <resultMap id="resultPromoteCourseVOMap" type="cn.itcast.jk.vo.PromoteCourseVO">
+        <!--一般属性-->
+        <result property="userName" column="USER_NAME"/>
+        <result property="courseCategory" column="course_category"/>
+        <result property="courseId" column="promote_course_id"/>
+        <result property="creditPoints" column="CREDIT_VIP_POINTS"/>
+        <result property="userOpenid" column="user_openid"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="state" column="STATE"/>
+    </resultMap>
+
+    <!--查询数据表中关于某一发起课程的详细信息，用于展示哪些老师、学生对该课程感兴趣
+        对应的实体是promoteCourseVO-->
+    <select id="queryPromoteCourseVO" parameterType="int" resultMap="resultPromoteCourseVOMap">
+        select
+            s.USER_NAME,i.course_category,c.CREDIT_VIP_POINTS,
+            s.STATE,i.user_openid,s.USER_ID
+        from
+            student s,interest_course i,credit_points c
+        where
+            s.USER_ID=i.user_id and i.user_id=c.USER_ID
+            and i.course_id=#{id};
+    </select>
+
+    <!-- Student的resultMap映射 -->
+    <resultMap type="cn.itcast.jk.domain.Student" id="studentRM">
+        <result property="id" column="USER_ID"/>
+        <result property="userName" column="USER_NAME"/>
+        <result property="phoneNumber" column="PHONE_NUMBER"/>
+        <result property="email" column="EMAIL"/>
+        <result property="company" column="COMPANY"/>
+        <result property="sex" column="SEX"/>
+        <result property="adress" column="ADRESS"/>
+        <result property="weiXin" column="WEI_XIN"/>
+        <result property="marryd" column="MARRYD"/>
+        <result property="photoPath" column="PHOTO_PATH"/>
+        <result property="userOpenid" column="USER_OPENID"/>
+        <result property="areaId" column="AREA_ID"/>
+        <result property="areaName" column="AREA_NAME"/>
+        <result property="frozenAssets" column="FROZEN_ASSETS"/>
+        <result property="availableAssets" column="AVAILABLE_ASSETS"/>
+        <result property="state" column="STATE"/>
+        <result property="xianjin" column="XIANJIN"/>
+        <result property="likes" column="LIKES"/>
+        <result property="shenFen" column="SHENFEN"/>
+        <result property="zishu" column="ZISHU"/>
+    </resultMap>
+
+    <!--查询用户的详细信息-->
+    <select id="queryOneStudent" parameterType="String" resultMap="studentRM">
+        select * from student where USER_OPENID=#{id}
+    </select>
+
+</mapper>
