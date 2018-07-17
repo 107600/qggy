@@ -7,30 +7,29 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <style type="text/css">
         textarea {
-            width: 180px;
-            border: 1px solid #ccc;
+            width: 720px;
+            border: 20px solid #008866;
             padding: 2px;
         }
 
         table {
-            border: 1px solid #666;
+            width: 1000px;
+            height: 600px;
+            border: 2px solid #008866;
         }
 
-        /*http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js*/
     </style>
-    <%--<script href="../../../js/jquery-1.4.2.js" type="text/javascript"></script>--%>
-    <%--<script type="text/javascript" href="../../../js/vdform.js"></script>--%>
     <link rel="stylesheet" rev="stylesheet" type="text/css"
           href="../../../js/jquery-1.4.2.js"/>
-    <link rel="sty.lesheet" rev="stylesheet" type="text/css"
+    <link rel="stylesheet" rev="stylesheet" type="text/css"
           href="../../../js/vdform.js"/>
 
 </head>
 <body>
 <h2 style="display:block; text-align:center;">第三方活动</h2>
 <div>
-    <%--<form id="testform" action="" method="post">--%>
-        <table border="1px solid #666" align="center">
+
+        <table border="3px solid  #008866"  border-width="20px"  align="center">
             <c:forEach items="${activitys}" var="activity">
                 <tr>
                     <td> 活动发起单位:</td>
@@ -66,58 +65,59 @@
 
                 <tr>
                     <td>导师需求：</td>
-                    <td>
+                        <td>
+                        是否需要导师：
                             ${activity.teacherneed }
-                        导师
-                            ${activity.teachertype }
-                            ${activity.teachernum }
 
-                    </td>
+                        导师类型：
+                            ${activity.teachertype }
+
+                        导师人数：
+                            ${activity.teachernum }
+                        </td>
                 </tr>
 
                 <tr>
                     <td>志愿者需求：</td>
                     <td>
+                        是否需要志愿者：
                             ${activity.volunteerneed }
-                        志愿者
+                        志愿者人数：
                             ${activity.volunteernum }
-
                     </td>
                 </tr>
 
                 <tr>
                     <td>观众需求：</td>
                     <td>
+                        是否需要观众：
                             ${activity.audienceneed }
-                        观众
+                        观众人数：
                             ${activity.audiencenum }
-
                     </td>
                 </tr>
 
 
                 <td>匠人需求：</td>
                 <td>
+                    是否需要匠人：
                         ${activity.craftsmanneed }
-                    匠人
+                    匠人人数：
                         ${activity.craftsmannum }
-                    </tr>
                 </td>
                 <tr>
                     <td>场地需求：</td>
                     <td>
+                        是否需要场地：
                             ${activity.placeneed }
-                        需要场地
-
                     </td>
                 </tr>
 
                 <tr>
                     <td>缴纳押金：</td>
                     <td>
+                        是否缴纳押金：
                             ${activity.deposit }
-                        缴纳押金
-
                     </td>
                 </tr>
 
@@ -125,30 +125,13 @@
                     <td>活动介绍：</td>
                     <td>${activity.introduction }</td>
                 </tr>
+
+                <tr>
+                    <td>审核意见：</td>
+                    <td>${activity.suggestion}</td>
+                </tr>
             </c:forEach>
         </table>
-    <%--</form>--%>
-
-    <%--<c:forEach  items="${activitys}" var="activity">--%>
-    <%--<tr>--%>
-    <%--<td>${activity.launcher}</td>--%>
-    <%--<td>${activity.time }</td>--%>
-    <%--<td>${activity.theme }</td>--%>
-    <%--<td>${activity.time }</td>--%>
-    <%--<td>${activity.place }</td>--%>
-    <%--<td>${activity.money}</td>--%>
-    <%--<td>${activity.teacherneed }</td>--%>
-    <%--<td>${activity.teachertype }</td>--%>
-    <%--<td>${activity.teachernum}</td>--%>
-    <%--<td>${activity.volunteerneed}</td>--%>
-    <%--<td>${activity.volunteernum}</td>--%>
-    <%--<td>${activity.craftsmanneed }</td>--%>
-    <%--<td>${activity.craftsmannum}</td>--%>
-    <%--<td>${activity.placeneed}</td>--%>
-    <%--<td>${activity.deposit}</td>--%>
-    <%--<td>${activity.introduction}</td>--%>
-    <%--</tr>--%>
-    <%--</c:forEach>--%>
 
     <script>
         $('#testform').checkForm();

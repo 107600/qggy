@@ -31,33 +31,39 @@
             margin: 0px;
 
         }
+
+
     </style>
+
 </head>
 
+
+
 <body>
-<form name="icform" method="post">
     <table class="modelTable" cellspacing="1">
         <tr>
             <td colspan="2" class="modelTitle">第三方活动发布管理</td>
         </tr>
     </table>
 
+
+
     <div class="textbox-header">
         <div class="textbox-inner-header">
-
             <div class="textbox-title">
-                <form action="/basicinfo/activity/show.action" method="post">
-                    活动编号:<input type="text" name="likes" id="likes" value="${likes}">
-                    <input type="submit" value="查询" style=width:50px;height:20px;line-height:20px;border:none;background:#F8F8FF;color:#696969;/>
-                </form>
-            </div>
+            <form action="/basicinfo/activity/confirmfabushow.action" method="post">
+                活动编号:<input type="text" name="likes" id="likes" value="${likes}">
+                <input type="submit" value="查询" style=width:50px;height:20px;line-height:20px;border:none;background:#F8F8FF;color:#696969;/>
+            </form>
+
+        </div>
         </div>
     </div>
 
     <div class="textbox" id="centerTextbox">
         <div class="textbox-header">
             <div class="textbox-inner-header">
-                <div class="textbox-title">活动列表</div>
+                <div class="textbox-title">活动发布列表</div>
             </div>
         </div>
 
@@ -73,12 +79,12 @@
                         <td class="tableHeader" style="text-align: center">活动时间</td>
                         <td class="tableHeader" style="text-align: center">活动地点</td>
                         <td class="tableHeader" style="text-align: center">审核状态</td>
-                        <td class="tableHeader" colspan="4" style="text-align: center">可选择的操作</td>
+                        <td class="tableHeader"  style="text-align: center">可选择的操作</td>
                     </tr>
                     </thead>
                     <tbody class="tableBody">
 
-                    <c:forEach  items="${dataList}" var="activity">
+                    <c:forEach  items="${activitys}" var="activity">
                         <tr>
                             <td>${activity.num }</td>
                             <td>${activity.type }</td>
@@ -87,47 +93,24 @@
                             <td>${activity.place }</td>
                             <td>${activity.state }</td>
                             <td>
-                                <form action="/basicinfo/activity/view.action" method="post">
+                                <form action="/basicinfo/activity/deletefabuactivity.action" method="post">
                                     <input type="hidden" name=num  value="${activity.num }">
-                                    <input type="submit" value="查看详情" style="width:80px;height:30px;border:0px; background:#F8F8FF;color:#696969 ;"/>
-                                </form>
-                            </td>
-                            <td>
-                                <form action="/basicinfo/activity/findshenhefActivity.action" method="post">
-                                    <input type="hidden" name=num  value="${activity.num }">
-                                    <input type="submit" value="审核未通过" style="width:80px;height:30px;border:0px; background:#F8F8FF;color:#696969 ;"/>
+                                    <input type="submit" value="删除此次活动" style="width:80px;height:30px;border:0px; background:#F8F8FF;color:#696969 ;"/>
                                 </form>
                             </td>
 
-                            <td>
-                                <form action="/basicinfo/activity/findshenheActivity.action" method="post">
-                                    <input type="hidden" name=num  value="${activity.num }">
-                                    <input type="submit" value="审核通过" style="width:80px;height:30px;border:0px; background:#F8F8FF;color:#696969 ;"/>
-                                </form>
-                            </td>
 
-                            <td>
-                                <form action="/basicinfo/activity/mohusubmitactivity.action" method="post">
-                                    <input type="hidden" name=num  value="${activity.num }">
-                                    <input type="text"    name="suggestion" id="suggestion" value="${suggestion}" style=width:80px;height:20px;line-height:20px;  >
-                                    <input type="submit" value="提交"  style=width:30px;height:20px;line-height:20px;border:none;background:#F8F8FF;color:#696969;/>
-                                </form>
-                            </td>
                         </tr>
                     </c:forEach>
+
 
                     </tbody>
                 </table>
             </div>
         </div>
 
+
     </div>
 
-
-
-
-
-
-</form>
 </body>
 </html>

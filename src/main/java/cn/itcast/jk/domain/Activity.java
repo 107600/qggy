@@ -15,28 +15,36 @@ public class Activity implements Serializable{
     private String place;
     private String state;
     private String launcher;
-    private int people;
-    private double money;
-    private int volunteerneed;
-    private int audienceneed;
-    private int craftsmanneed;
-    private int placeneed;
-    private String volunteernum;
-    private String audiencenum;
-    private String craftsmannum;
-    private int deposit;
-    private int teacherneed;
-    private String teachernum;
+    private Integer people;
+    private Integer money;
+    private String volunteerneed;
+    private String audienceneed;
+    private String craftsmanneed;
+    private String placeneed;
+    private Integer volunteernum;
+    private Integer audiencenum;
+    private Integer craftsmannum;
+    private String deposit;
+    private String teacherneed;
+    private Integer teachernum;
     private String introduction;
     private String teachertype;
+    private String suggestion;
 
 
+    public String getSuggestion() {
+        return suggestion;
+    }
 
-    public int getPeople() {
+    public void setSuggestion(String suggestion) {
+        this.suggestion = suggestion;
+    }
+
+    public Integer getPeople() {
         return people;
     }
 
-    public void setPeople(int people) {
+    public void setPeople(Integer people) {
         this.people = people;
     }
 
@@ -57,91 +65,91 @@ public class Activity implements Serializable{
         this.launcher = launcher;
     }
 
-    public double getMoney() {
+    public Integer getMoney() {
         return money;
     }
 
-    public void setMoney(double money) {
+    public void setMoney(Integer money) {
         this.money = money;
     }
 
-    public int getVolunteerneed() {
+    public String getVolunteerneed() {
         return volunteerneed;
     }
 
-    public void setVolunteerneed(int volunteerneed) {
+    public void setVolunteerneed(String volunteerneed) {
         this.volunteerneed = volunteerneed;
     }
 
-    public int getAudienceneed() {
+    public String getAudienceneed() {
         return audienceneed;
     }
 
-    public void setAudienceneed(int audienceneed) {
+    public void setAudienceneed(String audienceneed) {
         this.audienceneed = audienceneed;
     }
 
-    public int getCraftsmanneed() {
+    public String getCraftsmanneed() {
         return craftsmanneed;
     }
 
-    public void setCraftsmanneed(int craftsmanneed) {
+    public void setCraftsmanneed(String craftsmanneed) {
         this.craftsmanneed = craftsmanneed;
     }
 
-    public int getPlaceneed() {
+    public String getPlaceneed() {
         return placeneed;
     }
 
-    public void setPlaceneed(int placeneed) {
+    public void setPlaceneed(String placeneed) {
         this.placeneed = placeneed;
     }
 
-    public String getVolunteernum() {
+    public Integer getVolunteernum() {
         return volunteernum;
     }
 
-    public void setVolunteernum(String volunteernum) {
+    public void setVolunteernum(Integer volunteernum) {
         this.volunteernum = volunteernum;
     }
 
-    public String getAudiencenum() {
+    public Integer getAudiencenum() {
         return audiencenum;
     }
 
-    public void setAudiencenum(String audiencenum) {
+    public void setAudiencenum(Integer audiencenum) {
         this.audiencenum = audiencenum;
     }
 
-    public String getCraftsmannum() {
+    public Integer getCraftsmannum() {
         return craftsmannum;
     }
 
-    public void setCraftsmannum(String craftsmannum) {
+    public void setCraftsmannum(Integer craftsmannum) {
         this.craftsmannum = craftsmannum;
     }
 
-    public int getDeposit() {
+    public String getDeposit() {
         return deposit;
     }
 
-    public void setDeposit(int deposit) {
+    public void setDeposit(String deposit) {
         this.deposit = deposit;
     }
 
-    public int getTeacherneed() {
+    public String getTeacherneed() {
         return teacherneed;
     }
 
-    public void setTeacherneed(int teacherneed) {
+    public void setTeacherneed(String teacherneed) {
         this.teacherneed = teacherneed;
     }
 
-    public String getTeachernum() {
+    public Integer getTeachernum() {
         return teachernum;
     }
 
-    public void setTeachernum(String teachernum) {
+    public void setTeachernum(Integer teachernum) {
         this.teachernum = teachernum;
     }
 
@@ -202,6 +210,7 @@ public class Activity implements Serializable{
     public void setState(String  state) {
         this.state = state;
     }
+
 
     @Override
     public String toString() {

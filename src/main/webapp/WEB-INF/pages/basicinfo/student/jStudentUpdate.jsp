@@ -13,7 +13,7 @@
         <div id="middleMenubar">
             <div id="innerMenubar">
                 <div id="navMenubar">
-                    <ul>
+                    <ul>z
                         <li id="save"><a href="#"
                                          onclick="formSubmit('update.action','_self');">修改</a></li>
                     </ul>

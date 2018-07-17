@@ -23,6 +23,7 @@
 		<result property="introduction" column="introduction" />
 		<result property="teachertype" column="teachertype" />
 		<result property="people" column="people" />
+		<result property="suggestion" column="suggestion" />
 	</resultMap>
 	<!-- Select SQL -->
 	<sql id="activitySelector">
@@ -61,7 +62,7 @@
 					and time=#{time}
 				</if>
 				<if test="timeLike == true">
-					and  time like "%"#{time}"%"
+					and time like "%"#{time}"%"
 				</if>
 				</if>
 				<if test="place != null">
@@ -77,7 +78,7 @@
 					and state=#{state}
 				</if>
 				<if test="stateLike == true">
-					and  state like "%"#{state}"%"
+					and state like "%"#{state}"%"
 				</if>
 				</if>
 
@@ -86,7 +87,7 @@
 					and launcher=#{launcher}
 				</if>
 				<if test="launcherLike == true">
-					and  launcher like "%"#{launcher}"%"
+					and launcher like "%"#{launcher}"%"
 				</if>
 				</if>
 
@@ -96,7 +97,7 @@
 					and money=#{money}
 				</if>
 				<if test="moneyLike == true">
-					and  money like "%"#{money}"%"
+					and money like "%"#{money}"%"
 				</if>
 			    </if>
 
@@ -105,7 +106,7 @@
 					and volunteerneed=#{volunteerneed}
 				</if>
 				<if test="volunteerneedLike == true">
-					and  volunteerneedlike "%"#{volunteerneed}"%"
+					and volunteerneedlike "%"#{volunteerneed}"%"
 				</if>
 			    </if>
 
@@ -114,7 +115,7 @@
 					and volunteernum=#{volunteernum}
 				</if>
 				<if test="volunteernumLike == true">
-					and  volunteernumlike "%"#{volunteernum}"%"
+					and volunteernumlike "%"#{volunteernum}"%"
 				</if>
 			    </if>
 
@@ -123,7 +124,7 @@
 					and audienceneed=#{audienceneed}
 				</if>
 				<if test="audienceneedLike == true">
-					and  audienceneed like "%"#{audienceneed}"%"
+					and audienceneed like "%"#{audienceneed}"%"
 				</if>
 			    </if>
 
@@ -132,7 +133,7 @@
 					and audiencenum=#{audiencenum}
 				</if>
 				<if test="audiencenumLike == true">
-					and  audiencenum like "%"#{audiencenum}"%"
+					and audiencenum like "%"#{audiencenum}"%"
 				</if>
 				</if>
 
@@ -141,7 +142,7 @@
 					and craftsmanneed=#{craftsmanneed}
 				</if>
 				<if test="craftsmanneedLike == true">
-					and  craftsmanneed like "%"#{craftsmanneed}"%"
+					and craftsmanneed like "%"#{craftsmanneed}"%"
 				</if>
 				</if>
 
@@ -150,7 +151,7 @@
 					and craftsmannum=#{craftsmannum}
 				</if>
 				<if test="craftsmannumLike == true">
-					and  craftsmannum like "%"#{craftsmannum}"%"
+					and craftsmannum like "%"#{craftsmannum}"%"
 				</if>
 				</if>
 
@@ -159,7 +160,7 @@
 					and placeneed=#{placeneed}
 				</if>
 				<if test="placeneedLike == true">
-					and  placeneed like "%"#{placeneed}"%"
+					and placeneed like "%"#{placeneed}"%"
 				</if>
 				</if>
 
@@ -168,7 +169,7 @@
 					and deposit=#{deposit}
 				</if>
 				<if test="depositLike == true">
-					and  deposit like "%"#{deposit}"%"
+					and deposit like "%"#{deposit}"%"
 				</if>
 			    </if>
 
@@ -177,7 +178,7 @@
 					and introduction=#{introduction}
 				</if>
 				<if test="introductionLike == true">
-					and  introduction like "%"#{introduction}"%"
+					and introduction like "%"#{introduction}"%"
 				</if>
 			    </if>
 
@@ -186,7 +187,7 @@
 					and teacherneed=#{teacherneed}
 				</if>
 				<if test="teacherneedLike == true">
-					and  teacherneed like "%"#{teacherneed}"%"
+					and teacherneed like "%"#{teacherneed}"%"
 				</if>
 			    </if>
 
@@ -195,7 +196,7 @@
 					and teachernum=#{teachernum}
 				</if>
 				<if test="teachernumLike == true">
-					and  teachernum like "%"#{teachernum}"%"
+					and teachernum like "%"#{teachernum}"%"
 				</if>
 				</if>
 
@@ -204,7 +205,7 @@
 					and teachertype=#{teachertype}
 				</if>
 				<if test="teachertypeLike == true">
-					and  teachertype like "%"#{teachertype}"%"
+					and teachertype like "%"#{teachertype}"%"
 				</if>
 			    </if>
 
@@ -213,9 +214,17 @@
 					and people=#{people}
 				</if>
 				<if test="peopleLike == true">
-					and   people like "%"#{people}"%"
+					and people like "%"#{people}"%"
 				</if>
 			    </if>
+			<if test="suggestion!= null">
+				<if test="suggestion== false">
+					and suggestion=#{suggestion}
+				</if>
+				<if test="suggestionLike == true">
+					and suggestion like "%"#{suggestion}"%"
+				</if>
+			</if>
 
 		</where>
 	</sql>
@@ -238,7 +247,7 @@
 	<!-- 根据主键查询 -->
 	<select id="getActivityByKey" resultMap="activity" parameterType="hashMap">
 		SELECT num,type,theme,time,place,people,state,launcher,money,volunteerneed,volunteernum,audienceneed,audiencenum,craftsmanneed,craftsmannum,placeneed,deposit,introduction,teacherneed,teachernum,
-	teachertype FROM dsf_activity
+	teachertype,suggestion FROM dsf_activity
 		WHERE
 		num=#{num}
 	</select>
@@ -252,6 +261,30 @@
         </if>
     </select>
 
+
+	<!--根据state状态(审核通过）进行查询-->
+	<select id="select" resultType="activity"
+			parameterType="String">
+	select * from dsf_activity where state='审核通过'
+
+	</select>
+
+
+	<!--根据state状态（已发布）进行查寻-->
+	<select id="getconfirm" resultType="activity"
+			parameterType="String">
+		select * from dsf_activity where state='已发布'
+
+	</select>
+
+
+	<!--根据state状态（审核通过）进行查寻-->
+	<select id="getpass" resultType="activity"
+			parameterType="String">
+		select * from dsf_activity where state='审核通过'
+
+	</select>
+
 	<!-- id查询一个 -->
 	<select id="get" parameterType="Integer" resultType="activity">
 		SELECT
@@ -263,11 +296,22 @@
 
 
 
+	<!--根据主键更新状态码-->
+	<update id="update" parameterType="map">
+		update  dsf_activity set state=#{state}
+		where num in
+		<foreach collection="state" item="num" open="(" close=")"
+				 separator=",">#{num}
+		</foreach>
+	</update>
+
+
+
 
 
 	<select id="getActivitysByKeys" resultMap="activity" parameterType="ArrayList">
 		SELECT num,type,theme,time,place,people,state,launcher,money,volunteerneed,volunteernum,audienceneed,audiencenum,craftsmanneed,craftsmannum,placeneed,deposit,introduction,teacherneed,teachernum,
-		teachertype FROM dsf_activity
+		teachertype,suggestion FROM dsf_activity
 		WHERE
 		num in
 		<foreach collection="list" separator="," item="num" open="(" close=")">
@@ -276,7 +320,7 @@
 	</select>
 
 	<!-- 根据主键删除 -->
-	<delete id="deleteByKey" parameterType="hashMap">
+	<delete id="deleteByKey"   parameterType="hashMap">
 		DELETE FROM dsf_activity
 		WHERE
 		num=#{num}
@@ -375,6 +419,9 @@
 				<if test="teachertype!= null">
 					teachertype= #{teachertype},
 				</if>
+				<if test="suggestion!= null">
+					suggestion= #{suggestion},
+				</if>
 			</trim>
 		</set>
 		WHERE
@@ -398,136 +445,145 @@
 		<include refid="activityListWhere" />
 		<include refid="activityListOrder" />
 	</select>
-	<!-- 添加 -->
-	<insert id="addActivity" parameterType="Activity">
-		INSERT INTO dsf_activity
-		<trim prefix="(" suffix=")" suffixOverrides=",">
-				<if test="num != null">
-					num,
-				</if>
-				<if test="type != null">
-					type,
-				</if>
-				<if test="theme != null">
-					theme,
-				</if>
-				<if test="time != null">
-					time,
-				</if>
-				<if test="place != null">
-					place,
-				</if>
-				<if test="state != null">
-					state,
-				</if>
-			    <if test="launcher != null">
-					launcher,
-			    </if>
-			    <if test="people != null">
-				    people,
-			    </if>
-			    <if test="money != null">
-				    money,
-			    </if>
-			    <if test="volunteerneed != null">
-					volunteerneed,
-			    </if>
-			    <if test="volunteernum != null">
-			        volunteernum,
-		        </if>
-			    <if test="audienceneed != null">
-					audienceneed,
-				</if>
-			    <if test="audiencenum != null">
-					audiencenum,
-			    </if>
-			    <if test="craftsmanneed!= null">
-					craftsmanneed,
-			    </if>
-			    <if test="craftsmannum!= null">
-					craftsmannum,
-			    </if>
-			    <if test="placeneed!= null">
-					placeneed,
-				</if>
-			    <if test="deposit!= null">
-			        deposit,
-				</if>
-			    <if test="introduction!= null">
-					introduction,
-		        </if>
-			    <if test="teacherneed!= null">
-					teacherneed,
-			    </if>
-			    <if test="teachernum!= null">
-					teachernum,
-			    </if>
-			    <if test="teachertype!= null">
-				    teachertype
-				</if>
-		</trim>
-		VALUES
-		<trim prefix="(" suffix=")" suffixOverrides=",">
-					<if test="num != null">
-						#{num},
-					</if>
-					<if test="type != null">
-						#{type},
-					</if>
-					<if test="theme != null">
-						#{theme},
-					</if>
-					<if test="time != null">
-						#{time},
-					</if>
-					<if test="place != null">
-						#{place},
-					</if>
-					<if test="state != null">
-						#{state}
-					</if>
-			        <if test="people != null">
-				        #{people}
-			        </if>
-                    <if test="launcher != null">
-				        #{launcher},
-					</if>
-			        <if test="volunteerneed != null">
-				        #{volunteerneed},
-					</if>
-			        <if test="volunteernum != null">
-				        #{volunteernum},
-			        </if>
-			        <if test="audienceneed != null">
-				        #{audienceneed},
-			        </if>
-			        <if test="audiencenum != null">
-				        #{audiencenum},
-			        </if>
-			        <if test="craftsmanneed != null">
-				        #{craftsmanneed},
-					</if>
-			        <if test="craftsmannum!= null">
-				        #{craftsmannum},
-					</if>
-			        <if test="placeneed != null">
-				        #{placeneed},
-			        </if>
-			        <if test="deposit != null">
-				        #{deposit},
-			        </if>
-			        <if test="introduction != null">
-				        #{introduction},
-			        </if>
-			        <if test="teacherneed!= null">
-				        #{teacherneed},
-			        </if>
-			        <if test="teachernum!= null">
-				        #{teachernum},
-			        </if>
-			        <if test="teachertype!= null">
-				        #{teachertype}
-			        </if>
-		</trim>
-	</insert>
+
+
+
+	<!--&lt;!&ndash; 添加 &ndash;&gt;-->
+	<!--<insert id="addActivity" parameterType="Activity">-->
+		<!--INSERT INTO dsf_activity-->
+		<!--<trim prefix="(" suffix=")" suffixOverrides=",">-->
+				<!--<if test="num != null">-->
+					<!--num,-->
+				<!--</if>-->
+				<!--<if test="type != null">-->
+					<!--type,-->
+				<!--</if>-->
+				<!--<if test="theme != null">-->
+					<!--theme,-->
+				<!--</if>-->
+				<!--<if test="time != null">-->
+					<!--time,-->
+				<!--</if>-->
+				<!--<if test="place != null">-->
+					<!--place,-->
+				<!--</if>-->
+				<!--<if test="state != null">-->
+					<!--state,-->
+				<!--</if>-->
+			    <!--<if test="launcher != null">-->
+					<!--launcher,-->
+			    <!--</if>-->
+			    <!--<if test="people != null">-->
+				    <!--people,-->
+			    <!--</if>-->
+			    <!--<if test="money != null">-->
+				    <!--money,-->
+			    <!--</if>-->
+			    <!--<if test="volunteerneed != null">-->
+					<!--volunteerneed,-->
+			    <!--</if>-->
+			    <!--<if test="volunteernum != null">-->
+			        <!--volunteernum,-->
+		        <!--</if>-->
+			    <!--<if test="audienceneed != null">-->
+					<!--audienceneed,-->
+				<!--</if>-->
+			    <!--<if test="audiencenum != null">-->
+					<!--audiencenum,-->
+			    <!--</if>-->
+			    <!--<if test="craftsmanneed!= null">-->
+					<!--craftsmanneed,-->
+			    <!--</if>-->
+			    <!--<if test="craftsmannum!= null">-->
+					<!--craftsmannum,-->
+			    <!--</if>-->
+			    <!--<if test="placeneed!= null">-->
+					<!--placeneed,-->
+				<!--</if>-->
+			    <!--<if test="deposit!= null">-->
+			        <!--deposit,-->
+				<!--</if>-->
+			    <!--<if test="introduction!= null">-->
+					<!--introduction,-->
+		        <!--</if>-->
+			    <!--<if test="teacherneed!= null">-->
+					<!--teacherneed,-->
+			    <!--</if>-->
+			    <!--<if test="teachernum!= null">-->
+					<!--teachernum,-->
+			    <!--</if>-->
+			    <!--<if test="teachertype!= null">-->
+				    <!--teachertype,-->
+				<!--</if>-->
+			    <!--<if test="suggestion!= null">-->
+				    <!--suggestion-->
+			    <!--</if>-->
+		<!--</trim>-->
+		<!--VALUES-->
+		<!--<trim prefix="(" suffix=")" suffixOverrides=",">-->
+					<!--<if test="num != null">-->
+						<!--#{num},-->
+					<!--</if>-->
+					<!--<if test="type != null">-->
+						<!--#{type},-->
+					<!--</if>-->
+					<!--<if test="theme != null">-->
+						<!--#{theme},-->
+					<!--</if>-->
+					<!--<if test="time != null">-->
+						<!--#{time},-->
+					<!--</if>-->
+					<!--<if test="place != null">-->
+						<!--#{place},-->
+					<!--</if>-->
+					<!--<if test="state != null">-->
+						<!--#{state}-->
+					<!--</if>-->
+			        <!--<if test="people != null">-->
+				        <!--#{people}-->
+			        <!--</if>-->
+                    <!--<if test="launcher != null">-->
+				        <!--#{launcher},-->
+					<!--</if>-->
+			        <!--<if test="volunteerneed != null">-->
+				        <!--#{volunteerneed},-->
+					<!--</if>-->
+			        <!--<if test="volunteernum != null">-->
+				        <!--#{volunteernum},-->
+			        <!--</if>-->
+			        <!--<if test="audienceneed != null">-->
+				        <!--#{audienceneed},-->
+			        <!--</if>-->
+			        <!--<if test="audiencenum != null">-->
+				        <!--#{audiencenum},-->
+			        <!--</if>-->
+			        <!--<if test="craftsmanneed != null">-->
+				        <!--#{craftsmanneed},-->
+					<!--</if>-->
+			        <!--<if test="craftsmannum!= null">-->
+				        <!--#{craftsmannum},-->
+					<!--</if>-->
+			        <!--<if test="placeneed != null">-->
+				        <!--#{placeneed},-->
+			        <!--</if>-->
+			        <!--<if test="deposit != null">-->
+				        <!--#{deposit},-->
+			        <!--</if>-->
+			        <!--<if test="introduction != null">-->
+				        <!--#{introduction},-->
+			        <!--</if>-->
+			        <!--<if test="teacherneed!= null">-->
+				        <!--#{teacherneed},-->
+			        <!--</if>-->
+			        <!--<if test="teachernum!= null">-->
+				        <!--#{teachernum},-->
+			        <!--</if>-->
+			        <!--<if test="teachertype!= null">-->
+				        <!--#{teachertype},-->
+			        <!--</if>-->
+			        <!--<if test="suggestion!= null">-->
+				        <!--#{suggestion}-->
+			        <!--</if>-->
+		<!--</trim>-->
+	<!--</insert>-->
 </mapper>

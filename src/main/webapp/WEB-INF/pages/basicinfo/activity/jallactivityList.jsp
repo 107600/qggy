@@ -19,7 +19,7 @@
           href="../../../css/main.css" media="all"/>
     <meta charset="utf-8">
     <style>
-        .odd{
+        {
             border-top: 1px solid #b7dad6;
             border-bottom: 1px solid #c1e1dd;
             color: #00554a;
@@ -40,7 +40,6 @@
 
 
 <body>
-<%--<form name="icform" method="post">--%>
     <table class="modelTable" cellspacing="1">
         <tr>
             <td colspan="2" class="modelTitle">第三方活动发布管理</td>
@@ -49,16 +48,29 @@
 
     <div class="textbox-header">
         <div class="textbox-inner-header">
-
             <div class="textbox-title">
             <form action="/basicinfo/activity/show.action" method="post">
                 活动编号:<input type="text" name="likes" id="likes" value="${likes}">
-                <input type="submit" value="查询"/>
+                <input type="submit" value="查询"  style=width:50px;height:20px;line-height:20px;border:none;background:#F8F8FF;color:#696969;/>
             </form>
-
         </div>
+            </div>
+    </div>
+
+    <div class="textbox-header">
+        <div class="textbox-inner-header">
+            <div class="textbox-title">
+                <form action= "/basicinfo/activity/shenhepassActivity.action" method="post">
+                    <style>
+                        #sub{width:50px;height:20px;line-height:20px;border:none; background:#F8F8FF;color:#696969 ;}
+                    </style>
+                    查看审核通过活动:<input type="submit" value="查看"  id="sub" >
+                </form>
+            </div>
         </div>
     </div>
+
+
 
     <div class="textbox" id="centerTextbox">
         <div class="textbox-header">
@@ -73,13 +85,13 @@
                 <table id="ec_table" class="tableRegion" width="98%">
                     <thead>
                     <tr>
-                        <td class="tableHeader">序号</td>
-                        <td class="tableHeader">活动类型</td>
-                        <td class="tableHeader">活动主题</td>
-                        <td class="tableHeader">活动时间</td>
-                        <td class="tableHeader">活动地点</td>
-                        <td class="tableHeader">审核状态</td>
-                        <td class="tableHeader" colspan="3" style="text-align: center">可选择的操作</td>
+                        <td class="tableHeader" style="text-align: center">序号</td>
+                        <td class="tableHeader" style="text-align: center">活动类型</td>
+                        <td class="tableHeader" style="text-align: center">活动主题</td>
+                        <td class="tableHeader" style="text-align: center">活动时间</td>
+                        <td class="tableHeader" style="text-align: center">活动地点</td>
+                        <td class="tableHeader" style="text-align: center">审核状态</td>
+                        <td class="tableHeader" colspan="4" style="text-align: center">可选择的操作</td>
                     </tr>
                     </thead>
                     <tbody class="tableBody">
@@ -92,42 +104,38 @@
                             <td>${activity.time }</td>
                             <td>${activity.place }</td>
                             <td>${activity.state }</td>
+
                             <td>
                                 <form action="/basicinfo/activity/view.action" method="post">
                                     <input type="hidden" name=num  value="${activity.num }">
-                                    <input type="submit" value="查看详情"/>
+                                    <input type="submit" value="查看详情" style="width:80px;height:30px;border:0px; background:#F8F8FF;color:#696969 ;"/>
                                 </form>
                             </td>
 
                             <td>
-                                <form action="" method="post">
-                                    <input type="hidden" name=num  value="">
-                                    <input type="submit" value="审核未通过"/>
+                                <form action="/basicinfo/activity/shenhefActivity.action" method="post">
+                                    <input type="hidden" name=num  value="${activity.num }">
+                                    <input type="submit" value="审核未通过" style="width:80px;height:30px;border:0px; background:#F8F8FF;color:#696969 ;"/>
                                 </form>
                             </td>
 
                             <td>
-                                <form action="" method="post">
-                                    <input type="hidden" name=num  value="">
-                                    <input type="submit" value="确认发布"/>
+                                <form action="/basicinfo/activity/shenheActivity.action" method="post">
+                                    <input type="hidden" name=num  value="${activity.num }">
+                                    <input type="submit" value="审核通过" style="width:80px;height:30px;border:0px; background:#F8F8FF;color:#696969 ;"/>
                                 </form>
                             </td>
 
+                            <td>
+                                <form action="/basicinfo/activity/submitactivity.action" method="post">
+                                    <input type="hidden" name=num  value="${activity.num }">
+                                    <input type="text"    name="suggestion" id="suggestion" value="${suggestion}" style=width:80px;height:20px;line-height:20px;  >
+                                    <input type="submit" value="提交"  style=width:30px;height:20px;line-height:20px;border:none;background:#F8F8FF;color:#696969;/>
+                                </form>
+                            </td>
                         </tr>
                     </c:forEach>
 
-
-
-                    <%--<tr class="odd">
-                        &lt;%&ndash;<td><input type="checkbox"/></td>&ndash;%&gt;
-                        &lt;%&ndash;<td>1</td>&ndash;%&gt;
-                        &lt;%&ndash;<td>大类</td>&ndash;%&gt;
-                        &lt;%&ndash;<td>聚会</td>&ndash;%&gt;
-                        &lt;%&ndash;<td>周六上午9:00-11:00</td>&ndash;%&gt;
-                        &lt;%&ndash;<td>杨浦区</td>&ndash;%&gt;
-                        &lt;%&ndash;<td>已审核</td>&ndash;%&gt;
-
-                    </tr>--%>
                     </tbody>
                 </table>
             </div>
@@ -136,23 +144,5 @@
 
     </div>
 
-<%--<script type="text/javascript">--%>
-  <%--$("#detail").click(function () {--%>
-      <%--$.ajax({--%>
-          <%--url:"/basicinfo/activity/view.action",--%>
-          <%--data:{number:${activity.num }},--%>
-          <%--type:"post",--%>
-          <%--datatype:"text",--%>
-          <%--success:function (data) {--%>
-              <%--console.log(data);--%>
-          <%--}--%>
-          <%----%>
-          <%--error:function (data) {--%>
-
-          <%--}--%>
-
-      <%--})--%>
-  <%--})--%>
-<%--</script>--%>
 </body>
 </html>

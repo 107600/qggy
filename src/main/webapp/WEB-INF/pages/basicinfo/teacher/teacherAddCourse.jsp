@@ -94,7 +94,6 @@
         </div>
 
         <div>
-
             <div class="eXtremeTable">
                 <table id="ec_table" class="tableRegion" width="98%">
                     <thead>

@@ -38,7 +38,10 @@
 
 
                     <li><a href="${ctx}/basicinfo/activity/list.action"
-                           onclick="linkHighlighted(this)" target="main" id="aa_1">第三方活动审核</a>
+                                onclick="linkHighlighted(this)" target="main" id="aa_1">第三方活动审核</a>
+                    </li>
+                    <li><a href="${ctx}/basicinfo/activity/fabuActivity.action"
+                           onclick="linkHighlighted(this)" target="main" id="aa_1">第三方活动发布</a>
                     </li>
                     <li><a href="${ctx}/"
                            onclick="linkHighlighted(this)" target="main" id="aa_1">考勤管理</a>

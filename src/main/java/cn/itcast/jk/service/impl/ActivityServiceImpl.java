@@ -6,6 +6,7 @@ import java.util.Map;
 
 import cn.itcast.jk.controller.query.ActivityQuery;
 import cn.itcast.jk.domain.Activity;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import cn.itcast.jk.service.ActivityService;
@@ -14,13 +15,15 @@ import javax.annotation.Resource;
 
 @Service
 @Transactional
-public class ActivityServiceImpl implements ActivityService{
+public class ActivityServiceImpl implements ActivityService {
 	@Resource
-    ActivityDao activityDao;
-	public Integer addActivity(Activity activity) {
+	ActivityDao activityDao;
+
+	public String  addActivity(Activity activity) {
 		// TODO Auto-generated method stub
 		return activityDao.addActivity(activity);
 	}
+
 	@Transactional(readOnly = true)
 	public Activity getActivityByKey(Integer num) {
 		// TODO Auto-generated method stub
@@ -47,6 +50,10 @@ public class ActivityServiceImpl implements ActivityService{
 		return activityDao.deleteByKey(num);
 	}
 
+	public String update(Activity activity) {
+		return activityDao.update(activity);
+	}
+
 	public Integer deleteByKeys(List<Integer> idList) {
 		// TODO Auto-generated method stub
 		return activityDao.deleteByKeys(idList);
@@ -61,6 +68,24 @@ public class ActivityServiceImpl implements ActivityService{
 	public List<Activity> getActivityList(ActivityQuery activityQuery) {
 		// TODO Auto-generated method stub
 		return activityDao.getActivityList(activityQuery);
+	}
+
+	@Transactional(readOnly = true)
+	public List<Activity> select(ActivityQuery activityQuery) {
+		// TODO Auto-generated method stub
+		return activityDao.select(activityQuery);
+	}
+
+	@Transactional(readOnly = true)
+	public List<Activity> getconfirm(ActivityQuery activityQuery) {
+		// TODO Auto-generated method stub
+		return activityDao.getconfirm(activityQuery);
+	}
+
+	@Transactional(readOnly = true)
+	public List<Activity> getpass(ActivityQuery activityQuery) {
+		// TODO Auto-generated method stub
+		return activityDao.getpass(activityQuery);
 	}
 
 }
