@@ -150,7 +150,7 @@
         <%--<a id="js-alert-btn" class="alert-btn"--%>
            <%--href="${pageContext.request.contextPath}/phone/user/basicinfo/student/tocreate.action?id=${id}">立即前往注册</a>--%>
         <a id="js-alert-btn" class="alert-btn"
-           href="${pageContext.request.contextPath}/basicinfo/promotecourse/tutorinformation.action?id=${userOpenid}">立即前往注册</a>
+           href="/qggy/phone/user/basicinfo/student/userRegister.action?id=${userOpenid}">立即前往注册</a>
     </div>
     <div class="alert-footer clearfix">
         <svg width="46px" height="42px" class="alert-footer-icon">
@@ -182,8 +182,8 @@
             setInterval(
                 function () {
                     if (0 == t) {
-                        window.location.href = "${pageContext.request.contextPath}/phone/user/basicinfo/student/tocreate.action?id=${id}";
-                        alert("ahhahahah");
+                        window.location.href = "${pageContext.request.contextPath}/phone/user/basicinfo/student/userRegister.action?id=${userOpenid}";
+                        <%--window.location.href = "${pageContext.request.contextPath}/basicinfo/promotecourse/tutorinformation.action?id=${userOpenid}";--%>
                     } else {
                         t -= 1,
                             document

@@ -30,10 +30,11 @@
             <mvc:mapping path="/phone/public/basicinfo/course/view.action"/>
             <bean class="cn.itcast.jk.interceptor.MainInterceptor"></bean>
         </mvc:interceptor>
-        <mvc:interceptor>
-            <mvc:mapping path="/basicinfo/**"/>
-            <bean class="cn.itcast.jk.interceptor.LoginInterceptor"></bean>
-        </mvc:interceptor>
+        <!--注册所用的拦截器，这里要跳转到注册页面，暂时注销掉，以后再放开-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/basicinfo/**"/>-->
+            <!--<bean class="cn.itcast.jk.interceptor.LoginInterceptor"></bean>-->
+        <!--</mvc:interceptor>-->
         <mvc:interceptor>
             <mvc:mapping path="/app/user/**"/>
             <bean class="cn.itcast.jk.interceptor.appInterceptor"></bean>
@@ -41,7 +42,7 @@
         <mvc:interceptor>
             <mvc:mapping path="/phone/user/**"/>
             <!--之前配置为cn.itcast.jk.interceptor.UserAutIdentiInterceptor-->
-            <!--在最后加上test-->
+            <!--在最后加上test，可以模拟电脑从手机上登录-->
             <bean class="cn.itcast.jk.interceptor.UserAutIdentiInterceptortest"></bean>
         </mvc:interceptor>
         <mvc:interceptor>
