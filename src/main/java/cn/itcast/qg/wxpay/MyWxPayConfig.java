@@ -15,10 +15,10 @@ public class MyWxPayConfig implements WXPayConfig {
 	 * KEY：商户支付密钥，参考开户邮件设置（必须配置） APPSECRET：公众帐号secert（仅JSAPI支付的时候需要配置）
 	 */
     public final static String HTTP_URL = "http://qingguocloud.com/qggy";
-    public final static String APPID = "wxb12c86bf0b51f2fd";
-    public final static String MCHID = "1496314082";
+    public final static String APPID = "wxa5696d8241cb626c";
+    public final static String MCHID = "1328510801";
     public final static String KEY = "ABCDEFGH12345678abcdefgh87654321";
-    public final static String APPSECRET = "db0900116f692dfa4d294950e13b3ad5";
+    public final static String APPSECRET = "1be77de45cb705ec7d3061c1abb5c7c4";
     public final static String OAUTH_AUTHORIZE_URL = "https://open.weixin.qq.com/connect/oauth2/authorize?";
     public final static String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/sns/oauth2/access_token?";
     /*

@@ -268,6 +268,9 @@
              style="color: black;"></div>
         <div class="weui-form-preview__bd" id="previewbd"></div>
         <div class="weui-form-preview__ft" id="previewft"></div>
+        <div>
+            <p class="weui-msg__desc"><span style="color:red">*</span>注：如需提现至个人微信账户，需将课程账户余额先提取至充值余额</p>
+        </div>
     </div>
 </div>
 <font color="red"></font>
