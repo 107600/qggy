@@ -169,31 +169,34 @@ public class WithdrawController extends BaseController {
                         model.addAttribute("url",
                                 "/basicinfo/withdraw/list.action?state=1");
                     } else {
-                        //提现状态设为未通过，提示用户未通过，需要走人工
-                        Withdraw unCheckedWithdraw = new Withdraw();
-                        unCheckedWithdraw.setId(id);
-                        unCheckedWithdraw.setState(3);
-                        withdrawService.update(unCheckedWithdraw);
-                        //未通过讲提现金额加至现金账户
-                        Map queryMap = new HashMap();
-                        queryMap.put("id",withdraw.getUserId());
-                        List<Student> studentList = studentService.find(queryMap);
-                        //重新计算扣手续费的钱再添加至个人现金账户
-                        if (studentList.size()>0) {
-                            Student student = studentList.get(0);
-                            DecimalFormat df = new DecimalFormat("######0.00");
-                            student.setXianjin(Double.valueOf(df.format(student.getXianjin() + withdraw.getMoney() / 0.95)));
-                            studentService.update(student);
-                        }else {
-                            throw new RuntimeException("数据异常，该提现用户不存在");
-                        }
+
                         index = result.indexOf("err_code");
                         String err_code = result.substring(index + 18,
                                 result.indexOf("err_code", index + 20) - 5);
                         System.out.println("err_code:" + err_code);
                         System.out.println("return_code:" + return_code);
                         System.out.println(result);
-
+                        //余额不足不做任何操作
+                        if (!err_code.equals("NOTENOUGH")) {
+                            //提现状态设为未通过，提示用户未通过，需要走人工
+                            Withdraw unCheckedWithdraw = new Withdraw();
+                            unCheckedWithdraw.setId(id);
+                            unCheckedWithdraw.setState(3);
+                            withdrawService.update(unCheckedWithdraw);
+                            //未通过讲提现金额加至现金账户
+                            Map queryMap = new HashMap();
+                            queryMap.put("id", withdraw.getUserId());
+                            List<Student> studentList = studentService.find(queryMap);
+                            //重新计算扣手续费的钱再添加至个人现金账户
+                            if (studentList.size() > 0) {
+                                Student student = studentList.get(0);
+                                DecimalFormat df = new DecimalFormat("######0.00");
+                                student.setXianjin(Double.valueOf(df.format(student.getXianjin() + withdraw.getMoney() / 0.95)));
+                                studentService.update(student);
+                            } else {
+                                throw new RuntimeException("数据异常，该提现用户不存在");
+                            }
+                        }
                         if (err_code.equals("AMOUNT_LIMIT")) {
                             System.out.println("付款金额不能小于最低限额");
                             model.addAttribute("message", "付款金额不能小于最低限额\n" + result);

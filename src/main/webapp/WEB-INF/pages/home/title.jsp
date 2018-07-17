@@ -251,11 +251,7 @@
                             id="tm_separator3"></span><span id="topmenu"
                                                            onclick="top.leftFrame.location.href='baseinfoLeft.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">课程管理</span><span
 
-                            id="tm_separator6"></span><span id="topmenu"
-                                                            onclick="top.leftFrame.location.href='activityManage.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">活动管理</span><span
-                            id="tm_separator1"></span><span id="topmenu"
-                                                            onclick="top.leftFrame.location.href='scoreManage.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">积分管理</span><span
-                            id="tm_separator2"><span id="topmenu"
+                            id="tm_separator6"></span><span id="tm_separator2"><span id="topmenu"
                                                            onclick="top.leftFrame.location.href='sysadminLeft.action';top.main.location.href='sysadminMain.action';linkHighlightMenu(this);">系统管理</span>
 
                     </div>
