@@ -158,13 +158,16 @@
             </tr>
             <tr>
                 <td colspan="2" class="subModelTitle" align="center">
-                    <input id="release" type="submit" value="发布">
+                    <input id="release" type="submit" value="发布" href="/basicinfo/activityreleased/activitylist.jsp">
                 </td>
             </tr>
         </table>
     </div>
 </form>
+
 <script src="${pageContext.request.contextPath}/js/activityRelease/checkform.js"></script>
-<script src="${pageContext.request.contextPath}/js/activityRelease/diranddomain.js"></script>
+<script src="${pageContext.request.contextPath}/js/activityRelease/directoryAndDomain.js"></script>
 </body>
 </html>
+
+

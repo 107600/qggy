@@ -119,6 +119,7 @@ public class ActivityReleasedController extends BaseController {
 
         activityReleasedService.insertIntoActivityReleased(activityReleased);
 
+
     }
 
     @RequestMapping(value = "/basicinfo/activityreleased/releasedsuccess.action")
